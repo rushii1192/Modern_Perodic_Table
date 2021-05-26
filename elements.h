@@ -8,7 +8,7 @@
 struct element 
 {
 	
-    char name[20];
+    char name[20]; 
     char symbol[4];
     int atomicnum;
     float atomicwt;
@@ -60,6 +60,21 @@ extern void table()
     strcpy(atom[1].symbol,"He");
     atom[1].atomicnum=2;
     atom[1].atomicwt=4.00;
+    strcpy(atom[0].electronic_configuration,"1s2");
+    strcpy(atom[0].history,"The first evidence of helium was obtained on August 18th, 1868 by French astronomer Jules Janssen. While in Guntur, India, Janssen observed a solar eclipse through a prism, whereupon he noticed a bright yellow spectral line (at 587.49 nanometers) emanating from the chromosphere of the Sun.");
+    atom[0].melting_point = 0.95;
+    atom[0].boiling_point = 4.22;
+    atom[0].ionic_radius =93;
+    atom[0].isotopes = 2;
+    atom[0].electronegativity = 0;
+    strcpy(atom[0].color,"Colorless");
+    atom[0].group = 18;
+    atom[0].period = 1;
+    strcpy(atom[0].conductivity,"high thermal conductivity");
+    strcpy(atom[0].luster,"No Luster");
+    strcpy(atom[0].phase,"Gas");
+    atom[0].density = 0.00017;
+    strcpy(atom[0].image_path,"");
 
     strcpy(atom[2].name,"LITHIUM");
     strcpy(atom[2].symbol,"Li");

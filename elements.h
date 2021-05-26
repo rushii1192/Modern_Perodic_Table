@@ -133,6 +133,22 @@ extern void table()
     strcpy(atom[5].symbol,"C");	
     atom[5].atomicnum=6;	
     atom[5].atomicwt=12.01;
+    strcpy(atom[5].electronic_configuration,"[H5e] 2s2 2p1");
+    strcpy(atom[5].history,"Jöns Jacob Berzelius identified boron as an element in 1824. Pure boron was arguably first produced by the American chemist Ezekiel Weintraub in 1909. The earliest routes to elemental boron involved the reduction of boric oxide with metals such as magnesium or aluminium.");
+    atom[4].melting_point = 2349;
+    atom[4].boiling_point = 4200;
+    atom[4].ionic_radius = 23;
+    atom[4].isotopes = 14;
+    atom[4].electronegativity = 2.04;
+    strcpy(atom[4].color,"Blue");
+    atom[4].group = 13;
+    atom[4].period = 2;
+    strcpy(atom[4].conductivity,"Thermal Conducting");
+    strcpy(atom[4].luster,"No luster");
+    strcpy(atom[4].phase,"Solid");
+    atom[4].density = 2.34;
+    strcpy(atom[4].uses,"uses of boron");
+    strcpy(atom[4].image_path,"");
 
 
     strcpy(atom[6].name,"NITROGEN");	

@@ -152,230 +152,191 @@ extern void table()
     atom[8].atomicnum=9;
     atom[8].atomicwt=18.99;
 
+	
     strcpy(atom[9].name,"NEON");
-        
     strcpy(atom[9].symbol,"Ne");
-        
-    atom[9].atomicnum=10;
-        
+    atom[9].atomicnum=10;  
     atom[9].atomicwt=20.18;
-    strcpy(atom[10].name,"SODIUM");
-        
-    strcpy(atom[10].symbol,"Na");
-        
-    atom[10].atomicnum=11;
-        
+	
+	
+    strcpy(atom[10].name,"SODIUM");     
+    strcpy(atom[10].symbol,"Na"); 
+    atom[10].atomicnum=11;        
     atom[10].atomicwt=22.99;
-    strcpy(atom[11].name,"MAGNESIUM");
-        
+	
+	
+    strcpy(atom[11].name,"MAGNESIUM");        
     strcpy(atom[11].symbol,"Mg");
-        
-    atom[11].atomicnum=12;
-        
+    atom[11].atomicnum=12;  
     atom[11].atomicwt=24.30;
-    strcpy(atom[12].name,"ALUMINIUM");
-        
-    strcpy(atom[12].symbol,"Al");
-        
-    atom[12].atomicnum=13;
-        
+	
+	
+    strcpy(atom[12].name,"ALUMINIUM");       
+    strcpy(atom[12].symbol,"Al");        
+    atom[12].atomicnum=13;        
     atom[12].atomicwt=1.008;
 
 
-    strcpy(atom[13].name,"SILICON");
-        
-    strcpy(atom[13].symbol,"Si");
-        
-    atom[13].atomicnum=14;
-        
+    strcpy(atom[13].name,"SILICON");        
+    strcpy(atom[13].symbol,"Si");       
+    atom[13].atomicnum=14;        
     atom[13].atomicwt=28.08;
-    strcpy(atom[14].name,"PHOSPHOROUS");
-        
-    strcpy(atom[14].symbol,"P");
-        
-    atom[14].atomicnum=15;
-        
+	
+	
+    strcpy(atom[14].name,"PHOSPHOROUS");       
+    strcpy(atom[14].symbol,"P");        
+    atom[14].atomicnum=15;        
     atom[14].atomicwt=30.97;
-    strcpy(atom[15].name,"SULPHUR");
-        
-    strcpy(atom[15].symbol,"S");
-        
-    atom[15].atomicnum=16;
-        
+	
+	
+    strcpy(atom[15].name,"SULPHUR");        
+    strcpy(atom[15].symbol,"S");        
+    atom[15].atomicnum=16;      
     atom[15].atomicwt=32.06;
-    strcpy(atom[16].name,"CHLORINE");
-        
-    strcpy(atom[16].symbol,"Cl");
-        
-    atom[16].atomicnum=17;
-        
+	
+	
+    strcpy(atom[16].name,"CHLORINE");        
+    strcpy(atom[16].symbol,"Cl");        
+    atom[16].atomicnum=17;       
     atom[16].atomicwt=35.45;
-    strcpy(atom[17].name,"ARGON");
-        
-    strcpy(atom[17].symbol,"Ar");
-        
-    atom[17].atomicnum=18;
-        
+	
+	
+    strcpy(atom[17].name,"ARGON");        
+    strcpy(atom[17].symbol,"Ar");        
+    atom[17].atomicnum=18;        
     atom[17].atomicwt=39.94;
-    strcpy(atom[18].name,"POTASSIUM");
-        
-    strcpy(atom[18].symbol,"K");
-        
-    atom[18].atomicnum=19;
-        
+	
+	
+    strcpy(atom[18].name,"POTASSIUM");        
+    strcpy(atom[18].symbol,"K");        
+    atom[18].atomicnum=19;        
     atom[18].atomicwt=39.09;
-    strcpy(atom[19].name,"CALICUM");
-        
-    strcpy(atom[19].symbol,"Ca");
-        
-    atom[19].atomicnum=20;
-        
+	
+	
+    strcpy(atom[19].name,"CALICUM");        
+    strcpy(atom[19].symbol,"Ca");        
+    atom[19].atomicnum=20;       
     atom[19].atomicwt=40.07;
-    strcpy(atom[20].name,"SCANDIUM");
-        
-    strcpy(atom[20].symbol,"Sc");
-        
-    atom[20].atomicnum=21;
-        
+	
+    strcpy(atom[20].name,"SCANDIUM");        
+    strcpy(atom[20].symbol,"Sc");        
+    atom[20].atomicnum=21;        
     atom[20].atomicwt=44.95;
 
-    strcpy(atom[21].name,"TITANIUM");
-        
-    strcpy(atom[21].symbol,"Ti");
-        
-    atom[21].atomicnum=22;
-        
+	
+    strcpy(atom[21].name,"TITANIUM");       
+    strcpy(atom[21].symbol,"Ti");       
+    atom[21].atomicnum=22;        
     atom[21].atomicwt=47.86;
-    strcpy(atom[22].name,"VANADIUM");
-        
-    strcpy(atom[22].symbol,"V");
-        
-    atom[22].atomicnum=23;
-        
+	
+	
+    strcpy(atom[22].name,"VANADIUM");        
+    strcpy(atom[22].symbol,"V");       
+    atom[22].atomicnum=23;       
     atom[22].atomicwt=50.94;
-    strcpy(atom[23].name,"CHROMIUM");
-        
-    strcpy(atom[23].symbol,"Cr");
-        
-    atom[23].atomicnum=24;
-        
+	
+	
+    strcpy(atom[23].name,"CHROMIUM");        
+    strcpy(atom[23].symbol,"Cr");        
+    atom[23].atomicnum=24;        
     atom[23].atomicwt=51.99;
-    strcpy(atom[24].name,"MANGANESE");
-        
-    strcpy(atom[24].symbol,"Mg");
-        
-    atom[24].atomicnum=25;
-        
+	
+	
+    strcpy(atom[24].name,"MANGANESE");        
+    strcpy(atom[24].symbol,"Mg");        
+    atom[24].atomicnum=25;       
     atom[24].atomicwt=54.84;
-    strcpy(atom[25].name,"IRON");
-        
-    strcpy(atom[25].symbol,"Fe");
-        
-    atom[25].atomicnum=26;
-        
+	
+	
+    strcpy(atom[25].name,"IRON");        
+    strcpy(atom[25].symbol,"Fe");       
+    atom[25].atomicnum=26;        
     atom[25].atomicwt=55.84;
 
-    strcpy(atom[26].name,"COBALT");
-        
-    strcpy(atom[26].symbol,"Co");
-        
-    atom[26].atomicnum=27;
-        
+	
+    strcpy(atom[26].name,"COBALT");        
+    strcpy(atom[26].symbol,"Co");       
+    atom[26].atomicnum=27;        
     atom[26].atomicwt=58.93;
-    strcpy(atom[27].name,"NICKEL");
-        
-    strcpy(atom[27].symbol,"Ni");
-        
-    atom[27].atomicnum=28;
-        
+	
+	
+    strcpy(atom[27].name,"NICKEL");       
+    strcpy(atom[27].symbol,"Ni");        
+    atom[27].atomicnum=28;       
     atom[27].atomicwt=58.69;
-    strcpy(atom[28].name,"COPPER");
-        
-    strcpy(atom[28].symbol,"Cu");
-        
+	
+	
+    strcpy(atom[28].name,"COPPER");        
+    strcpy(atom[28].symbol,"Cu");        
     atom[28].atomicnum=29;
     atom[28].atomicwt=63.54;
-    strcpy(atom[29].name,"ZINC");
-        
-    strcpy(atom[29].symbol,"Zn");
-        
-    atom[29].atomicnum=30;
-        
+	
+	
+    strcpy(atom[29].name,"ZINC");        
+    strcpy(atom[29].symbol,"Zn");        
+    atom[29].atomicnum=30;       
     atom[29].atomicwt=65.39;
-    strcpy(atom[30].name,"GALLIUM");
-        
-    strcpy(atom[30].symbol,"Ga");
-        
-    atom[30].atomicnum=31;
-        
+	
+	
+    strcpy(atom[30].name,"GALLIUM");        
+    strcpy(atom[30].symbol,"Ga");        
+    atom[30].atomicnum=31;       
     atom[30].atomicwt=69.72;
 
-    strcpy(atom[31].name,"GERMANIUM");
-        
-    strcpy(atom[31].symbol,"Ge");
-        
-    atom[31].atomicnum=32;
-        
+	
+    strcpy(atom[31].name,"GERMANIUM");        
+    strcpy(atom[31].symbol,"Ge");        
+    atom[31].atomicnum=32;        
     atom[31].atomicwt=72.64;
-    strcpy(atom[32].name,"ARSENIC");
-        
-    strcpy(atom[32].symbol,"As");
-        
-    atom[32].atomicnum=33;
-        
+	
+	
+    strcpy(atom[32].name,"ARSENIC");        
+    strcpy(atom[32].symbol,"As");        
+    atom[32].atomicnum=33;       
     atom[32].atomicwt=74.92;
-    strcpy(atom[33].name,"SELENIUM");
-        
-    strcpy(atom[33].symbol,"Se");
-        
-    atom[33].atomicnum=34;
-        
+	
+	
+    strcpy(atom[33].name,"SELENIUM");        
+    strcpy(atom[33].symbol,"Se");        
+    atom[33].atomicnum=34;       
     atom[33].atomicwt=78.96;
 
-    strcpy(atom[34].name,"BROMINE");
-        
-    strcpy(atom[34].symbol,"Br");
-        
-    atom[34].atomicnum=35;
-        
+	
+    strcpy(atom[34].name,"BROMINE");        
+    strcpy(atom[34].symbol,"Br");        
+    atom[34].atomicnum=35;        
     atom[34].atomicwt=79.90;
 
-    strcpy(atom[35].name,"KRYPTON");
-        
-    strcpy(atom[35].symbol,"Kr");
-        
-    atom[35].atomicnum=36;
-        
+	
+    strcpy(atom[35].name,"KRYPTON");        
+    strcpy(atom[35].symbol,"Kr");        
+    atom[35].atomicnum=36;        
     atom[35].atomicwt=83.80;
-    strcpy(atom[36].name,"RUBIDIUM");
-        
-    strcpy(atom[36].symbol,"Rb");
-        
-    atom[36].atomicnum=37;
-        
+	
+	
+    strcpy(atom[36].name,"RUBIDIUM");        
+    strcpy(atom[36].symbol,"Rb");       
+    atom[36].atomicnum=37;        
     atom[36].atomicwt=85.46;
-    strcpy(atom[37].name,"STRONTIUM");
-        
-    strcpy(atom[37].symbol,"Sr");
-        
-    atom[37].atomicnum=38;
-        
+	
+	
+    strcpy(atom[37].name,"STRONTIUM");      
+    strcpy(atom[37].symbol,"Sr");        
+    atom[37].atomicnum=38;        
     atom[37].atomicwt=87.62;
-    strcpy(atom[38].name,"YTTRIUM");
-        
-    strcpy(atom[38].symbol,"Y");
-        
-    atom[38].atomicnum=39;
-        
+	
+	
+    strcpy(atom[38].name,"YTTRIUM");        
+    strcpy(atom[38].symbol,"Y");        
+    atom[38].atomicnum=39;        
     atom[38].atomicwt=88.90;
 
-    strcpy(atom[39].name,"ZIRCONIUM");
-        
-    strcpy(atom[39].symbol,"Zr");
-        
-    atom[39].atomicnum=40;
-        
+	
+    strcpy(atom[39].name,"ZIRCONIUM");       
+    strcpy(atom[39].symbol,"Zr");        
+    atom[39].atomicnum=40;        
     atom[39].atomicwt=91.22;
+	
     strcpy(atom[40].name,"NIOBIUM");
         
     strcpy(atom[40].symbol,"Nb");

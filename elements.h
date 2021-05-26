@@ -80,6 +80,24 @@ extern void table()
     strcpy(atom[2].symbol,"Li");
     atom[2].atomicnum=3;
     atom[2].atomicwt=6.94;
+    strcpy(atom[0].electronic_configuration,"1s2 2s1");
+    strcpy(atom[0].history,"Lithium was first discovered by Dr. Robert Howland as a chemical element in 1817.By the mid-1800s, there was great interest in “urate imbalances”, which were thought to explain a variety of diseases, including mania and depression. Around this time, it was discovered that a solution of lithium carbonate could dissolve stones made of urate.
+
+");
+    atom[0].melting_point = 180.5;
+    atom[0].boiling_point = 1342;
+    atom[0].ionic_radius = 0.06;
+    atom[0].isotopes = 2;
+    atom[0].electronegativity = 1.0;
+    strcpy(atom[0].color,"Silvery white");
+    atom[0].group = 1;
+    atom[0].period = 1;
+    strcpy(atom[0].conductivity,"Good conductor of heat and electricity");
+    strcpy(atom[0].luster,"Shiny");
+    strcpy(atom[0].phase," Solid");
+    atom[0].density = 0.534;
+    strcpy(atom[0].image_path,"");
+
 
 
     strcpy(atom[3].name,"BERYLLIUM");	

@@ -26,6 +26,7 @@ struct element
     char luster[20];
     char phase[7];
     float density;
+    char uses[2700];
     char image_path[150];
 
 }
@@ -53,6 +54,7 @@ extern void table()
     strcpy(atom[0].luster,"No luster");
     strcpy(atom[0].phase,"Gas");
     atom[0].density = 0.00008;
+    strcpy(atom[0].uses,"uses of hydrogen");
     strcpy(atom[0].image_path,"");
 
 
@@ -60,21 +62,22 @@ extern void table()
     strcpy(atom[1].symbol,"He");
     atom[1].atomicnum=2;
     atom[1].atomicwt=4.00;
-    strcpy(atom[0].electronic_configuration,"1s2");
-    strcpy(atom[0].history,"The first evidence of helium was obtained on August 18th, 1868 by French astronomer Jules Janssen. While in Guntur, India, Janssen observed a solar eclipse through a prism, whereupon he noticed a bright yellow spectral line (at 587.49 nanometers) emanating from the chromosphere of the Sun.");
-    atom[0].melting_point = 0.95;
-    atom[0].boiling_point = 4.22;
-    atom[0].ionic_radius =93;
-    atom[0].isotopes = 2;
-    atom[0].electronegativity = 0;
-    strcpy(atom[0].color,"Colorless");
-    atom[0].group = 18;
-    atom[0].period = 1;
-    strcpy(atom[0].conductivity,"high thermal conductivity");
-    strcpy(atom[0].luster,"No Luster");
-    strcpy(atom[0].phase,"Gas");
-    atom[0].density = 0.00017;
-    strcpy(atom[0].image_path,"");
+    strcpy(atom[1].electronic_configuration,"1s2");
+    strcpy(atom[1].history,"The first evidence of helium was obtained on August 18th, 1868 by French astronomer Jules Janssen. While in Guntur, India, Janssen observed a solar eclipse through a prism, whereupon he noticed a bright yellow spectral line (at 587.49 nanometers) emanating from the chromosphere of the Sun.");
+    atom[1].melting_point = 0.95;
+    atom[1].boiling_point = 4.22;
+    atom[1].ionic_radius =93;
+    atom[1].isotopes = 2;
+    atom[1].electronegativity = 0;
+    strcpy(atom[1].color,"Colorless");
+    atom[1].group = 18;
+    atom[1].period = 1;
+    strcpy(atom[1].conductivity,"high thermal conductivity");
+    strcpy(atom[1].luster,"No Luster");
+    strcpy(atom[1].phase,"Gas");
+    atom[1].density = 0.00017;
+    strcpy(atom[1].uses,"uses of helium");
+    strcpy(atom[1].image_path,"");
 
     strcpy(atom[2].name,"LITHIUM");
     strcpy(atom[2].symbol,"Li");
@@ -86,42 +89,44 @@ extern void table()
     strcpy(atom[3].symbol,"Be");	
     atom[3].atomicnum=4;	
     atom[3].atomicwt=9.01;
-    strcpy(atom[0].electronic_configuration,"[He] 2s2");
-    strcpy(atom[0].history,"Elemental (metallic) beryllium was isolated in 1828 by two chemists, working independently: Antoine Bussy (France) and Friedrich Wöhler (Germany). Copper beryllium alloys were first patented and used as the conductive spring components of telephone switchboard relays produced in Germany.");
-    atom[0].melting_point = 1560;
-    atom[0].boiling_point = 2742;
-    atom[0].ionic_radius = 45;
-    atom[0].isotopes = 11;
-    atom[0].electronegativity = 1.57;
-    strcpy(atom[0].color,"silver gray metallic");
-    atom[0].group = 2;
-    atom[0].period = 2;
-    strcpy(atom[0].conductivity,"Electrically Conducting");
-    strcpy(atom[0].luster,"Silver white");
-    strcpy(atom[0].phase,"Solid");
-    atom[0].density = 1.85;
-    strcpy(atom[0].image_path,"");
+    strcpy(atom[3].electronic_configuration,"[He] 2s2");
+    strcpy(atom[3].history,"Elemental (metallic) beryllium was isolated in 1828 by two chemists, working independently: Antoine Bussy (France) and Friedrich Wöhler (Germany). Copper beryllium alloys were first patented and used as the conductive spring components of telephone switchboard relays produced in Germany.");
+    atom[3].melting_point = 1560;
+    atom[3].boiling_point = 2742;
+    atom[3].ionic_radius = 45;
+    atom[3].isotopes = 11;
+    atom[3].electronegativity = 1.57;
+    strcpy(atom[3].color,"silver gray metallic");
+    atom[3].group = 2;
+    atom[3].period = 2;
+    strcpy(atom[3].conductivity,"Electrically Conducting");
+    strcpy(atom[3].luster,"Silver white");
+    strcpy(atom[3].phase,"Solid");
+    atom[3].density = 1.85;
+    strcpy(atom[3].uses,"uses of beryllium");
+    strcpy(atom[3].image_path,"");
 
 
     strcpy(atom[4].name,"BORON");	
     strcpy(atom[4].symbol,"B");
     atom[4].atomicnum=5;
     atom[4].atomicwt=10.81;
-    strcpy(atom[0].electronic_configuration,"[He] 2s2 2p1");
-    strcpy(atom[0].history,"Jöns Jacob Berzelius identified boron as an element in 1824. Pure boron was arguably first produced by the American chemist Ezekiel Weintraub in 1909. The earliest routes to elemental boron involved the reduction of boric oxide with metals such as magnesium or aluminium.");
-    atom[0].melting_point = 2349;
-    atom[0].boiling_point = 4200;
-    atom[0].ionic_radius = 23;
-    atom[0].isotopes = 14;
-    atom[0].electronegativity = 2.04;
-    strcpy(atom[0].color,"Blue");
-    atom[0].group = 13;
-    atom[0].period = 2;
-    strcpy(atom[0].conductivity,"Thermal Conducting");
-    strcpy(atom[0].luster,"No luster");
-    strcpy(atom[0].phase,"Solid");
-    atom[0].density = 2.34;
-    strcpy(atom[0].image_path,"");
+    strcpy(atom[4].electronic_configuration,"[He] 2s2 2p1");
+    strcpy(atom[4].history,"Jöns Jacob Berzelius identified boron as an element in 1824. Pure boron was arguably first produced by the American chemist Ezekiel Weintraub in 1909. The earliest routes to elemental boron involved the reduction of boric oxide with metals such as magnesium or aluminium.");
+    atom[4].melting_point = 2349;
+    atom[4].boiling_point = 4200;
+    atom[4].ionic_radius = 23;
+    atom[4].isotopes = 14;
+    atom[4].electronegativity = 2.04;
+    strcpy(atom[4].color,"Blue");
+    atom[4].group = 13;
+    atom[4].period = 2;
+    strcpy(atom[4].conductivity,"Thermal Conducting");
+    strcpy(atom[4].luster,"No luster");
+    strcpy(atom[4].phase,"Solid");
+    atom[4].density = 2.34;
+    strcpy(atom[4].uses,"uses of boron");
+    strcpy(atom[4].image_path,"");
 
 
     strcpy(atom[5].name,"CARBON");	

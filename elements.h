@@ -972,7 +972,18 @@ extern void table()
     atom[45].atomicwt=106.42;
 
     strcpy(atom[46].name,"SILVER");
-        
+    strcpy(atom[2].name,"LITHIUM");
+    strcpy(atom[2].symbol,"Li");
+    atom[2].atomicnum=3;
+    atom[2].atomicwt=6.94;
+    strcpy(atom[2].electronic_configuration,"[He] 2s1");
+    strcpy(atom[2].history,"The first lithium mineral petalite, LiAlSi4O10, was discovered on the Swedish island of Utö by the Brazilian, Jozé Bonifácio de Andralda e Silva in the 1790s. It was observed to give an intense crimson flame when thrown onto a fire. In 1817, Johan August Arfvedson of Stockholm analysed it and deduced it contained a previously unknown metal, which he called lithium. He realised this was a new alkali metal and a lighter version of sodium. However, unlike sodium he was not able to separate it by electrolysis. In 1821 William Brande obtained a tiny amount this way but not enough on which to make measurements. It was not until 1855 that the German chemist Robert Bunsen and the British chemist Augustus Matthiessen obtained it in bulk by the electrolysis of molten lithium chloride.");
+    atom[2].melting_point = 453.650;
+    atom[2].boiling_point = 1615;
+    atom[2].ionic_radius = 0.76;
+    atom[2].isotopes = 21;
+    atom[2].electronegativity = 0.98;
+    strcpy(atom[2].color,"silvery white");    
     strcpy(atom[46].symbol,"Ag");
         
     atom[46].atomicnum=47;

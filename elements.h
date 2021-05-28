@@ -26,6 +26,7 @@ struct element
     char luster[20];
     char phase[7];
     float density;
+    char uses[2700];
     char image_path[150];
 
 }
@@ -52,7 +53,7 @@ extern void table()
     strcpy(atom[0].conductivity,"Thermal conductivity");
     strcpy(atom[0].luster,"No luster");
     strcpy(atom[0].phase,"Gas");
-    atom[0].density = Thermal conductivity;
+    atom[0].density = 0.00523;
     strcpy(atom[0].uses,"Hydrogen also has many other uses. In the chemical industry it is used to make ammonia for agricultural fertiliser (the Haber process) and cyclohexane and methanol, which are intermediates in the production of plastics and pharmaceuticals. It is also used to remove sulfur from fuels during the oil-refining process. Large quantities of hydrogen are used to hydrogenate oils to form fats, for example to make margarine. Hydrogen is an essential element for life. It is present in water and in almost all the molecules in living things. However, hydrogen itself does not play a particularly active role. It remains bonded to carbon and oxygen atoms, while the chemistry of life takes place at the more active sites involving, for example, oxygen, nitrogen and phosphorus. Hydrogen is easily the most abundant element in the universe. It is found in the sun and most of the stars, and the planet Jupiter is composed mostly of hydrogen.");
     strcpy(atom[0].image_path,"");
 
@@ -400,7 +401,7 @@ extern void table()
     atom[16].ionic_radius = 0.99;
     atom[16].isotopes = 27;
     atom[16].electronegativity = 3.16;
-    strcpy(atom[16].color,Yellowy-green");
+    strcpy(atom[16].color,"Yellowy-green");
     atom[16].group = 17;
     atom[16].period = 3;
     strcpy(atom[16].conductivity,"Thermal Conductivity");
@@ -471,7 +472,7 @@ extern void table()
     atom[19].period = 4;
     strcpy(atom[19].conductivity,"Thermal conductivity");
     strcpy(atom[19].luster,"Shiny");
-    strcpy(atom[19].phase,Solid"");
+    strcpy(atom[19].phase,"Solid");
     atom[19].density = 1.54;
     strcpy(atom[19].uses,"Calcium compounds are widely used. There are vast deposits of limestone (calcium carbonate) used directly as a building stone and indirectly for cement. When limestone is heated in kilns it gives off carbon dioxide gas leaving behind quicklime (calcium oxide). This reacts vigorously with water to give slaked lime (calcium hydroxide). Slaked lime is used to make cement, as a soil conditioner and in water treatment to reduce acidity, and in the chemicals industry. It is also used in steel making to remove impurities from the molten iron ore. When mixed with sand, slaked lime takes up carbon dioxide from the air and hardens as lime plaster.Calcium is essential to all living things, particularly for the growth of healthy teeth and bones. Calcium phosphate is the main component of bone. The average human contains about 1 kilogram of calcium.Calcium metal is used as a reducing agent in preparing other metals such as thorium and uranium. It is also used as an alloying agent for aluminium, beryllium, copper, lead and magnesium alloys.");
     strcpy(atom[19].image_path,"");

@@ -920,7 +920,15 @@ extern void table()
 
 
     strcpy(atom[40].name,"NIOBIUM");
-        
+     atom[34].melting_point =41 ;
+    atom[34].boiling_point = 332;
+    atom[34].ionic_radius = 1.96;
+    atom[34].isotopes = 79;
+    atom[34].electronegativity = 2.96;
+    strcpy(atom[34].color,"Deep-red");
+    atom[34].group = 17;
+    atom[34].period = 4;
+    strcpy(atom[34].conductivity,"Very poor     
     strcpy(atom[40].symbol,"Nb");
         
     atom[40].atomicnum=41;

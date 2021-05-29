@@ -10,8 +10,8 @@ struct element
 	
     char name[20]; 
     char symbol[4];
-    int atomicnum;
-    float atomicwt;
+    int atomic_number;
+    float atomic_weight;
     char electronic_configuration[15];
     char history[500];
     float melting_point;
@@ -29,17 +29,19 @@ struct element
     char uses[2700];
     char image_path[150];
 
-}
-atom[118];
+};
 
-
-extern void table() 
+int i;
+struct element element_searcher(char element_name[20],char element_symbol[4],int atomic_number,float atomic_weight)
 {
-	
+	struct element atom[118];
+
+    //for data department you can start from here don,t change above code
+
     strcpy(atom[0].name,"HYDROGEN");	
     strcpy(atom[0].symbol,"H");
-    atom[0].atomicnum=1;
-    atom[0].atomicwt=1.008;
+    atom[0].atomic_number=1;
+    atom[0].atomic_weight=1.008;
     strcpy(atom[0].electronic_configuration,"1s1");
     strcpy(atom[0].history,"In the early 1500s the alchemist Paracelsus noted that the bubbles given off when iron filings were added to sulfuric acid were flammable. In 1671 Robert Boyle made the same observation. Neither followed up their discovery of hydrogen, and so Henry Cavendish gets the credit. In 1766 he collected the bubbles and showed that they were different from other gases. He later showed that when hydrogen burns it forms water, thereby ending the belief that water was an element. The gas was given its name hydro-gen, meaning water-former, by Antoine Lavoisier.In 1931, Harold Urey and his colleagues at Columbia University in the US detected a second, rarer, form of hydrogen. This has twice the mass of normal hydrogen, and they named it deuterium.");
     atom[0].melting_point = 13.99;
@@ -60,8 +62,8 @@ extern void table()
 
     strcpy(atom[1].name,"HELIUM");	
     strcpy(atom[1].symbol,"He");
-    atom[1].atomicnum=2;
-    atom[1].atomicwt=4.00;
+    atom[1].atomic_number=2;
+    atom[1].atomic_weight=4.00;
     strcpy(atom[1].electronic_configuration,"1s2");
     strcpy(atom[1].history,"The first evidence of helium was obtained on August 18th, 1868 by French astronomer Jules Janssen. While in Guntur, India, Janssen observed a solar eclipse through a prism, whereupon he noticed a bright yellow spectral line (at 587.49 nanometers) emanating from the chromosphere of the Sun.");
     atom[1].melting_point = 0.95;
@@ -81,8 +83,8 @@ extern void table()
 
     strcpy(atom[2].name,"LITHIUM");
     strcpy(atom[2].symbol,"Li");
-    atom[2].atomicnum=3;
-    atom[2].atomicwt=6.94;
+    atom[2].atomic_number=3;
+    atom[2].atomic_weight=6.94;
     strcpy(atom[2].electronic_configuration,"[He] 2s1");
     strcpy(atom[2].history,"The first lithium mineral petalite, LiAlSi4O10, was discovered on the Swedish island of Utö by the Brazilian, Jozé Bonifácio de Andralda e Silva in the 1790s. It was observed to give an intense crimson flame when thrown onto a fire. In 1817, Johan August Arfvedson of Stockholm analysed it and deduced it contained a previously unknown metal, which he called lithium. He realised this was a new alkali metal and a lighter version of sodium. However, unlike sodium he was not able to separate it by electrolysis. In 1821 William Brande obtained a tiny amount this way but not enough on which to make measurements. It was not until 1855 that the German chemist Robert Bunsen and the British chemist Augustus Matthiessen obtained it in bulk by the electrolysis of molten lithium chloride.");
     atom[2].melting_point = 453.650;
@@ -104,8 +106,8 @@ extern void table()
 
     strcpy(atom[3].name,"BERYLLIUM");	
     strcpy(atom[3].symbol,"Be");	
-    atom[3].atomicnum=4;	
-    atom[3].atomicwt=9.01;
+    atom[3].atomic_number=4;	
+    atom[3].atomic_weight=9.01;
     strcpy(atom[3].electronic_configuration,"[He] 2s2");
     strcpy(atom[3].history,"The gemstones beryl and emerald are both forms of beryllium aluminium silicate, Be3Al2(SiO3)6. The French mineralogist Abbé René-Just Haüy thought they might harbour a new element, and he asked Nicholas Louis Vauquelin, to analyse them and he realised they harboured a new metal and he investigated it. In February 1798 Vauquelin announced his discovery at the French Academy and named the element glaucinium (Greek glykys = sweet) because its compounds tasted sweet. Others preferred the name beryllium, based on the gemstone, and this is now the official name.Beryllium metal was isolated in 1828 by Friedrich Wöhler at Berlin and independently by Antoine-Alexandere-Brutus Bussy at Paris, both of whom extracted it from beryllium chloride (BeCl2) by reacting this with potassium.");
     atom[3].melting_point = 1560;
@@ -127,8 +129,8 @@ extern void table()
 
     strcpy(atom[4].name,"BORON");	
     strcpy(atom[4].symbol,"B");
-    atom[4].atomicnum=5;
-    atom[4].atomicwt=10.81;
+    atom[4].atomic_number=5;
+    atom[4].atomic_weight=10.81;
     strcpy(atom[4].electronic_configuration,"[He] 2s22p1");
     strcpy(atom[4].history,"For centuries the only source of borax, Na2B2O5(OH)4, was the crystallized deposits of Lake Yamdok Cho, in Tibet. It was used as a flux used by goldsmiths.In 1808, Louis-Josef Gay-Lussac and Louis-Jacques Thénard working in Paris, and Sir Humphry Davy in London, independently extracted boron by heating borax with potassium metal. In fact, neither had produced the pure element which is almost impossible to obtain. A purer type of boron was isolated in 1892 by Henri Moissan. Eventually, E. Weintraub in the USA produced totally pure boron by sparking a mixture of boron chloride, BCl3 vapour, and hydrogen. The material so obtained boron was found to have very different properties to those previously reported.");
     atom[4].melting_point = 2350;
@@ -149,8 +151,8 @@ extern void table()
 
     strcpy(atom[5].name,"CARBON");	
     strcpy(atom[5].symbol,"C");	
-    atom[5].atomicnum=6;	
-    atom[5].atomicwt=12.01;
+    atom[5].atomic_number=6;	
+    atom[5].atomic_weight=12.01;
     strcpy(atom[5].electronic_configuration,"[He] 2s2 2p2");
     strcpy(atom[5].history,"The name carbon has been derived from the word carbo (Latin for coal and charcoal). Carbon was discovered as a novel element by 1722 by Antoine Ferchault de Réaumur, who proposed that this novel element can be used to transform iron into steel.");
     atom[5].melting_point = 40000;
@@ -172,8 +174,8 @@ extern void table()
 
     strcpy(atom[6].name,"NITROGEN");	
     strcpy(atom[6].symbol,"N");
-    atom[6].atomicnum=7;
-    atom[6].atomicwt=14.00;
+    atom[6].atomic_number=7;
+    atom[6].atomic_weight=14.00;
     strcpy(atom[6].electronic_configuration,"[He] 2s22p3");
     strcpy(atom[6].history,"Nitrogen in the form of ammonium chloride, NH4Cl, was known to the alchemists as sal ammonia. It was manufactured in Egypt by heating a mixture of dung, salt and urine. Nitrogen gas itself was obtained in the 1760s by both Henry Cavendish and Joseph Priestley and they did this by removing the oxygen from air. They noted it extinguished a lighted candle and that a mouse breathing it would soon die. Neither man deduced that it was an element. The first person to suggest this was a young student Daniel Rutherford in his doctorate thesis of September 1772 at Edinburgh, Scotland.");
     atom[6].melting_point = 63.2;
@@ -195,8 +197,8 @@ extern void table()
 
     strcpy(atom[7].name,"OXYGEN");	
     strcpy(atom[7].symbol,"O");
-    atom[7].atomicnum=8;
-    atom[7].atomicwt=15.59;
+    atom[7].atomic_number=8;
+    atom[7].atomic_weight=15.59;
     strcpy(atom[7].electronic_configuration,"[He] 2s22p4");
     strcpy(atom[7].history,"In 1608, Cornelius Drebbel had shown that heating saltpetre (potassium nitrate, KNO3) released a gas. This was oxygen although it was not identified as such.The credit for discovering oxygen is now shared by three chemists: an Englishman, a Swede, and a Frenchman. Joseph Priestley was the first to publish an account of oxygen, having made it in 1774 by focussing sunlight on to mercuric oxide (HgO), and collecting the gas which came off. He noted that a candle burned more brightly in it and that it made breathing easier. Unknown to Priestly, Carl Wilhelm Scheele had produced oxygen in June 1771. He had written an account of his discovery but it was not published until 1777. Antoine Lavoisier also claimed to have discovered oxygen, and he proposed that the new gas be called oxy-gène, meaning acid-forming, because he thought it was the basis of all acids.");
     atom[7].melting_point = 54.36;
@@ -217,8 +219,8 @@ extern void table()
 
     strcpy(atom[8].name,"FLUORINE");	
     strcpy(atom[8].symbol,"F");
-    atom[8].atomicnum=9;
-    atom[8].atomicwt=18.99;
+    atom[8].atomic_number=9;
+    atom[8].atomic_weight=18.99;
     strcpy(atom[8].electronic_configuration,"[He] 2s22p5");
     strcpy(atom[8].history,"The early chemists were aware that metal fluorides contained an unidentified element similar to chlorine, but they could not isolate it. (The French scientist, André Ampère coined the name fluorine in 1812.) Even the great Humphry Davy was unable to produce the element, and he became ill by trying to isolate it from hydrofluoric acid.The British chemist George Gore in 1869 passed an electric current through liquid HF but found that the gas which was liberated reacted violently with his apparatus. He thought it was fluorine but was unable to collect it and prove it. Then in 1886 the French chemist Henri Moissan obtained it by the electrolysis of potassium bifluoride (KHF2) dissolved in liquid HF.");
     atom[8].melting_point = 53.48;
@@ -238,8 +240,8 @@ extern void table()
 
     strcpy(atom[9].name,"NEON");        
     strcpy(atom[9].symbol,"Ne");        
-    atom[9].atomicnum=10;        
-    atom[9].atomicwt=20.18;
+    atom[9].atomic_number=10;        
+    atom[9].atomic_weight=20.18;
     strcpy(atom[9].electronic_configuration,"[He] 2s22p6");
     strcpy(atom[9].history,"In 1898, William Ramsay and Morris Travers at University College London isolated krypton gas by evaporating liquid argon. They had been expecting to find a lighter gas which would fit a niche above argon in the periodic table of the elements. They then repeated their experiment, this time allowing solid argon to evaporate slowly under reduced pressure and collected the gas which came off first. This time they were successful, and when they put a sample of the new gas into their atomic spectrometer it startled them by the brilliant red glow that we now associate with neon signs. Ramsay named the new gas neon, basing it on neos, the Greek word for new.");
     atom[9].melting_point = 24.56;
@@ -260,8 +262,8 @@ extern void table()
 
     strcpy(atom[10].name,"SODIUM");
     strcpy(atom[10].symbol,"Na");        
-    atom[10].atomicnum=11;        
-    atom[10].atomicwt=22.99;
+    atom[10].atomic_number=11;        
+    atom[10].atomic_weight=22.99;
     strcpy(atom[10].electronic_configuration,"[Ne] 3s1");
     strcpy(atom[10].history,"Salt (sodium chloride, NaCl) and soda (sodium carbonate, Na2CO3) had been known since prehistoric times, the former used as a flavouring and preservative, and the latter for glass manufacture. Salt came from seawater, while soda came from the Natron Valley in Egypt or from the ash of certain plants. Their composition was debated by early chemists and the solution finally came from the Royal Institution in London in October 1807 where Humphry Davy exposed caustic soda (sodium hydroxide, NaOH) to an electric current and obtained globules of sodium metal, just as he had previously done for potassium, although he needed to use a stronger current.The following year, Louis-Josef Gay-Lussac and Louis-Jacques Thénard obtained sodium by heating to red heat a mixture of caustic soda and iron filings.");
     atom[10].melting_point =  370.94;
@@ -282,8 +284,8 @@ extern void table()
 
     strcpy(atom[11].name,"MAGNESIUM");        
     strcpy(atom[11].symbol,"Mg");        
-    atom[11].atomicnum=12;        
-    atom[11].atomicwt=24.30;
+    atom[11].atomic_number=12;        
+    atom[11].atomic_weight=24.30;
     strcpy(atom[11].electronic_configuration,"[Ne] 3s2");
     strcpy(atom[11].history,"The first person to recognise that magnesium was an element was Joseph Black at Edinburgh in 1755. He distinguished magnesia (magnesium oxide, MgO) from lime (calcium oxide, CaO) although both were produced by heating similar kinds of carbonate rocks, magnesite and limestone respectively. Another magnesium mineral called meerschaum (magnesium silicate) was reported by Thomas Henry in 1789, who said that it was much used in Turkey to make pipes for smoking tobacco.An impure form of metallic magnesium was first produced in 1792 by Anton Rupprecht who heated magnesia with charcoal. A pure, but tiny, amount of the metal was isolated in 1808 by Humphry Davy by the electrolysis of magnesium oxide. However, it was the French scientist, Antoine-Alexandre-Brutus Bussy who made a sizeable amount of the metal in 1831 by reacting magnesium chloride with potassium, and he then studied its properties.");
     atom[11].melting_point = 923;
@@ -304,8 +306,8 @@ extern void table()
 
     strcpy(atom[12].name,"ALUMINIUM");        
     strcpy(atom[12].symbol,"Al");        
-    atom[12].atomicnum=13;        
-    atom[12].atomicwt=1.008;
+    atom[12].atomic_number=13;        
+    atom[12].atomic_weight=1.008;
     strcpy(atom[12].electronic_configuration,"[Ne] 3s23p1");
     strcpy(atom[12].history,"The analysis of a curious metal ornament found in the tomb of Chou-Chu, a military leader in 3rd century China, turned out to be 85% aluminium. How it was produced remains a mystery. By the end of the 1700s, aluminium oxide was known to contain a metal, but it defeated all attempts to extract it. Humphry Davy had used electric current to extract sodium and potassium from their so-called ‘earths’ (oxides), but his method did not release aluminium in the same way. The first person to produce it was Hans Christian Oersted at Copenhagen, Denmark, in 1825, and he did it by heating aluminium chloride with potassium. Even so, his sample was impure. It fell to the German chemist Friedrich Wöhler to perfect the method in 1827, and obtain pure aluminium for the first time by using sodium instead of potassium.");
     atom[12].melting_point = 933.47;
@@ -326,8 +328,8 @@ extern void table()
 
     strcpy(atom[13].name,"SILICON");        
     strcpy(atom[13].symbol,"Si");        
-    atom[13].atomicnum=14;        
-    atom[13].atomicwt=28.08;
+    atom[13].atomic_number=14;        
+    atom[13].atomic_weight=28.08;
     strcpy(atom[13].electronic_configuration,"[Ne] 3s23p2");
     strcpy(atom[13].history,"Silica (SiO2) in the form of sharp flints were among the first tools made by humans. The ancient civilizations used other forms of silica such as rock crystal, and knew how to turn sand into glass. Considering silicon’s abundance, it is somewhat surprising that it aroused little curiosity among early chemists.Attempts to reduce silica to its components by electrolysis had failed. In 1811, Joseph Gay Lussac and Louis Jacques Thénard reacted silicon tetrachloride with potassium metal and produced some very impure form of silicon. The credit for discovering silicon really goes to the Swedish chemist Jöns Jacob Berzelius of Stockholm who, in 1824, obtained silicon by heating potassium fluorosilicate with potassium. The product was contaminated with potassium silicide, but he removed this by stirring it with water, with which it reacts, and thereby obtained relatively pure silicon powder.");
     atom[13].melting_point = 1687;
@@ -348,8 +350,8 @@ extern void table()
 
     strcpy(atom[14].name,"PHOSPHOROUS");        
     strcpy(atom[14].symbol,"P");        
-    atom[14].atomicnum=15;        
-    atom[14].atomicwt=30.97;
+    atom[14].atomic_number=15;        
+    atom[14].atomic_weight=30.97;
     strcpy(atom[14].electronic_configuration,"[Ne] 3s23p3");
     strcpy(atom[14].history,"Phosphorus was first made by Hennig Brandt at Hamburg in 1669 when he evaporated urine and heated the residue until it was red hot, whereupon phosphorus vapour distilled which he collected by condensing it in water. Brandt kept his discovery secret, thinking he had discovered the Philosopher’s Stone that could turn base metals into gold. When he ran out of money, he sold phosphorus to Daniel Kraft who exhibited it around Europe including London where Robert Boyle was fascinated by it. He discovered how it was produced and investigated it systematically. (His assistant Ambrose Godfrey set up his own business making and selling phosphorus and became rich.)When it was realised that bone was calcium phosphate, and could be used to make phosphorus, and it became more widely available. Demand from match manufacturers in the 1800s ensured a ready market.");
     atom[14].melting_point = 317.3;
@@ -370,8 +372,8 @@ extern void table()
 
     strcpy(atom[15].name,"SULPHUR");        
     strcpy(atom[15].symbol,"S");        
-    atom[15].atomicnum=16;        
-    atom[15].atomicwt=32.06;
+    atom[15].atomic_number=16;        
+    atom[15].atomic_weight=32.06;
     strcpy(atom[15].electronic_configuration,"[Ne] 3s23p4");
     strcpy(atom[15].history,"Sulfur is mentioned 15 times in the Bible, and was best known for destroying Sodom and Gomorrah. It was also known to the ancient Greeks, and burnt as a fumigant. Sulfur was mined near Mount Etna in Sicily and used for bleaching cloth and preserving wine, both of which involved burning it to form sulfur dioxide, and allowing this to be absorbed by wet clothes or the grape juice. For centuries, sulfur along with mercury and salt, was believed to be a component of all metals and formed the basis of alchemy whereby one metal could be transmuted into another.Antoine Lavoisier thought that sulfur was an element, but in 1808 Humphry Davy said it contained hydrogen. However, his sample was impure and when Louis-Josef Gay-Lussac and Louis-Jacques Thénard proved it to be an element the following year, Davy eventually agreed.");
     atom[15].melting_point = 388.36;
@@ -392,8 +394,8 @@ extern void table()
 
     strcpy(atom[16].name,"CHLORINE");        
     strcpy(atom[16].symbol,"Cl");        
-    atom[16].atomicnum=17;        
-    atom[16].atomicwt=35.45;
+    atom[16].atomic_number=17;        
+    atom[16].atomic_weight=35.45;
     strcpy(atom[16].electronic_configuration,"[Ne] 3s23p5");
     strcpy(atom[16].history,"Hydrochloric acid (HCl) was known to the alchemists. The gaseous element itself was first produced in 1774 by Carl Wilhelm Scheele at Uppsala, Sweden, by heating hydrochloric acid with the mineral pyrolusite which is naturally occuring manganese dioxide, MnO2. A dense, greenish-yellow gas was evolved which he recorded as having a choking smell and which dissolved in water to give an acid solution. He noted that it bleached litmus paper, and decolourised leaves and flowers.Humphry Davy investigated it in 1807 and eventually concluded not only that it was a simple substance, but that it was truly an element. He announced this in 1810 and yet it took another ten years for some chemists finally to accept that chlorine really was an element.");
     atom[16].melting_point = 171.7;
@@ -414,8 +416,8 @@ extern void table()
 
     strcpy(atom[17].name,"ARGON");        
     strcpy(atom[17].symbol,"Ar");        
-    atom[17].atomicnum=18;        
-    atom[17].atomicwt=39.94;
+    atom[17].atomic_number=18;        
+    atom[17].atomic_weight=39.94;
     strcpy(atom[17].electronic_configuration,"[Ne] 3s23p6");
     strcpy(atom[17].history,"Although argon is abundant in the Earth’s atmosphere, it evaded discovery until 1894 when Lord Rayleigh and William Ramsay first separated it from liquid air. In fact the gas had been isolated in 1785 by Henry Cavendish who had noted that about 1% of air would not react even under the most extreme conditions. That 1% was argon.Argon was discovered as a result of trying to explain why the density of nitrogen extracted from air differed from that obtained by the decomposition of ammonia.Ramsay removed all the nitrogen from the gas he had extracted from air, and did this by reacting it with hot magnesium, forming the solid magnesium nitride. He was then left with a gas that would not react and when he examined its spectrum he saw new groups of red and green lines, confirming that it was a new element.");
     atom[17].melting_point = 83.81;
@@ -436,8 +438,8 @@ extern void table()
 
     strcpy(atom[18].name,"POTASSIUM");        
     strcpy(atom[18].symbol,"K");        
-    atom[18].atomicnum=19;        
-    atom[18].atomicwt=39.09;
+    atom[18].atomic_number=19;        
+    atom[18].atomic_weight=39.09;
     strcpy(atom[18].electronic_configuration,"[Ar] 4s1");
     strcpy(atom[18].history,"Potassium salts in the form of saltpetre (potassium nitrate, KNO3), alum (potassium aluminium sulfate, KAl(SO4)2), and potash (potassium carbonate, K2CO3) have been known for centuries. They were used in gunpowder, dyeing, and soap making. They were scraped from the walls of latrines, manufactured from clay and sulfuric acid, and collected as wood ash respectively. Reducing them to the element defeated the early chemists and potassium was classed as an ‘earth’ by Antoine Lavoisier. Then in 1807, Humphry Davy exposed moist potash to an electric current and observed the formation of metallic globules of a new metal, potassium. He noted that when they were dropped into water they skimmed around on the surface, burning with a lavender-coloured flame.");
     atom[18].melting_point = 336.7;
@@ -458,8 +460,8 @@ extern void table()
 
     strcpy(atom[19].name,"CALICUM");        
     strcpy(atom[19].symbol,"Ca");        
-    atom[19].atomicnum=20;        
-    atom[19].atomicwt=40.07;
+    atom[19].atomic_number=20;        
+    atom[19].atomic_weight=40.07;
     strcpy(atom[19].electronic_configuration,"[Ar] 4s2");
     strcpy(atom[19].history,"Lime (calcium oxide, CaO) was the useful material obtained by heating limestone and used for centuries to make plaster and mortar. Antoine Lavoisier classified it as an ‘earth’ because it seemed impossible to reduce it further, but he suspected it was the oxide of an unknown element. In 1808, Humphry Davy tried to reduce moist lime by electrolysis, just as he had done with sodium and potassium, but he was not successful. So he tried a mixture of lime and mercury oxide and while this produced an amalgam of calcium and mercury, it was not enough to confirm that he’d obtained a new element. (Jöns Jacob Berzelius had conducted a similar experiment and also obtained the amalgam.) Davy tried using more lime in the mixture and produced more of the amalgam from which he distilled off the mercury leaving just calcium.");
     atom[19].melting_point = 1115;
@@ -480,8 +482,8 @@ extern void table()
 
     strcpy(atom[20].name,"SCANDIUM");        
     strcpy(atom[20].symbol,"Sc");        
-    atom[20].atomicnum=21;        
-    atom[20].atomicwt=44.95;
+    atom[20].atomic_number=21;        
+    atom[20].atomic_weight=44.95;
     strcpy(atom[20].electronic_configuration,"[Ar] 3d14s2");
     strcpy(atom[20].history,"In 1869, Mendeleev noticed that there was a gap in atomic weights between calcium (40) and titanium (48) and predicted there was an undiscovered element of intermediate atomic weight. He forecast that its oxide would be X2O3. It was discovered as scandium in 1879, by Lars Frederik Nilson of the University of Uppsala, Sweden. He extracted it from euxenite, a complex mineral containing eight metal oxides. He had already extracted erbium oxide from euxenite, and from this oxide he obtained ytterbium oxide and then another oxide of a lighter element whose atomic spectrum showed it to be an unknown metal. This was the metal that Mendeleev had predicted and its oxide was Sc2O3.Scandium metal itself was only produced in 1937 by the electrolysis of molten scandium chloride.");
     atom[20].melting_point = 1814;
@@ -502,8 +504,8 @@ extern void table()
 
     strcpy(atom[21].name,"TITANIUM");        
     strcpy(atom[21].symbol,"Ti");        
-    atom[21].atomicnum=22;        
-    atom[21].atomicwt=47.86;
+    atom[21].atomic_number=22;        
+    atom[21].atomic_weight=47.86;
     strcpy(atom[21].electronic_configuration,"[Ar] 3d24s2");
     strcpy(atom[21].history,"The first titanium mineral, a black sand called menachanite, was discovered in 1791 in Cornwall by the Reverend William Gregor. He analysed it and deduced it was made up of the oxides of iron and an unknown metal, and reported it as such to the Royal Geological Society of Cornwall.In 1795, the German scientist Martin Heinrich Klaproth of Berlin investigated a red ore known as Schörl from Hungary. This is a form of rutile (TiO2) and Klaproth realised it was the oxide of a previously unknown element which he named titanium. When he was told of Gregor’s discovery he investigated menachanite and confirmed it too contained titanium.It was not until 1910 that M. A. Hunter, working for General Electric in the USA, made pure titanium metal by heating titanium tetrachloride and sodium metal.");
     atom[21].melting_point = 1943;
@@ -524,8 +526,8 @@ extern void table()
 
     strcpy(atom[22].name,"VANADIUM");        
     strcpy(atom[22].symbol,"V");        
-    atom[22].atomicnum=23;        
-    atom[22].atomicwt=50.94;
+    atom[22].atomic_number=23;        
+    atom[22].atomic_weight=50.94;
     strcpy(atom[22].electronic_configuration,"[Ar] 3d34s2");
     strcpy(atom[22].history,"Vanadium was discovered twice. The first time was in 1801 by Andrés Manuel del Rio who was Professor of Mineralogy in Mexico City. He found it in a specimen of vanadite, Pb5(VO4)3Cl and sent a sample to Paris. However, French chemists concluded that it was a chromium mineral.The second time vanadium was discovered was in 1831 by the Swedish chemist Nil Gabriel Selfström at Stockholm. He separated it from a sample of cast iron made from ore that had been mined at Småland. He was able to show that it was a new element, and in so doing he beat a rival chemist, Friedrich Wöhler, to the discovery He was also working another vanadium mineral from Zimapan.Pure vanadium was produced by Henry Roscoe at Manchester, in 1869, and he showed that previous samples of the metal were really vanadium nitride (VN).");
     atom[22].melting_point = 2183;
@@ -546,8 +548,8 @@ extern void table()
 
     strcpy(atom[23].name,"CHROMIUM");        
     strcpy(atom[23].symbol,"Cr");        
-    atom[23].atomicnum=24;        
-    atom[23].atomicwt=51.99;
+    atom[23].atomic_number=24;        
+    atom[23].atomic_weight=51.99;
     strcpy(atom[23].electronic_configuration,"[Ar] 3d54s1 ");
     strcpy(atom[23].history,"Chromium was discovered by the French chemist Nicholas Louis Vauquelin at Paris in1798. He was intrigued by a bright red mineral that had been discovered in a Siberian gold mine in 1766 and was referred to as Siberian red lead. It is now known as crocoite and is a form of lead chromate. Vauquelin analysed it and confirmed that it was a lead mineral. Then he dissolved it in acid, precipitated the lead, filtered this off, and focused his attention on the remaining liquor from which he succeeded in isolating chromium. Intrigued by the range of colours that it could produce in solution, he named it chromium from the Greek word chroma meaning colour. He then discovered that the green colouration of emeralds was also due to chromium");
     atom[23].melting_point = 2180;
@@ -568,8 +570,8 @@ extern void table()
 
     strcpy(atom[24].name,"MANGANESE");        
     strcpy(atom[24].symbol,"Mg");        
-    atom[24].atomicnum=25;        
-    atom[24].atomicwt=54.84;
+    atom[24].atomic_number=25;        
+    atom[24].atomic_weight=54.84;
     strcpy(atom[24].electronic_configuration,"[Ar] 3d54s2 ");
     strcpy(atom[24].history,"Manganese in the form of the black ore pyrolucite (manganese dioxide, MnO2) was used by the pre-historic cave painters of the Lascaux region of France around 30,000 years ago. In more recent times was used by glass makers to remove the pale greenish tint of natural glass.In 1740, the Berlin glass technologist Johann Heinrich Pott investigated it chemically and showed that it contained no iron as has been assumed. From it he was able to make potassium permanganate (KMnO4), one of the strongest oxidising agents known. Several chemists in the 1700s tried unsuccessfully to isolate the metal component in pyrolusite. The first person to do this was the Swedish chemist and mineralogist Johan Gottlieb Gahn in 1774. However, a student at Vienna, Ignatius Kaim, had already described how he had produced manganese metal, in his dissertation written in 1771.");
     atom[24].melting_point = 1519;
@@ -590,8 +592,8 @@ extern void table()
 
     strcpy(atom[25].name,"IRON");        
     strcpy(atom[25].symbol,"Fe");        
-    atom[25].atomicnum=26;        
-    atom[25].atomicwt=55.84;
+    atom[25].atomic_number=26;        
+    atom[25].atomic_weight=55.84;
     strcpy(atom[25].electronic_configuration,"[Ar] 3d64s2");
     strcpy(atom[25].history,"Iron objects have been found in Egypt dating from around 3500 BC. They contain about 7.5% nickel, which indicates that they were of meteoric origin.The ancient Hittites of Asia Minor, today’s Turkey, were the first to smelt iron from its ores around 1500 BC and this new, stronger, metal gave them economic and political power. The Iron Age had begun. Some kinds of iron were clearly superior to others depending on its carbon content, although this was not appreciated. Some iron ore contained vanadium producing so-called Damascene steel, ideal for swords.The first person to explain the various types of iron was René Antoine Ferchault de Réaumur who wrote a book on the subject in 1722. This explained how steel, wrought iron, and cast iron, were to be distinguished by the amount of charcoal (carbon) they contained. The Industrial Revolution which began that same century relied extensively on this metal.");
     atom[25].melting_point = 1811;
@@ -613,8 +615,8 @@ extern void table()
 
     strcpy(atom[26].name,"COBALT");        
     strcpy(atom[26].symbol,"Co");        
-    atom[26].atomicnum=27;        
-    atom[26].atomicwt=58.93;
+    atom[26].atomic_number=27;        
+    atom[26].atomic_weight=58.93;
     strcpy(atom[26].electronic_configuration,"[Ar] 3d74s2");
     strcpy(atom[26].history,"The tomb of Pharaoh Tutankhamen, who ruled from 1361-1352 BC, contained a small glass object coloured deep blue with cobalt. Cobalt blue was known even earlier in China and was used for pottery glazes.In 1730, chemist Georg Brandt of Stockholm became interested in a dark blue ore from some local copper workings and he eventually proved that it contained a hitherto unrecognised metal and he gave it the name by which its ore was cursed by miners in Germany, where it was sometimes mistaken for a silver ore. He published his results in 1739. For many years his claim to have uncovered a new metal was disputed by other chemists who said his new element was really a compound of iron and arsenic, but eventually it was recognised as an element in its own right.");
     atom[26].melting_point = 1768;
@@ -635,8 +637,8 @@ extern void table()
 
     strcpy(atom[27].name,"NICKEL");        
     strcpy(atom[27].symbol,"Ni");        
-    atom[27].atomicnum=28;        
-    atom[27].atomicwt=58.69;
+    atom[27].atomic_number=28;        
+    atom[27].atomic_weight=58.69;
     strcpy(atom[27].electronic_configuration,"[Ar] 3d84s2 ");
     strcpy(atom[27].history,"Meteorites contain both iron and nickel, and earlier ages used them as a superior form of iron. Because the metal did not rust, it was regarded by the natives of Peru as a kind of silver. A zinc-nickel alloy called pai-t’ung (white copper) was in use in China as long ago as 200 BC. Some even reached Europe.In 1751, Axel Fredrik Cronstedt, working at Stockholm, investigated a new mineral – now called nickeline (NiAs) – which came from a mine at Los, Hälsingland, Sweden. He thought it might contain copper but what he extracted was a new metal which he announced and named nickel in 1754. Many chemists thought it was an alloy of cobalt, arsenic, iron and copper – these elements were present as trace contaminants. It was not until 1775 that pure nickel was produced by Torbern Bergman and this confirmed its elemental nature.");
     atom[27].melting_point = 1728;
@@ -657,8 +659,8 @@ extern void table()
 
     strcpy(atom[28].name,"COPPER");        
     strcpy(atom[28].symbol,"Cu");        
-    atom[28].atomicnum=29;
-    atom[28].atomicwt=63.54;
+    atom[28].atomic_number=29;
+    atom[28].atomic_weight=63.54;
     strcpy(atom[28].electronic_configuration,"[Ar] 3d104s1 ");
     strcpy(atom[28].history,"Copper beads have been excavated in northern Iraq and which are more than ten thousand years old and presumably made from native copper, nuggets of which can sometimes be found. Copper was widely used in the ancient world as bronze, its alloy with tin, which was used to make cutlery, coins, and tools. In China it was used for bells.Copper is not difficult to extract from it ores, but mineable deposits were relatively rare. Some, such as the copper mine at Falun, Sweden, date from the 1200s, were the source of great wealth. One way to extract the metal was to roast the sulfide ore then leach out the copper sulfate that was formed, with water. This was then trickled over scrap iron on the surface of which the copper deposited, forming a flaky layer that was easily removed.");
     atom[28].melting_point = 1357.7;
@@ -679,8 +681,8 @@ extern void table()
 
     strcpy(atom[29].name,"ZINC");        
     strcpy(atom[29].symbol,"Zn");        
-    atom[29].atomicnum=30;        
-    atom[29].atomicwt=65.39;
+    atom[29].atomic_number=30;        
+    atom[29].atomic_weight=65.39;
     strcpy(atom[29].electronic_configuration,"[Ar] 3d104s2");
     strcpy(atom[29].history,"Zinc was known to the Romans but rarely used. It was first recognised as a metal in its own right in India and the waste from a zinc smelter at Zawar, in Rajasthan, testifies to the large scale on which it was refined during the period 1100 to the 1500.Zinc refining in China was carried out on a large scale by the 1500s. An East India Company ship which sank off the coast of Sweden in 1745 was carrying a cargo of Chinese zinc and analysis of reclaimed ingots showed them to be almost the pure metal.In 1668, a Flemish metallurgist, P. Moras de Respour, reported the extraction of metallic zinc from zinc oxide, but as far as Europe was concerned zinc was discovered by the German chemist Andreas Marggraf in 1746, and indeed he was the first to recognise it as a new metal.");
     atom[29].melting_point =  692.67;
@@ -701,8 +703,8 @@ extern void table()
 
     strcpy(atom[30].name,"GALLIUM");       
     strcpy(atom[30].symbol,"Ga");        
-    atom[30].atomicnum=31;        
-    atom[30].atomicwt=69.72;
+    atom[30].atomic_number=31;        
+    atom[30].atomic_weight=69.72;
     strcpy(atom[30].electronic_configuration,"[Ar] 3d104s24p1 ");
     strcpy(atom[30].history,"Gallium was discovered in Paris by Paul-Émile Lecoq de Boisbaudran in 1875. He observed a new violet line in the atomic spectrum of some zinc he had extracted from a sample of zinc blende ore (ZnS) from the Pyrenees. He knew it meant that an unknown element was present. What Boisbaudran didn’t realise was that its existence, and properties, had been predicted by Mendeleev whose periodic table showed there was a gap below aluminium which was yet to be occupied. He forecast that the missing element’s atomic weight would be around 68 and its density would be 5.9 g/cm3.By November of 1875, Boisbaudran had isolated and purified the new metal and shown that it was like aluminium. In December 1875 he announced it to the French Academy of Sciences.");
     atom[30].melting_point = 302.91;
@@ -723,8 +725,8 @@ extern void table()
 
     strcpy(atom[31].name,"GERMANIUM");        
     strcpy(atom[31].symbol,"Ge");        
-    atom[31].atomicnum=32;        
-    atom[31].atomicwt=72.64;
+    atom[31].atomic_number=32;        
+    atom[31].atomic_weight=72.64;
     strcpy(atom[31].electronic_configuration,"[Ar] 3d104s24p2");
     strcpy(atom[31].history,"Germanium was discovered by Clemens A. Winkler at Freiberg, Germany, in 1886. Its existence had been predicted by Mendeleev who predicted its atomic weight would be about 71 and that its density around 5.5 g/cm3. In September 1885 a miner working in the Himmelsfürst silver mine near Freiberg, came across an unusual ore. It was passed to Albin Weisbach at the nearby Mining Academy who certified it was a new mineral, and asked his colleague Winkler to analyse it. He found its composition to be 75% silver, 18% sulfur, and 7% he could not explain. By February 1886, he realised it was a new metal-like element and as its properties were revealed, it became clear that it was the missing element below silicon as Mendeleev had predicted. The mineral from which it came we know as argyrodite, Ag8GeS6.");
     atom[31].melting_point = 1211.4;
@@ -745,8 +747,8 @@ extern void table()
 
     strcpy(atom[32].name,"ARSENIC");        
     strcpy(atom[32].symbol,"As");        
-    atom[32].atomicnum=33;        
-    atom[32].atomicwt=74.92;
+    atom[32].atomic_number=33;        
+    atom[32].atomic_weight=74.92;
     strcpy(atom[32].electronic_configuration,"[Ar] 3d104s24p3");
     strcpy(atom[32].history,"Arsenic was known to the ancient Egyptian, and is mentioned in one papyrus as a ways of gilding metals. The Greek philosopher Theophrastus knew of two arsenic sulfide minerals: orpiment (As2S3) and realgar (As4S4). The Chinese also knew about arsenic as the writings of Pen Ts’ao Kan-Mu. He compiled his great work on the natural world in the 1500s, during the Ming dynasty. He noted the toxicity associated with arsenic compounds and mentioned their use as pesticides in rice fields. A more dangerous form of arsenic, called white arsenic, has also been long known. This was the trioxide, As2O3, and was a by-product of copper refining. When this was mixed with olive oil and heated it yielded arsenic metal itself. The discovery of the element arsenic is attributed to Albertus Magnus in the 1200s.");
     atom[32].melting_point = 889;
@@ -767,8 +769,8 @@ extern void table()
 
     strcpy(atom[33].name,"SELENIUM");        
     strcpy(atom[33].symbol,"Se");        
-    atom[33].atomicnum=34;       
-    atom[33].atomicwt=78.96;
+    atom[33].atomic_number=34;       
+    atom[33].atomic_weight=78.96;
     strcpy(atom[33].electronic_configuration,"[Ar] 3d104s24p4 ");
     strcpy(atom[33].history,"Selenium was discovered by Jöns Jacob Berzelius at Stockholm in 1817. He had shares in a sulfuric acid works and he was intrigued by a red-brown sediment which collected at the bottom of the chambers in which the acid was made. At first he thought it was the element tellurium because it gave off a strong smell of radishes when heated, but he eventually realised that it was in fact a new element. He also noted that it was like sulfur and indeed had properties intermediate between sulfur and tellurium. Berzelius found that selenium was present in samples of tellurium and gave that element its characteristic smell. He also became affected by it personally – it can be absorbed through the skin – and it caused him to experience the bad breath associated with those who work with this element.");
     atom[33].melting_point = 494;
@@ -789,8 +791,8 @@ extern void table()
 
     strcpy(atom[34].name,"BROMINE");        
     strcpy(atom[34].symbol,"Br");        
-    atom[34].atomicnum=35;        
-    atom[34].atomicwt=79.90;
+    atom[34].atomic_number=35;        
+    atom[34].atomic_weight=79.90;
     strcpy(atom[34].electronic_configuration,"[Ar] 3d104s24p5 ");
     strcpy(atom[34].history,"Antoine-Jérôme Balard discovered bromine while investigating some salty water from Montpellier, France. He took the concentrated residue which remained after most of the brine had evaporated and passed chlorine gas into it. In so doing he liberated an orange-red liquid which he deduced was a new element. He sent an account of his findings to the French Academy’s journal in 1826. A year earlier, a student at Heidelberg, Carl Löwig, had brought his professor a sample of bromine which he had produced from the waters of a natural spring near his home at Keruznach. He was asked to produce more of it, and while he was doing so Balard published his results and so became known at its discoverer.");
     atom[34].melting_point = 266;
@@ -811,8 +813,8 @@ extern void table()
 
     strcpy(atom[35].name,"KRYPTON");        
     strcpy(atom[35].symbol,"Kr");        
-    atom[35].atomicnum=36;        
-    atom[35].atomicwt=83.80;
+    atom[35].atomic_number=36;        
+    atom[35].atomic_weight=83.80;
     strcpy(atom[35].electronic_configuration,"[Ar] 3d104s24p6");
     strcpy(atom[35].history,"Having discovered the noble gas argon, extracted from air, William Ramsay and Morris William Travers of University College, London, were convinced this must be one of a new group of elements of the periodic table. They decided others were likely to be hidden in the argon and by a process of liquefaction and evaporation they hoped it might leave behind a heavier component, and it did. It yielded krypton in the afternoon of 30th May 1898, and they were able to isolate about 25 cm3 of the new gas. This they immediately tested in a spectrometer, and saw from its atomic spectrum that it was a new element.");
     atom[35].melting_point = 115.78;
@@ -833,8 +835,8 @@ extern void table()
 
     strcpy(atom[36].name,"RUBIDIUM");        
     strcpy(atom[36].symbol,"Rb");        
-    atom[36].atomicnum=37;      
-    atom[36].atomicwt=85.46;
+    atom[36].atomic_number=37;      
+    atom[36].atomic_weight=85.46;
     strcpy(atom[36].electronic_configuration,"[Kr] 5s1 ");
     strcpy(atom[36].history,"The lithium potassium mineral lepidolite was discovered in the 1760s and it behaved oddly. When thrown on to glowing coals it frothed and then hardened like glass. Analysis showed it to contain lithium and potassium, but it held a secret: rubidium. In 1861, Robert Bunsen and Gustav Kirchhoff, of the University of Heidelberg, dissolved the ore in acid and then precipitated the potassium it contained which carried down another heavier alkali metal. By carefully washing this precipitate with boiling water they removed the more soluble potassium component and then confirmed that they really had a new element by examining the atomic spectrum of what remained. This showed two intense ruby red lines never seen before, indicating a new element, which they named after this colour. A sample of pure rubidium metal was eventually produced in 1928.");
     atom[36].melting_point = 312.45;
@@ -855,8 +857,8 @@ extern void table()
 
     strcpy(atom[37].name,"STRONTIUM");        
     strcpy(atom[37].symbol,"Sr");        
-    atom[37].atomicnum=38;        
-    atom[37].atomicwt=87.62;
+    atom[37].atomic_number=38;        
+    atom[37].atomic_weight=87.62;
     strcpy(atom[37].electronic_configuration,"[Kr] 5s2");
     strcpy(atom[37].history,"In 1787, an unusual rock which had been found in a lead mine at Strontian, Scotland, was investigated by Adair Crawford, an Edinburgh doctor. He realised it was a new mineral containing an unknown ‘earth’ which he named strontia. In 1791, another Edinburgh man, Thomas Charles Hope, made a fuller investigation of it and proved it was a new element. He also noted that it caused the flame of a candle to burn red. Meanwhile Martin Heinrich Klaproth in Germany was working with the same mineral and he produced both strontium oxide and strontium hydroxide. Strontium metal itself was isolated in 1808 at the Royal Institution in London by Humphry Davy by means of electrolysis, using the method with which he had already isolated sodium and potassium.");
     atom[37].melting_point = 1050;
@@ -877,8 +879,8 @@ extern void table()
 
     strcpy(atom[38].name,"YTTRIUM");        
     strcpy(atom[38].symbol,"Y");        
-    atom[38].atomicnum=39;        
-    atom[38].atomicwt=88.90;
+    atom[38].atomic_number=39;        
+    atom[38].atomic_weight=88.90;
     strcpy(atom[38].electronic_configuration,"[Kr] 4d15s2");
     strcpy(atom[38].history,"In 1787, Karl Arrhenius came across an unusual black rock in an old quarry at Ytterby, near Stockholm. He thought he had found a new tungsten mineral, and passed the specimen over to Johan Gadolin based in Finland. In 1794, Gadolin announced that it contained a new 'earth' which made up 38 per cent of its weight. It was called an’ earth’ because it was yttrium oxide, Y2O3, which could not be reduced further by heating with charcoal. The metal itself was first isolated in 1828 by Friedrich Wöhler and made by reacting yttrium chloride with potassium. Yet, yttrium was still hiding other elements. In 1843, Carl Mosander investigated yttrium oxide more thoroughly and found that it consisted of three oxides: yttrium oxide, which was white; terbium oxide, which was yellow; and erbium oxide, which was rose-coloured.");
     atom[38].melting_point = 1795;
@@ -899,8 +901,8 @@ extern void table()
 
     strcpy(atom[39].name,"ZIRCONIUM");        
     strcpy(atom[39].symbol,"Zr");        
-    atom[39].atomicnum=40;
-    atom[39].atomicwt=91.22;
+    atom[39].atomic_number=40;
+    atom[39].atomic_weight=91.22;
     strcpy(atom[39].electronic_configuration,"[Kr] 4d25s2");
     strcpy(atom[39].history,"Gems that contain zirconium were known in ancient times as zircon. In 1789, the German chemist, Martin Klaproth analysed a zircon and separated zirconium in the form of its ‘earth’ zirconia, which is the oxide ZrO2. Klaproth failed to isolate the pure metal itself, and Humphry Davy also failed when he tried electrolysis in 1808. It was not until 1824 that the element was isolated, when the Swedish chemist Jöns Berzelius heated potassium hexafluorozirconate (K2ZrF6) with potassium metal and obtained some zirconium as a black powder. Totally pure zirconium was only produced in 1925 by the Dutch chemists Anton Eduard van Arkel and Jan Hendrik de Boer by the decomposition of zirconium tetraiodide (ZrI4)");
     atom[39].melting_point = 2127;
@@ -920,849 +922,302 @@ extern void table()
 
 
     strcpy(atom[40].name,"NIOBIUM");
+        
     strcpy(atom[40].symbol,"Nb");
-    atom[40].atomicnum=41;       
-    atom[40].atomicwt=92.90;
-    strcpy(atom[0].electronic_configuration,"Kr 4d⁴ 5s¹");
-    strcpy(atom[0].history,"Niobium was discovered in 1801 by Charles Hatchett in an ore called columbite sent to England in the 1750s by John Winthrop the Younger, the first goveror of Connecticut, USA. ... The metal niobium was first prepared in 1864 by Blomstrand, who reduced the chloride by heating it in a hydrogen atmosphere.");
-    atom[0].melting_point = 2,477 °C;
-    atom[0].boiling_point = 4,927 °C;
-    atom[0].ionic_radius = 207 pm;
-    atom[0].isotopes = 18;
-    atom[0].electronegativity = 1.6;
-    strcpy(atom[0].color," silvery-white");
-    atom[0].group = 5;
-    atom[0].period = 5;
-    strcpy(atom[0].conductivity,"Thermal & Electrical Conductivity");
-    strcpy(atom[0].luster,"bright metallic luster");
-    strcpy(atom[0].phase,"Solid");
-    atom[0].density = 8.57;
-    strcpy(atom[0].image_path,"");
-	
-	
-    strcpy(atom[41].name,"MOLYBDENUM");       
+        
+    atom[40].atomic_number=41;
+        
+    atom[40].atomic_weight=92.90;
+    strcpy(atom[41].name,"MOLYBDENUM");
+        
     strcpy(atom[41].symbol,"Mo");
-    atom[41].atomicnum=42;      
-    atom[41].atomicwt=95.94;
-    strcpy(atom[0].electronic_configuration,"[Kr] 4d₅ 5s₁");
-    strcpy(atom[0].history," Molybdenum was discovered by Carl Welhelm Scheele, a Swedish chemist, in 1778 in a mineral known as molybdenite (MoS2) which had been confused as a lead compound. Molybdenum was isolated by Peter Jacob Hjelm in 1781");
-    atom[0].melting_point = 2,623 °C;
-    atom[0].boiling_point = 4,639 °C;
-    atom[0].ionic_radius = 0.068 nm (+4) ; 0.06 nm (+6);
-    atom[0].isotopes = 7;
-    atom[0].electronegativity = 2.16;
-    strcpy(atom[0].color,"silvery-grey");
-    atom[0].group = 6;
-    atom[0].period = 5;
-    strcpy(atom[0].conductivity,"Thermal Conductivity");
-    strcpy(atom[0].luster,"metallic luster");
-    strcpy(atom[0].phase,"Solid");
-    atom[0].density = 10.22 g/cm3;
-    strcpy(atom[0].image_path,"");
 
-
-    strcpy(atom[42].name,"TECHNETIUM");       
-    strcpy(atom[42].symbol,"Tc");       
-    atom[42].atomicnum=43;        
-    atom[42].atomicwt=98.00;
-    strcpy(atom[0].electronic_configuration,"Kr 4d5 5s2");
-    strcpy(atom[0].history,"Technetium was discovered by Emilio Segrè in 1937 in Italy. He investigated molybdenum from California which had been exposed to high energy radiation and he found technetium to be present and separated it. Today, this element is extracted from spent nuclear fuel rods in tonne quantities.");
-    atom[0].melting_point = 2,157 °C;
-    atom[0].boiling_point = 4,265 °C;
-    atom[0].ionic_radius = 205 pm;
-    atom[0].isotopes = 22;
-    atom[0].electronegativity = 1.9;
-    strcpy(atom[0].color,"silvery-grey");
-    atom[0].group = 7;
-    atom[0].period = 5;
-    strcpy(atom[0].conductivity,"Thermal Conductivity");
-    strcpy(atom[0].luster,"No luster");
-    strcpy(atom[0].phase,"Solid");
-    atom[0].density = 11.5 g.cm-3 at 20°C;
-    strcpy(atom[0].image_path,"");
-	
-	
-	
-    strcpy(atom[43].name,"RUTHENIUM");      
-    strcpy(atom[43].symbol,"Ru");       
-    atom[43].atomicnum=44;       
-    atom[43].atomicwt=101.07;
-    strcpy(atom[0].electronic_configuration,"[Kr] 4d7 5s1");
-    strcpy(atom[0].history," Ruthenium was discovered by Karl Karlovich Klaus, a Russian chemist, in 1844 while analyzing the residue of a sample of platinum ore obtained from the Ural mountains. ... Small amounts of ruthenium are added to platinum and palladium to strengthen them.");
-    atom[0].melting_point = 2,334 °C;
-    atom[0].boiling_point = 4,150 °C;
-    atom[0].ionic_radius = 205 pm;
-    atom[0].isotopes = 7;
-    atom[0].electronegativity = 2.2;
-    strcpy(atom[0].color,"silvery white");
-    atom[0].group = 8;
-    atom[0].period = 5;
-    strcpy(atom[0].conductivity,"Thermal and Electrical Conductivity");
-    strcpy(atom[0].luster,"Hard luster");
-    strcpy(atom[0].phase,"Solid");
-    atom[0].density = 12.2 g.cm-3 at 20°C;
-    strcpy(atom[0].image_path,"");
-	
+    atom[41].atomic_number=42;
+        
+    atom[41].atomic_weight=95.94;
+    strcpy(atom[42].name,"TECHNETIUM");
+        
+    strcpy(atom[42].symbol,"Tc");
+        
+    atom[42].atomic_number=43;
+        
+    atom[42].atomic_weight=98.00;
+    strcpy(atom[43].name,"RUTHENIUM");
+        
+    strcpy(atom[43].symbol,"Ru");
+        
+    atom[43].atomic_number=44;
+        
+    atom[43].atomic_weight=101.07;
 
     strcpy(atom[44].name,"RHODIUM");
+        
     strcpy(atom[44].symbol,"Rh");
-    atom[44].atomicnum=45;
-    atom[44].atomicwt=102.90;
-    strcpy(atom[0].electronic_configuration,"Kr 4d8 5s1");
-    strcpy(atom[0].history,"Rhodium was discovered in 1803 by William Wollaston. He collaborated with Smithson Tennant in a commercial venture, part of which was to produce pure platinum for sale. The first step in the process was to dissolve ordinary platinum in aqua regia (nitric acid + hydrochloric acid).");
-    atom[0].melting_point = 1,964 °C;
-    atom[0].boiling_point = 3,697 °C;
-    atom[0].ionic_radius = 200 pm;
-    atom[0].isotopes = 1;
-    atom[0].electronegativity = 2.28;
-    strcpy(atom[0].color,"silver white");
-    atom[0].group = 9;
-    atom[0].period = 5;
-    strcpy(atom[0].conductivity,"Thermal Conductivity");
-    strcpy(atom[0].luster,"Metallic luster");
-    strcpy(atom[0].phase,"Solid ");
-    atom[0].density = 12.4 g.cm-3 at 20°C;
-    strcpy(atom[0].image_path,"");
-	
-	
-    strcpy(atom[45].name,"PALLADIUM");      
-    strcpy(atom[45].symbol,"Pd");      
-    atom[45].atomicnum=46;      
-    atom[45].atomicwt=106.42;
-    strcpy(atom[0].electronic_configuration,"[Kr] 4d¹⁰");
-    strcpy(atom[0].history,"Palladium was discovered by William Hyde Wollaston, an English chemist, in 1803 while analyzing samples of platinum ore that were obtained from South America.Finely divided palladium acts as a catalyst and is used in hydrogenation and dehydrogenation processes.");
-    atom[0].melting_point = 1,555 °C;
-    atom[0].boiling_point = 2,963 °C;
-    atom[0].ionic_radius = 163 pm;
-    atom[0].isotopes = 6;
-    atom[0].electronegativity = 2.2;
-    strcpy(atom[0].color,"silver white");
-    atom[0].group = 10;
-    atom[0].period = 5;
-    strcpy(atom[0].conductivity,"Electrical Conductivity");
-    strcpy(atom[0].luster,"Metallic luster");
-    strcpy(atom[0].phase,"Solid ");
-    atom[0].density = 11.9 g.cm-3 at 20°C;
-    strcpy(atom[0].image_path,"");
+        
+    atom[44].atomic_number=45;
+        
+    atom[44].atomic_weight=102.90;
+    strcpy(atom[45].name,"PALLADIUM");
+        
+    strcpy(atom[45].symbol,"Pd");
+        
+    atom[45].atomic_number=46;
+        
+    atom[45].atomic_weight=106.42;
 
-	
-    strcpy(atom[46].name,"SILVER");    
-    strcpy(atom[46].symbol,"Ag";
-    atom[46].atomicnum=47;       
-    atom[46].atomicwt=107.86;
-    strcpy(atom[0].electronic_configuration,"[Kr] 4d¹⁰ 5s¹");
-    strcpy(atom[0].history," The first evidence of silver mining dates back to 3000 B.C., in Turkey and Greece, according to the RSC. Ancient people even figured out how to refine silver. ... The silver does not react to the air, but the base metals such as lead and copper oxidize and separate from the precious metal");
-    atom[0].melting_point = 961.8 °C;
-    atom[0].boiling_point =2,162 °C;
-    atom[0].ionic_radius = 172 pm;
-    atom[0].isotopes = 2;
-    atom[0].electronegativity = 1.93;
-    strcpy(atom[0].color,"silver");
-    atom[0].group = 11;
-    atom[0].period = 5;
-    strcpy(atom[0].conductivity,"Electrical Conductivity");
-    strcpy(atom[0].luster,"Metallic luster");
-    strcpy(atom[0].phase,"Solid ");
-    atom[0].density = 10.49 g/cm³;
-    strcpy(atom[0].image_path,"");   
-	   
-    strcpy(atom[47].name,"CADMIUM");       
-    strcpy(atom[47].symbol,"Cd");        
-    atom[47].atomicnum=48;        
-    atom[47].atomicwt=112.41;
-    strcpy(atom[0].electronic_configuration,"[Kr] 4d105s2");
-    strcpy(atom[0].history,"Cadmium was discovered in 1817 by a physician, Friedrich Stromeyer (1776-1835). The element was first found in the condensation of vapors (mixed with soot and zinc oxides) that rose out of a furnace in which zinc oxide was being roasted. Cadmium's discovery is also loosely attributed to K.S.L. Hermann and J.C.H.");
-    atom[0].melting_point = 321 °C;
-    atom[0].boiling_point = 1,409 °F;
-    atom[0].ionic_radius = 158 pm;
-    atom[0].isotopes =7 ;
-    atom[0].electronegativity = 1.69;
-    strcpy(atom[0].color,"silvery white bluish color");
-    atom[0].group = 12;
-    atom[0].period = 5;
-    strcpy(atom[0].conductivity,"Thermal and Electrical Conductivity");
-    strcpy(atom[0].luster,"Metallic luster");
-    strcpy(atom[0].phase,"Solid ");
-    atom[0].density = 8.7 g.cm-3 at 20°C;
-    strcpy(atom[0].image_path,"");      
-	   
-	   
-    strcpy(atom[48].name,"INDIUM");       
-    strcpy(atom[48].symbol,"In");       
-    atom[48].atomicnum=49;        
-    atom[48].atomicwt=114.81;
-    strcpy(atom[0].electronic_configuration,"");
-    strcpy(atom[0].history,"");
-    atom[0].melting_point = ;
-    atom[0].boiling_point = ;
-    atom[0].ionic_radius = ;
-    atom[0].isotopes = ;
-    atom[0].electronegativity = ;
-    strcpy(atom[0].color,"");
-    atom[0].group = ;
-    atom[0].period = ;
-    strcpy(atom[0].conductivity,"");
-    strcpy(atom[0].luster,"");
-    strcpy(atom[0].phase,"");
-    atom[0].density = ;
-    strcpy(atom[0].image_path,"");   
-	   
-	   
-    strcpy(atom[49].name,"TIN");     
-    strcpy(atom[49].symbol,"Sn");       
-    atom[49].atomicnum=50;        
-    atom[49].atomicwt=118.71;
-    strcpy(atom[0].electronic_configuration,"");
-    strcpy(atom[0].history,"");
-    atom[0].melting_point = ;
-    atom[0].boiling_point = ;
-    atom[0].ionic_radius = ;
-    atom[0].isotopes = ;
-    atom[0].electronegativity = ;
-    strcpy(atom[0].color,"");
-    atom[0].group = ;
-    atom[0].period = ;
-    strcpy(atom[0].conductivity,"");
-    strcpy(atom[0].luster,"");
-    strcpy(atom[0].phase,"");
-    atom[0].density = ;
-    strcpy(atom[0].image_path,"");  
-	   
-	   
+    strcpy(atom[46].name,"SILVER");
+        
+    strcpy(atom[46].symbol,"Ag");
+        
+    atom[46].atomic_number=47;
+        
+    atom[46].atomic_weight=107.86;
+    strcpy(atom[47].name,"CADMIUM");
+        
+    strcpy(atom[47].symbol,"Cd");
+        
+    atom[47].atomic_number=48;
+        
+    atom[47].atomic_weight=112.41;
+    strcpy(atom[48].name,"INDIUM");
+        
+    strcpy(atom[48].symbol,"In");
+        
+    atom[48].atomic_number=49;
+        
+    atom[48].atomic_weight=114.81;
+    strcpy(atom[49].name,"TIN");
+        
+    strcpy(atom[49].symbol,"Sn");
+        
+    atom[49].atomic_number=50;
+        
+    atom[49].atomic_weight=118.71;
     strcpy(atom[50].name,"ANTIMONY");
+        
     strcpy(atom[50].symbol,"Sb");
-    atom[50].atomicnum=51;   
-    atom[50].atomicwt=121.76;
-    strcpy(atom[0].electronic_configuration,"");
-    strcpy(atom[0].history,"");
-    atom[0].melting_point = ;
-    atom[0].boiling_point = ;
-    atom[0].ionic_radius = ;
-    atom[0].isotopes = ;
-    atom[0].electronegativity = ;
-    strcpy(atom[0].color,"");
-    atom[0].group = ;
-    atom[0].period = ;
-    strcpy(atom[0].conductivity,"");
-    strcpy(atom[0].luster,"");
-    strcpy(atom[0].phase,"");
-    atom[0].density = ;
-    strcpy(atom[0].image_path,"");   
-	   
-	   
+        
+    atom[50].atomic_number=51;
+        
+    atom[50].atomic_weight=121.76;
     strcpy(atom[51].name,"TELLURIUM");
+        
     strcpy(atom[51].symbol,"Te");
-    atom[51].atomicnum=52;
-    atom[51].atomicwt=127.60;
-    strcpy(atom[0].electronic_configuration,"");
-    strcpy(atom[0].history,"");
-    atom[0].melting_point = ;
-    atom[0].boiling_point = ;
-    atom[0].ionic_radius = ;
-    atom[0].isotopes = ;
-    atom[0].electronegativity = ;
-    strcpy(atom[0].color,"");
-    atom[0].group = ;
-    atom[0].period = ;
-    strcpy(atom[0].conductivity,"");
-    strcpy(atom[0].luster,"");
-    strcpy(atom[0].phase,"");
-    atom[0].density = ;
-    strcpy(atom[0].image_path,"");   
-	   
-	   
-    strcpy(atom[52].name,"IODINE");       
-    strcpy(atom[52].symbol,"I");       
-    atom[52].atomicnum=53;     
-    atom[52].atomicwt=126.90;
-    strcpy(atom[0].electronic_configuration,"");
-    strcpy(atom[0].history,"");
-    atom[0].melting_point = ;
-    atom[0].boiling_point = ;
-    atom[0].ionic_radius = ;
-    atom[0].isotopes = ;
-    atom[0].electronegativity = ;
-    strcpy(atom[0].color,"");
-    atom[0].group = ;
-    atom[0].period = ;
-    strcpy(atom[0].conductivity,"");
-    strcpy(atom[0].luster,"");
-    strcpy(atom[0].phase,"");
-    atom[0].density = ;
-    strcpy(atom[0].image_path,"");
-	   
-	   
+        
+    atom[51].atomic_number=52;
+        
+    atom[51].atomic_weight=127.60;
+    strcpy(atom[52].name,"IODINE");
+        
+    strcpy(atom[52].symbol,"I");
+        
+    atom[52].atomic_number=53;
+        
+    atom[52].atomic_weight=126.90;
     strcpy(atom[53].name,"XENON");
-    strcpy(atom[53].symbol,"Xe");        
-    atom[53].atomicnum=54;       
-    atom[53].atomicwt=131.29;
-    strcpy(atom[0].electronic_configuration,"");
-    strcpy(atom[0].history,"");
-    atom[0].melting_point = ;
-    atom[0].boiling_point = ;
-    atom[0].ionic_radius = ;
-    atom[0].isotopes = ;
-    atom[0].electronegativity = ;
-    strcpy(atom[0].color,"");
-    atom[0].group = ;
-    atom[0].period = ;
-    strcpy(atom[0].conductivity,"");
-    strcpy(atom[0].luster,"");
-    strcpy(atom[0].phase,"");
-    atom[0].density = ;
-    strcpy(atom[0].image_path,""); 
-	   
-	   
-    strcpy(atom[54].name,"CESIUM");        
-    strcpy(atom[54].symbol,"Cs");        
-    atom[54].atomicnum=55;        
-    atom[54].atomicwt=132.906;
-    strcpy(atom[0].electronic_configuration,"");
-    strcpy(atom[0].history,"");
-    atom[0].melting_point = ;
-    atom[0].boiling_point = ;
-    atom[0].ionic_radius = ;
-    atom[0].isotopes = ;
-    atom[0].electronegativity = ;
-    strcpy(atom[0].color,"");
-    atom[0].group = ;
-    atom[0].period = ;
-    strcpy(atom[0].conductivity,"");
-    strcpy(atom[0].luster,"");
-    strcpy(atom[0].phase,"");
-    atom[0].density = ;
-    strcpy(atom[0].image_path,"");  
-	   
-	   
-    strcpy(atom[55].name,"BARIUM");       
-    strcpy(atom[55].symbol,"Ba");        
-    atom[55].atomicnum=56;        
-    atom[55].atomicwt=137.372; 
-    strcpy(atom[0].electronic_configuration,"");
-    strcpy(atom[0].history,"");
-    atom[0].melting_point = ;
-    atom[0].boiling_point = ;
-    atom[0].ionic_radius = ;
-    atom[0].isotopes = ;
-    atom[0].electronegativity = ;
-    strcpy(atom[0].color,"");
-    atom[0].group = ;
-    atom[0].period = ;
-    strcpy(atom[0].conductivity,"");
-    strcpy(atom[0].luster,"");
-    strcpy(atom[0].phase,"");
-    atom[0].density = ;
-    strcpy(atom[0].image_path,"");
-	   
-	   
-    strcpy(atom[56].name,"LANTHANUM");        
-    strcpy(atom[56].symbol,"La");        
-    atom[56].atomicnum=57;       
-    atom[56].atomicwt=138.906;
-    strcpy(atom[0].electronic_configuration,"");
-    strcpy(atom[0].history,"");
-    atom[0].melting_point = ;
-    atom[0].boiling_point = ;
-    atom[0].ionic_radius = ;
-    atom[0].isotopes = ;
-    atom[0].electronegativity = ;
-    strcpy(atom[0].color,"");
-    atom[0].group = ;
-    atom[0].period = ;
-    strcpy(atom[0].conductivity,"");
-    strcpy(atom[0].luster,"");
-    strcpy(atom[0].phase,"");
-    atom[0].density = ;
-    strcpy(atom[0].image_path,"");   
-	   
+        
+    strcpy(atom[53].symbol,"Xe");
+        
+    atom[53].atomic_number=54;
+        
+    atom[53].atomic_weight=131.29;
+    strcpy(atom[54].name,"CESIUM");
+        
+    strcpy(atom[54].symbol,"Cs");
+        
+    atom[54].atomic_number=55;
+        
+    atom[54].atomic_weight=132.906;
+    strcpy(atom[55].name,"BARIUM");
+        
+    strcpy(atom[55].symbol,"Ba");
+        
+    atom[55].atomic_number=56;
+        
+    atom[55].atomic_weight=137.372;
+    strcpy(atom[56].name,"LANTHANUM");
+        
+    strcpy(atom[56].symbol,"La");
+        
+    atom[56].atomic_number=57;
+        
+    atom[56].atomic_weight=138.906;
 
-    strcpy(atom[57].name,"CERIUM");       
-    strcpy(atom[57].symbol,"Ce");       
-    atom[57].atomicnum=58;       
-    atom[57].atomicwt=140.116;
-    strcpy(atom[0].electronic_configuration,"");
-    strcpy(atom[0].history,"");
-    atom[0].melting_point = ;
-    atom[0].boiling_point = ;
-    atom[0].ionic_radius = ;
-    atom[0].isotopes = ;
-    atom[0].electronegativity = ;
-    strcpy(atom[0].color,"");
-    atom[0].group = ;
-    atom[0].period = ;
-    strcpy(atom[0].conductivity,"");
-    strcpy(atom[0].luster,"");
-    strcpy(atom[0].phase,"");
-    atom[0].density = ;
-    strcpy(atom[0].image_path,"");
+    strcpy(atom[57].name,"CERIUM");
+        
+    strcpy(atom[57].symbol,"Ce");
+        
+    atom[57].atomic_number=58;
+        
+    atom[57].atomic_weight=140.116;
+
+    strcpy(atom[58].name,"PRASEODYMIUM");
+        
+    strcpy(atom[58].symbol,"Pr");
 	
-	   
-    strcpy(atom[58].name,"PRASEODYMIUM");     
-    strcpy(atom[58].symbol,"Pr");	
-    atom[58].atomicnum=59;		
-    atom[58].atomicwt=140.906;
-    strcpy(atom[0].electronic_configuration,"");
-    strcpy(atom[0].history,"");
-    atom[0].melting_point = ;
-    atom[0].boiling_point = ;
-    atom[0].ionic_radius = ;
-    atom[0].isotopes = ;
-    atom[0].electronegativity = ;
-    strcpy(atom[0].color,"");
-    atom[0].group = ;
-    atom[0].period = ;
-    strcpy(atom[0].conductivity,"");
-    strcpy(atom[0].luster,"");
-    strcpy(atom[0].phase,"");
-    atom[0].density = ;
-    strcpy(atom[0].image_path,"");
-	   
-    strcpy(atom[59].name,"NEODYMIUM");
-    strcpy(atom[59].symbol,"Nd");	
-    atom[59].atomicnum=60;
-    atom[59].atomicwt=144.240;
-    strcpy(atom[0].electronic_configuration,"");
-    strcpy(atom[0].history,"");
-    atom[0].melting_point = ;
-    atom[0].boiling_point = ;
-    atom[0].ionic_radius = ;
-    atom[0].isotopes = ;
-    atom[0].electronegativity = ;
-    strcpy(atom[0].color,"");
-    atom[0].group = ;
-    atom[0].period = ;
-    strcpy(atom[0].conductivity,"");
-    strcpy(atom[0].luster,"");
-    strcpy(atom[0].phase,"");
-    atom[0].density = ;
-    strcpy(atom[0].image_path,"");   
-	   
+	atom[58].atomic_number=59;
+		
+	atom[58].atomic_weight=140.906;
 	
-    strcpy(atom[60].name,"PROMETHIUM");	
-    strcpy(atom[60].symbol,"Pm");
-    atom[60].atomicnum=61;
-    atom[60].atomicwt=145.000;
-    strcpy(atom[0].electronic_configuration,"");
-    strcpy(atom[0].history,"");
-    atom[0].melting_point = ;
-    atom[0].boiling_point = ;
-    atom[0].ionic_radius = ;
-    atom[0].isotopes = ;
-    atom[0].electronegativity = ;
-    strcpy(atom[0].color,"");
-    atom[0].group = ;
-    atom[0].period = ;
-    strcpy(atom[0].conductivity,"");
-    strcpy(atom[0].luster,"");
-    strcpy(atom[0].phase,"");
-    atom[0].density = ;
-    strcpy(atom[0].image_path,""); 
-	   
-	   
-    strcpy(atom[61].name,"SAMARIUM");
-    strcpy(atom[61].symbol,"Sm");
-    atom[61].atomicnum=62;
-    atom[61].atomicwt=150.36;
-    strcpy(atom[0].electronic_configuration,"");
-    strcpy(atom[0].history,"");
-    atom[0].melting_point = ;
-    atom[0].boiling_point = ;
-    atom[0].ionic_radius = ;
-    atom[0].isotopes = ;
-    atom[0].electronegativity = ;
-    strcpy(atom[0].color,"");
-    atom[0].group = ;
-    atom[0].period = ;
-    strcpy(atom[0].conductivity,"");
-    strcpy(atom[0].luster,"");
-    strcpy(atom[0].phase,"");
-    atom[0].density = ;
-    strcpy(atom[0].image_path,"");   
-	   
-	   	   
-    strcpy(atom[62].name,"EUROPIUM");
-    strcpy(atom[62].symbol,"Eu");	
-    atom[62].atomicnum=63;
-    atom[62].atomicwt=151.96;
-    strcpy(atom[0].electronic_configuration,"");
-    strcpy(atom[0].history,"");
-    atom[0].melting_point = ;
-    atom[0].boiling_point = ;
-    atom[0].ionic_radius = ;
-    atom[0].isotopes = ;
-    atom[0].electronegativity = ;
-    strcpy(atom[0].color,"");
-    atom[0].group = ;
-    atom[0].period = ;
-    strcpy(atom[0].conductivity,"");
-    strcpy(atom[0].luster,"");
-    strcpy(atom[0].phase,"");
-    atom[0].density = ;
-    strcpy(atom[0].image_path,"");   
-	   
-	   
-    strcpy(atom[63].name,"GADOLINIUM");	
-    strcpy(atom[63].symbol,"Gd");	
-    atom[63].atomicnum=64;	
-    atom[63].atomicwt=157.25;
-    strcpy(atom[0].electronic_configuration,"");
-    strcpy(atom[0].history,"");
-    atom[0].melting_point = ;
-    atom[0].boiling_point = ;
-    atom[0].ionic_radius = ;
-    atom[0].isotopes = ;
-    atom[0].electronegativity = ;
-    strcpy(atom[0].color,"");
-    atom[0].group = ;
-    atom[0].period = ;
-    strcpy(atom[0].conductivity,"");
-    strcpy(atom[0].luster,"");
-    strcpy(atom[0].phase,"");
-    atom[0].density = ;
-    strcpy(atom[0].image_path,"");   
-	   
-	   
-    strcpy(atom[64].name,"SAMARIUM");
-    strcpy(atom[64].symbol,"Sm");	
-    atom[64].atomicnum=65;
-    atom[64].atomicwt=150.36;
-    strcpy(atom[0].electronic_configuration,"");
-    strcpy(atom[0].history,"");
-    atom[0].melting_point = ;
-    atom[0].boiling_point = ;
-    atom[0].ionic_radius = ;
-    atom[0].isotopes = ;
-    atom[0].electronegativity = ;
-    strcpy(atom[0].color,"");
-    atom[0].group = ;
-    atom[0].period = ;
-    strcpy(atom[0].conductivity,"");
-    strcpy(atom[0].luster,"");
-    strcpy(atom[0].phase,"");
-    atom[0].density = ;
-    strcpy(atom[0].image_path,"");   
-	   
-	   
-    strcpy(atom[65].name,"DYSPROSIUM");
-    strcpy(atom[65].symbol,"Dy");
-    atom[65].atomicnum=66;
-    atom[65].atomicwt=162.50;
-    strcpy(atom[0].electronic_configuration,"");
-    strcpy(atom[0].history,"");
-    atom[0].melting_point = ;
-    atom[0].boiling_point = ;
-    atom[0].ionic_radius = ;
-    atom[0].isotopes = ;
-    atom[0].electronegativity = ;
-    strcpy(atom[0].color,"");
-    atom[0].group = ;
-    atom[0].period = ;
-    strcpy(atom[0].conductivity,"");
-    strcpy(atom[0].luster,"");
-    strcpy(atom[0].phase,"");
-    atom[0].density = ;
-    strcpy(atom[0].image_path,"");   
-	 
-	   
-    strcpy(atom[66].name,"HOLMINM");	
-    strcpy(atom[66].symbol,"Ho");	
-    atom[66].atomicnum=67;	
-    atom[66].atomicwt=164.93;
-    strcpy(atom[0].electronic_configuration,"");
-    strcpy(atom[0].history,"");
-    atom[0].melting_point = ;
-    atom[0].boiling_point = ;
-    atom[0].ionic_radius = ;
-    atom[0].isotopes = ;
-    atom[0].electronegativity = ;
-    strcpy(atom[0].color,"");
-    atom[0].group = ;
-    atom[0].period = ;
-    strcpy(atom[0].conductivity,"");
-    strcpy(atom[0].luster,"");
-    strcpy(atom[0].phase,"");
-    atom[0].density = ;
-    strcpy(atom[0].image_path,"");
-	   
-    strcpy(atom[67].name,"ERBIUM");
-    strcpy(atom[67].symbol,"Er");
-    atom[67].atomicnum=68;
-    atom[67].atomicwt=167.25;
-   strcpy(atom[0].electronic_configuration,"");
-    strcpy(atom[0].history,"");
-    atom[0].melting_point = ;
-    atom[0].boiling_point = ;
-    atom[0].ionic_radius = ;
-    atom[0].isotopes = ;
-    atom[0].electronegativity = ;
-    strcpy(atom[0].color,"");
-    atom[0].group = ;
-    atom[0].period = ;
-    strcpy(atom[0].conductivity,"");
-    strcpy(atom[0].luster,"");
-    strcpy(atom[0].phase,"");
-    atom[0].density = ;
-    strcpy(atom[0].image_path,""); 
+	strcpy(atom[59].name,"NEODYMIUM");
+		
+	strcpy(atom[59].symbol,"Nd");
+		
+	atom[59].atomic_number=60;
+		
+	atom[59].atomic_weight=144.240;
 	
-	   
-    strcpy(atom[68].name,"THULIUM");	
-    strcpy(atom[68].symbol,"Tm");
-    atom[68].atomicnum=69;
-    atom[68].atomicwt=168.93;
-    strcpy(atom[0].electronic_configuration,"");
-    strcpy(atom[0].history,"");
-    atom[0].melting_point = ;
-    atom[0].boiling_point = ;
-    atom[0].ionic_radius = ;
-    atom[0].isotopes = ;
-    atom[0].electronegativity = ;
-    strcpy(atom[0].color,"");
-    atom[0].group = ;
-    atom[0].period = ;
-    strcpy(atom[0].conductivity,"");
-    strcpy(atom[0].luster,"");
-    strcpy(atom[0].phase,"");
-    atom[0].density = ;
-    strcpy(atom[0].image_path,"");   
-	   
-	   
-    strcpy(atom[69].name,"YTTERBIUM");
-    strcpy(atom[69].symbol,"Yb");
-    atom[69].atomicnum=70;
-    atom[69].atomicwt=173.04;
-    strcpy(atom[0].electronic_configuration,"");
-    strcpy(atom[0].history,"");
-    atom[0].melting_point = ;
-    atom[0].boiling_point = ;
-    atom[0].ionic_radius = ;
-    atom[0].isotopes = ;
-    atom[0].electronegativity = ;
-    strcpy(atom[0].color,"");
-    atom[0].group = ;
-    atom[0].period = ;
-    strcpy(atom[0].conductivity,"");
-    strcpy(atom[0].luster,"");
-    strcpy(atom[0].phase,"");
-    atom[0].density = ;
-    strcpy(atom[0].image_path,"");   
-	   
-	   
-    strcpy(atom[70].name,"LUTETIUM");
-    strcpy(atom[70].symbol,"Lu");	
-    atom[70].atomicnum=71;
-    atom[70].atomicwt=174.96;
-    strcpy(atom[0].electronic_configuration,"");
-    strcpy(atom[0].history,"");
-    atom[0].melting_point = ;
-    atom[0].boiling_point = ;
-    atom[0].ionic_radius = ;
-    atom[0].isotopes = ;
-    atom[0].electronegativity = ;
-    strcpy(atom[0].color,"");
-    atom[0].group = ;
-    atom[0].period = ;
-    strcpy(atom[0].conductivity,"");
-    strcpy(atom[0].luster,"");
-    strcpy(atom[0].phase,"");
-    atom[0].density = ;
-    strcpy(atom[0].image_path,"");   
-	   
-	   
-    strcpy(atom[71].name,"HAFNIUM");
-    strcpy(atom[71].symbol,"Hf");
-    atom[71].atomicnum=72;
-    atom[71].atomicwt=178.49;
-    strcpy(atom[0].electronic_configuration,"");
-    strcpy(atom[0].history,"");
-    atom[0].melting_point = ;
-    atom[0].boiling_point = ;
-    atom[0].ionic_radius = ;
-    atom[0].isotopes = ;
-    atom[0].electronegativity = ;
-    strcpy(atom[0].color,"");
-    atom[0].group = ;
-    atom[0].period = ;
-    strcpy(atom[0].conductivity,"");
-    strcpy(atom[0].luster,"");
-    strcpy(atom[0].phase,"");
-    atom[0].density = ;
-    strcpy(atom[0].image_path,"");   
-	   
-	   
-    strcpy(atom[72].name,"TANTALUM");
-    strcpy(atom[72].symbol,"Ta");	
-    atom[72].atomicnum=73;	
-    atom[72].atomicwt=180.94;
-    strcpy(atom[0].electronic_configuration,"");
-    strcpy(atom[0].history,"");
-    atom[0].melting_point = ;
-    atom[0].boiling_point = ;
-    atom[0].ionic_radius = ;
-    atom[0].isotopes = ;
-    atom[0].electronegativity = ;
-    strcpy(atom[0].color,"");
-    atom[0].group = ;
-    atom[0].period = ;
-    strcpy(atom[0].conductivity,"");
-    strcpy(atom[0].luster,"");
-    strcpy(atom[0].phase,"");
-    atom[0].density = ;
-    strcpy(atom[0].image_path,"");   
-	   
-	   
-    strcpy(atom[73].name,"TUNGSTEN");
-    strcpy(atom[73].symbol,"Lu");	
-    atom[73].atomicnum=74;
-    atom[73].atomicwt=174.96;
-    strcpy(atom[0].electronic_configuration,"");
-    strcpy(atom[0].history,"");
-    atom[0].melting_point = ;
-    atom[0].boiling_point = ;
-    atom[0].ionic_radius = ;
-    atom[0].isotopes = ;
-    atom[0].electronegativity = ;
-    strcpy(atom[0].color,"");
-    atom[0].group = ;
-    atom[0].period = ;
-    strcpy(atom[0].conductivity,"");
-    strcpy(atom[0].luster,"");
-    strcpy(atom[0].phase,"");
-    atom[0].density = ;
-    strcpy(atom[0].image_path,"");   
-	   
-	   
-    strcpy(atom[74].name,"RHENIUM");
-    strcpy(atom[74].symbol,"Re");
-    atom[74].atomicnum=75;
-    atom[74].atomicwt=186.84;
-    strcpy(atom[0].electronic_configuration,"");
-    strcpy(atom[0].history,"");
-    atom[0].melting_point = ;
-    atom[0].boiling_point = ;
-    atom[0].ionic_radius = ;
-    atom[0].isotopes = ;
-    atom[0].electronegativity = ;
-    strcpy(atom[0].color,"");
-    atom[0].group = ;
-    atom[0].period = ;
-    strcpy(atom[0].conductivity,"");
-    strcpy(atom[0].luster,"");
-    strcpy(atom[0].phase,"");
-    atom[0].density = ;
-    strcpy(atom[0].image_path,"");   
-	   
+	strcpy(atom[60].name,"PROMETHIUM");
+		
+	strcpy(atom[60].symbol,"Pm");
+		
+	atom[60].atomic_number=61;
+		
+	atom[60].atomic_weight=145.000;
+	strcpy(atom[61].name,"SAMARIUM");
+		
+	strcpy(atom[61].symbol,"Sm");
+		
+	atom[61].atomic_number=62;
+		
+	atom[61].atomic_weight=150.36;
+	strcpy(atom[62].name,"EUROPIUM");
+		
+	strcpy(atom[62].symbol,"Eu");
+		
+	atom[62].atomic_number=63;
+		
+	atom[62].atomic_weight=151.96;
+	strcpy(atom[63].name,"GADOLINIUM");
+		
+	strcpy(atom[63].symbol,"Gd");
+		
+	atom[63].atomic_number=64;
+		
+	atom[63].atomic_weight=157.25;
+	strcpy(atom[64].name,"SAMARIUM");
+		
+	strcpy(atom[64].symbol,"Sm");
+		
+	atom[64].atomic_number=65;
+		
+	atom[64].atomic_weight=150.36;
+	strcpy(atom[65].name,"DYSPROSIUM");
+		
+	strcpy(atom[65].symbol,"Dy");
+		
+	atom[65].atomic_number=66;
+		
+	atom[65].atomic_weight=162.50;
+	strcpy(atom[66].name,"HOLMINM");
+		
+	strcpy(atom[66].symbol,"Ho");
+		
+	atom[66].atomic_number=67;
+		
+	atom[66].atomic_weight=164.93;
+	strcpy(atom[67].name,"ERBIUM");
+		
+	strcpy(atom[67].symbol,"Er");
+		
+	atom[67].atomic_number=68;
+		
+	atom[67].atomic_weight=167.25;
+	strcpy(atom[68].name,"THULIUM");
+		
+	strcpy(atom[68].symbol,"Tm");
+		
+	atom[68].atomic_number=69;
+		
+	atom[68].atomic_weight=168.93;
+	strcpy(atom[69].name,"YTTERBIUM");
+		
+	strcpy(atom[69].symbol,"Yb");
+		
+	atom[69].atomic_number=70;
+		
+	atom[69].atomic_weight=173.04;
+	strcpy(atom[70].name,"LUTETIUM");
+		
+	strcpy(atom[70].symbol,"Lu");
+		
+	atom[70].atomic_number=71;
+		
+	atom[70].atomic_weight=174.96;
+	strcpy(atom[71].name,"HAFNIUM");
+		
+	strcpy(atom[71].symbol,"Hf");
+		
+	atom[71].atomic_number=72;
+		
+	atom[71].atomic_weight=178.49;
+	strcpy(atom[72].name,"TANTALUM");
+		
+	strcpy(atom[72].symbol,"Ta");
+		
+	atom[72].atomic_number=73;
+		
+	atom[72].atomic_weight=180.94;
+	strcpy(atom[73].name,"TUNGSTEN");
+		
+	strcpy(atom[73].symbol,"Lu");
+		
+	atom[73].atomic_number=74;
+		
+	atom[73].atomic_weight=174.96;
+	strcpy(atom[74].name,"RHENIUM");
+		
+	strcpy(atom[74].symbol,"Re");
+		
+	atom[74].atomic_number=75;
+		
+	atom[74].atomic_weight=186.84;
 	
-    strcpy(atom[75].name,"OSMIUM");	
-    strcpy(atom[75].symbol,"Os");
-    atom[75].atomicnum=76;
-    atom[75].atomicwt=190.23;
-    strcpy(atom[0].electronic_configuration,"");
-    strcpy(atom[0].history,"");
-    atom[0].melting_point = ;
-    atom[0].boiling_point = ;
-    atom[0].ionic_radius = ;
-    atom[0].isotopes = ;
-    atom[0].electronegativity = ;
-    strcpy(atom[0].color,"");
-    atom[0].group = ;
-    atom[0].period = ;
-    strcpy(atom[0].conductivity,"");
-    strcpy(atom[0].luster,"");
-    strcpy(atom[0].phase,"");
-    atom[0].density = ;
-    strcpy(atom[0].image_path,"");
 	
-    strcpy(atom[76].name,"IRIDIUM");
-    strcpy(atom[76].symbol,"Ir");
-    atom[76].atomicnum=77;
-    atom[76].atomicwt=192.21;
-    strcpy(atom[0].electronic_configuration,"");
-    strcpy(atom[0].history,"");
-    atom[0].melting_point = ;
-    atom[0].boiling_point = ;
-    atom[0].ionic_radius = ;
-    atom[0].isotopes = ;
-    atom[0].electronegativity = ;
-    strcpy(atom[0].color,"");
-    atom[0].group = ;
-    atom[0].period = ;
-    strcpy(atom[0].conductivity,"");
-    strcpy(atom[0].luster,"");
-    strcpy(atom[0].phase,"");
-    atom[0].density = ;
-    strcpy(atom[0].image_path,"");   
-	   
-	   
-    strcpy(atom[77].name,"PLATINUM");
-    strcpy(atom[77].symbol,"Pt");
-    atom[77].atomicnum=78;
-    atom[77].atomicwt=195.07;
-    strcpy(atom[0].electronic_configuration,"");
-    strcpy(atom[0].history,"");
-    atom[0].melting_point = ;
-    atom[0].boiling_point = ;
-    atom[0].ionic_radius = ;
-    atom[0].isotopes = ;
-    atom[0].electronegativity = ;
-    strcpy(atom[0].color,"");
-    atom[0].group = ;
-    atom[0].period = ;
-    strcpy(atom[0].conductivity,"");
-    strcpy(atom[0].luster,"");
-    strcpy(atom[0].phase,"");
-    atom[0].density = ;
-    strcpy(atom[0].image_path,"");   
-	   
-	   
-    strcpy(atom[78].name,"GOLD");
-    strcpy(atom[78].symbol,"Au");	
-    atom[78].atomicnum=79;
-    atom[78].atomicwt=196.96;
-    strcpy(atom[0].electronic_configuration,"");
-    strcpy(atom[0].history,"");
-    atom[0].melting_point = ;
-    atom[0].boiling_point = ;
-    atom[0].ionic_radius = ;
-    atom[0].isotopes = ;
-    atom[0].electronegativity = ;
-    strcpy(atom[0].color,"");
-    atom[0].group = ;
-    atom[0].period = ;
-    strcpy(atom[0].conductivity,"");
-    strcpy(atom[0].luster,"");
-    strcpy(atom[0].phase,"");
-    atom[0].density = ;
-    strcpy(atom[0].image_path,"");   
+	strcpy(atom[75].name,"OSMIUM");
+		
+	strcpy(atom[75].symbol,"Os");
+		
+	atom[75].atomic_number=76;
+		
+	atom[75].atomic_weight=190.23;
 	
-	   
-    strcpy(atom[79].name,"MERCURY");
-    strcpy(atom[79].symbol,"Hg");
-    atom[79].atomicnum=80;
-    atom[79].atomicwt=200.59;
-    strcpy(atom[0].electronic_configuration,"");
-    strcpy(atom[0].history,"");
-    atom[0].melting_point = ;
-    atom[0].boiling_point = ;
-    atom[0].ionic_radius = ;
-    atom[0].isotopes = ;
-    atom[0].electronegativity = ;
-    strcpy(atom[0].color,"");
-    atom[0].group = ;
-    atom[0].period = ;
-    strcpy(atom[0].conductivity,"");
-    strcpy(atom[0].luster,"");
-    strcpy(atom[0].phase,"");
-    atom[0].density = ;
-    strcpy(atom[0].image_path,"");   
-	   
-	   
+	
+	strcpy(atom[76].name,"IRIDIUM");
+		
+	strcpy(atom[76].symbol,"Ir");
+		
+	atom[76].atomic_number=77;
+		
+	atom[76].atomic_weight=192.21;
+	strcpy(atom[77].name,"PLATINUM");
+		
+	strcpy(atom[77].symbol,"Pt");
+		
+	atom[77].atomic_number=78;
+		
+	atom[77].atomic_weight=195.07;
+	strcpy(atom[78].name,"GOLD");
+		
+	strcpy(atom[78].symbol,"Au");
+		
+	atom[78].atomic_number=79;
+		
+	atom[78].atomic_weight=196.96;
+	strcpy(atom[79].name,"MERCURY");
+		
+	strcpy(atom[79].symbol,"Hg");
+		
+	atom[79].atomic_number=80;
+		
+	atom[79].atomic_weight=200.59;
 	strcpy(atom[80].name,"THALLIUM");
 		
 	strcpy(atom[80].symbol,"Tl");
 		
-	atom[80].atomicnum=81;
+	atom[80].atomic_number=81;
 		
-	atom[80].atomicwt=201.38;
+	atom[80].atomic_weight=201.38;
 	
 	
 	
@@ -1777,88 +1232,88 @@ extern void table()
 		
 	strcpy(atom[81].symbol,"Pb");
 		
-	atom[81].atomicnum=82;
+	atom[81].atomic_number=82;
 		
-	atom[81].atomicwt=201.20;
+	atom[81].atomic_weight=201.20;
 	
 	
 	strcpy(atom[82].name,"BISMITH");
 		
 	strcpy(atom[82].symbol,"Bi");
 		
-	atom[82].atomicnum=83;
+	atom[82].atomic_number=83;
 		
-	atom[82].atomicwt=208.98;
+	atom[82].atomic_weight=208.98;
 	
 	
 	strcpy(atom[83].name,"POLONIUM");
 		
 	strcpy(atom[83].symbol,"Po");
 		
-	atom[83].atomicnum=84;
+	atom[83].atomic_number=84;
 		
-	atom[83].atomicwt=209.00;
+	atom[83].atomic_weight=209.00;
 	
 	
 	strcpy(atom[84].name,"Astatine");
 		
 	strcpy(atom[84].symbol,"At");
 		
-	atom[84].atomicnum=85;
+	atom[84].atomic_number=85;
 		
-	atom[84].atomicwt=210.00;
+	atom[84].atomic_weight=210.00;
 	
 	
 	strcpy(atom[85].name,"RADON");
 		
 	strcpy(atom[85].symbol,"Rn");
 		
-	atom[85].atomicnum=86;
+	atom[85].atomic_number=86;
 		
-	atom[85].atomicwt=222.00;
+	atom[85].atomic_weight=222.00;
 	
 	
 	strcpy(atom[86].name,"FRANCIUM");
 		
 	strcpy(atom[86].symbol,"Fr");
 		
-	atom[86].atomicnum=87;
+	atom[86].atomic_number=87;
 		
-	atom[86].atomicwt=223.00;
+	atom[86].atomic_weight=223.00;
 	
 	
 	strcpy(atom[87].name,"RADIUM");
 		
 	strcpy(atom[87].symbol,"Ra");
 		
-	atom[87].atomicnum=88;
+	atom[87].atomic_number=88;
 		
-	atom[87].atomicwt=226.00;
+	atom[87].atomic_weight=226.00;
 	
 	
 	strcpy(atom[88].name,"ACTINIUM");
 		
 	strcpy(atom[88].symbol,"Ac");
 		
-	atom[88].atomicnum=89;
+	atom[88].atomic_number=89;
 		
-	atom[88].atomicwt=227.00;
+	atom[88].atomic_weight=227.00;
 	
 	
 	strcpy(atom[89].name,"THORIUM");
 		
 	strcpy(atom[89].symbol,"Th");
 		
-	atom[89].atomicnum=90;
+	atom[89].atomic_number=90;
 		
-	atom[89].atomicwt=232.03;
+	atom[89].atomic_weight=232.03;
 	strcpy(atom[90].name,"PROTACTINIUM");
 		
 	strcpy(atom[90].symbol,"Pa");
 		
-	atom[90].atomicnum=91;
+	atom[90].atomic_number=91;
 		
-	atom[90].atomicwt=231.03;
+	atom[90].atomic_weight=231.03;
 	
 	
 	
@@ -1867,9 +1322,9 @@ extern void table()
 		
 	strcpy(atom[91].symbol,"U");
 		
-	atom[91].atomicnum=92;
+	atom[91].atomic_number=92;
 		
-	atom[91].atomicwt=238.02;
+	atom[91].atomic_weight=238.02;
 	
 	
 	
@@ -1878,9 +1333,9 @@ extern void table()
 		
 	strcpy(atom[92].symbol,"Np");
 		
-	atom[92].atomicnum=93;
+	atom[92].atomic_number=93;
 		
-	atom[92].atomicwt=237.00;
+	atom[92].atomic_weight=237.00;
 	
 	
 	
@@ -1889,9 +1344,9 @@ extern void table()
 		
 	strcpy(atom[93].symbol,"Pu");
 		
-	atom[93].atomicnum=94;
+	atom[93].atomic_number=94;
 		
-	atom[93].atomicwt=244.00;
+	atom[93].atomic_weight=244.00;
 	
 	
 	
@@ -1900,16 +1355,16 @@ extern void table()
 		
 	strcpy(atom[94].symbol,"Am");
 		
-	atom[94].atomicnum=95;
+	atom[94].atomic_number=95;
 		
-	atom[94].atomicwt=243.00;
+	atom[94].atomic_weight=243.00;
 	strcpy(atom[95].name,"CURIUM");
 		
 	strcpy(atom[95].symbol,"Cm");
 		
-	atom[95].atomicnum=96;
+	atom[95].atomic_number=96;
 		
-	atom[95].atomicwt=247.00;
+	atom[95].atomic_weight=247.00;
 	
 	
 	
@@ -1922,9 +1377,9 @@ extern void table()
 		
 	strcpy(atom[96].symbol,"Bk");
 		
-	atom[96].atomicnum=97;
+	atom[96].atomic_number=97;
 		
-	atom[96].atomicwt=247.00;
+	atom[96].atomic_weight=247.00;
 	
 	
 	
@@ -1933,9 +1388,9 @@ extern void table()
 		
 	strcpy(atom[97].symbol,"Cf");
 		
-	atom[97].atomicnum=98;
+	atom[97].atomic_number=98;
 		
-	atom[97].atomicwt=251.00;
+	atom[97].atomic_weight=251.00;
 	
 	
 	
@@ -1944,9 +1399,9 @@ extern void table()
 		
 	strcpy(atom[98].symbol,"Es");
 		
-	atom[98].atomicnum=99;
+	atom[98].atomic_number=99;
 		
-	atom[98].atomicwt=252.00;
+	atom[98].atomic_weight=252.00;
 	
 	
 	
@@ -1955,9 +1410,9 @@ extern void table()
 		
 	strcpy(atom[99].symbol,"Fm");
 		
-	atom[99].atomicnum=257.00;
+	atom[99].atomic_number=257.00;
 		
-	atom[99].atomicwt=231.03;
+	atom[99].atomic_weight=231.03;
 	
 	
 	
@@ -1966,9 +1421,9 @@ extern void table()
 		
 	strcpy(atom[100].symbol,"Md");
 		
-	atom[100].atomicnum=101;
+	atom[100].atomic_number=101;
 		
-	atom[100].atomicwt=258.00;
+	atom[100].atomic_weight=258.00;
 	
 	
 	
@@ -1977,9 +1432,9 @@ extern void table()
 		
 	strcpy(atom[101].symbol,"Np");
 		
-	atom[101].atomicnum=102;
+	atom[101].atomic_number=102;
 		
-	atom[101].atomicwt=259.00;
+	atom[101].atomic_weight=259.00;
 	
 	
 	
@@ -1988,9 +1443,9 @@ extern void table()
 		
 	strcpy(atom[102].symbol,"Lr");
 		
-	atom[102].atomicnum=103;
+	atom[102].atomic_number=103;
 		
-	atom[102].atomicwt=262.00;
+	atom[102].atomic_weight=262.00;
 	
 	
 	
@@ -1999,9 +1454,9 @@ extern void table()
 		
 	strcpy(atom[103].symbol,"Rf");
 		
-	atom[103].atomicnum=104;
+	atom[103].atomic_number=104;
 		
-	atom[103].atomicwt=261.00;
+	atom[103].atomic_weight=261.00;
 	
 	
 	
@@ -2010,16 +1465,16 @@ extern void table()
 		
 	strcpy(atom[104].symbol,"Db");
 		
-	atom[104].atomicnum=105;
+	atom[104].atomic_number=105;
 		
-	atom[104].atomicwt=262.00;
+	atom[104].atomic_weight=262.00;
 	strcpy(atom[105].name,"SEABORGIUM");
 		
 	strcpy(atom[105].symbol,"Sg");
 		
-	atom[105].atomicnum=106;
+	atom[105].atomic_number=106;
 		
-	atom[105].atomicwt=266.00;
+	atom[105].atomic_weight=266.00;
 	
 	
 	
@@ -2028,9 +1483,9 @@ extern void table()
 		
 	strcpy(atom[106].symbol,"Bh");
 		
-	atom[106].atomicnum=107;
+	atom[106].atomic_number=107;
 		
-	atom[106].atomicwt=264.00;
+	atom[106].atomic_weight=264.00;
 	
 	
 	
@@ -2039,16 +1494,33 @@ extern void table()
 		
 	strcpy(atom[107].symbol,"Hs");
 		
-	atom[107].atomicnum=108;
+	atom[107].atomic_number=108;
 		
-	atom[107].atomicwt=277.00;
+	atom[107].atomic_weight=277.00;
 	strcpy(atom[108].name,"Meinerium");
 		
 	strcpy(atom[108].symbol,"Mt");
 		
-	atom[108].atomicnum=109;
+	atom[108].atomic_number=109;
 		
-	atom[108].atomicwt=268.00;
+	atom[108].atomic_weight=268.00;
 
-
+    
+    //for data department please don't change below code
+    
+    for(i<0;i<118;i++){
+        if(strcmp(atom[i].name,element_name)==0){
+            return atom[i];
+        }
+        if(strcmp(atom[i].symbol,element_symbol)==0){
+            return atom[i];
+        }
+        if(atom[i].atomic_number==atomic_number){
+            return atom[i];
+        }
+        if(atom[i].atomic_weight==atomic_weight){
+            return atom[i];
+        }
+    }
 }
+

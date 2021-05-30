@@ -20,8 +20,13 @@ struct quiz question_search()
 {
     strcpy(quiz_details[0].questions,"Atomic number of helium is________");
     strcpy(quiz_details[0].correct_answer,"2");
+
+    strcpy(quiz_details[1].questions,"Symbol of helium is________");
+    strcpy(quiz_details[1].correct_answer,"He");
+
 }
 
+struct quiz question_search();
 bool answer_checker(char question[200],char selected_answer[100]){
     for(int i=0;i<200;i++){
         if(strcmp(quiz_details[i].questions,question)==0){

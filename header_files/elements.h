@@ -927,9 +927,9 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
     atom[40].atomic_weight=92.90;
     strcpy(atom[40].electronic_configuration,"Kr 4d⁴ 5s¹");
     strcpy(atom[40].history,"Niobium was discovered in 1801 by Charles Hatchett in an ore called columbite sent to England in the 1750s by John Winthrop the Younger, the first goveror of Connecticut, USA.The metal niobium was first prepared in 1864 by Blomstrand, who reduced the chloride by heating it in a hydrogen atmosphere.");
-    atom[40].melting_point = 2,477 °C;
-    atom[40].boiling_point = 4,927 °C;
-    atom[40].ionic_radius = 207 pm;
+    atom[40].melting_point = 2,477 ;
+    atom[40].boiling_point = 4,927 ;
+    atom[40].ionic_radius = 207 ;
     atom[40].isotopes = 18;
     atom[40].electronegativity = 1.6;
     strcpy(atom[40].color,"light grey");
@@ -948,9 +948,9 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
     atom[41].atomic_weight=95.94;
     strcpy(atom[41].electronic_configuration,"[Kr] 4d₅ 5s₁");
     strcpy(atom[41].history," Molybdenum was discovered by Carl Welhelm Scheele, a Swedish chemist, in 1778 in a mineral known as molybdenite (MoS2) which had been confused as a lead compound. Molybdenum was isolated by Peter Jacob Hjelm in 1781. ");
-    atom[41].melting_point = 2,623 °C;
-    atom[41].boiling_point = 4,639 °C;
-    atom[41].ionic_radius = 0.068 nm (+4) ; 0.06 nm (+6);
+    atom[41].melting_point = 2,623 ;
+    atom[41].boiling_point = 4,639 ;
+    atom[41].ionic_radius = 0.068  (+4) ; 0.06  (+6);
     atom[41].isotopes = 7;
     atom[41].electronegativity = 2.16;
     strcpy(atom[41].color,"Silvery-grey ");
@@ -959,7 +959,7 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
     strcpy(atom[41].conductivity,"Thermal and Electrical conductivity");
     strcpy(atom[41].luster,"Metallic luster");
     strcpy(atom[41].phase,"Solid");
-    atom[41].density = 10.22 g/cm3;
+    atom[41].density = 10.223;
     strcpy(atom[41].uses,"Molybdenum is primarily used as an alloying agent in steel.");
     strcpy(atom[41].image_path,"");
 	
@@ -970,9 +970,9 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
     atom[42].atomic_weight=98.00;
     strcpy(atom[42].electronic_configuration,"Kr 4d5 5s2");
     strcpy(atom[42].history,"Technetium was discovered by Emilio Segrè in 1937 in Italy. He investigated molybdenum from California which had been exposed to high energy radiation and he found technetium to be present and separated it. Today, this element is extracted from spent nuclear fuel rods in tonne quantities.");
-    atom[42].melting_point = 2,157 °C;
-    atom[42].boiling_point = 4,265 °C;
-    atom[42].ionic_radius = 205 pm;
+    atom[42].melting_point = 2,157  ;
+    atom[42].boiling_point = 4,265 ;
+    atom[42].ionic_radius = 205 ;
     atom[42].isotopes = 22;
     atom[42].electronegativity = 1.9;
     strcpy(atom[42].color," Silvery-grey");
@@ -981,7 +981,7 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
     strcpy(atom[42].conductivity,"Thermal conductivity");
     strcpy(atom[42].luster,"Metallic lustre");
     strcpy(atom[42].phase,"Solid");
-    atom[42].density = 11.5 g.cm-3 at 20°C;
+    atom[42].density = 11.5 at 20;
     strcpy(atom[42].uses,"Technetium-99m (metastable) is widely used for medical diagnostic studies. Several chemical forms are used to image different parts of the body. Technetium is a remarkable corrosion inhibitor for steel, and adding very small amounts can provide excellent protection.");
     strcpy(atom[42].image_path,"");
 	
@@ -992,9 +992,9 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
     atom[43].atomic_weight=101.07;
     strcpy(atom[43].electronic_configuration,"[Kr] 4d7 5s1");
     strcpy(atom[43].history,"Ruthenium was discovered by Karl Karlovich Klaus, a Russian chemist, in 1844 while analyzing the residue of a sample of platinum ore obtained from the Ural mountains.Small amounts of ruthenium are added to platinum and palladium to strengthen them.");
-    atom[43].melting_point = 2,334 °C;
-    atom[43].boiling_point = 4,150 °C;
-    atom[43].ionic_radius = 205 pm;
+    atom[43].melting_point = 2,334 ;
+    atom[43].boiling_point = 4,150 ;
+    atom[43].ionic_radius = 205 ;
     atom[43].isotopes = 7;
     atom[43].electronegativity = 2.2;
     strcpy(atom[43].color,"Silvery-white");
@@ -1003,7 +1003,7 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
     strcpy(atom[43].conductivity,"Thermal Conductivity");
     strcpy(atom[43].luster,"Metallic Luster");
     strcpy(atom[43].phase,"Solid");
-    atom[43].density = 12.2 g.cm-3 at 20°C;
+    atom[43].density = 12.2  at 20;
     strcpy(atom[43].uses,"Ruthenium oxide is used in the chemical industry to coat the anodes of electrochemical cells for chlorine production. Ruthenium is also used in catalysts for ammonia and acetic acid production. Ruthenium compounds can be used in solar cells, which turn light energy into electrical energy.");
     strcpy(atom[43].image_path,"");
 	
@@ -1014,9 +1014,9 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
     atom[44].atomic_weight=102.90;
     strcpy(atom[44].electronic_configuration,"Kr 4d8 5s1");
     strcpy(atom[44].history,"Rhodium was discovered in 1803 by William Wollaston. He collaborated with Smithson Tennant in a commercial venture, part of which was to produce pure platinum for sale. The first step in the process was to dissolve ordinary platinum in aqua regia (nitric acid + hydrochloric acid).");
-    atom[44].melting_point = 1,964 °C;
-    atom[44].boiling_point = 3,697 °C;
-    atom[44].ionic_radius = 200 pm;
+    atom[44].melting_point = 1,964 ;
+    atom[44].boiling_point = 3,697 ;
+    atom[44].ionic_radius = 200 ;
     atom[44].isotopes = 24;
     atom[44].electronegativity = 2.28;
     strcpy(atom[44].color,"Silver-white");
@@ -1025,7 +1025,7 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
     strcpy(atom[44].conductivity,"Thermal Conductivity");
     strcpy(atom[44].luster,"Metallic luster");
     strcpy(atom[44].phase,"Gas");
-    atom[44].density = 12.4 g.cm-3 at 20°C;
+    atom[44].density = 12.4 at 20;
     strcpy(atom[44].uses,"The major use of rhodium is in catalytic converters for cars (80%). It reduces nitrogen oxides in exhaust gases. Rhodium is also used as catalysts in the chemical industry, for making nitric acid, acetic acid and hydrogenation reactions.");
     strcpy(atom[44].image_path,"");
 	
@@ -1036,9 +1036,9 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
     atom[45].atomic_weight=106.42;
     strcpy(atom[45].electronic_configuration,"[Kr] 4d¹⁰");
     strcpy(atom[45].history,"Palladium was discovered by William Hyde Wollaston, an English chemist, in 1803 while analyzing samples of platinum ore that were obtained from South America. ");
-    atom[45].melting_point = 1,555 °C;
-    atom[45].boiling_point = 2,963 °C;
-    atom[45].ionic_radius = 163 pm;
+    atom[45].melting_point = 1,555 ;
+    atom[45].boiling_point = 2,963 ;
+    atom[45].ionic_radius = 163 ;
     atom[45].isotopes = 6;
     atom[45].electronegativity = 2.2;
     strcpy(atom[45].color,"Silver-white");
@@ -1047,7 +1047,7 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
     strcpy(atom[45].conductivity,"Thermal conductivity");
     strcpy(atom[45].luster,"Metallic Luster");
     strcpy(atom[45].phase,"Solid");
-    atom[45].density = 11.9 g.cm-3 at 20°C;
+    atom[45].density = 11.9 at 20;
     strcpy(atom[45].uses,"The largest use of palladium today is in catalytic converters. Palladium is also used in jewelry, dentistry, watch making, blood sugar test strips, aircraft spark plugs, surgical instruments, and electrical contacts. Palladium is also used to make professional transverse (concert or classical) flutes.");
     strcpy(atom[45].image_path,"");
 	
@@ -1058,9 +1058,9 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
     atom[46].atomic_weight=107.86;
     strcpy(atom[46].electronic_configuration,"[Kr] 4d¹⁰ 5s¹");
     strcpy(atom[46].history,"The first evidence of silver mining dates back to 3000 B.C., in Turkey and Greece, according to the RSC. Ancient people even figured out how to refine silver. ... The silver does not react to the air, but the base metals such as lead and copper oxidize and separate from the precious metal.");
-    atom[46].melting_point = 961.8 °C;
-    atom[46].boiling_point = 2,162 °C;
-    atom[46].ionic_radius = 172 pm;
+    atom[46].melting_point = 961.8 ;
+    atom[46].boiling_point = 2,162 ;
+    atom[46].ionic_radius = 172 ;
     atom[46].isotopes = 2;
     atom[46].electronegativity = 1.93;
     strcpy(atom[46].color,"Silver or metallic gray ");
@@ -1069,7 +1069,7 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
     strcpy(atom[46].conductivity,"Electric conductivity");
     strcpy(atom[46].luster,"Metallic luster");
     strcpy(atom[46].phase,"Solid");
-    atom[46].density = 10.49 g/cm³;
+    atom[46].density = 10.49 ;
     strcpy(atom[46].uses,"Silver is used for jewellery and silver tableware, where appearance is important. Silver is used to make mirrors, as it is the best reflector of visible light known, although it does tarnish with time. It is also used in dental alloys, solder and brazing alloys, electrical contacts and batteries.");
     strcpy(atom[46].image_path,"");
 	
@@ -1080,9 +1080,9 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
     atom[47].atomic_weight=112.41;
     strcpy(atom[47].electronic_configuration,"[Kr] 4d105s2");
     strcpy(atom[47].history,"Cadmium was discovered in 1817 by a physician, Friedrich Stromeyer (1776-1835). The element was first found in the condensation of vapors (mixed with soot and zinc oxides) that rose out of a furnace in which zinc oxide was being roasted. Cadmium's discovery is also loosely attributed to K.S.L. Hermann and J.C.H.");
-    atom[47].melting_point = 321 °C;
-    atom[47].boiling_point = 765 °C ;
-    atom[47].ionic_radius = 158 pm;
+    atom[47].melting_point = 321 ;
+    atom[47].boiling_point = 765  ;
+    atom[47].ionic_radius = 158 ;
     atom[47].isotopes = 7;
     atom[47].electronegativity = 1.69;
     strcpy(atom[47].color,"Silvery white bluish ");
@@ -1091,7 +1091,7 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
     strcpy(atom[47].conductivity,"Thermal conductivity");
     strcpy(atom[47].luster,"Metallic luster");
     strcpy(atom[47].phase,"Solid");
-    atom[47].density = 8.65 Mg/m3;
+    atom[47].density = 8.65 ;
     strcpy(atom[47].uses,"Cadmium is used in Common industrial uses for cadmium today are in batteries, alloys, coatings (electroplating), solar cells, plastic stabilizers, and pigments.");
     strcpy(atom[47].image_path,"");
 	
@@ -1102,9 +1102,9 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
     atom[48].atomic_weight=114.81; 
     strcpy(atom[48].electronic_configuration,"Kr 4d10 5s2 5p1");
     strcpy(atom[48].history,"Indium was discovered in 1863 by Ferdinand Reich at the Freiberg School of Mines in Germany. ... However, because he was colour-blind he asked Hieronymous Richter to look at the spectrum, and he noted a brilliant violet line, and this eventually gave rise to the name indium, from the Latin word indicum meaning violet.");
-    atom[48].melting_point = 156.6 °C;
-    atom[48].boiling_point = 2,072 °C;
-    atom[48].ionic_radius = 220 pm;
+    atom[48].melting_point = 156.6 ;
+    atom[48].boiling_point = 2,072 ;
+    atom[48].ionic_radius = 220 ;
     atom[48].isotopes = 2;
     atom[48].electronegativity = 1.78;
     strcpy(atom[48].color,"Silvery white");
@@ -1113,7 +1113,7 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
     strcpy(atom[48].conductivity,"Thermal conductivity");
     strcpy(atom[48].luster,"Indium is a very soft, silvery-white metal. The metal has a brilliant luster and emits a high pitched sound when bent. ... Uses: Indium is used in low melting point alloys, bearing alloys, transistors, thermistors, photoconductors, and rectifiers.");
     strcpy(atom[48].phase,"Solid");
-    atom[48].density = 7.31 g/cm3;
+    atom[48].density = 7.31 ;
     strcpy(atom[48].uses,"Most indium is used to make indium tin oxide (ITO), which is an important part of touch screens, flatscreen TVs and solar panels. This is because it conducts electricity, bonds strongly to glass and is transparent. Indium nitride, phosphide and antimonide are semiconductors used in transistors and microchips.");
     strcpy(atom[48].image_path,"");
 	
@@ -1124,9 +1124,9 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
     atom[49].atomic_weight=118.71;
     strcpy(atom[49].electronic_configuration,"[Kr] 5s²4d¹⁰5p²");
     strcpy(atom[49].history,"Tin was first used in 3500 BC in the city of Ur in southern Mesopotamia, now known as Iraq. The natives of Iran made articles from bronze, which is an alloy of tin and copper. ... When tin undergoes mining, it becomes a silvery metal that is used for the resistance to corrosion.");
-    atom[49].melting_point = 231.9 °C;
-    atom[49].boiling_point = 2,602 °C;
-    atom[49].ionic_radius = 225 pm;
+    atom[49].melting_point = 231.9;
+    atom[49].boiling_point = 2,602;
+    atom[49].ionic_radius = 225;
     atom[49].isotopes = 10;
     atom[49].electronegativity = 1.96;
     strcpy(atom[49].color,"Silvery white");
@@ -1135,7 +1135,7 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
     strcpy(atom[49].conductivity,"Electrical Conductivity");
     strcpy(atom[49].luster,"Metallic luster");
     strcpy(atom[49].phase,"Solid");
-    atom[49].density = β: 7.265 g/cm3 gray, α: 5.769 g/cm3;
+    atom[49].density = β:7.265,α:5.769;
     strcpy(atom[49].uses,"Tin has many uses. It takes a high polish and is used to coat other metals to prevent corrosion, such as in tin cans, which are made of tin-coated steel. Alloys of tin are important, such as soft solder, pewter, bronze and phosphor bronze. A niobium-tin alloy is used for superconducting magnets.");
     strcpy(atom[49].image_path,"");
 	
@@ -1146,9 +1146,9 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
     atom[50].atomic_weight=121.76;
     strcpy(atom[50].electronic_configuration,"[Kr] 4d10 5s2 5p3");
     strcpy(atom[50].history,"Antimony has been known since ancient times. It is sometimes found free in nature, but is usually obtained from the ores stibnite (Sb2S3) and valentinite (Sb2O3). Nicolas Lémery, a French chemist, was the first person to scientifically study antimony and its compounds. He published his findings in 1707.");
-    atom[50].melting_point = 630.6 °C;
-    atom[50].boiling_point = 1,587 °C;
-    atom[50].ionic_radius = 206 pm;
+    atom[50].melting_point = 630.6;
+    atom[50].boiling_point = 1,587;
+    atom[50].ionic_radius = 206;
     atom[50].isotopes = 2;
     atom[50].electronegativity = 2.05;
     strcpy(atom[50].color,"Silvery");
@@ -1157,7 +1157,7 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
     strcpy(atom[50].conductivity,"Thermal conductivity");
     strcpy(atom[50].luster,"Metallic luster");
     strcpy(atom[50].phase,"Solid");
-    atom[50].density = 6.691 g/cm3;
+    atom[50].density = 6.691;
     strcpy(atom[50].uses,"A lead-antimony alloy is used in batteries. Other uses of antimony alloys include type metal (in printing presses), bullets and cable sheathing. Antimony compounds are used to make flame-retardant materials, paints, enamels, glass and pottery.");
     strcpy(atom[50].image_path,"");
 	
@@ -1168,9 +1168,9 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
     atom[51].atomic_weight=127.60;
     strcpy(atom[51].electronic_configuration,"[Kr] 4d10 5s2 5p4");
     strcpy(atom[51].history,"Tellurium was discovered in 1783 by Franz Joseph Müller von Reichenstein at Sibiu, Romania. He became intrigued by ore from a mine near Zalatna which had a metallic sheen and which he suspected was native antimony or bismuth. ... Klaproth produced a pure sample and decided to call it tellurium.");
-    atom[51].melting_point = 449.5 °C;
-    atom[51].boiling_point = 987.8 °C;
-    atom[51].ionic_radius = 210 pm;
+    atom[51].melting_point = 449.5;
+    atom[51].boiling_point = 987.8;
+    atom[51].ionic_radius = 210;
     atom[51].isotopes = 8;
     atom[51].electronegativity = 2.1;
     strcpy(atom[51].color,"Silvery white");
@@ -1179,7 +1179,7 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
     strcpy(atom[51].conductivity,"Thermal conductivity");
     strcpy(atom[51].luster,"Metallic luster");
     strcpy(atom[51].phase,"Solid");
-    atom[51].density = 6.24 g.cm-;
+    atom[51].density = 6.24;
     strcpy(atom[51].uses,"Tellurium has been used to vulcanise rubber, to tint glass and ceramics, in solar cells, in rewritable CDs and DVDs and as a catalyst in oil refining. It can be doped with silver, gold, copper or tin in semiconductor applications.");
     strcpy(atom[51].image_path,"");
 	
@@ -1190,10 +1190,10 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
     atom[52].atomic_weight=126.90;
     strcpy(atom[52].electronic_configuration,"[Kr] 4d10 5s2 5p5");
     strcpy(atom[52].history,"Iodine was discovered by the French chemist Barnard Courtois in 1811. Courtois was extracting sodium and potassium compounds from seaweed ash. ... Iodine is part of thyroxin, a hormone produced by the thyroid gland that controls the body's rate of physical and mental development.");
-    atom[52].melting_point = 113.7 °C;
-    atom[52].boiling_point = 184.3 °C;
-    atom[52].ionic_radius = ;
-    atom[52].isotopes = ;
+    atom[52].melting_point = 113.7;
+    atom[52].boiling_point = 184.3;
+    atom[52].ionic_radius = 198;
+    atom[52].isotopes = 34;
     atom[52].electronegativity = 2.66;
     strcpy(atom[52].color,"Black");
     atom[52].group = 17;
@@ -1201,7 +1201,7 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
     strcpy(atom[52].conductivity,"Thermal conductivity");
     strcpy(atom[52].luster,"Metallic luster");
     strcpy(atom[52].phase,"Solid");
-    atom[52].density = 4.93 g.cm-3 at 20°C;
+    atom[52].density = 4.93 at 20;
     strcpy(atom[52].uses,"Iodine has many commercial uses. Iodide salts are used in pharmaceuticals and disinfectants, printing inks and dyes, catalysts, animal feed supplements and photographic chemicals. Iodine is also used to make polarising filters for LCD displays.");
     strcpy(atom[52].image_path,"");
 	
@@ -1212,9 +1212,9 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
     atom[53].atomic_weight=131.29;
     strcpy(atom[53].electronic_configuration,"[Kr] 4d¹⁰ 5s² 5p⁶");
     strcpy(atom[53].history," Xenon was discovered in July 1898 by William Ramsay and Morris Travers at University College London. They had already extracted neon, argon, and krypton from liquid air, and wondered if it contained other gases");
-    atom[53].melting_point = -111.8 °C;
-    atom[53].boiling_point = -108.1 °C;
-    atom[53].ionic_radius = 216 pm;
+    atom[53].melting_point = -111.8;
+    atom[53].boiling_point = -108.1;
+    atom[53].ionic_radius = 216;
     atom[53].isotopes = 9;
     atom[53].electronegativity = 2.6;
     strcpy(atom[53].color,"Colorless");
@@ -1223,7 +1223,7 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
     strcpy(atom[53].conductivity,"Thermal conductivity");
     strcpy(atom[53].luster,"No luster");
     strcpy(atom[53].phase,"Gas");
-    atom[53].density = 5.887 g/litre;
+    atom[53].density = 5.887;
     strcpy(atom[53].uses,"Xenon is used in certain specialised light sources. It produces a beautiful blue glow when excited by an electrical discharge. Xenon lamps have applications as high-speed electronic flash bulbs used by photographers, sunbed lamps and bactericidal lamps used in food preparation and processing.");
     strcpy(atom[53].image_path,"");
 	
@@ -1234,9 +1234,9 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
     atom[54].atomic_weight=132.906;
     strcpy(atom[54].electronic_configuration,"[Xe] 6s1");
     strcpy(atom[54].history,"Cesium was discovered by Robert Wilhelm Bunsen and Gustav Robert Kirchhoff, German chemists, in 1860 through the spectroscopic analysis of Durkheim mineral water. They named cesium after the blue lines they observed in its spectrum. ... Cesium is recovered from cesium azide by heating it.");
-    atom[54].melting_point = 28.44 °C;
-    atom[54].boiling_point = 670.8 °C;
-    atom[54].ionic_radius = 343 pm;
+    atom[54].melting_point = 28.44;
+    atom[54].boiling_point = 670.8;
+    atom[54].ionic_radius = 343;
     atom[54].isotopes = 40;
     atom[54].electronegativity = 0.79;
     strcpy(atom[54].color,"Pale gold");
@@ -1245,7 +1245,7 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
     strcpy(atom[54].conductivity,"Thermal conductivity");
     strcpy(atom[54].luster,"Metallic luster");
     strcpy(atom[54].phase,"Solid");
-    atom[54].density = 1.9 g.cm-3 at 20°C;
+    atom[54].density = 1.9 at 20;
     strcpy(atom[54].uses,"The most common use for caesium compounds is as a drilling fluid. They are also used to make special optical glass, as a catalyst promoter, in vacuum tubes and in radiation monitoring equipment. One of its most important uses is in the 'caesium clock' (atomic clock).");
     strcpy(atom[54].image_path,"");
 	
@@ -1256,9 +1256,9 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
     atom[55].atomic_weight=137.372;
     strcpy(atom[55].electronic_configuration,"[Xe] 6s2");
     strcpy(atom[55].history,"Barium was first isolated by electrolysis of molten barium salts in 1808 by Sir Humphry Davy in England. Davy, by analogy with calcium, named "barium" after baryta, with the "-ium" ending signifying a metallic element.");
-    atom[55].melting_point = 727 °C;
-    atom[55].boiling_point = 1,897 °C;
-    atom[55].ionic_radius = 268 pm;
+    atom[55].melting_point = 727;
+    atom[55].boiling_point = 1,897;
+    atom[55].ionic_radius = 268;
     atom[55].isotopes = 6;
     atom[55].electronegativity = 0.89;
     strcpy(atom[55].color,"Silvery-white");
@@ -1267,7 +1267,7 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
     strcpy(atom[55].conductivity,"Thermal conductivity");
     strcpy(atom[55].luster,"silvery white lustre");
     strcpy(atom[55].phase,"Solid");
-    atom[55].density = 3.5 g.cm-3 at 20°C;
+    atom[55].density = 3.5 at 20;
     strcpy(atom[55].uses,"Barium is often used for spark-plug electrodes and in vacuum tubes as a drying and oxygen-removing agent.Its compounds are used by oil and gas industries to make drilling mud. ...Barium compounds are also used to make paint, bricks, tiles, glass, and rubber.Barium nitrate and chlorate give fireworks a green colour.");
     strcpy(atom[55].image_path,"");
 	
@@ -1278,9 +1278,9 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
     atom[56].atomic_weight=138.906;
     strcpy(atom[56].electronic_configuration,"[Xe] 5d¹ 6s²");
     strcpy(atom[56].history,"Lanthanum was discovered in January 1839 by Carl Gustav Mosander at the Karolinska Institute, Stockholm. He extracted it from cerium which had been discovered in 1803. ... Finally, Mosander explained his delay, saying that he had extracted a second element from cerium, and this he called didymium.");
-    atom[56].melting_point = 920 °C;
-    atom[56].boiling_point = 3,464 °C;
-    atom[56].ionic_radius = 250 pm;
+    atom[56].melting_point = 920;
+    atom[56].boiling_point = 3,464;
+    atom[56].ionic_radius = 250;
     atom[56].isotopes = 38;
     atom[56].electronegativity = 1.1;
     strcpy(atom[56].color,"Silvery white");
@@ -1289,7 +1289,7 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
     strcpy(atom[56].conductivity,"Thermal conductivity");
     strcpy(atom[56].luster,"Metallic luster");
     strcpy(atom[56].phase,"Solid");
-    atom[56].density = 6.18 g.cm-3 at 20°C;
+    atom[56].density = 6.18 at 20;
     strcpy(atom[56].uses,"The chemical Lanthanum is found in modern television sets, the energy saving lamps, fluorescent tubes, etc.It is used in the field of optics as lenses and radiation absorbing glasses.It is known to increase the resistivity and malleability of steel.It is also used for catalysis in the field of petroleum refineries.");
     strcpy(atom[56].image_path,"");
 	
@@ -1300,9 +1300,9 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
     atom[57].atomic_weight=140.116;
     strcpy(atom[57].electronic_configuration,"[Xe] 4f¹ 5d¹ 6s²");
     strcpy(atom[57].history,"Cerium as the oxide (ceria) was discovered in 1803 by Swedish chemists Jöns Jacob Berzelius and Wilhelm Hisinger, working together, and independently by German chemist Martin Klaproth. It was named after the asteroid Ceres, which was discovered in 1801. Cerium occurs in bastnasite, monazite, and many other minerals.");
-    atom[57].melting_point = 795 °C;
-    atom[57].boiling_point = 3,443 °C;
-    atom[57].ionic_radius = 248 pm;
+    atom[57].melting_point = 795;
+    atom[57].boiling_point = 3,443;
+    atom[57].ionic_radius = 248;
     atom[57].isotopes = 4;
     atom[57].electronegativity = 1.12;
     strcpy(atom[57].color,"Iron-gray ");
@@ -1311,7 +1311,7 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
     strcpy(atom[57].conductivity,"Thermal Conductivity");
     strcpy(atom[57].luster,"Metallic luster");
     strcpy(atom[57].phase,"Solid");
-    atom[57].density = 6.76 g.cm-3;
+    atom[57].density = 6.76;
     strcpy(atom[57].uses,"Cerium is the key component of mischmetal alloy which is used in flints for cigarette lighters.Used in the manufacture of arc lamps, incandescent mantles for gas lighting.Acts as a catalyst in the conversion process of nitrogen oxide to nitrogen.Cerium sulfide is used as a pigment as it has a rich red color.");
     strcpy(atom[57].image_path,"");
 	
@@ -1322,9 +1322,9 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
     atom[58].atomic_weight=140.906;
     strcpy(atom[58].electronic_configuration,"[Xe] 4f3 6s2");
     strcpy(atom[58].history,"Praseodymium was discovered by Carl F. Auer von Welsbach, an Austrian chemist, in 1885. He separated praseodymium, as well as the element neodymium, from a material known as didymium.Praseodymium's primary use is as an alloying agent with magnesium to create high-strength metals that are used in aircraft engines.");
-    atom[58].melting_point = 931 °C;
-    atom[58].boiling_point = 3,512 °C;
-    atom[58].ionic_radius = 247 pm;
+    atom[58].melting_point = 931;
+    atom[58].boiling_point = 3,512;
+    atom[58].ionic_radius = 247;
     atom[58].isotopes = 38;
     atom[58].electronegativity = 1.13;
     strcpy(atom[58].color,"Green");
@@ -1333,7 +1333,7 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
     strcpy(atom[58].conductivity,"Thermal and Electrical Conductivity");
     strcpy(atom[58].luster,"Metallic luster");
     strcpy(atom[58].phase,"Solid");
-    atom[58].density = 6.8 g.cm-3 at 20°C;
+    atom[58].density = 6.8 at 20;
     strcpy(atom[58].uses,"Praseodymium is used in a variety of alloys. The high-strength alloy it forms with magnesium is used in aircraft engines. Mischmetal is an alloy containing about 5% praseodymium and is used to make flints for cigarette lighters. Praseodymium is also used in alloys for permanent magnets.");
     strcpy(atom[58].image_path,"");
 	

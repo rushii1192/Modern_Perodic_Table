@@ -1801,14 +1801,25 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
 	
 	
 	strcpy(atom[80].name,"THALLIUM");
-		
 	strcpy(atom[80].symbol,"Tl");
-		
-	atom[80].atomic_number=81;
-		
+        atom[80].atomic_number=81;
 	atom[80].atomic_weight=201.38;
-	
-	
+        strcpy(atom[0].electronic_configuration,"[Xe] 4f145d106s26p1 ");
+        strcpy(atom[0].history," British chemist William Crookes discovered thallium spectroscopically in 1861. Both Crookes and French chemist Claude Auguste Lamy isolated the element in 1862 independently..");
+        atom[0].melting_point = 304 °C;
+        atom[0].boiling_point = 1,473 °C;
+        atom[0].ionic_radius = 220 pm;
+        atom[0].isotopes = ; has 41 isotopes with atomic masses that range from 176 to 216. 203Tl and 205Tl are the only stable isotopes and 204Tl is the most stable radioisotope with a half-life of 3.78 years. 207Tl, with a half-life of 4.77 minutes, has the longest half-life of naturally occurring radioisotopes.;
+        atom[0].electronegativity = 2.20;
+       strcpy(atom[0].color,"silvery-gray");
+       atom[0].group =13 (XIII) of the p block ;
+	atom[58].period = 6;
+        strcpy(atom[58].conductivity,"46.1 W/(m⋅K)");
+       strcpy(atom[58].luster,"Thallium is a malleable, soft element that can be sliced with a knife. It has a metallic luster that quickly tarnishes when exposed to air to a bluish-green color. ");
+       strcpy(atom[58].phase,"Thallium is a solid at room temperature");
+       atom[58].density =11.85 g / cm3 ;
+      strcpy(atom[58].uses,"Thallium uses today commonly include the production of electronic devices, fiber optics, camera lenses, switches, and closures.");
+       strcpy(atom[58].image_path,"")
 	
 	
 	
@@ -1818,12 +1829,25 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
 	
 	
 	strcpy(atom[81].name,"LEAD");
-		
 	strcpy(atom[81].symbol,"Pb");
-		
 	atom[81].atomic_number=82;
-		
 	atom[81].atomic_weight=201.20;
+        strcpy(atom[81].electronic_configuration,"[Xe] 4f¹⁴5d¹⁰6s²6p²");
+    strcpy(atom[81].history,"Lead was one of the earliest metals discovered by the human race and was in use by 3000 B.C. ");
+    atom[81].melting_point =327.5 °C ;
+    atom[81].boiling_point =1,749 °C ;
+    atom[81].ionic_radius = 202 pm;
+    atom[81].isotopes =Lead has of four naturally occurring stable isotopes, 204Pb (1.4 %), 206Pb (24.1 %), 207Pb (22.1 %), and 208Pb (52.10 %). ;
+    atom[81].electronegativity =2.33 ;
+    strcpy(atom[81].color,"When freshly cut, lead is silvery with a hint of blue; it tarnishes to a dull gray color when exposed to air.");
+    atom[81].group =14 ;
+    atom[81].period =6 ;
+    strcpy(atom[81].conductivity,"lead is a metal that conducts electricity, making it a poor insulator. ");
+    strcpy(atom[81].luster,"Lead has a dull luster and is a dense, ductile, very soft, highly malleable, bluish-white metal that has poor electrical conductivity. ");
+    strcpy(atom[81].phase,"This element is a solid");
+    atom[81].density =11.29 gram/cm3 ;
+    strcpy(atom[81].uses,"Lead is still widely used for car batteries, pigments, ammunition, cable sheathing, weights for lifting, weight belts for diving, lead crystal glass, radiation protection and in some solders. It is often used to store corrosive liquids.");
+    strcpy(atom[81].image_path,"");
 	
 	
 	strcpy(atom[82].name,"BISMITH");
@@ -1833,7 +1857,21 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
 	atom[82].atomic_number=83;
 		
 	atom[82].atomic_weight=208.98;
-	
+	strcpy(atom[58].history,"");
+    atom[58].melting_point = ;
+    atom[58].boiling_point = ;
+    atom[58].ionic_radius = ;
+    atom[58].isotopes = ;
+    atom[58].electronegativity = ;
+    strcpy(atom[58].color,"");
+    atom[58].group = ;
+    atom[58].period = ;
+    strcpy(atom[58].conductivity,"");
+    strcpy(atom[58].luster,"");
+    strcpy(atom[58].phase,"");
+    atom[58].density = ;
+    strcpy(atom[58].uses,"");
+    strcpy(atom[58].image_path,"");
 	
 	strcpy(atom[83].name,"POLONIUM");
 		
@@ -1842,7 +1880,20 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
 	atom[83].atomic_number=84;
 		
 	atom[83].atomic_weight=209.00;
-	
+	 atom[58].melting_point = ;
+    atom[58].boiling_point = ;
+    atom[58].ionic_radius = ;
+    atom[58].isotopes = ;
+    atom[58].electronegativity = ;
+    strcpy(atom[58].color,"");
+    atom[58].group = ;
+    atom[58].period = ;
+    strcpy(atom[58].conductivity,"");
+    strcpy(atom[58].luster,"");
+    strcpy(atom[58].phase,"");
+    atom[58].density = ;
+    strcpy(atom[58].uses,"");
+    strcpy(atom[58].image_path,"");
 	
 	strcpy(atom[84].name,"Astatine");
 		
@@ -1851,7 +1902,21 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
 	atom[84].atomic_number=85;
 		
 	atom[84].atomic_weight=210.00;
-	
+	strcpy(atom[58].history,"");
+    atom[58].melting_point = ;
+    atom[58].boiling_point = ;
+    atom[58].ionic_radius = ;
+    atom[58].isotopes = ;
+    atom[58].electronegativity = ;
+    strcpy(atom[58].color,"");
+    atom[58].group = ;
+    atom[58].period = ;
+    strcpy(atom[58].conductivity,"");
+    strcpy(atom[58].luster,"");
+    strcpy(atom[58].phase,"");
+    atom[58].density = ;
+    strcpy(atom[58].uses,"");
+    strcpy(atom[58].image_path,"");
 	
 	strcpy(atom[85].name,"RADON");
 		
@@ -1860,6 +1925,22 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
 	atom[85].atomic_number=86;
 		
 	atom[85].atomic_weight=222.00;
+	atom[84].atomic_weight=210.00;
+	strcpy(atom[58].history,"");
+    atom[58].melting_point = ;
+    atom[58].boiling_point = ;
+    atom[58].ionic_radius = ;
+    atom[58].isotopes = ;
+    atom[58].electronegativity = ;
+    strcpy(atom[58].color,"");
+    atom[58].group = ;
+    atom[58].period = ;
+    strcpy(atom[58].conductivity,"");
+    strcpy(atom[58].luster,"");
+    strcpy(atom[58].phase,"");
+    atom[58].density = ;
+    strcpy(atom[58].uses,"");
+    strcpy(atom[58].image_path,"");
 	
 	
 	strcpy(atom[86].name,"FRANCIUM");
@@ -1869,7 +1950,21 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
 	atom[86].atomic_number=87;
 		
 	atom[86].atomic_weight=223.00;
-	
+	strcpy(atom[58].history,"");
+    atom[58].melting_point = ;
+    atom[58].boiling_point = ;
+    atom[58].ionic_radius = ;
+    atom[58].isotopes = ;
+    atom[58].electronegativity = ;
+    strcpy(atom[58].color,"");
+    atom[58].group = ;
+    atom[58].period = ;
+    strcpy(atom[58].conductivity,"");
+    strcpy(atom[58].luster,"");
+    strcpy(atom[58].phase,"");
+    atom[58].density = ;
+    strcpy(atom[58].uses,"");
+    strcpy(atom[58].image_path,"");
 	
 	strcpy(atom[87].name,"RADIUM");
 		
@@ -1878,7 +1973,21 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
 	atom[87].atomic_number=88;
 		
 	atom[87].atomic_weight=226.00;
-	
+	strcpy(atom[58].history,"");
+    atom[58].melting_point = ;
+    atom[58].boiling_point = ;
+    atom[58].ionic_radius = ;
+    atom[58].isotopes = ;
+    atom[58].electronegativity = ;
+    strcpy(atom[58].color,"");
+    atom[58].group = ;
+    atom[58].period = ;
+    strcpy(atom[58].conductivity,"");
+    strcpy(atom[58].luster,"");
+    strcpy(atom[58].phase,"");
+    atom[58].density = ;
+    strcpy(atom[58].uses,"");
+    strcpy(atom[58].image_path,"");
 	
 	strcpy(atom[88].name,"ACTINIUM");
 		
@@ -1887,7 +1996,21 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
 	atom[88].atomic_number=89;
 		
 	atom[88].atomic_weight=227.00;
-	
+	strcpy(atom[58].history,"");
+    atom[58].melting_point = ;
+    atom[58].boiling_point = ;
+    atom[58].ionic_radius = ;
+    atom[58].isotopes = ;
+    atom[58].electronegativity = ;
+    strcpy(atom[58].color,"");
+    atom[58].group = ;
+    atom[58].period = ;
+    strcpy(atom[58].conductivity,"");
+    strcpy(atom[58].luster,"");
+    strcpy(atom[58].phase,"");
+    atom[58].density = ;
+    strcpy(atom[58].uses,"");
+    strcpy(atom[58].image_path,"");
 	
 	strcpy(atom[89].name,"THORIUM");
 		
@@ -1896,6 +2019,22 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
 	atom[89].atomic_number=90;
 		
 	atom[89].atomic_weight=232.03;
+	strcpy(atom[58].history,"");
+    atom[58].melting_point = ;
+    atom[58].boiling_point = ;
+    atom[58].ionic_radius = ;
+    atom[58].isotopes = ;
+    atom[58].electronegativity = ;
+    strcpy(atom[58].color,"");
+    atom[58].group = ;
+    atom[58].period = ;
+    strcpy(atom[58].conductivity,"");
+    strcpy(atom[58].luster,"");
+    strcpy(atom[58].phase,"");
+    atom[58].density = ;
+    strcpy(atom[58].uses,"");
+    strcpy(atom[58].image_path,"");
+	
 	strcpy(atom[90].name,"PROTACTINIUM");
 		
 	strcpy(atom[90].symbol,"Pa");
@@ -1903,7 +2042,21 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
 	atom[90].atomic_number=91;
 		
 	atom[90].atomic_weight=231.03;
-	
+	strcpy(atom[58].history,"");
+    atom[58].melting_point = ;
+    atom[58].boiling_point = ;
+    atom[58].ionic_radius = ;
+    atom[58].isotopes = ;
+    atom[58].electronegativity = ;
+    strcpy(atom[58].color,"");
+    atom[58].group = ;
+    atom[58].period = ;
+    strcpy(atom[58].conductivity,"");
+    strcpy(atom[58].luster,"");
+    strcpy(atom[58].phase,"");
+    atom[58].density = ;
+    strcpy(atom[58].uses,"");
+    strcpy(atom[58].image_path,"");
 	
 	
 	
@@ -1914,6 +2067,22 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
 	atom[91].atomic_number=92;
 		
 	atom[91].atomic_weight=238.02;
+	strcpy(atom[58].history,"");
+    atom[58].melting_point = ;
+    atom[58].boiling_point = ;
+    atom[58].ionic_radius = ;
+    atom[58].isotopes = ;
+    atom[58].electronegativity = ;
+    strcpy(atom[58].color,"");
+    atom[58].group = ;
+    atom[58].period = ;
+    strcpy(atom[58].conductivity,"");
+    strcpy(atom[58].luster,"");
+    strcpy(atom[58].phase,"");
+    atom[58].density = ;
+    strcpy(atom[58].uses,"");
+    strcpy(atom[58].image_path,"");
+	
 	
 	
 	
@@ -1925,6 +2094,21 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
 	atom[92].atomic_number=93;
 		
 	atom[92].atomic_weight=237.00;
+	strcpy(atom[58].history,"");
+    atom[58].melting_point = ;
+    atom[58].boiling_point = ;
+    atom[58].ionic_radius = ;
+    atom[58].isotopes = ;
+    atom[58].electronegativity = ;
+    strcpy(atom[58].color,"");
+    atom[58].group = ;
+    atom[58].period = ;
+    strcpy(atom[58].conductivity,"");
+    strcpy(atom[58].luster,"");
+    strcpy(atom[58].phase,"");
+    atom[58].density = ;
+    strcpy(atom[58].uses,"");
+    strcpy(atom[58].image_path,"");
 	
 	
 	
@@ -1936,6 +2120,22 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
 	atom[93].atomic_number=94;
 		
 	atom[93].atomic_weight=244.00;
+	strcpy(atom[58].history,"");
+    atom[58].melting_point = ;
+    atom[58].boiling_point = ;
+    atom[58].ionic_radius = ;
+    atom[58].isotopes = ;
+    atom[58].electronegativity = ;
+    strcpy(atom[58].color,"");
+    atom[58].group = ;
+    atom[58].period = ;
+    strcpy(atom[58].conductivity,"");
+    strcpy(atom[58].luster,"");
+    strcpy(atom[58].phase,"");
+    atom[58].density = ;
+    strcpy(atom[58].uses,"");
+    strcpy(atom[58].image_path,"");
+	
 	
 	
 	
@@ -1947,6 +2147,22 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
 	atom[94].atomic_number=95;
 		
 	atom[94].atomic_weight=243.00;
+	strcpy(atom[58].history,"");
+    atom[58].melting_point = ;
+    atom[58].boiling_point = ;
+    atom[58].ionic_radius = ;
+    atom[58].isotopes = ;
+    atom[58].electronegativity = ;
+    strcpy(atom[58].color,"");
+    atom[58].group = ;
+    atom[58].period = ;
+    strcpy(atom[58].conductivity,"");
+    strcpy(atom[58].luster,"");
+    strcpy(atom[58].phase,"");
+    atom[58].density = ;
+    strcpy(atom[58].uses,"");
+    strcpy(atom[58].image_path,"");
+	
 	strcpy(atom[95].name,"CURIUM");
 		
 	strcpy(atom[95].symbol,"Cm");
@@ -1954,6 +2170,21 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
 	atom[95].atomic_number=96;
 		
 	atom[95].atomic_weight=247.00;
+	strcpy(atom[58].history,"");
+    atom[58].melting_point = ;
+    atom[58].boiling_point = ;
+    atom[58].ionic_radius = ;
+    atom[58].isotopes = ;
+    atom[58].electronegativity = ;
+    strcpy(atom[58].color,"");
+    atom[58].group = ;
+    atom[58].period = ;
+    strcpy(atom[58].conductivity,"");
+    strcpy(atom[58].luster,"");
+    strcpy(atom[58].phase,"");
+    atom[58].density = ;
+    strcpy(atom[58].uses,"");
+    strcpy(atom[58].image_path,"");
 	
 	
 	
@@ -1969,7 +2200,21 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
 	atom[96].atomic_number=97;
 		
 	atom[96].atomic_weight=247.00;
-	
+	strcpy(atom[58].history,"");
+    atom[58].melting_point = ;
+    atom[58].boiling_point = ;
+    atom[58].ionic_radius = ;
+    atom[58].isotopes = ;
+    atom[58].electronegativity = ;
+    strcpy(atom[58].color,"");
+    atom[58].group = ;
+    atom[58].period = ;
+    strcpy(atom[58].conductivity,"");
+    strcpy(atom[58].luster,"");
+    strcpy(atom[58].phase,"");
+    atom[58].density = ;
+    strcpy(atom[58].uses,"");
+    strcpy(atom[58].image_path,"");
 	
 	
 	
@@ -1980,6 +2225,22 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
 	atom[97].atomic_number=98;
 		
 	atom[97].atomic_weight=251.00;
+	strcpy(atom[58].history,"");
+    atom[58].melting_point = ;
+    atom[58].boiling_point = ;
+    atom[58].ionic_radius = ;
+    atom[58].isotopes = ;
+    atom[58].electronegativity = ;
+    strcpy(atom[58].color,"");
+    atom[58].group = ;
+    atom[58].period = ;
+    strcpy(atom[58].conductivity,"");
+    strcpy(atom[58].luster,"");
+    strcpy(atom[58].phase,"");
+    atom[58].density = ;
+    strcpy(atom[58].uses,"");
+    strcpy(atom[58].image_path,"");
+	
 	
 	
 	
@@ -1991,7 +2252,21 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
 	atom[98].atomic_number=99;
 		
 	atom[98].atomic_weight=252.00;
-	
+	strcpy(atom[58].history,"");
+    atom[58].melting_point = ;
+    atom[58].boiling_point = ;
+    atom[58].ionic_radius = ;
+    atom[58].isotopes = ;
+    atom[58].electronegativity = ;
+    strcpy(atom[58].color,"");
+    atom[58].group = ;
+    atom[58].period = ;
+    strcpy(atom[58].conductivity,"");
+    strcpy(atom[58].luster,"");
+    strcpy(atom[58].phase,"");
+    atom[58].density = ;
+    strcpy(atom[58].uses,"");
+    strcpy(atom[58].image_path,"");
 	
 	
 	
@@ -2002,6 +2277,22 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
 	atom[99].atomic_number=257.00;
 		
 	atom[99].atomic_weight=231.03;
+	strcpy(atom[58].history,"");
+    atom[58].melting_point = ;
+    atom[58].boiling_point = ;
+    atom[58].ionic_radius = ;
+    atom[58].isotopes = ;
+    atom[58].electronegativity = ;
+    strcpy(atom[58].color,"");
+    atom[58].group = ;
+    atom[58].period = ;
+    strcpy(atom[58].conductivity,"");
+    strcpy(atom[58].luster,"");
+    strcpy(atom[58].phase,"");
+    atom[58].density = ;
+    strcpy(atom[58].uses,"");
+    strcpy(atom[58].image_path,"");
+	
 	
 	
 	
@@ -2013,7 +2304,21 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
 	atom[100].atomic_number=101;
 		
 	atom[100].atomic_weight=258.00;
-	
+	strcpy(atom[58].history,"");
+    atom[58].melting_point = ;
+    atom[58].boiling_point = ;
+    atom[58].ionic_radius = ;
+    atom[58].isotopes = ;
+    atom[58].electronegativity = ;
+    strcpy(atom[58].color,"");
+    atom[58].group = ;
+    atom[58].period = ;
+    strcpy(atom[58].conductivity,"");
+    strcpy(atom[58].luster,"");
+    strcpy(atom[58].phase,"");
+    atom[58].density = ;
+    strcpy(atom[58].uses,"");
+    strcpy(atom[58].image_path,"");
 	
 	
 	
@@ -2024,6 +2329,22 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
 	atom[101].atomic_number=102;
 		
 	atom[101].atomic_weight=259.00;
+	strcpy(atom[58].history,"");
+    atom[58].melting_point = ;
+    atom[58].boiling_point = ;
+    atom[58].ionic_radius = ;
+    atom[58].isotopes = ;
+    atom[58].electronegativity = ;
+    strcpy(atom[58].color,"");
+    atom[58].group = ;
+    atom[58].period = ;
+    strcpy(atom[58].conductivity,"");
+    strcpy(atom[58].luster,"");
+    strcpy(atom[58].phase,"");
+    atom[58].density = ;
+    strcpy(atom[58].uses,"");
+    strcpy(atom[58].image_path,"");
+	
 	
 	
 	
@@ -2035,6 +2356,22 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
 	atom[102].atomic_number=103;
 		
 	atom[102].atomic_weight=262.00;
+		strcpy(atom[58].history,"");
+    atom[58].melting_point = ;
+    atom[58].boiling_point = ;
+    atom[58].ionic_radius = ;
+    atom[58].isotopes = ;
+    atom[58].electronegativity = ;
+    strcpy(atom[58].color,"");
+    atom[58].group = ;
+    atom[58].period = ;
+    strcpy(atom[58].conductivity,"");
+    strcpy(atom[58].luster,"");
+    strcpy(atom[58].phase,"");
+    atom[58].density = ;
+    strcpy(atom[58].uses,"");
+    strcpy(atom[58].image_path,"");
+	
 	
 	
 	
@@ -2046,6 +2383,21 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
 	atom[103].atomic_number=104;
 		
 	atom[103].atomic_weight=261.00;
+	strcpy(atom[58].history,"");
+    atom[58].melting_point = ;
+    atom[58].boiling_point = ;
+    atom[58].ionic_radius = ;
+    atom[58].isotopes = ;
+    atom[58].electronegativity = ;
+    strcpy(atom[58].color,"");
+    atom[58].group = ;
+    atom[58].period = ;
+    strcpy(atom[58].conductivity,"");
+    strcpy(atom[58].luster,"");
+    strcpy(atom[58].phase,"");
+    atom[58].density = ;
+    strcpy(atom[58].uses,"");
+    strcpy(atom[58].image_path,"");
 	
 	
 	
@@ -2057,42 +2409,117 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
 	atom[104].atomic_number=105;
 		
 	atom[104].atomic_weight=262.00;
+	strcpy(atom[105].electronic_configuration,"[Rn] 5f146d47s2";
+	strcpy(atom[104].history,"");
+    atom[104].melting_point = ;
+    atom[104].boiling_point = ;
+    atom[104].ionic_radius = ;
+    atom[104].isotopes = ;
+    atom[104].electronegativity = ;
+    strcpy(atom[104].color,"");
+    atom[104].group = ;
+    atom[104].period = ;
+    strcpy(atom[104].conductivity,"");
+    strcpy(atom[104].luster,"");
+    strcpy(atom[104].phase,"");
+    atom[104].density = ;
+    strcpy(atom[104].uses,"");
+    strcpy(atom[104].image_path,"");
+	
+	
+	
 	strcpy(atom[105].name,"SEABORGIUM");
-		
 	strcpy(atom[105].symbol,"Sg");
-		
 	atom[105].atomic_number=106;
-		
 	atom[105].atomic_weight=266.00;
+	strcpy(atom[105].electronic_configuration,"[Rn] 5f146d47s2";
+	strcpy(atom[105].history," Seaborgium was first produced by a team of scientists led by Albert Ghiorso working at the Lawrence Berkeley Laboratory in Berkeley, California, in 1974. ");
+    atom[105].melting_point =–°C ;
+    atom[105].boiling_point =–°C ;
+    atom[105].ionic_radius =200 pm ;
+    atom[105].isotopes =. There are 12 known radioisotopes from 258Sg to 271Sg and 2 known isomers (261mSg and 263mSg). The longest-lived isotope is 269Sg with a half-life of 14 minutes. ;
+    atom[105].electronegativity = (no data) ;
+    strcpy(atom[105].color,"Seaborgium is an artificially produced radioactive chemical element, it's appearance is unknown, it probably has a silvery white or metallic gray colour");
+    atom[105].group =  6;
+    atom[105].period =  7;
+    strcpy(atom[105].conductivity,"Thermal Conductivity,");
+    strcpy(atom[105].luster," It appears like a metallic grey or silvery white with a hint of shine. It is of metallic lustre.");
+    strcpy(atom[105].phase,"solid (predicted)");
+    atom[105].density =23–24 g/cm3 (predicted) ;
+    strcpy(atom[105].uses," Since only a few atoms of seaborgium have ever been made, there are currently no uses for seaborgium outside of basic scientific research.");
+    strcpy(atom[105].image_path,"");
+	
 	
 	
 	
 	
 	strcpy(atom[106].name,"BOHRIUM");
-		
 	strcpy(atom[106].symbol,"Bh");
-		
 	atom[106].atomic_number=107;
-		
 	atom[106].atomic_weight=264.00;
+	strcpy(atom[58].electronic_configuration,"[Rn] 5f14 6d5 7s2";
+	strcpy(atom[58].history,"Bohrium was first discovered by a team of scientists in Dubna, Russia, in 1976. The discovery was confirmed by Peter Armbruster, Gottfried Münzenber and their team working in Darmstadt, Germany, in 1981");
+    atom[58].melting_point =254 °C (489 °F) ;
+    atom[58].boiling_point =962 °C (1,764 °F) ;
+    atom[58].ionic_radius =200 pm ;
+    atom[58].isotopes =There are 11 known isotopes ranging from 260Bh to 274Bh, and 1 isomer, 262mBh. The longest-lived isotope is 270Bh ;
+    atom[58].electronegativity =1.3 ;
+    strcpy(atom[58].color,"Unknown, but probably metallic and silvery white or grey in appearance");
+    atom[58].group = 7 ;
+    atom[58].period = 7 ;
+    strcpy(atom[58].conductivity,"Transition Metals are generally described as ductile, malleable, and able to conduct electricity and heat.");
+    strcpy(atom[58].luster,"Unknown Luster");
+    strcpy(atom[58].phase,"Solid");
+    atom[58].density =26–27 g/cm3 (predicted) ;
+    strcpy(atom[58].uses," Since only a few atoms of bohrium have ever been made, there are currently no uses for bohrium outside of basic scientific research.");
+    strcpy(atom[58].image_path,"");
 	
 	
 	
 	
 	strcpy(atom[107].name,"HASSSIUM");
-		
 	strcpy(atom[107].symbol,"Hs");
-		
 	atom[107].atomic_number=108;
-		
 	atom[107].atomic_weight=277.00;
-	strcpy(atom[108].name,"Meinerium");
-		
+	 strcpy(atom[58].electronic_configuration,"[Rn] 5f146d67s2";
+	strcpy(atom[58].history,"Hassium was discovered in 1984. It was first produced in Darmstadt, Germany, by a team led by Peter Armbruster and Gottfried Münzenber");
+    atom[58].melting_point =–°C ;
+    atom[58].boiling_point =–°C ;
+    atom[58].ionic_radius =200 pm ;
+    atom[58].isotopes =There are 12 known isotopes from 263Hs to 277Hs and 1–4 isomers. ;
+    atom[58].electronegativity =1.3 ;
+    strcpy(atom[58].color,"Unknown, but probably metallic and silvery white or grey in appearance");
+    atom[58].group =8 ;
+    atom[58].period =7 ;
+    strcpy(atom[58].conductivity," high electrical conductivity and malleability ");
+    strcpy(atom[58].luster,"Hassium's appearance is unknown but it is suspected to be silvery white or metallic grey in color");
+    strcpy(atom[58].phase,"41 kg·cm3 (predicted)");
+    atom[58].density =41 kg·cm3 (predicted) ;
+    strcpy(atom[58].uses," At present it is only used in research. Hassium has no known biological role.");
+    strcpy(atom[58].image_path,"");
+	
+	strcpy(atom[108].name,"Meitnerium");
 	strcpy(atom[108].symbol,"Mt");
-		
 	atom[108].atomic_number=109;
-		
-	atom[108].atomic_weight=268.00;
+	atom[108].atomic_weight=278.00;
+	  strcpy(atom[58].electronic_configuration,"[Rn] 5f146d77s2");
+	strcpy(atom[58].history,"Meitnerium was first discovered in 1982 in Darmstadt, in what was then West Germany.");
+    atom[58].melting_point =–°C. ;
+    atom[58].boiling_point =–°C. ;
+    atom[58].ionic_radius =200 pm ;
+    atom[58].isotopes =There are eight known isotopes, from 266Mt to 278Mt. There may also be two isomers. The longest-lived of the known isotopes is 278Mt with a half-life of 8 seconds. The unconfirmed heavier 282Mt appears to have an even longer half-life of 67 seconds. ;
+    atom[58].electronegativity =  1.3.;
+    strcpy(atom[58].color,"Unknown, but probably metallic and silvery white or grey in appearance");
+    atom[58].group =middle of this band in group 9 ;
+    atom[58].period =7 ;
+    strcpy(atom[58].conductivity," high electrical conductivity ");
+    strcpy(atom[58].luster,Meitnerium is a radioactive, synthetic element about which little is known. It is classified as a metal and is a solid at room temperature."");
+    strcpy(atom[58].phase," solid at room temperature.");
+    atom[58].density =27–28 g/cm3 (predicted) ;
+    strcpy(atom[58].uses,"meitnerium might be used for technology purposes and harvesting energy.");
+    strcpy(atom[58].image_path,"");
+	
+	
 
     
     //for data department please don't change below code

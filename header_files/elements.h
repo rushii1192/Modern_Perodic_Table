@@ -1338,158 +1338,468 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
     strcpy(atom[58].image_path,"");
 	
 	
-	strcpy(atom[59].name,"NEODYMIUM");
-		
-	strcpy(atom[59].symbol,"Nd");
-		
-	atom[59].atomic_number=60;
-		
-	atom[59].atomic_weight=144.240;
-	
-	strcpy(atom[60].name,"PROMETHIUM");
-		
-	strcpy(atom[60].symbol,"Pm");
-		
-	atom[60].atomic_number=61;
-		
-	atom[60].atomic_weight=145.000;
-	strcpy(atom[61].name,"SAMARIUM");
-		
-	strcpy(atom[61].symbol,"Sm");
-		
-	atom[61].atomic_number=62;
-		
-	atom[61].atomic_weight=150.36;
-	strcpy(atom[62].name,"EUROPIUM");
-		
-	strcpy(atom[62].symbol,"Eu");
-		
-	atom[62].atomic_number=63;
-		
-	atom[62].atomic_weight=151.96;
-	strcpy(atom[63].name,"GADOLINIUM");
-		
-	strcpy(atom[63].symbol,"Gd");
-		
-	atom[63].atomic_number=64;
-		
-	atom[63].atomic_weight=157.25;
-	strcpy(atom[64].name,"SAMARIUM");
-		
-	strcpy(atom[64].symbol,"Sm");
-		
-	atom[64].atomic_number=65;
-		
-	atom[64].atomic_weight=150.36;
-	strcpy(atom[65].name,"DYSPROSIUM");
-		
-	strcpy(atom[65].symbol,"Dy");
-		
-	atom[65].atomic_number=66;
-		
-	atom[65].atomic_weight=162.50;
-	strcpy(atom[66].name,"HOLMINM");
-		
-	strcpy(atom[66].symbol,"Ho");
-		
-	atom[66].atomic_number=67;
-		
-	atom[66].atomic_weight=164.93;
-	strcpy(atom[67].name,"ERBIUM");
-		
-	strcpy(atom[67].symbol,"Er");
-		
-	atom[67].atomic_number=68;
-		
-	atom[67].atomic_weight=167.25;
-	strcpy(atom[68].name,"THULIUM");
-		
-	strcpy(atom[68].symbol,"Tm");
-		
-	atom[68].atomic_number=69;
-		
-	atom[68].atomic_weight=168.93;
-	strcpy(atom[69].name,"YTTERBIUM");
-		
-	strcpy(atom[69].symbol,"Yb");
-		
-	atom[69].atomic_number=70;
-		
-	atom[69].atomic_weight=173.04;
-	strcpy(atom[70].name,"LUTETIUM");
-		
-	strcpy(atom[70].symbol,"Lu");
-		
-	atom[70].atomic_number=71;
-		
-	atom[70].atomic_weight=174.96;
-	strcpy(atom[71].name,"HAFNIUM");
-		
-	strcpy(atom[71].symbol,"Hf");
-		
-	atom[71].atomic_number=72;
-		
-	atom[71].atomic_weight=178.49;
-	strcpy(atom[72].name,"TANTALUM");
-		
-	strcpy(atom[72].symbol,"Ta");
-		
-	atom[72].atomic_number=73;
-		
-	atom[72].atomic_weight=180.94;
-	strcpy(atom[73].name,"TUNGSTEN");
-		
-	strcpy(atom[73].symbol,"Lu");
-		
-	atom[73].atomic_number=74;
-		
-	atom[73].atomic_weight=174.96;
-	strcpy(atom[74].name,"RHENIUM");
-		
-	strcpy(atom[74].symbol,"Re");
-		
-	atom[74].atomic_number=75;
-		
-	atom[74].atomic_weight=186.84;
+    strcpy(atom[59].name,"NEODYMIUM");
+    strcpy(atom[59].symbol,"Nd");
+    atom[59].atomic_number=60;
+    atom[59].atomic_weight=144.240;
+    strcpy(atom[58].electronic_configuration,"");
+    strcpy(atom[58].history,"");
+    atom[58].melting_point = ;
+    atom[58].boiling_point = ;
+    atom[58].ionic_radius = ;
+    atom[58].isotopes = ;
+    atom[58].electronegativity = ;
+    strcpy(atom[58].color,"");
+    atom[58].group = ;
+    atom[58].period = ;
+    strcpy(atom[58].conductivity,"");
+    strcpy(atom[58].luster,"");
+    strcpy(atom[58].phase,"");
+    atom[58].density = ;
+    strcpy(atom[58].uses,"");
+    strcpy(atom[58].image_path,"");
 	
 	
-	strcpy(atom[75].name,"OSMIUM");
-		
-	strcpy(atom[75].symbol,"Os");
-		
-	atom[75].atomic_number=76;
-		
-	atom[75].atomic_weight=190.23;
+    strcpy(atom[60].name,"PROMETHIUM");
+    strcpy(atom[60].symbol,"Pm");	
+    atom[60].atomic_number=61;
+    atom[60].atomic_weight=145.000;
+    strcpy(atom[58].electronic_configuration,"");
+    strcpy(atom[58].history,"");
+    atom[58].melting_point = ;
+    atom[58].boiling_point = ;
+    atom[58].ionic_radius = ;
+    atom[58].isotopes = ;
+    atom[58].electronegativity = ;
+    strcpy(atom[58].color,"");
+    atom[58].group = ;
+    atom[58].period = ;
+    strcpy(atom[58].conductivity,"");
+    strcpy(atom[58].luster,"");
+    strcpy(atom[58].phase,"");
+    atom[58].density = ;
+    strcpy(atom[58].uses,"");
+    strcpy(atom[58].image_path,"");
 	
 	
-	strcpy(atom[76].name,"IRIDIUM");
-		
-	strcpy(atom[76].symbol,"Ir");
-		
-	atom[76].atomic_number=77;
-		
-	atom[76].atomic_weight=192.21;
-	strcpy(atom[77].name,"PLATINUM");
-		
-	strcpy(atom[77].symbol,"Pt");
-		
-	atom[77].atomic_number=78;
-		
-	atom[77].atomic_weight=195.07;
-	strcpy(atom[78].name,"GOLD");
-		
-	strcpy(atom[78].symbol,"Au");
-		
-	atom[78].atomic_number=79;
-		
-	atom[78].atomic_weight=196.96;
-	strcpy(atom[79].name,"MERCURY");
-		
-	strcpy(atom[79].symbol,"Hg");
-		
-	atom[79].atomic_number=80;
-		
-	atom[79].atomic_weight=200.59;
+    strcpy(atom[61].name,"SAMARIUM");
+    strcpy(atom[61].symbol,"Sm");	
+    atom[61].atomic_number=62;	
+    atom[61].atomic_weight=150.3;
+    strcpy(atom[58].electronic_configuration,"");
+    strcpy(atom[58].history,"");
+    atom[58].melting_point = ;
+    atom[58].boiling_point = ;
+    atom[58].ionic_radius = ;
+    atom[58].isotopes = ;
+    atom[58].electronegativity = ;
+    strcpy(atom[58].color,"");
+    atom[58].group = ;
+    atom[58].period = ;
+    strcpy(atom[58].conductivity,"");
+    strcpy(atom[58].luster,"");
+    strcpy(atom[58].phase,"");
+    atom[58].density = ;
+    strcpy(atom[58].uses,"");
+    strcpy(atom[58].image_path,"");
+	
+	
+    strcpy(atom[62].name,"EUROPIUM");
+    strcpy(atom[62].symbol,"Eu");	
+    atom[62].atomic_number=63;	
+    atom[62].atomic_weight=151.96;
+    strcpy(atom[58].electronic_configuration,"");
+    strcpy(atom[58].history,"");
+    atom[58].melting_point = ;
+    atom[58].boiling_point = ;
+    atom[58].ionic_radius = ;
+    atom[58].isotopes = ;
+    atom[58].electronegativity = ;
+    strcpy(atom[58].color,"");
+    atom[58].group = ;
+    atom[58].period = ;
+    strcpy(atom[58].conductivity,"");
+    strcpy(atom[58].luster,"");
+    strcpy(atom[58].phase,"");
+    atom[58].density = ;
+    strcpy(atom[58].uses,"");
+    strcpy(atom[58].image_path,"");
+	
+	
+    strcpy(atom[63].name,"GADOLINIUM");	
+    strcpy(atom[63].symbol,"Gd");	
+    atom[63].atomic_number=64;	
+    atom[63].atomic_weight=157.25;
+    strcpy(atom[58].electronic_configuration,"");
+    strcpy(atom[58].history,"");
+    atom[58].melting_point = ;
+    atom[58].boiling_point = ;
+    atom[58].ionic_radius = ;
+    atom[58].isotopes = ;
+    atom[58].electronegativity = ;
+    strcpy(atom[58].color,"");
+    atom[58].group = ;
+    atom[58].period = ;
+    strcpy(atom[58].conductivity,"");
+    strcpy(atom[58].luster,"");
+    strcpy(atom[58].phase,"");
+    atom[58].density = ;
+    strcpy(atom[58].uses,"");
+    strcpy(atom[58].image_path,"");
+	
+	
+    strcpy(atom[64].name,"SAMARIUM");	
+    strcpy(atom[64].symbol,"Sm");	
+    atom[64].atomic_number=65;	
+    atom[64].atomic_weight=150.36;
+    strcpy(atom[58].electronic_configuration,"");
+    strcpy(atom[58].history,"");
+    atom[58].melting_point = ;
+    atom[58].boiling_point = ;
+    atom[58].ionic_radius = ;
+    atom[58].isotopes = ;
+    atom[58].electronegativity = ;
+    strcpy(atom[58].color,"");
+    atom[58].group = ;
+    atom[58].period = ;
+    strcpy(atom[58].conductivity,"");
+    strcpy(atom[58].luster,"");
+    strcpy(atom[58].phase,"");
+    atom[58].density = ;
+    strcpy(atom[58].uses,"");
+    strcpy(atom[58].image_path,"");
+	
+	
+    strcpy(atom[65].name,"DYSPROSIUM");	
+    strcpy(atom[65].symbol,"Dy");
+    atom[65].atomic_number=66;	
+    atom[65].atomic_weight=162.50;
+    strcpy(atom[58].electronic_configuration,"");
+    strcpy(atom[58].history,"");
+    atom[58].melting_point = ;
+    atom[58].boiling_point = ;
+    atom[58].ionic_radius = ;
+    atom[58].isotopes = ;
+    atom[58].electronegativity = ;
+    strcpy(atom[58].color,"");
+    atom[58].group = ;
+    atom[58].period = ;
+    strcpy(atom[58].conductivity,"");
+    strcpy(atom[58].luster,"");
+    strcpy(atom[58].phase,"");
+    atom[58].density = ;
+    strcpy(atom[58].uses,"");
+    strcpy(atom[58].image_path,"");
+	
+	
+    strcpy(atom[66].name,"HOLMINM");
+    strcpy(atom[66].symbol,"Ho");	
+    atom[66].atomic_number=67;	
+    atom[66].atomic_weight=164.93;
+    strcpy(atom[58].electronic_configuration,"");
+    strcpy(atom[58].history,"");
+    atom[58].melting_point = ;
+    atom[58].boiling_point = ;
+    atom[58].ionic_radius = ;
+    atom[58].isotopes = ;
+    atom[58].electronegativity = ;
+    strcpy(atom[58].color,"");
+    atom[58].group = ;
+    atom[58].period = ;
+    strcpy(atom[58].conductivity,"");
+    strcpy(atom[58].luster,"");
+    strcpy(atom[58].phase,"");
+    atom[58].density = ;
+    strcpy(atom[58].uses,"");
+    strcpy(atom[58].image_path,"");
+	
+	
+    strcpy(atom[67].name,"ERBIUM");	
+    strcpy(atom[67].symbol,"Er");
+    atom[67].atomic_number=68;	
+    atom[67].atomic_weight=167.25;
+    strcpy(atom[58].electronic_configuration,"");
+    strcpy(atom[58].history,"");
+    atom[58].melting_point = ;
+    atom[58].boiling_point = ;
+    atom[58].ionic_radius = ;
+    atom[58].isotopes = ;
+    atom[58].electronegativity = ;
+    strcpy(atom[58].color,"");
+    atom[58].group = ;
+    atom[58].period = ;
+    strcpy(atom[58].conductivity,"");
+    strcpy(atom[58].luster,"");
+    strcpy(atom[58].phase,"");
+    atom[58].density = ;
+    strcpy(atom[58].uses,"");
+    strcpy(atom[58].image_path,"");
+	
+	
+    strcpy(atom[68].name,"THULIUM");	
+    strcpy(atom[68].symbol,"Tm");	
+    atom[68].atomic_number=69;
+    atom[68].atomic_weight=168.93;
+    strcpy(atom[58].electronic_configuration,"");
+    strcpy(atom[58].history,"");
+    atom[58].melting_point = ;
+    atom[58].boiling_point = ;
+    atom[58].ionic_radius = ;
+    atom[58].isotopes = ;
+    atom[58].electronegativity = ;
+    strcpy(atom[58].color,"");
+    atom[58].group = ;
+    atom[58].period = ;
+    strcpy(atom[58].conductivity,"");
+    strcpy(atom[58].luster,"");
+    strcpy(atom[58].phase,"");
+    atom[58].density = ;
+    strcpy(atom[58].uses,"");
+    strcpy(atom[58].image_path,"");
+	
+	
+    strcpy(atom[69].name,"YTTERBIUM");
+    strcpy(atom[69].symbol,"Yb");
+    atom[69].atomic_number=70;	
+    atom[69].atomic_weight=173.04;
+    strcpy(atom[58].electronic_configuration,"");
+    strcpy(atom[58].history,"");
+    atom[58].melting_point = ;
+    atom[58].boiling_point = ;
+    atom[58].ionic_radius = ;
+    atom[58].isotopes = ;
+    atom[58].electronegativity = ;
+    strcpy(atom[58].color,"");
+    atom[58].group = ;
+    atom[58].period = ;
+    strcpy(atom[58].conductivity,"");
+    strcpy(atom[58].luster,"");
+    strcpy(atom[58].phase,"");
+    atom[58].density = ;
+    strcpy(atom[58].uses,"");
+    strcpy(atom[58].image_path,"");
+	
+	
+    strcpy(atom[70].name,"LUTETIUM");
+    strcpy(atom[70].symbol,"Lu");
+    atom[70].atomic_number=71;	
+    atom[70].atomic_weight=174.96;
+    strcpy(atom[58].electronic_configuration,"");
+    strcpy(atom[58].history,"");
+    atom[58].melting_point = ;
+    atom[58].boiling_point = ;
+    atom[58].ionic_radius = ;
+    atom[58].isotopes = ;
+    atom[58].electronegativity = ;
+    strcpy(atom[58].color,"");
+    atom[58].group = ;
+    atom[58].period = ;
+    strcpy(atom[58].conductivity,"");
+    strcpy(atom[58].luster,"");
+    strcpy(atom[58].phase,"");
+    atom[58].density = ;
+    strcpy(atom[58].uses,"");
+    strcpy(atom[58].image_path,"");
+	
+	
+    strcpy(atom[71].name,"HAFNIUM");
+    strcpy(atom[71].symbol,"Hf");	
+    atom[71].atomic_number=72; 	
+    atom[71].atomic_weight=178.49;
+    strcpy(atom[58].electronic_configuration,"");
+    strcpy(atom[58].history,"");
+    atom[58].melting_point = ;
+    atom[58].boiling_point = ;
+    atom[58].ionic_radius = ;
+    atom[58].isotopes = ;
+    atom[58].electronegativity = ;
+    strcpy(atom[58].color,"");
+    atom[58].group = ;
+    atom[58].period = ;
+    strcpy(atom[58].conductivity,"");
+    strcpy(atom[58].luster,"");
+    strcpy(atom[58].phase,"");
+    atom[58].density = ;
+    strcpy(atom[58].uses,"");
+    strcpy(atom[58].image_path,"");
+	
+	
+    strcpy(atom[72].name,"TANTALUM");
+    strcpy(atom[72].symbol,"Ta");	
+    atom[72].atomic_number=73;	
+    atom[72].atomic_weight=180.94;
+    strcpy(atom[58].electronic_configuration,"");
+    strcpy(atom[58].history,"");
+    atom[58].melting_point = ;
+    atom[58].boiling_point = ;
+    atom[58].ionic_radius = ;
+    atom[58].isotopes = ;
+    atom[58].electronegativity = ;
+    strcpy(atom[58].color,"");
+    atom[58].group = ;
+    atom[58].period = ;
+    strcpy(atom[58].conductivity,"");
+    strcpy(atom[58].luster,"");
+    strcpy(atom[58].phase,"");
+    atom[58].density = ;
+    strcpy(atom[58].uses,"");
+    strcpy(atom[58].image_path,"");
+	
+	
+    strcpy(atom[73].name,"TUNGSTEN");	
+    strcpy(atom[73].symbol,"Lu");	
+    atom[73].atomic_number=74;	
+    atom[73].atomic_weight=174.96;
+    strcpy(atom[58].electronic_configuration,"");
+    strcpy(atom[58].history,"");
+    atom[58].melting_point = ;
+    atom[58].boiling_point = ;
+    atom[58].ionic_radius = ;
+    atom[58].isotopes = ;
+    atom[58].electronegativity = ;
+    strcpy(atom[58].color,"");
+    atom[58].group = ;
+    atom[58].period = ;
+    strcpy(atom[58].conductivity,"");
+    strcpy(atom[58].luster,"");
+    strcpy(atom[58].phase,"");
+    atom[58].density = ;
+    strcpy(atom[58].uses,"");
+    strcpy(atom[58].image_path,"");
+	
+	
+    strcpy(atom[74].name,"RHENIUM");	
+    strcpy(atom[74].symbol,"Re");	
+    atom[74].atomic_number=75;	
+    atom[74].atomic_weight=186.84;
+    strcpy(atom[58].electronic_configuration,"");
+    strcpy(atom[58].history,"");
+    atom[58].melting_point = ;
+    atom[58].boiling_point = ;
+    atom[58].ionic_radius = ;
+    atom[58].isotopes = ;
+    atom[58].electronegativity = ;
+    strcpy(atom[58].color,"");
+    atom[58].group = ;
+    atom[58].period = ;
+    strcpy(atom[58].conductivity,"");
+    strcpy(atom[58].luster,"");
+    strcpy(atom[58].phase,"");
+    atom[58].density = ;
+    strcpy(atom[58].uses,"");
+    strcpy(atom[58].image_path,"");
+	
+	
+   strcpy(atom[75].name,"OSMIUM");	
+   strcpy(atom[75].symbol,"Os");		
+   atom[75].atomic_number=76;
+   atom[75].atomic_weight=190.23;
+    strcpy(atom[58].electronic_configuration,"");
+    strcpy(atom[58].history,"");
+    atom[58].melting_point = ;
+    atom[58].boiling_point = ;
+    atom[58].ionic_radius = ;
+    atom[58].isotopes = ;
+    atom[58].electronegativity = ;
+    strcpy(atom[58].color,"");
+    atom[58].group = ;
+    atom[58].period = ;
+    strcpy(atom[58].conductivity,"");
+    strcpy(atom[58].luster,"");
+    strcpy(atom[58].phase,"");
+    atom[58].density = ;
+    strcpy(atom[58].uses,"");
+    strcpy(atom[58].image_path,"");
+	
+	
+    strcpy(atom[76].name,"IRIDIUM");	
+    strcpy(atom[76].symbol,"Ir");	
+    atom[76].atomic_number=77;	
+    atom[76].atomic_weight=192.21;
+    strcpy(atom[58].electronic_configuration,"");
+    strcpy(atom[58].history,"");
+    atom[58].melting_point = ;
+    atom[58].boiling_point = ;
+    atom[58].ionic_radius = ;
+    atom[58].isotopes = ;
+    atom[58].electronegativity = ;
+    strcpy(atom[58].color,"");
+    atom[58].group = ;
+    atom[58].period = ;
+    strcpy(atom[58].conductivity,"");
+    strcpy(atom[58].luster,"");
+    strcpy(atom[58].phase,"");
+    atom[58].density = ;
+    strcpy(atom[58].uses,"");
+    strcpy(atom[58].image_path,"");
+	
+	
+    strcpy(atom[77].name,"PLATINUM");	
+    strcpy(atom[77].symbol,"Pt");	
+    atom[77].atomic_number=78;
+    atom[77].atomic_weight=195.07;
+    strcpy(atom[58].electronic_configuration,"");
+    strcpy(atom[58].history,"");
+    atom[58].melting_point = ;
+    atom[58].boiling_point = ;
+    atom[58].ionic_radius = ;
+    atom[58].isotopes = ;
+    atom[58].electronegativity = ;
+    strcpy(atom[58].color,"");
+    atom[58].group = ;
+    atom[58].period = ;
+    strcpy(atom[58].conductivity,"");
+    strcpy(atom[58].luster,"");
+    strcpy(atom[58].phase,"");
+    atom[58].density = ;
+    strcpy(atom[58].uses,"");
+    strcpy(atom[58].image_path,"");
+	
+	
+    strcpy(atom[78].name,"GOLD");		
+    strcpy(atom[78].symbol,"Au");
+    atom[78].atomic_number=79;	
+    atom[78].atomic_weight=196.96;
+    strcpy(atom[58].electronic_configuration,"");
+    strcpy(atom[58].history,"");
+    atom[58].melting_point = ;
+    atom[58].boiling_point = ;
+    atom[58].ionic_radius = ;
+    atom[58].isotopes = ;
+    atom[58].electronegativity = ;
+    strcpy(atom[58].color,"");
+    atom[58].group = ;
+    atom[58].period = ;
+    strcpy(atom[58].conductivity,"");
+    strcpy(atom[58].luster,"");
+    strcpy(atom[58].phase,"");
+    atom[58].density = ;
+    strcpy(atom[58].uses,"");
+    strcpy(atom[58].image_path,"");
+	
+	
+    strcpy(atom[79].name,"MERCURY");
+    strcpy(atom[79].symbol,"Hg");	
+    atom[79].atomic_number=80;	
+    atom[79].atomic_weight=200.59;
+    strcpy(atom[58].electronic_configuration,"");
+    strcpy(atom[58].history,"");
+    atom[58].melting_point = ;
+    atom[58].boiling_point = ;
+    atom[58].ionic_radius = ;
+    atom[58].isotopes = ;
+    atom[58].electronegativity = ;
+    strcpy(atom[58].color,"");
+    atom[58].group = ;
+    atom[58].period = ;
+    strcpy(atom[58].conductivity,"");
+    strcpy(atom[58].luster,"");
+    strcpy(atom[58].phase,"");
+    atom[58].density = ;
+    strcpy(atom[58].uses,"");
+    strcpy(atom[58].image_path,"");
+	
+	
 	strcpy(atom[80].name,"THALLIUM");
 		
 	strcpy(atom[80].symbol,"Tl");

@@ -950,7 +950,7 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
     strcpy(atom[41].history," Molybdenum was discovered by Carl Welhelm Scheele, a Swedish chemist, in 1778 in a mineral known as molybdenite (MoS2) which had been confused as a lead compound. Molybdenum was isolated by Peter Jacob Hjelm in 1781. ");
     atom[41].melting_point = 2,623 ;
     atom[41].boiling_point = 4,639 ;
-    atom[41].ionic_radius = 0.068  (+4) ; 0.06  (+6);
+    atom[41].ionic_radius = 0.068;
     atom[41].isotopes = 7;
     atom[41].electronegativity = 2.16;
     strcpy(atom[41].color,"Silvery-grey ");
@@ -981,7 +981,7 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
     strcpy(atom[42].conductivity,"Thermal conductivity");
     strcpy(atom[42].luster,"Metallic lustre");
     strcpy(atom[42].phase,"Solid");
-    atom[42].density = 11.5 at 20;
+    atom[42].density = 11.5;
     strcpy(atom[42].uses,"Technetium-99m (metastable) is widely used for medical diagnostic studies. Several chemical forms are used to image different parts of the body. Technetium is a remarkable corrosion inhibitor for steel, and adding very small amounts can provide excellent protection.");
     strcpy(atom[42].image_path,"");
 	
@@ -1003,7 +1003,7 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
     strcpy(atom[43].conductivity,"Thermal Conductivity");
     strcpy(atom[43].luster,"Metallic Luster");
     strcpy(atom[43].phase,"Solid");
-    atom[43].density = 12.2  at 20;
+    atom[43].density = 12.2;
     strcpy(atom[43].uses,"Ruthenium oxide is used in the chemical industry to coat the anodes of electrochemical cells for chlorine production. Ruthenium is also used in catalysts for ammonia and acetic acid production. Ruthenium compounds can be used in solar cells, which turn light energy into electrical energy.");
     strcpy(atom[43].image_path,"");
 	
@@ -1025,7 +1025,7 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
     strcpy(atom[44].conductivity,"Thermal Conductivity");
     strcpy(atom[44].luster,"Metallic luster");
     strcpy(atom[44].phase,"Gas");
-    atom[44].density = 12.4 at 20;
+    atom[44].density = 12.4;
     strcpy(atom[44].uses,"The major use of rhodium is in catalytic converters for cars (80%). It reduces nitrogen oxides in exhaust gases. Rhodium is also used as catalysts in the chemical industry, for making nitric acid, acetic acid and hydrogenation reactions.");
     strcpy(atom[44].image_path,"");
 	
@@ -1047,7 +1047,7 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
     strcpy(atom[45].conductivity,"Thermal conductivity");
     strcpy(atom[45].luster,"Metallic Luster");
     strcpy(atom[45].phase,"Solid");
-    atom[45].density = 11.9 at 20;
+    atom[45].density = 11.9;
     strcpy(atom[45].uses,"The largest use of palladium today is in catalytic converters. Palladium is also used in jewelry, dentistry, watch making, blood sugar test strips, aircraft spark plugs, surgical instruments, and electrical contacts. Palladium is also used to make professional transverse (concert or classical) flutes.");
     strcpy(atom[45].image_path,"");
 	
@@ -1135,7 +1135,7 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
     strcpy(atom[49].conductivity,"Electrical Conductivity");
     strcpy(atom[49].luster,"Metallic luster");
     strcpy(atom[49].phase,"Solid");
-    atom[49].density = β:7.265,α:5.769;
+    atom[49].density =5.679;
     strcpy(atom[49].uses,"Tin has many uses. It takes a high polish and is used to coat other metals to prevent corrosion, such as in tin cans, which are made of tin-coated steel. Alloys of tin are important, such as soft solder, pewter, bronze and phosphor bronze. A niobium-tin alloy is used for superconducting magnets.");
     strcpy(atom[49].image_path,"");
 	
@@ -1201,7 +1201,7 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
     strcpy(atom[52].conductivity,"Thermal conductivity");
     strcpy(atom[52].luster,"Metallic luster");
     strcpy(atom[52].phase,"Solid");
-    atom[52].density = 4.93 at 20;
+    atom[52].density = 4.93;
     strcpy(atom[52].uses,"Iodine has many commercial uses. Iodide salts are used in pharmaceuticals and disinfectants, printing inks and dyes, catalysts, animal feed supplements and photographic chemicals. Iodine is also used to make polarising filters for LCD displays.");
     strcpy(atom[52].image_path,"");
 	
@@ -1245,7 +1245,7 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
     strcpy(atom[54].conductivity,"Thermal conductivity");
     strcpy(atom[54].luster,"Metallic luster");
     strcpy(atom[54].phase,"Solid");
-    atom[54].density = 1.9 at 20;
+    atom[54].density = 1.9;
     strcpy(atom[54].uses,"The most common use for caesium compounds is as a drilling fluid. They are also used to make special optical glass, as a catalyst promoter, in vacuum tubes and in radiation monitoring equipment. One of its most important uses is in the 'caesium clock' (atomic clock).");
     strcpy(atom[54].image_path,"");
 	
@@ -1255,7 +1255,7 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
     atom[55].atomic_number=56;       
     atom[55].atomic_weight=137.372;
     strcpy(atom[55].electronic_configuration,"[Xe] 6s2");
-    strcpy(atom[55].history,"Barium was first isolated by electrolysis of molten barium salts in 1808 by Sir Humphry Davy in England. Davy, by analogy with calcium, named "barium" after baryta, with the "-ium" ending signifying a metallic element.");
+    strcpy(atom[55].history,"Barium was first isolated by electrolysis of molten barium salts in 1808 by Sir Humphry Davy in England. Davy, by analogy with calcium, named 'barium' after baryta, with the '-ium' ending signifying a metallic element.");
     atom[55].melting_point = 727;
     atom[55].boiling_point = 1,897;
     atom[55].ionic_radius = 268;
@@ -1267,7 +1267,7 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
     strcpy(atom[55].conductivity,"Thermal conductivity");
     strcpy(atom[55].luster,"silvery white lustre");
     strcpy(atom[55].phase,"Solid");
-    atom[55].density = 3.5 at 20;
+    atom[55].density = 3.5;
     strcpy(atom[55].uses,"Barium is often used for spark-plug electrodes and in vacuum tubes as a drying and oxygen-removing agent.Its compounds are used by oil and gas industries to make drilling mud. ...Barium compounds are also used to make paint, bricks, tiles, glass, and rubber.Barium nitrate and chlorate give fireworks a green colour.");
     strcpy(atom[55].image_path,"");
 	
@@ -1289,7 +1289,7 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
     strcpy(atom[56].conductivity,"Thermal conductivity");
     strcpy(atom[56].luster,"Metallic luster");
     strcpy(atom[56].phase,"Solid");
-    atom[56].density = 6.18 at 20;
+    atom[56].density = 6.18;
     strcpy(atom[56].uses,"The chemical Lanthanum is found in modern television sets, the energy saving lamps, fluorescent tubes, etc.It is used in the field of optics as lenses and radiation absorbing glasses.It is known to increase the resistivity and malleability of steel.It is also used for catalysis in the field of petroleum refineries.");
     strcpy(atom[56].image_path,"");
 	
@@ -1333,7 +1333,7 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
     strcpy(atom[58].conductivity,"Thermal and Electrical Conductivity");
     strcpy(atom[58].luster,"Metallic luster");
     strcpy(atom[58].phase,"Solid");
-    atom[58].density = 6.8 at 20;
+    atom[58].density = 6.8;
     strcpy(atom[58].uses,"Praseodymium is used in a variety of alloys. The high-strength alloy it forms with magnesium is used in aircraft engines. Mischmetal is an alloy containing about 5% praseodymium and is used to make flints for cigarette lighters. Praseodymium is also used in alloys for permanent magnets.");
     strcpy(atom[58].image_path,"");
 	

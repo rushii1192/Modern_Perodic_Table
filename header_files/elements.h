@@ -2050,7 +2050,7 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
 	atom[91].atomic_number=92;
 		
 	atom[91].atomic_weight=238.02;
-	strcpy(atom[58].history,"");
+	strcpy(atom[58].history,"Uranium was discovered in 1789 by Martin Klaproth, a German chemist, in the mineral called pitchblende. It was named after the planet Uranus, which had been discovered eight years earlier. ");
     atom[58].melting_point = ;
     atom[58].boiling_point = ;
     atom[58].ionic_radius = ;

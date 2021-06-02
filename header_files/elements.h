@@ -2044,26 +2044,24 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
 	
 	
 	strcpy(atom[91].name,"URANIUM");
-		
 	strcpy(atom[91].symbol,"U");
-		
 	atom[91].atomic_number=92;
-		
 	atom[91].atomic_weight=238.02;
+	strcpy(atom[81].electronic_configuration="[Rn] 5f36d17s2");
 	strcpy(atom[58].history,"Uranium was discovered in 1789 by Martin Klaproth, a German chemist, in the mineral called pitchblende. It was named after the planet Uranus, which had been discovered eight years earlier. ");
-    atom[58].melting_point = ;
-    atom[58].boiling_point = ;
-    atom[58].ionic_radius = ;
-    atom[58].isotopes = ;
-    atom[58].electronegativity = ;
-    strcpy(atom[58].color,"");
-    atom[58].group = ;
-    atom[58].period = ;
-    strcpy(atom[58].conductivity,"");
-    strcpy(atom[58].luster,"");
-    strcpy(atom[58].phase,"");
-    atom[58].density = ;
-    strcpy(atom[58].uses,"");
+    atom[58].melting_point =1,132 °C ;
+    atom[58].boiling_point =4,131 °C ;
+    atom[58].ionic_radius =230 pm ;
+    atom[58].isotopes =Naturally occurring uranium consists of three isotopes: uranium-234, uranium-235 and uranium-238. ;
+    atom[58].electronegativity =1.38 ;
+    strcpy(atom[58].color,"silvery white");
+    atom[58].group =6 ;
+    atom[58].period =7 ;
+    strcpy(atom[58].conductivity,"27.5 W/(m⋅K)");
+    strcpy(atom[58].luster," sub-metallic, greasy, pitchy, or dull.");
+    strcpy(atom[58].phase,"alpha (α), beta (β), and gamma (γ) phases.");
+    atom[58].density =19.1 g/cm3 ;
+    strcpy(atom[58].uses,"a very important element because it provides us with nuclear fuel used to generate electricity in nuclear power stations. It is also the major material from which other synthetic transuranium elements are made.");
     strcpy(atom[58].image_path,"");
 	
 	
@@ -2071,26 +2069,24 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
 	
 	
 	strcpy(atom[92].name,"NEPTUNIUM");
-		
 	strcpy(atom[92].symbol,"Np");
-		
 	atom[92].atomic_number=93;
-		
 	atom[92].atomic_weight=237.00;
-	strcpy(atom[58].history,"");
-    atom[58].melting_point = ;
-    atom[58].boiling_point = ;
-    atom[58].ionic_radius = ;
-    atom[58].isotopes = ;
-    atom[58].electronegativity = ;
-    strcpy(atom[58].color,"");
+	strcpy(atom[81].electronic_configuration="[Rn] 5f46d17s2");
+	strcpy(atom[58].history,"Neptunium was first made in 1940 by Edwin McMillan and Philip Abelson at Berkeley, California. It came from a uranium target that had been bombarded with slow neutrons ");
+    atom[58].melting_point =644 °C ;
+    atom[58].boiling_point =3,902 °C ;
+    atom[58].ionic_radius = 230 pm;
+    atom[58].isotopes =7 ;
+    atom[58].electronegativity =1.36 ;
+    strcpy(atom[58].color,"silvery metallic");
     atom[58].group = ;
-    atom[58].period = ;
-    strcpy(atom[58].conductivity,"");
-    strcpy(atom[58].luster,"");
-    strcpy(atom[58].phase,"");
-    atom[58].density = ;
-    strcpy(atom[58].uses,"");
+    atom[58].period =7 ;
+    strcpy(atom[58].conductivity,"6.3 W/(m⋅K)");
+    strcpy(atom[58].luster,"Unknown");
+    strcpy(atom[58].phase,"solid");
+    atom[58].density =20.45 ;
+    strcpy(atom[58].uses,"Neptunium is fissionable, and could theoretically be used as fuel in a fast neutron reactor or in a nuclear weapon.");
     strcpy(atom[58].image_path,"");
 	
 	
@@ -2124,49 +2120,45 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
 	
 	
 	strcpy(atom[94].name,"AMERICIUM");
-		
 	strcpy(atom[94].symbol,"Am");
-		
 	atom[94].atomic_number=95;
-		
 	atom[94].atomic_weight=243.00;
-	strcpy(atom[58].history,"");
-    atom[58].melting_point = ;
-    atom[58].boiling_point = ;
-    atom[58].ionic_radius = ;
-    atom[58].isotopes = ;
-    atom[58].electronegativity = ;
-    strcpy(atom[58].color,"");
+	strcpy(atom[81].electronic_configuration="[Rn] 5f77s2");
+	strcpy(atom[58].history,"Americium was first made late in 1944 at the University of Chicago by a team which included Glenn Seaborg, Ralph James, Leon Morgan, and Albert Ghiorso.");
+    atom[58].melting_point =1,176 °C ;
+    atom[58].boiling_point =2,607 °C ;
+    atom[58].ionic_radius =200 pm ;
+    atom[58].isotopes =19 ;
+    atom[58].electronegativity =1.3 ;
+    strcpy(atom[58].color,"silvery white");
     atom[58].group = ;
-    atom[58].period = ;
-    strcpy(atom[58].conductivity,"");
-    strcpy(atom[58].luster,"");
-    strcpy(atom[58].phase,"");
-    atom[58].density = ;
-    strcpy(atom[58].uses,"");
+    atom[58].period =7 ;
+    strcpy(atom[58].conductivity,"10 W/(m⋅K)");
+    strcpy(atom[58].luster,"The luster of freshly prepared americium metal is white");
+    strcpy(atom[58].phase,"solid");
+    atom[58].density =13.67 g.cm-3 ;
+    strcpy(atom[58].uses," used in spacecraft batteries in the future. Currently plutonium is used but availability is poor so alternatives are being considered.");
     strcpy(atom[58].image_path,"");
 	
 	strcpy(atom[95].name,"CURIUM");
-		
 	strcpy(atom[95].symbol,"Cm");
-		
 	atom[95].atomic_number=96;
-		
 	atom[95].atomic_weight=247.00;
-	strcpy(atom[58].history,"");
-    atom[58].melting_point = ;
-    atom[58].boiling_point = ;
-    atom[58].ionic_radius = ;
-    atom[58].isotopes = ;
-    atom[58].electronegativity = ;
-    strcpy(atom[58].color,"");
+	strcpy(atom[81].electronic_configuration="[Rn] 5f76d17s2");
+	strcpy(atom[58].history,"Curium is named in honour of Pierre and Marie Curie, who pioneered the study of radioactivity in the final days of the 19th century. ");
+    atom[58].melting_point =1,345 °C ;
+    atom[58].boiling_point =3,110 °C ;
+    atom[58].ionic_radius =200 pm ;
+    atom[58].isotopes =14 ;
+    atom[58].electronegativity =1.3 ;
+    strcpy(atom[58].color,"silvery-white");
     atom[58].group = ;
-    atom[58].period = ;
-    strcpy(atom[58].conductivity,"");
-    strcpy(atom[58].luster,"");
-    strcpy(atom[58].phase,"");
-    atom[58].density = ;
-    strcpy(atom[58].uses,"");
+    atom[58].period =7 ;
+    strcpy(atom[58].conductivity,"N/A");
+    strcpy(atom[58].luster,"Unknown");
+    strcpy(atom[58].phase," solid ");
+    atom[58].density =13.51 g/cm3 ;
+    strcpy(atom[58].uses,"Curium has two main uses: as a fuel for Radioisotope Thermal Generators (RTGs) on board satellites, deep space probes, planetary surface rovers and in heart pacemakers, and as a alpha emitter for alpha particle X-Ray spectrometry, again particularly in space applications.");
     strcpy(atom[58].image_path,"");
 	
 	

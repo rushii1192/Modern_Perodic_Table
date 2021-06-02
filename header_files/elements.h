@@ -1937,118 +1937,108 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
 	
 	
 	strcpy(atom[86].name,"FRANCIUM");
-		
 	strcpy(atom[86].symbol,"Fr");
-		
 	atom[86].atomic_number=87;
-		
 	atom[86].atomic_weight=223.00;
-	strcpy(atom[58].history,"");
-    atom[58].melting_point = ;
-    atom[58].boiling_point = ;
-    atom[58].ionic_radius = ;
-    atom[58].isotopes = ;
-    atom[58].electronegativity = ;
-    strcpy(atom[58].color,"");
-    atom[58].group = ;
-    atom[58].period = ;
-    strcpy(atom[58].conductivity,"");
-    strcpy(atom[58].luster,"");
-    strcpy(atom[58].phase,"");
-    atom[58].density = ;
-    strcpy(atom[58].uses,"");
+	strcpy(atom[81].electronic_configuration,[Rn] 7s1"");
+	strcpy(atom[58].history,"Francium was finally discovered in 1939 by Marguerite Perey at the Curie Institute in Paris. She had purified a sample of actinium free of all its known radioactive impurities and yet its radioactivity still indicated another element was present, and which she rightly deduced was the missing element 87.");
+    atom[58].melting_point =27 °C ;
+    atom[58].boiling_point =676.8 °C ;
+    atom[58].ionic_radius = 348 pm;
+    atom[58].isotopes =Francium (87Fr) has no stable isotopes. A standard atomic weight cannot be given. Its most stable isotope is 223Fr with a half-life of 22 minutes, occurring in trace quantities as an intermediate decay product of 235U. ;
+    atom[58].electronegativity =0.79 ;
+    strcpy(atom[58].color,"silver-gray-metallic (presumed)");
+    atom[58].group = 1 ;
+    atom[58].period = 7;
+    strcpy(atom[58].conductivity,"15 W·m1·K1");
+    strcpy(atom[58].luster," Silver Gray (Unconfirmed) Flame Color.");
+    strcpy(atom[58].phase,"solid");
+    atom[58].density =2.48 g/cm3 ;
+    strcpy(atom[58].uses,"Francium has been used in the field of research, chemistry and also in the atomic structure.");
     strcpy(atom[58].image_path,"");
 	
 	strcpy(atom[87].name,"RADIUM");
-		
 	strcpy(atom[87].symbol,"Ra");
-		
 	atom[87].atomic_number=88;
-		
 	atom[87].atomic_weight=226.00;
-	strcpy(atom[58].history,"");
-    atom[58].melting_point = ;
-    atom[58].boiling_point = ;
-    atom[58].ionic_radius = ;
-    atom[58].isotopes = ;
-    atom[58].electronegativity = ;
-    strcpy(atom[58].color,"");
-    atom[58].group = ;
-    atom[58].period = ;
-    strcpy(atom[58].conductivity,"");
-    strcpy(atom[58].luster,"");
-    strcpy(atom[58].phase,"");
-    atom[58].density = ;
-    strcpy(atom[58].uses,"");
+	strcpy(atom[81].electronic_configuratio="[Rn] 7s2");
+	strcpy(atom[58].history,"Polish physicist Marie Curie and her husband, Pierre, discovered radium in 1898, refining it from pitchblende scooped from the Joachimsthal mines. ");
+    atom[58].melting_point =700 °C ;
+    atom[58].boiling_point =1,737 °C ;
+    atom[58].ionic_radius =283 pm ;
+    atom[58].isotopes =Radium has 33 known isotopes from 202Ra to 234Ra. ;
+    atom[58].electronegativity=0.89 ;
+    strcpy(atom[58].color,"silvery white metallic");
+    atom[58].group =2 ;
+    atom[58].period =7 ;
+    strcpy(atom[58].conductivity,"18.6 W·m-1·K-1");
+    strcpy(atom[58].luster,"Radium is silvery, lustrous, soft, intensely radioactive");
+    strcpy(atom[58].phase,"Solid");
+    atom[58].density =5 g.cm-3  ;
+    strcpy(atom[58].uses,"Radium-223 is sometimes used to treat prostate cancer that has spread to the bones. Because bones contain calcium and radium is in the same group as calcium, it can be used to target cancerous bone cells.");
     strcpy(atom[58].image_path,"");
 	
 	strcpy(atom[88].name,"ACTINIUM");
-		
 	strcpy(atom[88].symbol,"Ac");
-		
 	atom[88].atomic_number=89;
-		
 	atom[88].atomic_weight=227.00;
-	strcpy(atom[58].history,"");
-    atom[58].melting_point = ;
-    atom[58].boiling_point = ;
-    atom[58].ionic_radius = ;
-    atom[58].isotopes = ;
-    atom[58].electronegativity = ;
-    strcpy(atom[58].color,"");
-    atom[58].group = ;
-    atom[58].period = ;
-    strcpy(atom[58].conductivity,"");
-    strcpy(atom[58].luster,"");
-    strcpy(atom[58].phase,"");
-    atom[58].density = ;
-    strcpy(atom[58].uses,"");
+	strcpy(atom[81].electronic_configuration=" [Rn] 6d17s2");
+	strcpy(atom[58].history," Actinium was discovered in 1899 by André-Louis Debierne, a French chemist, while experimenting with new methods of separating rare earth oxides. Friedrich Otto Giesel independently discovered actinium in 1902");
+    atom[58].melting_point =1,050 °C ;
+    atom[58].boiling_point =3,197 °C ;
+    atom[58].ionic_radius =200 pm ;
+    atom[58].isotopes = There are 32 known isotopes, from 205Ac to 236Ac, and 7 isomers ;
+    atom[58].electronegativity =1.1 ;
+    strcpy(atom[58].color,"silvery-white radioactive metal");
+    atom[58].group =  3;
+    atom[58].period =[Rn] 6d1 7s2 ;
+    strcpy(atom[58].conductivity,"12 W -1 K-1 ");
+    strcpy(atom[58].luster,"Unknown");
+    strcpy(atom[58].phase,"solid");
+    atom[58].density =10.07 g.cm-3 ;
+    strcpy(atom[58].uses,"Actinium is a very powerful source of alpha rays, but is rarely used outside research. Actinium has no known biological role");
     strcpy(atom[58].image_path,"");
 	
 	strcpy(atom[89].name,"THORIUM");
-		
 	strcpy(atom[89].symbol,"Th");
-		
 	atom[89].atomic_number=90;
-		
 	atom[89].atomic_weight=232.03;
-	strcpy(atom[58].history,"");
-    atom[58].melting_point = ;
-    atom[58].boiling_point = ;
-    atom[58].ionic_radius = ;
-    atom[58].isotopes = ;
-    atom[58].electronegativity = ;
-    strcpy(atom[58].color,"");
+	 strcpy(atom[81].electronic_configuration=" [Rn] 6d27s2 ");
+	strcpy(atom[58].history,"Thorium was discovered in 1828 by the Norwegian amateur mineralogist Morten Thrane Esmark and identified by the Swedish chemist Jöns Jacob Berzelius, who named it after Thor, the Norse god of thunder.");
+    atom[58].melting_point =1,750 °C ;
+    atom[58].boiling_point =4,787 °C ;
+    atom[58].ionic_radius =240 pm ;
+    atom[58].isotopes = has seven naturally occurring isotopes but none are stable. One isotope, 232Th, is relatively stable, with a half-life of 1.405×1010 years ;
+    atom[58].electronegativity =1.3 ;
+    strcpy(atom[58].color," silvery white metal");
     atom[58].group = ;
-    atom[58].period = ;
-    strcpy(atom[58].conductivity,"");
-    strcpy(atom[58].luster,"");
-    strcpy(atom[58].phase,"");
-    atom[58].density = ;
-    strcpy(atom[58].uses,"");
+    atom[58].period = 7;
+    strcpy(atom[58].conductivity,"The thermal conductivity for ThO2 is significantly higher than for UO2");
+    strcpy(atom[58].luster,thorium is a silvery-white metal which is air-stable and retains its luster for several months. When contaminated with the oxide, thorium slowly tarnishes in air, becoming gray and finally black."");
+    strcpy(atom[58].phase," solid.");
+    atom[58].density =11.72 g.cm-3 ;
+    strcpy(atom[58].uses,"Thorium is also used to strengthen magnesium, coating tungsten wire in electrical equipment, controlling the grain size of tungsten in electric lamps, high-temperature crucibles, in glasses, in camera and scientific instrument lenses, and is a source of nuclear power");
     strcpy(atom[58].image_path,"");
 	
 	strcpy(atom[90].name,"PROTACTINIUM");
-		
 	strcpy(atom[90].symbol,"Pa");
-		
 	atom[90].atomic_number=91;
-		
 	atom[90].atomic_weight=231.03;
-	strcpy(atom[58].history,"");
-    atom[58].melting_point = ;
-    atom[58].boiling_point = ;
-    atom[58].ionic_radius = ;
-    atom[58].isotopes = ;
-    atom[58].electronegativity = ;
-    strcpy(atom[58].color,"");
-    atom[58].group = ;
-    atom[58].period = ;
-    strcpy(atom[58].conductivity,"");
-    strcpy(atom[58].luster,"");
-    strcpy(atom[58].phase,"");
-    atom[58].density = ;
-    strcpy(atom[58].uses,"");
+	strcpy(atom[81].electronic_configuration=" [Rn] 5f26d17s2");
+	strcpy(atom[58].history,"The existence of protactinium was predicted in 1871 by Dmitri Mendeleev. Discovery of the element is attributed to Otto Hahn and Lise Meitner, who discovered another isotope of protactinium, 231Pa in 1917. The element wasn't isolated until 1934, by Aristid von Grosse.");
+    atom[58].melting_point =1,568 °C ;
+    atom[58].boiling_point =4,027 °C ;
+    atom[58].ionic_radius =200 pm ;
+    atom[58].isotopes =no stable isotopes. The three naturally occurring isotopes allow a standard atomic weight to be given. ;
+    atom[58].electronegativity =1.5 ;
+    strcpy(atom[58].color,"Silvery metallic");
+    atom[58].group = n/a ;
+    atom[58].period = 7 ;
+    strcpy(atom[58].conductivity,"47 W/(m⋅K)");
+    strcpy(atom[58].luster,"bright, silvery metallic");
+    strcpy(atom[58].phase,"solid");
+    atom[58].density =15.37 g/cm3 ;
+    strcpy(atom[58].uses," protactinium is usually extracted from used nuclear fuel. Due to its scarcity, high toxicity, and high radioactivity, protactinium has no current practical uses other than basic scientific research.");
     strcpy(atom[58].image_path,"");
 	
 	
@@ -2370,53 +2360,48 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
 	
 	
 	strcpy(atom[103].name,"RUTHERFORDIUM");
-		
 	strcpy(atom[103].symbol,"Rf");
-		
 	atom[103].atomic_number=104;
-		
 	atom[103].atomic_weight=261.00;
-	strcpy(atom[58].history,"");
-    atom[58].melting_point = ;
-    atom[58].boiling_point = ;
-    atom[58].ionic_radius = ;
-    atom[58].isotopes = ;
-    atom[58].electronegativity = ;
-    strcpy(atom[58].color,"");
-    atom[58].group = ;
-    atom[58].period = ;
-    strcpy(atom[58].conductivity,"");
-    strcpy(atom[58].luster,"");
-    strcpy(atom[58].phase,"");
-    atom[58].density = ;
-    strcpy(atom[58].uses,"");
+	strcpy(atom[105].electronic_configuration,"[Rn] 5f146d27s2";
+	strcpy(atom[58].history," Rutherfordium is named for scientist Ernest Rutherford. ... It was first reported by a team of scientists in Dubna, Russia, in 1964. ");
+    atom[58].melting_point =2400 K ​(2100 °C, ​3800 °F) (predicted) ;
+    atom[58].boiling_point =5800 K ​(5500 °C, ​9900 °F) (predicted) ;
+    atom[58].ionic_radius =200 pm ;
+    atom[58].isotopes =12 ;
+    atom[58].electronegativity = 1.28;
+    strcpy(atom[58].color,"Unknown, but probably metallic and silvery white or grey in appearance");
+    atom[58].group = 4 ;
+    atom[58].period = 7 ;
+    strcpy(atom[58].conductivity," 23 (estimate) W m‑1 K‑1");
+    strcpy(atom[58].luster,"The chemical element rutherfordium is classed as a transition metal.");
+    strcpy(atom[58].phase,"solid (predicted)");
+    atom[58].density =23 g·cm3(estimated) ;
+    strcpy(atom[58].uses,"Because rutherfordium is made within the lab, there are not very many uses for this element commercially. On the other hand, rutherfordium has been used within the laboratory setting to conduct research");
     strcpy(atom[58].image_path,"");
 	
 	
 	
 	
 	strcpy(atom[104].name,"DUBNIUM");
-		
 	strcpy(atom[104].symbol,"Db");
-		
 	atom[104].atomic_number=105;
-		
 	atom[104].atomic_weight=262.00;
-	strcpy(atom[105].electronic_configuration,"[Rn] 5f146d47s2";
-	strcpy(atom[104].history,"");
-    atom[104].melting_point = ;
-    atom[104].boiling_point = ;
-    atom[104].ionic_radius = ;
-    atom[104].isotopes = ;
-    atom[104].electronegativity = ;
+	strcpy(atom[105].electronic_configuration,"[Rn] 5f146d37s2";
+	strcpy(atom[104].history," Scientists working at the Joint Institute for Nuclear Research in Dubna, Russia, first reported the production of dubnium in 1967. ");
+    atom[104].melting_point = –°C ;
+    atom[104].boiling_point = –°C ;
+    atom[104].ionic_radius =200 pm ;
+    atom[104].isotopes = The first isotope to be synthesized was 261Db in 1968. The 13 known radioisotopes are from 255Db to 270Db, and 1–3 isomers. ;
+    atom[104].electronegativity =— ;
     strcpy(atom[104].color,"");
-    atom[104].group = ;
-    atom[104].period = ;
-    strcpy(atom[104].conductivity,"");
-    strcpy(atom[104].luster,"");
-    strcpy(atom[104].phase,"");
-    atom[104].density = ;
-    strcpy(atom[104].uses,"");
+    atom[104].group = 5;
+    atom[104].period =7 ;
+    strcpy(atom[104].conductivity,"N/A");
+    strcpy(atom[104].luster," It is a transuranium element ");
+    strcpy(atom[104].phase,"Presumably a solid at 298 K");
+    atom[104].density = 21.6 g/cm3;
+    strcpy(atom[104].uses,"At present, it is only used in research. Dubnium has no known biological role");
     strcpy(atom[104].image_path,"");
 	
 	

@@ -1850,96 +1850,89 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
     strcpy(atom[81].image_path,"");
 	
 	
-	strcpy(atom[82].name,"BISMITH");
-		
+	strcpy(atom[82].name,"BISMUTH");
 	strcpy(atom[82].symbol,"Bi");
-		
 	atom[82].atomic_number=83;
-		
 	atom[82].atomic_weight=208.98;
-	strcpy(atom[58].history,"");
-    atom[58].melting_point = ;
-    atom[58].boiling_point = ;
-    atom[58].ionic_radius = ;
-    atom[58].isotopes = ;
-    atom[58].electronegativity = ;
-    strcpy(atom[58].color,"");
-    atom[58].group = ;
-    atom[58].period = ;
-    strcpy(atom[58].conductivity,"");
-    strcpy(atom[58].luster,"");
-    strcpy(atom[58].phase,"");
-    atom[58].density = ;
-    strcpy(atom[58].uses,"");
+	 strcpy(atom[81].electronic_configuration,"[Xe] 4f14 5d10 6s2 6p3");
+	strcpy(atom[58].history,"Today, China, Mexico and Peru are the main sources of bismuth. Origin of name:The chemical element bismuth was officially discovered in 1753 by French scientist Claude Geoffroy.");
+    atom[58].melting_point =271.4 °C ;
+    atom[58].boiling_point =1,564 °C ;
+    atom[58].ionic_radius =230 pm ;
+    atom[58].isotopes =41 known isotopes, ranging from 184Bi to 224Bi ;
+    atom[58].electronegativity =2.02 ;
+    strcpy(atom[58].color,"gray-white with a reddish tinge.");
+    atom[58].group = 15;
+    atom[58].period =6 ;
+    strcpy(atom[58].conductivity,"Thermal conductivity	10 W/mK");
+    strcpy(atom[58].luster,"Metallic");
+    strcpy(atom[58].phase, "are about 10 possible solid phases");
+    atom[58].density =9.8 ;
+    strcpy(atom[58].uses,"It is used in extinguishers, electric fuses, and fire detectors. Certain bismuth compounds are also manufactured and used as pharmaceuticals. Industry makes use of bismuth compounds as catalysts in manufacturing acrylonitrile, the starting material for synthetic fibers and rubbers.");
     strcpy(atom[58].image_path,"");
 	
 	strcpy(atom[83].name,"POLONIUM");
-		
 	strcpy(atom[83].symbol,"Po");
-		
 	atom[83].atomic_number=84;
-		
 	atom[83].atomic_weight=209.00;
-	 atom[58].melting_point = ;
-    atom[58].boiling_point = ;
-    atom[58].ionic_radius = ;
-    atom[58].isotopes = ;
-    atom[58].electronegativity = ;
-    strcpy(atom[58].color,"");
-    atom[58].group = ;
+	strcpy(atom[81].electronic_configuration,"[Xe] 6s2 4f14 5d10 6p4");
+	strcpy(atom[58].history,"Polonium was discovered in 1898 by Marie and Pierre Curie, when it was extracted from the uranium ore pitchblende and identified solely by its strong radioactivity: it was the first element to be so discovered");
+	 atom[58].melting_point =254 °C ;
+    atom[58].boiling_point =962 °C ;
+    atom[58].ionic_radius = 200 pm;
+    atom[58].isotopes =Polonium has 42 known isotopes, all of which are radioactive. ;
+    atom[58].electronegativity =2 ;
+    strcpy(atom[58].color,"silvery");
+    atom[58].group =16 ;
     atom[58].period = ;
-    strcpy(atom[58].conductivity,"");
-    strcpy(atom[58].luster,"");
-    strcpy(atom[58].phase,"");
-    atom[58].density = ;
-    strcpy(atom[58].uses,"");
+    strcpy(atom[58].conductivity," 20 W·m-1·K-1");
+    strcpy(atom[58].luster,"Polonium is a rare, silvery-gray, radioactive, low-melting metalloid.");
+    strcpy(atom[58].phase,"solid");
+    atom[58].density = 9.4 g/cm3;
+    strcpy(atom[58].uses,"Polonium is an alpha-emitter, hence it is used in antistatic devices and for research purposes. It is used in the form of a thin film on a stainless steel disc as an alpha-particle source. It is used to eliminate static electricity produced during processes such as rolling paper, wire and sheet metal.");
     strcpy(atom[58].image_path,"");
 	
 	strcpy(atom[84].name,"Astatine");
-		
 	strcpy(atom[84].symbol,"At");
-		
 	atom[84].atomic_number=85;
-		
 	atom[84].atomic_weight=210.00;
-	strcpy(atom[58].history,"");
-    atom[58].melting_point = ;
-    atom[58].boiling_point = ;
-    atom[58].ionic_radius = ;
-    atom[58].isotopes = ;
-    atom[58].electronegativity = ;
-    strcpy(atom[58].color,"");
-    atom[58].group = ;
-    atom[58].period = ;
-    strcpy(atom[58].conductivity,"");
-    strcpy(atom[58].luster,"");
-    strcpy(atom[58].phase,"");
-    atom[58].density = ;
-    strcpy(atom[58].uses,"");
+	strcpy(atom[81].electronic_configuration,"[Xe] 4f¹⁴ 5d¹⁰ 6s² 6p⁵");
+	strcpy(atom[58].history,"Astatine was first produced in 1940 by Dale R. Coson, Kenneth Ross Mackenzie and Emilio Segrè at the University of California, Berkeley. ... The scientists found that the isotope they created was radioactive, so they named the element using the Greek 'astatos' meaning unstable.");
+    atom[58].melting_point = 302 °C;
+    atom[58].boiling_point =336.8 °C ;
+    atom[58].ionic_radius =200 pm ;
+    atom[58].isotopes =39 known isotopes, all of which are radioactive; the range of their mass numbers is from 191 to 229. ;
+    atom[58].electronegativity =2.2 ;
+    strcpy(atom[58].color,"black");
+    atom[58].group =17 ;
+    atom[58].period = 6;
+    strcpy(atom[58].conductivity,"1.7 W·m-1·K-1");
+    strcpy(atom[58].luster," Metallic. Odor.");
+    strcpy(atom[58].phase,"Solid");
+    atom[58].density =About 7g/cm3 ;
+    strcpy(atom[58].uses,"Hence it is used for treating diseases related to the thyroid. The isotope called Astatine-211 is utilized in the process of radiotherapy. It is also employed in the treatment of cancer as it is known to destroy cancer-causing cells....");
     strcpy(atom[58].image_path,"");
 	
 	strcpy(atom[85].name,"RADON");
-		
 	strcpy(atom[85].symbol,"Rn");
-		
 	atom[85].atomic_number=86;
-		
 	atom[85].atomic_weight=222.00;
 	atom[84].atomic_weight=210.00;
-	strcpy(atom[58].history,"");
-    atom[58].melting_point = ;
-    atom[58].boiling_point = ;
-    atom[58].ionic_radius = ;
-    atom[58].isotopes = ;
-    atom[58].electronegativity = ;
-    strcpy(atom[58].color,"");
-    atom[58].group = ;
-    atom[58].period = ;
-    strcpy(atom[58].conductivity,"");
-    strcpy(atom[58].luster,"");
-    strcpy(atom[58].phase,"");
-    atom[58].density = ;
-    strcpy(atom[58].uses,"");
+	strcpy(atom[81].electronic_configuration,"[Xe] 4f145d106s26p6");
+	strcpy(atom[58].history,"Radon was discovered by Friedrich Ernst Dorn, a German chemist, in 1900 while studying radium's decay chain. Originally named niton after the Latin word for shining, “nitens,” it has been known as radon since 1923. ... Eventually, occupational limits were established for radon concentrations in uranium mines");
+    atom[58].melting_point = -71 °C;
+    atom[58].boiling_point = -61.7 °C;
+    atom[58].ionic_radius =200 pm ;
+    atom[58].isotopes =There are 37 known isotopes of radon (86Rn), from 195Rn to 231Rn; all are radioactive ;
+    atom[58].electronegativity =2.2 ;
+    strcpy(atom[58].color,colorless"");
+    atom[58].group = 18 ;
+    atom[58].period =6 ;
+    strcpy(atom[58].conductivity,"3.61 m W·m-1·K-1");
+    strcpy(atom[58].luster," It does not have luster,");
+    strcpy(atom[58].phase,"gas");
+    atom[58].density =9.73 g/litre (0.13 ounce/gallon) ;
+    strcpy(atom[58].uses,"It is used in the treatment of cell damage and cancer. Radon is also used in radiation therapy.");
     strcpy(atom[58].image_path,"");
 	
 	

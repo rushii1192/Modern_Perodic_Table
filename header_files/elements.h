@@ -2093,26 +2093,24 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
 	
 	
 	strcpy(atom[93].name,"PLUTONIUM");
-		
 	strcpy(atom[93].symbol,"Pu");
-		
 	atom[93].atomic_number=94;
-		
 	atom[93].atomic_weight=244.00;
-	strcpy(atom[58].history,"");
-    atom[58].melting_point = ;
-    atom[58].boiling_point = ;
-    atom[58].ionic_radius = ;
-    atom[58].isotopes = ;
-    atom[58].electronegativity = ;
-    strcpy(atom[58].color,"");
+	strcpy(atom[81].electronic_configuration="[Rn] 5f67s2");
+	strcpy(atom[58].history,"Plutonium was first made in December 1940 at Berkeley, California, by Glenn Seaborg, Arthur Wahl, Joseph Kennedy, and Edwin McMillan. ... ");
+    atom[58].melting_point =639.4  ;
+    atom[58].boiling_point =3,232  ;
+    atom[58].ionic_radius =108 (3+)  ;
+    atom[58].isotopes =5 ;
+    atom[58].electronegativity =1.28 ;
+    strcpy(atom[58].color," plutonium is yellow or olive green in colour.");
     atom[58].group = ;
-    atom[58].period = ;
-    strcpy(atom[58].conductivity,"");
-    strcpy(atom[58].luster,"");
-    strcpy(atom[58].phase,"");
-    atom[58].density = ;
-    strcpy(atom[58].uses,"");
+    atom[58].period =7 ;
+    strcpy(atom[58].conductivity,"6.74 W/(m⋅K)");
+    strcpy(atom[58].luster," silvery bright color but takes on a dull gray, yellow, or olive green tarnish when oxidized in air. ");
+    strcpy(atom[58].phase,"solid at room temperature.");
+    atom[58].density =19.84  ;
+    strcpy(atom[58].uses,"Plutonium has been used to make nuclear weapons (such as "atomic bombs") and in nuclear power plants to produce electricity. Plutonium has also been used as a portable energy supply in space probes and other space vehicles.");
     strcpy(atom[58].image_path,"");
 	
 	
@@ -2169,51 +2167,47 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
 	
 	
 	strcpy(atom[96].name,"BERKELIUM");
-		
 	strcpy(atom[96].symbol,"Bk");
-		
 	atom[96].atomic_number=97;
-		
 	atom[96].atomic_weight=247.00;
-	strcpy(atom[58].history,"");
-    atom[58].melting_point = ;
-    atom[58].boiling_point = ;
-    atom[58].ionic_radius = ;
-    atom[58].isotopes = ;
-    atom[58].electronegativity = ;
-    strcpy(atom[58].color,"");
+	strcpy(atom[81].electronic_configuration="[Rn] 5f97s2");
+	strcpy(atom[58].history,"Berkelium was first produced in December 1949, at the University of California at Berkeley, and was made by Stanley Thompson, Albert Ghiorso, and Glenn Seaborg");
+    atom[58].melting_point =986 °C, ;
+    atom[58].boiling_point =2627 ;
+    atom[58].ionic_radius =200 pm ;
+    atom[58].isotopes =14 ;
+    atom[58].electronegativity =1.3 ;
+    strcpy(atom[58].color,"it is electropositive, reactive, and silver-coloured ");
     atom[58].group = ;
-    atom[58].period = ;
-    strcpy(atom[58].conductivity,"");
-    strcpy(atom[58].luster,"");
-    strcpy(atom[58].phase,"");
-    atom[58].density = ;
-    strcpy(atom[58].uses,"");
+    atom[58].period =7 ;
+    strcpy(atom[58].conductivity,"10 W·m-1·K-1");
+    strcpy(atom[58].luster,"Metallic");
+    strcpy(atom[58].phase,"solid");
+    atom[58].density =14  ;
+    strcpy(atom[58].uses,"It was used for the atmospheric nuclear weapons tests between 1945 and 1980.");
     strcpy(atom[58].image_path,"");
 	
 	
 	
 	strcpy(atom[97].name,"CALIFONIUM");
-		
 	strcpy(atom[97].symbol,"Cf");
-		
 	atom[97].atomic_number=98;
-		
 	atom[97].atomic_weight=251.00;
-	strcpy(atom[58].history,"");
-    atom[58].melting_point = ;
-    atom[58].boiling_point = ;
-    atom[58].ionic_radius = ;
-    atom[58].isotopes = ;
-    atom[58].electronegativity = ;
-    strcpy(atom[58].color,"");
+	strcpy(atom[81].electronic_configuration=" [Rn] 5f107s2");
+	strcpy(atom[58].history,"Californium was first made in 1950 at Berkeley, California, by a team consisting of Stanley Thompson, Kenneth Street Jr., Albert Ghiorso, and Glenn Seaborg. ");
+    atom[58].melting_point =900  ;
+    atom[58].boiling_point =1,472  ;
+    atom[58].ionic_radius = 200 pm;
+    atom[58].isotopes =20 ;
+    atom[58].electronegativity =1.3 ;
+    strcpy(atom[58].color," silvery-white");
     atom[58].group = ;
-    atom[58].period = ;
-    strcpy(atom[58].conductivity,"");
-    strcpy(atom[58].luster,"");
-    strcpy(atom[58].phase,"");
-    atom[58].density = ;
-    strcpy(atom[58].uses,"");
+    atom[58].period =7 ;
+    strcpy(atom[58].conductivity,"10 ");
+    strcpy(atom[58].luster,"high and shines like sodium");
+    strcpy(atom[58].phase,"solid");
+    atom[58].density =15.1 ;
+    strcpy(atom[58].uses," It is used in portable metal detectors, for identifying gold and silver ores, to identify water and oil layers in oil wells and to detect metal fatigue and stress in aeroplanes.");
     strcpy(atom[58].image_path,"");
 	
 	
@@ -2221,51 +2215,47 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
 	
 	
 	strcpy(atom[98].name,"EINSTEINIUM");
-		
 	strcpy(atom[98].symbol,"Es");
-		
 	atom[98].atomic_number=99;
-		
 	atom[98].atomic_weight=252.00;
-	strcpy(atom[58].history,"");
-    atom[58].melting_point = ;
-    atom[58].boiling_point = ;
-    atom[58].ionic_radius = ;
-    atom[58].isotopes = ;
-    atom[58].electronegativity = ;
-    strcpy(atom[58].color,"");
+	 strcpy(atom[81].electronic_configuration=" [Rn] 5f117s2");
+	strcpy(atom[58].history,"Einsteinium was discovered by a team of scientists led by Albert Ghiorso in 1952 while studying the radioactive debris ");
+    atom[58].melting_point =860 ;
+    atom[58].boiling_point =996 ;
+    atom[58].ionic_radius = 200 ;
+    atom[58].isotopes =18 ;
+    atom[58].electronegativity =1.3 ;
+    strcpy(atom[58].color,"silvery; glows blue in the dark");
     atom[58].group = ;
-    atom[58].period = ;
-    strcpy(atom[58].conductivity,"");
-    strcpy(atom[58].luster,"");
-    strcpy(atom[58].phase,"");
-    atom[58].density = ;
-    strcpy(atom[58].uses,"");
+    atom[58].period =7 ;
+    strcpy(atom[58].conductivity,"N/A");
+    strcpy(atom[58].luster,"silvery-white metallic");
+    strcpy(atom[58].phase,"solid");
+    atom[58].density =8.84 ;
+    strcpy(atom[58].uses,"Einsteinium has no uses outside research. Einsteinium has no known biological role");
     strcpy(atom[58].image_path,"");
 	
 	
 	
 	strcpy(atom[99].name,"FERMIUM");
-		
 	strcpy(atom[99].symbol,"Fm");
-		
 	atom[99].atomic_number=257.00;
-		
 	atom[99].atomic_weight=231.03;
-	strcpy(atom[58].history,"");
-    atom[58].melting_point = ;
-    atom[58].boiling_point = ;
-    atom[58].ionic_radius = ;
-    atom[58].isotopes = ;
-    atom[58].electronegativity = ;
-    strcpy(atom[58].color,"");
+	strcpy(atom[81].electronic_configuration=" [Rn] 5f127s2");
+	strcpy(atom[58].history," Fermium was discovered in 1953 in the debris of the first thermonuclear explosion which took place on a Pacific atoll on 1 November 1952");
+    atom[58].melting_point =1527  ;
+    atom[58].boiling_point =– ;
+    atom[58].ionic_radius =200  ;
+    atom[58].isotopes =21 ;
+    atom[58].electronegativity =1.3 ;
+    strcpy(atom[58].color,"shiny and silver-colored.");
     atom[58].group = ;
-    atom[58].period = ;
-    strcpy(atom[58].conductivity,"");
-    strcpy(atom[58].luster,"");
-    strcpy(atom[58].phase,"");
-    atom[58].density = ;
-    strcpy(atom[58].uses,"");
+    atom[58].period = 7;
+    strcpy(atom[58].conductivity,"25");
+    strcpy(atom[58].luster,"Unknown");
+    strcpy(atom[58].phase,"solid ");
+    atom[58].density =9.7(1)  ;
+    strcpy(atom[58].uses,"outside research");
     strcpy(atom[58].image_path,"");
 	
 	
@@ -2273,51 +2263,47 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
 	
 	
 	strcpy(atom[100].name,"MENDELEVIUM");
-		
 	strcpy(atom[100].symbol,"Md");
-		
 	atom[100].atomic_number=101;
-		
 	atom[100].atomic_weight=258.00;
-	strcpy(atom[58].history,"");
-    atom[58].melting_point = ;
+	strcpy(atom[81].electronic_configuration="[Rn] 5f137s2");
+	strcpy(atom[58].history," Mendelevium is named after the Russian chemist Dmitri Mendeleev. Discovery: In early 1955, Stanley Thompson, Glenn Seaborg, Bernard Harvey, Gregory Choppin and Albert Ghiorso ");
+    atom[58].melting_point =827 ;
     atom[58].boiling_point = ;
-    atom[58].ionic_radius = ;
-    atom[58].isotopes = ;
-    atom[58].electronegativity = ;
-    strcpy(atom[58].color,"");
+    atom[58].ionic_radius =200  ;
+    atom[58].isotopes =14 ;
+    atom[58].electronegativity =1.3 ;
+    strcpy(atom[58].color,"Unknown, but probably metallic and silvery white or grey in appearance");
     atom[58].group = ;
-    atom[58].period = ;
-    strcpy(atom[58].conductivity,"");
-    strcpy(atom[58].luster,"");
-    strcpy(atom[58].phase,"");
-    atom[58].density = ;
-    strcpy(atom[58].uses,"");
+    atom[58].period =7 ;
+    strcpy(atom[58].conductivity,"N/A");
+    strcpy(atom[58].luster,"bright metallic");
+    strcpy(atom[58].phase,"solid");
+    atom[58].density =10.3(7)  ;
+    strcpy(atom[58].uses," It is used only for scientific research. ");
     strcpy(atom[58].image_path,"");
 	
 	
 	
 	strcpy(atom[101].name,"NOBELIUM");
-		
 	strcpy(atom[101].symbol,"Np");
-		
 	atom[101].atomic_number=102;
-		
 	atom[101].atomic_weight=259.00;
-	strcpy(atom[58].history,"");
-    atom[58].melting_point = ;
-    atom[58].boiling_point = ;
-    atom[58].ionic_radius = ;
-    atom[58].isotopes = ;
-    atom[58].electronegativity = ;
-    strcpy(atom[58].color,"");
+	strcpy(atom[81].electronic_configuration="[Rn] 5f147s2");
+	strcpy(atom[58].history,"Georgy Flerov and colleagues and at Dubna, near Moscow, Russia, and independently by Albert Ghiorso and colleagues at Berkeley, California, USA");
+    atom[58].melting_point =827 ;
+    atom[58].boiling_point =Unknown ;
+    atom[58].ionic_radius =200  ;
+    atom[58].isotopes =12 ;
+    atom[58].electronegativity =1.3 ;
+    strcpy(atom[58].color,"Unknown, but probably metallic and silvery white or grey in appearance");
     atom[58].group = ;
-    atom[58].period = ;
-    strcpy(atom[58].conductivity,"");
-    strcpy(atom[58].luster,"");
-    strcpy(atom[58].phase,"");
-    atom[58].density = ;
-    strcpy(atom[58].uses,"");
+    atom[58].period =7 ;
+    strcpy(atom[58].conductivity,"N/A");
+    strcpy(atom[58].luster,"Metallic");
+    strcpy(atom[58].phase,"solid ");
+    atom[58].density =9.9(4) ;
+    strcpy(atom[58].uses,"Nobelium has no uses outside research. Nobelium has no known biological role");
     strcpy(atom[58].image_path,"");
 	
 	
@@ -2325,26 +2311,24 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
 	
 	
 	strcpy(atom[102].name,"LAWRENCIUM");
-		
 	strcpy(atom[102].symbol,"Lr");
-		
 	atom[102].atomic_number=103;
-		
 	atom[102].atomic_weight=262.00;
-		strcpy(atom[58].history,"");
-    atom[58].melting_point = ;
-    atom[58].boiling_point = ;
-    atom[58].ionic_radius = ;
-    atom[58].isotopes = ;
-    atom[58].electronegativity = ;
-    strcpy(atom[58].color,"");
+	strcpy(atom[81].electronic_configuration=" [Rn] 5f147s27p1");
+		strcpy(atom[58].history,"Georgy Flerov and colleagues and at Dubna, near Moscow, Russia, and independently by Albert Ghiorso and colleagues at Berkeley, California, USA");
+    atom[58].melting_point =1627 ;
+    atom[58].boiling_point =– ;
+    atom[58].ionic_radius =200  ;
+    atom[58].isotopes =10 ;
+    atom[58].electronegativity =1.3 ;
+    strcpy(atom[58].color,"Unknown, but probably metallic and silvery white or grey in appearance");
     atom[58].group = ;
-    atom[58].period = ;
-    strcpy(atom[58].conductivity,"");
-    strcpy(atom[58].luster,"");
-    strcpy(atom[58].phase,"");
-    atom[58].density = ;
-    strcpy(atom[58].uses,"");
+    atom[58].period =7 ;
+    strcpy(atom[58].conductivity,"10");
+    strcpy(atom[58].luster,"Metallic");
+    strcpy(atom[58].phase,"solid (predicted)");
+    atom[58].density =14.4  ;
+    strcpy(atom[58].uses,"Very few atoms of Lawrencium have been made until now, due to this reason, there is no commercial use of Lawrencium. It is only being used in the laboratory for research work. They are mainly used for their radioactive properties and being toxic. This element can be used for technical purposes and harvesting energy.");
     strcpy(atom[58].image_path,"");
 	
 	

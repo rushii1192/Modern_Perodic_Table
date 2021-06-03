@@ -2411,22 +2411,22 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
 	strcpy(atom[106].symbol,"Bh");
 	atom[106].atomic_number=107;
 	atom[106].atomic_weight=264.00;
-	strcpy(atom[58].electronic_configuration,"[Rn] 5f14 6d5 7s2";
-	strcpy(atom[58].history,"Bohrium was first discovered by a team of scientists in Dubna, Russia, in 1976. The discovery was confirmed by Peter Armbruster, Gottfried Münzenber and their team working in Darmstadt, Germany, in 1981");
-    atom[58].melting_point =254 ;
-    atom[58].boiling_point =962  ;
-    atom[58].ionic_radius =200 pm ;
-    atom[58].isotopes =There are 11 known isotopes ranging from 260Bh to 274Bh, and 1 isomer, 262mBh. The longest-lived isotope is 270Bh ;
-    atom[58].electronegativity =1.3 ;
-    strcpy(atom[58].color,"Unknown, but probably metallic and silvery white or grey in appearance");
-    atom[58].group = 7 ;
-    atom[58].period = 7 ;
-    strcpy(atom[58].conductivity,"Transition Metals are generally described as ductile, malleable, and able to conduct electricity and heat.");
-    strcpy(atom[58].luster,"Unknown Luster");
-    strcpy(atom[58].phase,"Solid");
-    atom[58].density =26 ;
-    strcpy(atom[58].uses," Since only a few atoms of bohrium have ever been made, there are currently no uses for bohrium outside of basic scientific research.");
-    strcpy(atom[58].image_path,"");
+	strcpy(atom[106].electronic_configuration,"[Rn] 5f14 6d5 7s2";
+	strcpy(atom[106].history,"Bohrium was first discovered by a team of scientists in Dubna, Russia, in 1976. The discovery was confirmed by Peter Armbruster, Gottfried Münzenber and their team working in Darmstadt, Germany, in 1981");
+    atom[106].melting_point =254 ;
+    atom[106].boiling_point =962  ;
+    atom[106].ionic_radius =200  ;
+    atom[106].isotopes =11  ;
+    atom[106].electronegativity =1.3 ;
+    strcpy(atom[106].color,"Unknown, but probably metallic and silvery white or grey in appearance");
+    atom[106].group = 7 ;
+    atom[106].period = 7 ;
+    strcpy(atom[106].conductivity,"Transition Metals are generally described as ductile, malleable, and able to conduct electricity and heat.");
+    strcpy(atom[106].luster,"Unknown Luster");
+    strcpy(atom[106].phase,"Solid");
+    atom[106].density =26 ;
+    strcpy(atom[106].uses," Since only a few atoms of bohrium have ever been made, there are currently no uses for bohrium outside of basic scientific research.");
+    strcpy(atom[106].image_path,"");
 	
 	
 	

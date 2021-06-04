@@ -34,7 +34,7 @@ int intToStr(int x, char str[], int d)
         str[i++] = '0'; 
   
     reverse(str, i); 
-    str[i] = ""; 
+    str[i] = "\0"; 
     return i; 
 } 
   
@@ -64,5 +64,42 @@ void ftoa(float n, char *res, int afterpoint)
     } 
 }
 
+int Contains(char MyChar[], char Search[])
+{
+    int LoopOne = 0;
+    int LoopTwo = 0;
+    int LoopThree = 0;
+    int MyCharSize = sizeof(MyChar);
+    int SearchSize = sizeof(Search);
+    int Yes = 0;
+    
+    while(LoopOne < MyCharSize)
+    {
+        if(MyChar[LoopOne] == Search[0])
+        {
+        LoopTwo = 0;
+        LoopThree = LoopOne;
+        while(LoopTwo < SearchSize)
+        {
+            if(MyChar[LoopThree] == Search[LoopTwo])
+            Yes++;
+        
+            LoopTwo++;
+            LoopThree++;
+        } 
+        
+        }        
+        LoopOne++;
+    }
+    if(Yes == SearchSize)
+        return 1;
+    else
+        return 0;
+}
+
+
 
 //reference ==>> https://tutorialspoint.dev/language/c/convert-floating-point-number-string
+
+
+

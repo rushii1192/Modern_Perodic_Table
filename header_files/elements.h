@@ -1,7 +1,5 @@
 #include <stdio.h>
-
 #include <string.h>
-
 #include <stdlib.h>
 
 
@@ -31,10 +29,9 @@ struct element
 
 };
 
-int i;
-struct element element_searcher(char element_name[20],char element_symbol[4],int atomic_number,float atomic_weight)
+struct element *elements_data()
 {
-	struct element atom[118];
+	struct element *atom = malloc(sizeof(struct element) * 118);
 
     //for data department you can start from here don,t change above code
 
@@ -927,8 +924,8 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
     atom[40].atomic_weight=92.90;
     strcpy(atom[40].electronic_configuration,"Kr 4d⁴ 5s¹");
     strcpy(atom[40].history,"Niobium was discovered in 1801 by Charles Hatchett in an ore called columbite sent to England in the 1750s by John Winthrop the Younger, the first goveror of Connecticut, USA.The metal niobium was first prepared in 1864 by Blomstrand, who reduced the chloride by heating it in a hydrogen atmosphere.");
-    atom[40].melting_point = 2477 ;
-    atom[40].boiling_point = 4927 ;
+    atom[40].melting_point = 2,477 ;
+    atom[40].boiling_point = 4,927 ;
     atom[40].ionic_radius = 207 ;
     atom[40].isotopes = 18;
     atom[40].electronegativity = 1.6;
@@ -948,8 +945,8 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
     atom[41].atomic_weight=95.94;
     strcpy(atom[41].electronic_configuration,"[Kr] 4d₅ 5s₁");
     strcpy(atom[41].history," Molybdenum was discovered by Carl Welhelm Scheele, a Swedish chemist, in 1778 in a mineral known as molybdenite (MoS2) which had been confused as a lead compound. Molybdenum was isolated by Peter Jacob Hjelm in 1781. ");
-    atom[41].melting_point = 2623 ;
-    atom[41].boiling_point = 4639 ;
+    atom[41].melting_point = 2,623 ;
+    atom[41].boiling_point = 4,639 ;
     atom[41].ionic_radius = 0.068;
     atom[41].isotopes = 7;
     atom[41].electronegativity = 2.16;
@@ -970,8 +967,8 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
     atom[42].atomic_weight=98.00;
     strcpy(atom[42].electronic_configuration,"Kr 4d5 5s2");
     strcpy(atom[42].history,"Technetium was discovered by Emilio Segrè in 1937 in Italy. He investigated molybdenum from California which had been exposed to high energy radiation and he found technetium to be present and separated it. Today, this element is extracted from spent nuclear fuel rods in tonne quantities.");
-    atom[42].melting_point = 2157  ;
-    atom[42].boiling_point = 4265 ;
+    atom[42].melting_point = 2,157  ;
+    atom[42].boiling_point = 4,265 ;
     atom[42].ionic_radius = 205 ;
     atom[42].isotopes = 22;
     atom[42].electronegativity = 1.9;
@@ -992,8 +989,8 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
     atom[43].atomic_weight=101.07;
     strcpy(atom[43].electronic_configuration,"[Kr] 4d7 5s1");
     strcpy(atom[43].history,"Ruthenium was discovered by Karl Karlovich Klaus, a Russian chemist, in 1844 while analyzing the residue of a sample of platinum ore obtained from the Ural mountains.Small amounts of ruthenium are added to platinum and palladium to strengthen them.");
-    atom[43].melting_point = 2334 ;
-    atom[43].boiling_point = 4150 ;
+    atom[43].melting_point = 2,334 ;
+    atom[43].boiling_point = 4,150 ;
     atom[43].ionic_radius = 205 ;
     atom[43].isotopes = 7;
     atom[43].electronegativity = 2.2;
@@ -1014,8 +1011,8 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
     atom[44].atomic_weight=102.90;
     strcpy(atom[44].electronic_configuration,"Kr 4d8 5s1");
     strcpy(atom[44].history,"Rhodium was discovered in 1803 by William Wollaston. He collaborated with Smithson Tennant in a commercial venture, part of which was to produce pure platinum for sale. The first step in the process was to dissolve ordinary platinum in aqua regia (nitric acid + hydrochloric acid).");
-    atom[44].melting_point = 1964 ;
-    atom[44].boiling_point = 3697 ;
+    atom[44].melting_point = 1,964 ;
+    atom[44].boiling_point = 3,697 ;
     atom[44].ionic_radius = 200 ;
     atom[44].isotopes = 24;
     atom[44].electronegativity = 2.28;
@@ -1036,8 +1033,8 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
     atom[45].atomic_weight=106.42;
     strcpy(atom[45].electronic_configuration,"[Kr] 4d¹⁰");
     strcpy(atom[45].history,"Palladium was discovered by William Hyde Wollaston, an English chemist, in 1803 while analyzing samples of platinum ore that were obtained from South America. ");
-    atom[45].melting_point = 1555 ;
-    atom[45].boiling_point = 2963 ;
+    atom[45].melting_point = 1,555 ;
+    atom[45].boiling_point = 2,963 ;
     atom[45].ionic_radius = 163 ;
     atom[45].isotopes = 6;
     atom[45].electronegativity = 2.2;
@@ -1059,7 +1056,7 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
     strcpy(atom[46].electronic_configuration,"[Kr] 4d¹⁰ 5s¹");
     strcpy(atom[46].history,"The first evidence of silver mining dates back to 3000 B.C., in Turkey and Greece, according to the RSC. Ancient people even figured out how to refine silver. ... The silver does not react to the air, but the base metals such as lead and copper oxidize and separate from the precious metal.");
     atom[46].melting_point = 961.8 ;
-    atom[46].boiling_point = 2162 ;
+    atom[46].boiling_point = 2,162 ;
     atom[46].ionic_radius = 172 ;
     atom[46].isotopes = 2;
     atom[46].electronegativity = 1.93;
@@ -1103,7 +1100,7 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
     strcpy(atom[48].electronic_configuration,"Kr 4d10 5s2 5p1");
     strcpy(atom[48].history,"Indium was discovered in 1863 by Ferdinand Reich at the Freiberg School of Mines in Germany. ... However, because he was colour-blind he asked Hieronymous Richter to look at the spectrum, and he noted a brilliant violet line, and this eventually gave rise to the name indium, from the Latin word indicum meaning violet.");
     atom[48].melting_point = 156.6 ;
-    atom[48].boiling_point = 2072 ;
+    atom[48].boiling_point = 2,072 ;
     atom[48].ionic_radius = 220 ;
     atom[48].isotopes = 2;
     atom[48].electronegativity = 1.78;
@@ -1125,7 +1122,7 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
     strcpy(atom[49].electronic_configuration,"[Kr] 5s²4d¹⁰5p²");
     strcpy(atom[49].history,"Tin was first used in 3500 BC in the city of Ur in southern Mesopotamia, now known as Iraq. The natives of Iran made articles from bronze, which is an alloy of tin and copper. ... When tin undergoes mining, it becomes a silvery metal that is used for the resistance to corrosion.");
     atom[49].melting_point = 231.9;
-    atom[49].boiling_point = 2602;
+    atom[49].boiling_point = 2,602;
     atom[49].ionic_radius = 225;
     atom[49].isotopes = 10;
     atom[49].electronegativity = 1.96;
@@ -1147,7 +1144,7 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
     strcpy(atom[50].electronic_configuration,"[Kr] 4d10 5s2 5p3");
     strcpy(atom[50].history,"Antimony has been known since ancient times. It is sometimes found free in nature, but is usually obtained from the ores stibnite (Sb2S3) and valentinite (Sb2O3). Nicolas Lémery, a French chemist, was the first person to scientifically study antimony and its compounds. He published his findings in 1707.");
     atom[50].melting_point = 630.6;
-    atom[50].boiling_point = 1587;
+    atom[50].boiling_point = 1,587;
     atom[50].ionic_radius = 206;
     atom[50].isotopes = 2;
     atom[50].electronegativity = 2.05;
@@ -1257,7 +1254,7 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
     strcpy(atom[55].electronic_configuration,"[Xe] 6s2");
     strcpy(atom[55].history,"Barium was first isolated by electrolysis of molten barium salts in 1808 by Sir Humphry Davy in England. Davy, by analogy with calcium, named 'barium' after baryta, with the '-ium' ending signifying a metallic element.");
     atom[55].melting_point = 727;
-    atom[55].boiling_point = 1897;
+    atom[55].boiling_point = 1,897;
     atom[55].ionic_radius = 268;
     atom[55].isotopes = 6;
     atom[55].electronegativity = 0.89;
@@ -1279,12 +1276,12 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
     strcpy(atom[56].electronic_configuration,"[Xe] 5d¹ 6s²");
     strcpy(atom[56].history,"Lanthanum was discovered in January 1839 by Carl Gustav Mosander at the Karolinska Institute, Stockholm. He extracted it from cerium which had been discovered in 1803. ... Finally, Mosander explained his delay, saying that he had extracted a second element from cerium, and this he called didymium.");
     atom[56].melting_point = 920;
-    atom[56].boiling_point = 3464;
+    atom[56].boiling_point = 3,464;
     atom[56].ionic_radius = 250;
     atom[56].isotopes = 38;
     atom[56].electronegativity = 1.1;
     strcpy(atom[56].color,"Silvery white");
-    atom[56].group = 0;
+    atom[56].group = 3;
     atom[56].period = 6;
     strcpy(atom[56].conductivity,"Thermal conductivity");
     strcpy(atom[56].luster,"Metallic luster");
@@ -1301,12 +1298,12 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
     strcpy(atom[57].electronic_configuration,"[Xe] 4f¹ 5d¹ 6s²");
     strcpy(atom[57].history,"Cerium as the oxide (ceria) was discovered in 1803 by Swedish chemists Jöns Jacob Berzelius and Wilhelm Hisinger, working together, and independently by German chemist Martin Klaproth. It was named after the asteroid Ceres, which was discovered in 1801. Cerium occurs in bastnasite, monazite, and many other minerals.");
     atom[57].melting_point = 795;
-    atom[57].boiling_point = 3443;
+    atom[57].boiling_point = 3,443;
     atom[57].ionic_radius = 248;
     atom[57].isotopes = 4;
     atom[57].electronegativity = 1.12;
     strcpy(atom[57].color,"Iron-gray ");
-    atom[57].group = 0;
+    atom[57].group = 3;
     atom[57].period = 6;
     strcpy(atom[57].conductivity,"Thermal Conductivity");
     strcpy(atom[57].luster,"Metallic luster");
@@ -1323,7 +1320,7 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
     strcpy(atom[58].electronic_configuration,"[Xe] 4f3 6s2");
     strcpy(atom[58].history,"Praseodymium was discovered by Carl F. Auer von Welsbach, an Austrian chemist, in 1885. He separated praseodymium, as well as the element neodymium, from a material known as didymium.Praseodymium's primary use is as an alloying agent with magnesium to create high-strength metals that are used in aircraft engines.");
     atom[58].melting_point = 931;
-    atom[58].boiling_point = 3512;
+    atom[58].boiling_point = 3,512;
     atom[58].ionic_radius = 247;
     atom[58].isotopes = 38;
     atom[58].electronegativity = 1.13;
@@ -1337,8 +1334,7 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
     strcpy(atom[58].uses,"Praseodymium is used in a variety of alloys. The high-strength alloy it forms with magnesium is used in aircraft engines. Mischmetal is an alloy containing about 5% praseodymium and is used to make flints for cigarette lighters. Praseodymium is also used in alloys for permanent magnets.");
     strcpy(atom[58].image_path,"");
 	
-	
-    strcpy(atom[59].name,"NEODYMIUM");
+	strcpy(atom[59].name,"NEODYMIUM");
     strcpy(atom[59].symbol,"Nd");
     atom[59].atomic_number=60;
     atom[59].atomic_weight=144.240;
@@ -1443,7 +1439,7 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
     strcpy(atom[63].conductivity,"Thermal conductivity");
     strcpy(atom[63].luster,"Metallic luster");
     strcpy(atom[63].phase,"Solid");
-    atom[63].density = ;
+    atom[63].density = 7.9;
     strcpy(atom[63].uses,"Gadolinium is an extensively used element as a contrast agent to enhance the MRI imaging. Nine different gadolinium chelates have been approved by the FDA so far. Nephrogenic systemic fibrosis (NSF) is the main toxic effect caused by the gadolinium-based contrast agents.");
     strcpy(atom[63].image_path,"");
 	
@@ -1519,7 +1515,7 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
     atom[67].atomic_number=68;	
     atom[67].atomic_weight=167.25;
     strcpy(atom[67].electronic_configuration,"Xe 4f12 6s2");
-    strcpy(atom[67].history,"Erbium (for Ytterby, a village in Sweden) was discovered by Carl Gustaf Mosander in 1843. ... He discovered that the sample contained at least two metal oxides in addition to pure yttria, which he named "erbia" and "terbia" after the village of Ytterby where the gadolinite had been found.");
+    strcpy(atom[67].history,"Erbium (for Ytterby, a village in Sweden) was discovered by Carl Gustaf Mosander in 1843. ... He discovered that the sample contained at least two metal oxides in addition to pure yttria, which he named 'erbia' and 'terbia' after the village of Ytterby where the gadolinite had been found.");
     atom[67].melting_point = 1529;
     atom[67].boiling_point = 2867;
     atom[67].ionic_radius = 232;
@@ -1739,7 +1735,7 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
     atom[77].atomic_number=78;
     atom[77].atomic_weight=195.07;
     strcpy(atom[77].electronic_configuration,"[Xe] 4f14 5d9 6s1");
-    strcpy(atom[77].history,"he metal was used by pre-Columbian Indians but platinum was "rediscovered" in South America by Ulloa in 1735 and by Wood in 1741. In 1822 plenty of platinum was discovered in the Ural Mountains in Russia.");
+    strcpy(atom[77].history,"he metal was used by pre-Columbian Indians but platinum was 'rediscovered' in South America by Ulloa in 1735 and by Wood in 1741. In 1822 plenty of platinum was discovered in the Ural Mountains in Russia.");
     atom[77].melting_point = 1768;
     atom[77].boiling_point = 3825;
     atom[77].ionic_radius = 175;
@@ -1809,17 +1805,17 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
         atom[80].melting_point = 304 ;
         atom[80].boiling_point = 1,473 ;
         atom[80].ionic_radius = 220 ;
-        atom[80].isotopes = ; has 41 isotopes with atomic masses that range from 176 to 216. 203Tl and 205Tl are the only stable isotopes and 204Tl is the most stable radioisotope with a half-life of 3.78 years. 207Tl, with a half-life of 4.77 minutes, has the longest half-life of naturally occurring radioisotopes.;
+        atom[80].isotopes = 41; 
         atom[80].electronegativity = 2.20;
-       strcpy(atom8[0].color,"silvery-gray");
-       atom[80].group =13 (XIII) of the p block ;
+       strcpy(atom[80].color,"silvery-gray");
+       atom[80].group =13 ;
 	atom[80].period = 6;
         strcpy(atom[80].conductivity,"46.1 W/(m⋅K)");
        strcpy(atom[80].luster,"Thallium is a malleable, soft element that can be sliced with a knife. It has a metallic luster that quickly tarnishes when exposed to air to a bluish-green color. ");
        strcpy(atom[80].phase,"Thallium is a solid at room temperature");
        atom[80].density =11.85  ;
       strcpy(atom[80].uses,"Thallium uses today commonly include the production of electronic devices, fiber optics, camera lenses, switches, and closures.");
-       strcpy(atom[80].image_path,"")
+       strcpy(atom[80].image_path,"");
 	
 	
 	
@@ -1880,7 +1876,7 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
 	 atom[83].melting_point =254  ;
     atom[83].boiling_point =962  ;
     atom[83].ionic_radius = 200 ;
-    atom[83].isotopes = 42 . ;
+    atom[83].isotopes = 42. ;
     atom[83].electronegativity =2 ;
     strcpy(atom[83].color,"silvery");
     atom[83].group =16 ;
@@ -1901,7 +1897,7 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
     atom[84].melting_point = 302 ;
     atom[84].boiling_point =336.8  ;
     atom[84].ionic_radius =200 ;
-    atom[84].isotopes =39 . ;
+    atom[84].isotopes =39. ;
     atom[84].electronegativity =2.2 ;
     strcpy(atom[84].color,"black");
     atom[84].group =17 ;
@@ -1925,13 +1921,13 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
     atom[85].ionic_radius =200  ;
     atom[85].isotopes = 37  ;
     atom[85].electronegativity =2.2 ;
-    strcpy(atom[85].color,colorless"");
+    strcpy(atom[85].color,"colorless");
     atom[85].group = 18 ;
     atom[85].period =6 ;
     strcpy(atom[85].conductivity,"3.61 m W·m-1·K-1");
     strcpy(atom[85].luster," It does not have luster,");
     strcpy(atom[58].phase,"gas");
-    atom[58].density =9.73 g/litre (0.13 ounce/gallon) ;
+    atom[58].density =9.73 ;
     strcpy(atom[58].uses,"It is used in the treatment of cell damage and cancer. Radon is also used in radiation therapy.");
     strcpy(atom[58].image_path,"");
 	
@@ -1940,7 +1936,7 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
 	strcpy(atom[86].symbol,"Fr");
 	atom[86].atomic_number=87;
 	atom[86].atomic_weight=223.00;
-	strcpy(atom[86].electronic_configuration,[Rn] 7s1"");
+	strcpy(atom[86].electronic_configuration,"[Rn] 7s1");
 	strcpy(atom[86].history,"Francium was finally discovered in 1939 by Marguerite Perey at the Curie Institute in Paris. She had purified a sample of actinium free of all its known radioactive impurities and yet its radioactivity still indicated another element was present, and which she rightly deduced was the missing element 87.");
     atom[86].melting_point =27  ;
     atom[86].boiling_point =676.8  ;
@@ -1961,7 +1957,7 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
 	strcpy(atom[87].symbol,"Ra");
 	atom[87].atomic_number=88;
 	atom[87].atomic_weight=226.00;
-	strcpy(atom[87].electronic_configuratio="[Rn] 7s2");
+	strcpy(atom[87].electronic_configuration,"[Rn] 7s2");
 	strcpy(atom[87].history,"Polish physicist Marie Curie and her husband, Pierre, discovered radium in 1898, refining it from pitchblende scooped from the Joachimsthal mines. ");
     atom[87].melting_point =700  ;
     atom[87].boiling_point =1,737  ;
@@ -1982,16 +1978,16 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
 	strcpy(atom[88].symbol,"Ac");
 	atom[88].atomic_number=89;
 	atom[88].atomic_weight=227.00;
-	strcpy(atom[88].electronic_configuration=" [Rn] 6d17s2");
+	strcpy(atom[88].electronic_configuration," [Rn] 6d17s2");
 	strcpy(atom[88].history," Actinium was discovered in 1899 by André-Louis Debierne, a French chemist, while experimenting with new methods of separating rare earth oxides. Friedrich Otto Giesel independently discovered actinium in 1902");
     atom[88].melting_point =1,050  ;
     atom[88].boiling_point =3,197  ;
     atom[88].ionic_radius =200 ;
-    atom[88].isotopes = There are 32 known isotopes, from 205Ac to 236Ac, and 7 isomers ;
+    atom[88].isotopes = 32;
     atom[88].electronegativity =1.1 ;
     strcpy(atom[88].color,"silvery-white radioactive metal");
     atom[88].group =  3;
-    atom[88].period =[Rn] 6d1 7s2 ;
+    atom[88].period =7 ;
     strcpy(atom[88].conductivity,"12 W -1 K-1 ");
     strcpy(atom[88].luster,"Unknown");
     strcpy(atom[88].phase,"solid");
@@ -2003,7 +1999,7 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
 	strcpy(atom[89].symbol,"Th");
 	atom[89].atomic_number=90;
 	atom[89].atomic_weight=232.03;
-	 strcpy(atom[89].electronic_configuration=" [Rn] 6d27s2 ");
+	 strcpy(atom[89].electronic_configuration," [Rn] 6d27s2 ");
 	strcpy(atom[89].history,"Thorium was discovered in 1828 by the Norwegian amateur mineralogist Morten Thrane Esmark and identified by the Swedish chemist Jöns Jacob Berzelius, who named it after Thor, the Norse god of thunder.");
     atom[89].melting_point =1,750  ;
     atom[89].boiling_point =4,787  ;
@@ -2011,10 +2007,10 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
     atom[89].isotopes = 7 ;
     atom[89].electronegativity =1.3 ;
     strcpy(atom[89].color," silvery white metal");
-    atom[89].group = ;
+    atom[89].group = 0;
     atom[89].period = 7;
     strcpy(atom[89].conductivity,"The thermal conductivity for ThO2 is significantly higher than for UO2");
-    strcpy(atom[89].luster,thorium is a silvery-white metal which is air-stable and retains its luster for several months. When contaminated with the oxide, thorium slowly tarnishes in air, becoming gray and finally black."");
+    strcpy(atom[89].luster,"thorium is a silvery-white metal which is air-stable and retains its luster for several months. When contaminated with the oxide, thorium slowly tarnishes in air, becoming gray and finally black.");
     strcpy(atom[89].phase," solid.");
     atom[89].density =11.72 ;
     strcpy(atom[89].uses,"Thorium is also used to strengthen magnesium, coating tungsten wire in electrical equipment, controlling the grain size of tungsten in electric lamps, high-temperature crucibles, in glasses, in camera and scientific instrument lenses, and is a source of nuclear power");
@@ -2024,7 +2020,7 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
 	strcpy(atom[90].symbol,"Pa");
 	atom[90].atomic_number=91;
 	atom[90].atomic_weight=231.03;
-	strcpy(atom[90].electronic_configuration=" [Rn] 5f26d17s2");
+	strcpy(atom[90].electronic_configuration," [Rn] 5f26d17s2");
 	strcpy(atom[90].history,"The existence of protactinium was predicted in 1871 by Dmitri Mendeleev. Discovery of the element is attributed to Otto Hahn and Lise Meitner, who discovered another isotope of protactinium, 231Pa in 1917. The element wasn't isolated until 1934, by Aristid von Grosse.");
     atom[90].melting_point =1,568  ;
     atom[90].boiling_point =4,027  ;
@@ -2032,12 +2028,12 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
     atom[90].isotopes =3. ;
     atom[90].electronegativity =1.5 ;
     strcpy(atom[90].color,"Silvery metallic");
-    atom[90].group = n/a ;
+    atom[90].group = 0 ;
     atom[90].period = 7 ;
     strcpy(atom[90].conductivity,"47 W/(m⋅K)");
     strcpy(atom[90].luster,"bright, silvery metallic");
     strcpy(atom[90].phase,"solid");
-    atom[90].density =15.37 g/cm3 ;
+    atom[90].density =15.37 ;
     strcpy(atom[90].uses," protactinium is usually extracted from used nuclear fuel. Due to its scarcity, high toxicity, and high radioactivity, protactinium has no current practical uses other than basic scientific research.");
     strcpy(atom[90].image_path,"");
 	
@@ -2047,12 +2043,12 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
 	strcpy(atom[91].symbol,"U");
 	atom[91].atomic_number=92;
 	atom[91].atomic_weight=238.02;
-	strcpy(atom[91].electronic_configuration="[Rn] 5f36d17s2");
+	strcpy(atom[91].electronic_configuration,"[Rn] 5f36d17s2");
 	strcpy(atom[91].history,"Uranium was discovered in 1789 by Martin Klaproth, a German chemist, in the mineral called pitchblende. It was named after the planet Uranus, which had been discovered eight years earlier. ");
-    atom[91].melting_point =1,132 °C ;
-    atom[91].boiling_point =4,131 °C ;
-    atom[91].ionic_radius =230 pm ;
-    atom[91].isotopes =Naturally occurring uranium consists of three isotopes: uranium-234, uranium-235 and uranium-238. ;
+    atom[91].melting_point =1,132 ;
+    atom[91].boiling_point =4,131 ;
+    atom[91].ionic_radius =230 ;
+    atom[91].isotopes =3 ;
     atom[91].electronegativity =1.38 ;
     strcpy(atom[91].color,"silvery white");
     atom[91].group =6 ;
@@ -2060,7 +2056,7 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
     strcpy(atom[91].conductivity,"27.5 W/(m⋅K)");
     strcpy(atom[91].luster," sub-metallic, greasy, pitchy, or dull.");
     strcpy(atom[91].phase,"alpha (α), beta (β), and gamma (γ) phases.");
-    atom[91].density =19.1 g/cm3 ;
+    atom[91].density =19.1 ;
     strcpy(atom[91].uses,"a very important element because it provides us with nuclear fuel used to generate electricity in nuclear power stations. It is also the major material from which other synthetic transuranium elements are made.");
     strcpy(atom[91].image_path,"");
 	
@@ -2072,15 +2068,15 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
 	strcpy(atom[92].symbol,"Np");
 	atom[92].atomic_number=93;
 	atom[92].atomic_weight=237.00;
-	strcpy(atom[92].electronic_configuration="[Rn] 5f46d17s2");
+	strcpy(atom[92].electronic_configuration,"[Rn] 5f46d17s2");
 	strcpy(atom[92].history,"Neptunium was first made in 1940 by Edwin McMillan and Philip Abelson at Berkeley, California. It came from a uranium target that had been bombarded with slow neutrons ");
-    atom[92].melting_point =644 °C ;
-    atom[92].boiling_point =3,902 °C ;
-    atom[92].ionic_radius = 230 pm;
+    atom[92].melting_point =644 ;
+    atom[92].boiling_point =3,902 ;
+    atom[92].ionic_radius = 230;
     atom[92].isotopes =7 ;
     atom[92].electronegativity =1.36 ;
     strcpy(atom[92].color,"silvery metallic");
-    atom[92].group = ;
+    atom[92].group = 0;
     atom[92].period =7 ;
     strcpy(atom[92].conductivity,"6.3 W/(m⋅K)");
     strcpy(atom[92].luster,"Unknown");
@@ -2096,11 +2092,11 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
 	strcpy(atom[93].symbol,"Pu");
 	atom[93].atomic_number=94;
 	atom[93].atomic_weight=244.00;
-	strcpy(atom[93].electronic_configuration="[Rn] 5f67s2");
+	strcpy(atom[93].electronic_configuration,"[Rn] 5f67s2");
 	strcpy(atom[93].history,"Plutonium was first made in December 1940 at Berkeley, California, by Glenn Seaborg, Arthur Wahl, Joseph Kennedy, and Edwin McMillan. ... ");
     atom[93].melting_point =639.4  ;
-    atom[93].boiling_point =3,232  ;
-    atom[93].ionic_radius =108 (3+)  ;
+    atom[93].boiling_point =3.232  ;
+    atom[93].ionic_radius =108  ;
     atom[93].isotopes =5 ;
     atom[93].electronegativity =1.28 ;
     strcpy(atom[93].color," plutonium is yellow or olive green in colour.");
@@ -2121,10 +2117,10 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
 	strcpy(atom[94].symbol,"Am");
 	atom[94].atomic_number=95;
 	atom[94].atomic_weight=243.00;
-	strcpy(atom[94].electronic_configuration="[Rn] 5f77s2");
+	strcpy(atom[94].electronic_configuration,"[Rn] 5f77s2");
 	strcpy(atom[94].history,"Americium was first made late in 1944 at the University of Chicago by a team which included Glenn Seaborg, Ralph James, Leon Morgan, and Albert Ghiorso.");
-    atom[94].melting_point =1,176  ;
-    atom[94].boiling_point =2,607  ;
+    atom[94].melting_point =1.176  ;
+    atom[94].boiling_point =2.607  ;
     atom[94].ionic_radius =200  ;
     atom[94].isotopes =19 ;
     atom[94].electronegativity =1.3 ;
@@ -2142,15 +2138,15 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
 	strcpy(atom[95].symbol,"Cm");
 	atom[95].atomic_number=96;
 	atom[95].atomic_weight=247.00;
-	strcpy(atom[95].electronic_configuration="[Rn] 5f76d17s2");
+	strcpy(atom[95].electronic_configuration,"[Rn] 5f76d17s2");
 	strcpy(atom[95].history,"Curium is named in honour of Pierre and Marie Curie, who pioneered the study of radioactivity in the final days of the 19th century. ");
-    atom[95].melting_point =1,345 ;
-    atom[95].boiling_point =3,110  ;
+    atom[95].melting_point =1.345 ;
+    atom[95].boiling_point =3.110  ;
     atom[95].ionic_radius =200 ;
     atom[95].isotopes =14 ;
     atom[95].electronegativity =1.3 ;
     strcpy(atom[95].color,"silvery-white");
-    atom[95].group = ;
+    atom[95].group = 0;
     atom[95].period =7 ;
     strcpy(atom[95].conductivity,"N/A");
     strcpy(atom[95].luster,"Unknown");
@@ -2170,7 +2166,7 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
 	strcpy(atom[96].symbol,"Bk");
 	atom[96].atomic_number=97;
 	atom[96].atomic_weight=247.00;
-	strcpy(atom[96].electronic_configuration="[Rn] 5f97s2");
+	strcpy(atom[96].electronic_configuration,"[Rn] 5f97s2");
 	strcpy(atom[96].history,"Berkelium was first produced in December 1949, at the University of California at Berkeley, and was made by Stanley Thompson, Albert Ghiorso, and Glenn Seaborg");
     atom[96].melting_point =986  ;
     atom[96].boiling_point =2627 ;
@@ -2193,7 +2189,7 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
 	strcpy(atom[97].symbol,"Cf");
 	atom[97].atomic_number=98;
 	atom[97].atomic_weight=251.00;
-	strcpy(atom[97].electronic_configuration=" [Rn] 5f107s2");
+	strcpy(atom[97].electronic_configuration," [Rn] 5f107s2");
 	strcpy(atom[97].history,"Californium was first made in 1950 at Berkeley, California, by a team consisting of Stanley Thompson, Kenneth Street Jr., Albert Ghiorso, and Glenn Seaborg. ");
     atom[97].melting_point =900  ;
     atom[97].boiling_point =1,472  ;
@@ -2218,7 +2214,7 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
 	strcpy(atom[98].symbol,"Es");
 	atom[98].atomic_number=99;
 	atom[98].atomic_weight=252.00;
-	 strcpy(atom[98].electronic_configuration=" [Rn] 5f117s2");
+	 strcpy(atom[98].electronic_configuration," [Rn] 5f117s2");
 	strcpy(atom[98].history,"Einsteinium was discovered by a team of scientists led by Albert Ghiorso in 1952 while studying the radioactive debris ");
     atom[98].melting_point =860 ;
     atom[98].boiling_point =996 ;
@@ -2226,7 +2222,7 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
     atom[98].isotopes =18 ;
     atom[98].electronegativity =1.3 ;
     strcpy(atom[98].color,"silvery; glows blue in the dark");
-    atom[98].group = ;
+    atom[98].group = 0;
     atom[98].period =7 ;
     strcpy(atom[98].conductivity,"N/A");
     strcpy(atom[98].luster,"silvery-white metallic");
@@ -2241,7 +2237,7 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
 	strcpy(atom[99].symbol,"Fm");
 	atom[99].atomic_number=257.00;
 	atom[99].atomic_weight=231.03;
-	strcpy(atom[99].electronic_configuration=" [Rn] 5f127s2");
+	strcpy(atom[99].electronic_configuration," [Rn] 5f127s2");
 	strcpy(atom[99].history," Fermium was discovered in 1953 in the debris of the first thermonuclear explosion which took place on a Pacific atoll on 1 November 1952");
     atom[99].melting_point =1527  ;
     atom[99].boiling_point =-1;
@@ -2249,12 +2245,12 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
     atom[99].isotopes =21 ;
     atom[99].electronegativity =1.3 ;
     strcpy(atom[99].color,"shiny and silver-colored.");
-    atom[99].group = ;
+    atom[99].group = 0;
     atom[99].period = 7;
     strcpy(atom[99].conductivity,"25");
     strcpy(atom[99].luster,"Unknown");
     strcpy(atom[99].phase,"solid ");
-    atom[99].density =9.7(1)  ;
+    atom[99].density =9.7  ;
     strcpy(atom[99].uses,"outside research");
     strcpy(atom[99].image_path,"");
 	
@@ -2266,7 +2262,7 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
 	strcpy(atom[100].symbol,"Md");
 	atom[100].atomic_number=101;
 	atom[100].atomic_weight=258.00;
-	strcpy(atom[100].electronic_configuration="[Rn] 5f137s2");
+	strcpy(atom[100].electronic_configuration,"[Rn] 5f137s2");
 	strcpy(atom[100].history," Mendelevium is named after the Russian chemist Dmitri Mendeleev. Discovery: In early 1955, Stanley Thompson, Glenn Seaborg, Bernard Harvey, Gregory Choppin and Albert Ghiorso ");
     atom[100].melting_point =827 ;
     atom[100].boiling_point = 0;
@@ -2274,12 +2270,12 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
     atom[100].isotopes =14 ;
     atom[100].electronegativity =1.3 ;
     strcpy(atom[100].color,"Unknown, but probably metallic and silvery white or grey in appearance");
-    atom[100].group = ;
+    atom[100].group = 0;
     atom[100].period =7 ;
     strcpy(atom[100].conductivity,"N/A");
     strcpy(atom[100].luster,"bright metallic");
     strcpy(atom[100].phase,"solid");
-    atom[100].density =10.3(7)  ;
+    atom[100].density =10.3  ;
     strcpy(atom[100].uses," It is used only for scientific research. ");
     strcpy(atom[100].image_path,"");
 	
@@ -2289,20 +2285,20 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
 	strcpy(atom[101].symbol,"Np");
 	atom[101].atomic_number=102;
 	atom[101].atomic_weight=259.00;
-	strcpy(atom[101].electronic_configuration="[Rn] 5f147s2");
+	strcpy(atom[101].electronic_configuration,"[Rn] 5f147s2");
 	strcpy(atom[101].history,"Georgy Flerov and colleagues and at Dubna, near Moscow, Russia, and independently by Albert Ghiorso and colleagues at Berkeley, California, USA");
     atom[101].melting_point =827 ;
-    atom[101].boiling_point =Unknown ;
+    atom[101].boiling_point = 0 ;
     atom[101].ionic_radius =200  ;
     atom[101].isotopes =12 ;
     atom[101].electronegativity =1.3 ;
     strcpy(atom[101].color,"Unknown, but probably metallic and silvery white or grey in appearance");
-    atom[101].group = ;
+    atom[101].group = 0;
     atom[101].period =7 ;
     strcpy(atom[101].conductivity,"N/A");
     strcpy(atom[101].luster,"Metallic");
     strcpy(atom[101].phase,"solid ");
-    atom[101].density =9.9(4) ;
+    atom[101].density =9.9 ;
     strcpy(atom[101].uses,"Nobelium has no uses outside research. Nobelium has no known biological role");
     strcpy(atom[101].image_path,"");
 	
@@ -2314,8 +2310,8 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
 	strcpy(atom[102].symbol,"Lr");
 	atom[102].atomic_number=103;
 	atom[102].atomic_weight=262.00;
-	strcpy(atom[102].electronic_configuration=" [Rn] 5f147s27p1");
-		strcpy(atom[58].history,"Georgy Flerov and colleagues and at Dubna, near Moscow, Russia, and independently by Albert Ghiorso and colleagues at Berkeley, California, USA");
+	strcpy(atom[102].electronic_configuration," [Rn] 5f147s27p1");
+	strcpy(atom[58].history,"Georgy Flerov and colleagues and at Dubna, near Moscow, Russia, and independently by Albert Ghiorso and colleagues at Berkeley, California, USA");
     atom[102].melting_point =1627 ;
     atom[102].boiling_point =-1 ;
     atom[102].ionic_radius =200  ;
@@ -2339,11 +2335,11 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
 	strcpy(atom[103].symbol,"Rf");
 	atom[103].atomic_number=104;
 	atom[103].atomic_weight=261.00;
-	strcpy(atom[103].electronic_configuration,"[Rn] 5f146d27s2";
+	strcpy(atom[103].electronic_configuration,"[Rn] 5f146d27s2");
 	strcpy(atom[103].history," Rutherfordium is named for scientist Ernest Rutherford. ... It was first reported by a team of scientists in Dubna, Russia, in 1964. ");
     atom[103].melting_point =2400  ;
     atom[103].boiling_point =5800  ;
-    atom[103].ionic_radius =200 pm ;
+    atom[103].ionic_radius =200 ;
     atom[103].isotopes =12 ;
     atom[103].electronegativity = 1.28;
     strcpy(atom[103].color,"Unknown, but probably metallic and silvery white or grey in appearance");
@@ -2363,12 +2359,12 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
 	strcpy(atom[104].symbol,"Db");
 	atom[104].atomic_number=105;
 	atom[104].atomic_weight=262.00;
-	strcpy(atom[105].electronic_configuration,"[Rn] 5f146d37s2";
+	strcpy(atom[105].electronic_configuration,"[Rn] 5f146d37s2");
 	strcpy(atom[104].history," Scientists working at the Joint Institute for Nuclear Research in Dubna, Russia, first reported the production of dubnium in 1967. ");
     atom[104].melting_point = -1 ;
     atom[104].boiling_point = -1 ;
-    atom[104].ionic_radius =200 pm ;
-    atom[104].isotopes = The first isotope to be synthesized was 261Db in 1968. The 13 known radioisotopes are from 255Db to 270Db, and 1–3 isomers. ;
+    atom[104].ionic_radius =200 ;
+    atom[104].isotopes = 13 ;
     atom[104].electronegativity =-1 ;
     strcpy(atom[104].color,"");
     atom[104].group = 5;
@@ -2386,13 +2382,13 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
 	strcpy(atom[105].symbol,"Sg");
 	atom[105].atomic_number=106;
 	atom[105].atomic_weight=266.00;
-	strcpy(atom[105].electronic_configuration,"[Rn] 5f146d47s2";
+	strcpy(atom[105].electronic_configuration,"[Rn] 5f146d47s2");
 	strcpy(atom[105].history," Seaborgium was first produced by a team of scientists led by Albert Ghiorso working at the Lawrence Berkeley Laboratory in Berkeley, California, in 1974. ");
     atom[105].melting_point =-1 ;
     atom[105].boiling_point =-1 ;
     atom[105].ionic_radius =200  ;
-    atom[105].isotopes =. There are 12 known radioisotopes from 258Sg to 271Sg and 2 known isomers (261mSg and 263mSg). The longest-lived isotope is 269Sg with a half-life of 14 minutes. ;
-    atom[105].electronegativity = (no data) ;
+    atom[105].isotopes = 12 ;
+    atom[105].electronegativity =  0;
     strcpy(atom[105].color,"Seaborgium is an artificially produced radioactive chemical element, it's appearance is unknown, it probably has a silvery white or metallic gray colour");
     atom[105].group =  6;
     atom[105].period =  7;
@@ -2411,7 +2407,7 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
 	strcpy(atom[106].symbol,"Bh");
 	atom[106].atomic_number=107;
 	atom[106].atomic_weight=264.00;
-	strcpy(atom[106].electronic_configuration,"[Rn] 5f14 6d5 7s2";
+	strcpy(atom[106].electronic_configuration,"[Rn] 5f14 6d5 7s2");
 	strcpy(atom[106].history,"Bohrium was first discovered by a team of scientists in Dubna, Russia, in 1976. The discovery was confirmed by Peter Armbruster, Gottfried Münzenber and their team working in Darmstadt, Germany, in 1981");
     atom[106].melting_point =254 ;
     atom[106].boiling_point =962  ;
@@ -2435,12 +2431,12 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
 	strcpy(atom[107].symbol,"Hs");
 	atom[107].atomic_number=108;
 	atom[107].atomic_weight=277.00;
-	 strcpy(atom[107].electronic_configuration,"[Rn] 5f146d67s2";
+	 strcpy(atom[107].electronic_configuration,"[Rn] 5f146d67s2");
 	strcpy(atom[107].history,"Hassium was discovered in 1984. It was first produced in Darmstadt, Germany, by a team led by Peter Armbruster and Gottfried Münzenber");
     atom[107].melting_point =-1 ;
     atom[107].boiling_point =-1 ;
-    atom[107].ionic_radius =200 pm ;
-    atom[107].isotopes =There are 12 known isotopes from 263Hs to 277Hs and 1–4 isomers. ;
+    atom[107].ionic_radius =200 ;
+    atom[107].isotopes = 12 ;
     atom[107].electronegativity =1.3 ;
     strcpy(atom[107].color,"Unknown, but probably metallic and silvery white or grey in appearance");
     atom[107].group =8 ;
@@ -2456,41 +2452,236 @@ struct element element_searcher(char element_name[20],char element_symbol[4],int
 	strcpy(atom[108].symbol,"Mt");
 	atom[108].atomic_number=109;
 	atom[108].atomic_weight=278.00;
-	  strcpy(atom[108].electronic_configuration,"[Rn] 5f146d77s2");
+	strcpy(atom[108].electronic_configuration,"[Rn] 5f146d77s2");
 	strcpy(atom[108].history,"Meitnerium was first discovered in 1982 in Darmstadt, in what was then West Germany.");
     atom[108].melting_point =-1. ;
     atom[108].boiling_point =-1. ;
     atom[108].ionic_radius =200  ;
     atom[108].isotopes =8 ;
-    atom[108].electronegativity =  1.3.;
+    atom[108].electronegativity =  1.3;
     strcpy(atom[108].color,"Unknown, but probably metallic and silvery white or grey in appearance");
-    atom[108].group =middle of this band in group 9 ;
+    atom[108].group =0;
     atom[108].period =7 ;
     strcpy(atom[108].conductivity," high electrical conductivity ");
-    strcpy(atom[108].luster,Meitnerium is a radioactive, synthetic element about which little is known. It is classified as a metal and is a solid at room temperature."");
+    strcpy(atom[108].luster,"Meitnerium is a radioactive, synthetic element about which little is known. It is classified as a metal and is a solid at room temperature.");
     strcpy(atom[108].phase," solid at room temperature.");
-    atom[108].density =27 (predicted) ;
+    atom[108].density =27;
     strcpy(atom[108].uses,"meitnerium might be used for technology purposes and harvesting energy.");
     strcpy(atom[108].image_path,"");
-	
-	
 
-    
+    strcpy(atom[109].name,"");
+	strcpy(atom[109].symbol,"");
+	atom[109].atomic_number=0;
+	atom[109].atomic_weight=00;
+	strcpy(atom[109].electronic_configuration,"");
+	strcpy(atom[109].history,"");
+    atom[109].melting_point = 0 ;
+    atom[109].boiling_point = 0 ;
+    atom[109].ionic_radius = 0  ;
+    atom[109].isotopes = 0 ;
+    atom[109].electronegativity =  0;
+    strcpy(atom[109].color,"");
+    atom[109].group =0;
+    atom[109].period =0 ;
+    strcpy(atom[109].conductivity,"");
+    strcpy(atom[109].luster,"");
+    strcpy(atom[109].phase,"");
+    atom[109].density =0;
+    strcpy(atom[109].uses,"");
+    strcpy(atom[109].image_path,"");
+
+    strcpy(atom[110].name,"");
+	strcpy(atom[110].symbol,"");
+	atom[110].atomic_number=0;
+	atom[110].atomic_weight=00;
+	strcpy(atom[110].electronic_configuration,"");
+	strcpy(atom[110].history,"");
+    atom[110].melting_point = 0 ;
+    atom[110].boiling_point = 0 ;
+    atom[110].ionic_radius = 0  ;
+    atom[110].isotopes = 0 ;
+    atom[110].electronegativity =  0;
+    strcpy(atom[110].color,"");
+    atom[110].group =0;
+    atom[110].period =0 ;
+    strcpy(atom[110].conductivity,"");
+    strcpy(atom[110].luster,"");
+    strcpy(atom[110].phase,"");
+    atom[110].density =0;
+    strcpy(atom[110].uses,"");
+    strcpy(atom[110].image_path,"");
+
+    strcpy(atom[111].name,"");
+	strcpy(atom[111].symbol,"");
+	atom[111].atomic_number=0;
+	atom[111].atomic_weight=00;
+	strcpy(atom[111].electronic_configuration,"");
+	strcpy(atom[111].history,"");
+    atom[111].melting_point = 0 ;
+    atom[111].boiling_point = 0 ;
+    atom[111].ionic_radius = 0  ;
+    atom[111].isotopes = 0 ;
+    atom[111].electronegativity =  0;
+    strcpy(atom[111].color,"");
+    atom[111].group =0;
+    atom[111].period =0 ;
+    strcpy(atom[111].conductivity,"");
+    strcpy(atom[111].luster,"");
+    strcpy(atom[111].phase,"");
+    atom[111].density =0;
+    strcpy(atom[111].uses,"");
+    strcpy(atom[111].image_path,"");
+
+    strcpy(atom[112].name,"");
+	strcpy(atom[112].symbol,"");
+	atom[112].atomic_number=0;
+	atom[112].atomic_weight=00;
+	strcpy(atom[112].electronic_configuration,"");
+	strcpy(atom[112].history,"");
+    atom[112].melting_point = 0 ;
+    atom[112].boiling_point = 0 ;
+    atom[112].ionic_radius = 0  ;
+    atom[112].isotopes = 0 ;
+    atom[112].electronegativity =  0;
+    strcpy(atom[112].color,"");
+    atom[112].group =0;
+    atom[112].period =0 ;
+    strcpy(atom[112].conductivity,"");
+    strcpy(atom[112].luster,"");
+    strcpy(atom[112].phase,"");
+    atom[112].density =0;
+    strcpy(atom[112].uses,"");
+    strcpy(atom[112].image_path,"");
+
+    strcpy(atom[113].name,"");
+	strcpy(atom[113].symbol,"");
+	atom[113].atomic_number=0;
+	atom[113].atomic_weight=00;
+	strcpy(atom[113].electronic_configuration,"");
+	strcpy(atom[113].history,"");
+    atom[113].melting_point = 0 ;
+    atom[113].boiling_point = 0 ;
+    atom[113].ionic_radius = 0  ;
+    atom[113].isotopes = 0 ;
+    atom[113].electronegativity =  0;
+    strcpy(atom[113].color,"");
+    atom[113].group =0;
+    atom[113].period =0 ;
+    strcpy(atom[113].conductivity,"");
+    strcpy(atom[113].luster,"");
+    strcpy(atom[113].phase,"");
+    atom[113].density =0;
+    strcpy(atom[113].uses,"");
+    strcpy(atom[113].image_path,"");
+
+    strcpy(atom[114].name,"");
+	strcpy(atom[114].symbol,"");
+	atom[114].atomic_number=0;
+	atom[114].atomic_weight=00;
+	strcpy(atom[114].electronic_configuration,"");
+	strcpy(atom[114].history,"");
+    atom[114].melting_point = 0 ;
+    atom[114].boiling_point = 0 ;
+    atom[114].ionic_radius = 0  ;
+    atom[114].isotopes = 0 ;
+    atom[114].electronegativity =  0;
+    strcpy(atom[114].color,"");
+    atom[114].group =0;
+    atom[114].period =0 ;
+    strcpy(atom[114].conductivity,"");
+    strcpy(atom[114].luster,"");
+    strcpy(atom[114].phase,"");
+    atom[114].density =0;
+    strcpy(atom[114].uses,"");
+    strcpy(atom[114].image_path,"");
+
+    strcpy(atom[115].name,"");
+	strcpy(atom[115].symbol,"");
+	atom[115].atomic_number=0;
+	atom[115].atomic_weight=00;
+	strcpy(atom[115].electronic_configuration,"");
+	strcpy(atom[115].history,"");
+    atom[115].melting_point = 0 ;
+    atom[115].boiling_point = 0 ;
+    atom[115].ionic_radius = 0  ;
+    atom[115].isotopes = 0 ;
+    atom[115].electronegativity =  0;
+    strcpy(atom[115].color,"");
+    atom[115].group =0;
+    atom[115].period =0 ;
+    strcpy(atom[115].conductivity,"");
+    strcpy(atom[115].luster,"");
+    strcpy(atom[115].phase,"");
+    atom[115].density =0;
+    strcpy(atom[115].uses,"");
+    strcpy(atom[115].image_path,"");
+
+    strcpy(atom[116].name,"");
+	strcpy(atom[116].symbol,"");
+	atom[116].atomic_number=0;
+	atom[116].atomic_weight=00;
+	strcpy(atom[116].electronic_configuration,"");
+	strcpy(atom[116].history,"");
+    atom[116].melting_point = 0 ;
+    atom[116].boiling_point = 0 ;
+    atom[116].ionic_radius = 0  ;
+    atom[116].isotopes = 0 ;
+    atom[116].electronegativity =  0;
+    strcpy(atom[116].color,"");
+    atom[116].group =0;
+    atom[116].period =0 ;
+    strcpy(atom[116].conductivity,"");
+    strcpy(atom[116].luster,"");
+    strcpy(atom[116].phase,"");
+    atom[116].density =0;
+    strcpy(atom[116].uses,"");
+    strcpy(atom[116].image_path,"");
+
+    strcpy(atom[117].name,"");
+	strcpy(atom[117].symbol,"");
+	atom[117].atomic_number=0;
+	atom[117].atomic_weight=00;
+	strcpy(atom[117].electronic_configuration,"");
+	strcpy(atom[117].history,"");
+    atom[117].melting_point = 0 ;
+    atom[117].boiling_point = 0 ;
+    atom[117].ionic_radius = 0  ;
+    atom[117].isotopes = 0 ;
+    atom[117].electronegativity =  0;
+    strcpy(atom[117].color,"");
+    atom[117].group =0;
+    atom[117].period =0 ;
+    strcpy(atom[117].conductivity,"");
+    strcpy(atom[117].luster,"");
+    strcpy(atom[117].phase,"");
+    atom[117].density =0;
+    strcpy(atom[117].uses,"");
+    strcpy(atom[117].image_path,"");
+
+    strcpy(atom[118].name,"");
+	strcpy(atom[118].symbol,"");
+	atom[118].atomic_number=0;
+	atom[118].atomic_weight=00;
+	strcpy(atom[118].electronic_configuration,"");
+	strcpy(atom[118].history,"");
+    atom[118].melting_point = 0 ;
+    atom[118].boiling_point = 0 ;
+    atom[118].ionic_radius = 0  ;
+    atom[118].isotopes = 0 ;
+    atom[118].electronegativity =  0;
+    strcpy(atom[118].color,"");
+    atom[118].group =0;
+    atom[118].period =0 ;
+    strcpy(atom[118].conductivity,"");
+    strcpy(atom[118].luster,"");
+    strcpy(atom[118].phase,"");
+    atom[118].density =0;
+    strcpy(atom[118].uses,"");
+    strcpy(atom[118].image_path,"");
+
+	    
     //for data department please don't change below code
     
-    for(i<0;i<118;i++){
-        if(strcmp(atom[i].name,element_name)==0){
-            return atom[i];
-        }
-        if(strcmp(atom[i].symbol,element_symbol)==0){
-            return atom[i];
-        }
-        if(atom[i].atomic_number==atomic_number){
-            return atom[i];
-        }
-        if(atom[i].atomic_weight==atomic_weight){
-            return atom[i];
-        }
-    }
+    return atom;
 }
 

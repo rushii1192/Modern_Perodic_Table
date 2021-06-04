@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "elements.h"
 
 struct quiz
 {
@@ -12,12 +11,13 @@ struct quiz
 
 
 
-struct quiz quiz_details[250];
-struct element quiz_element[118];
+
 //you can start from here
 
-struct quiz question_search()
+struct quiz *question_search()
 {
+    struct quiz *quiz_details = malloc(sizeof(struct quiz) * 250);
+
     strcpy(quiz_details[0].questions,"Atomic number of Helium is________");
     strcpy(quiz_details[0].correct_answer,"2");
 
@@ -595,197 +595,107 @@ struct quiz question_search()
     strcpy(quiz_details[192].questions,"Symbol of Palladium is ________");
     strcpy(quiz_details[192].correct_answer,"Pd");
 
-    strcpy(quiz_details[193].questions,"Atomic mass of Rh is ________");
-    strcpy(quiz_details[193].correct_answer,"102.90");
+    strcpy(quiz_details[193].questions,"Atomic number of Ca is ________");
+    strcpy(quiz_details[193].correct_answer,"20");
 
-    strcpy(quiz_details[194].questions,"Atomic number of Mercury is ________");
-    strcpy(quiz_details[194].correct_answer,"80");
+    strcpy(quiz_details[194].questions,"Atomic number of Ca is ________");
+    strcpy(quiz_details[194].correct_answer,"20");
 
-    strcpy(quiz_details[195].questions,"Symbol of Erbium is ________");
-    strcpy(quiz_details[195].correct_answer,"Er");
+    strcpy(quiz_details[195].questions,"Atomic number of Ca is ________");
+    strcpy(quiz_details[195].correct_answer,"20");
 
-    strcpy(quiz_details[196].questions,"Atomic mass of Phosphorus is ________");
-    strcpy(quiz_details[196].correct_answer,"30.97");
+    strcpy(quiz_details[196].questions,"Atomic number of Ca is ________");
+    strcpy(quiz_details[196].correct_answer,"20");
 
-    strcpy(quiz_details[197].questions,"Symbol of Gold is ________");
-    strcpy(quiz_details[197].correct_answer,"Ag");
+    strcpy(quiz_details[197].questions,"Atomic number of Ca is ________");
+    strcpy(quiz_details[197].correct_answer,"20");
 
-    strcpy(quiz_details[198].questions,"Atomic number of Beryllium is ________");
-    strcpy(quiz_details[198].correct_answer,"4");
+    strcpy(quiz_details[198].questions,"Atomic number of Ca is ________");
+    strcpy(quiz_details[198].correct_answer,"20");
 
-    strcpy(quiz_details[199].questions,"Atomic mass of Tellurium is ________");
-    strcpy(quiz_details[199].correct_answer,"127.60");
+    strcpy(quiz_details[199].questions,"Atomic number of Ca is ________");
+    strcpy(quiz_details[199].correct_answer,"20");
 
-    strcpy(quiz_details[200].questions,"Symbol of Seaborgium is ________");
-    strcpy(quiz_details[200].correct_answer,"Sg");
+    strcpy(quiz_details[200].questions,"Atomic number of Ca is ________");
+    strcpy(quiz_details[200].correct_answer,"20");
 
-    strcpy(quiz_details[201].questions,"Atomic number of Hafnium is ________");
-    strcpy(quiz_details[201].correct_answer,"72");
+    strcpy(quiz_details[201].questions,"Atomic number of Ca is ________");
+    strcpy(quiz_details[201].correct_answer,"20");
 
-    strcpy(quiz_details[202].questions,"Atomic mass Ge is ________");
-    strcpy(quiz_details[202].correct_answer,"72.63")
+    strcpy(quiz_details[202].questions,"Atomic number of Ca is ________");
+    strcpy(quiz_details[202].correct_answer,"20");
 
-    strcpy(quiz_details[203].questions,"Symbol of Oxygen is ________");
-    strcpy(quiz_details[203].correct_answer,"O");
+    strcpy(quiz_details[203].questions,"Atomic number of Ca is ________");
+    strcpy(quiz_details[203].correct_answer,"20");
 
-    strcpy(quiz_details[204].questions,"Atomic number of Arsenic is ________");
-    strcpy(quiz_details[204].correct_answer,"33");
+    strcpy(quiz_details[204].questions,"Atomic number of Ca is ________");
+    strcpy(quiz_details[204].correct_answer,"20");
 
-    strcpy(quiz_details[205].questions,"Atomic number of Tin is ________");
-    strcpy(quiz_details[205].correct_answer,"50");
+    strcpy(quiz_details[205].questions,"Atomic number of Ca is ________");
+    strcpy(quiz_details[205].correct_answer,"20");
 
-    strcpy(quiz_details[206].questions,"Atomic symbol of Strontium is ________");
-    strcpy(quiz_details[206].correct_answer,"Sr");
+    strcpy(quiz_details[206].questions,"Atomic number of Ca is ________");
+    strcpy(quiz_details[206].correct_answer,"20");
 
-    strcpy(quiz_details[207].questions,"Atomic mass of Gold is ________");
-    strcpy(quiz_details[207].correct_answer,"196.96");
+    strcpy(quiz_details[207].questions,"Atomic number of Ca is ________");
+    strcpy(quiz_details[207].correct_answer,"20");
 
-    strcpy(quiz_details[208].questions,"Atomic number of Moscovium is ________");
-    strcpy(quiz_details[208].correct_answer,"115");
+    strcpy(quiz_details[208].questions,"Atomic number of Ca is ________");
+    strcpy(quiz_details[208].correct_answer,"20");
 
-    strcpy(quiz_details[209].questions,"Symbol of Flerovium is ________");
-    strcpy(quiz_details[209].correct_answer,"Fl");
+    strcpy(quiz_details[209].questions,"Atomic number of Ca is ________");
+    strcpy(quiz_details[209].correct_answer,"20");
 
-    strcpy(quiz_details[210].questions,"Atomic mass of Y is ________");
-    strcpy(quiz_details[210].correct_answer,"88.90");
+    strcpy(quiz_details[210].questions,"Atomic number of Ca is ________");
+    strcpy(quiz_details[210].correct_answer,"20");
 
-    strcpy(quiz_details[211].questions,"Atomic mass of Aluminium is ________");
-    strcpy(quiz_details[211].correct_answer,"26.98");
+    strcpy(quiz_details[211].questions,"Atomic number of Ca is ________");
+    strcpy(quiz_details[211].correct_answer,"20");
 
-    strcpy(quiz_details[212].questions,"Atomic number of Dubnium is ________");
-    strcpy(quiz_details[212].correct_answer,"105");
+    strcpy(quiz_details[212].questions,"Atomic number of Ca is ________");
+    strcpy(quiz_details[212].correct_answer,"20");
 
-    strcpy(quiz_details[213].questions,"Symbol of Hassium is ________");
-    strcpy(quiz_details[213].correct_answer,"Hs");
+    strcpy(quiz_details[213].questions,"Atomic number of Ca is ________");
+    strcpy(quiz_details[213].correct_answer,"20");
 
-    strcpy(quiz_details[214].questions,"Atomic mass of Yttrium is ________");
-    strcpy(quiz_details[214].correct_answer,"88.90");
+    strcpy(quiz_details[214].questions,"Atomic number of Ca is ________");
+    strcpy(quiz_details[214].correct_answer,"20");
 
-    strcpy(quiz_details[215].questions,"Element having symbol Cu ________");
-    strcpy(quiz_details[215].correct_answer,"Copper");
+    strcpy(quiz_details[215].questions,"Atomic number of Ca is ________");
+    strcpy(quiz_details[215].correct_answer,"20");
 
-    strcpy(quiz_details[216].questions,"Atomic mass of Cadmium is ________");
-    strcpy(quiz_details[216].correct_answer,"112.41");
+    strcpy(quiz_details[216].questions,"Atomic number of Ca is ________");
+    strcpy(quiz_details[216].correct_answer,"20");
 
-    strcpy(quiz_details[217].questions,"Symbol of Antimony is ________");
-    strcpy(quiz_details[217].correct_answer,"Sb");
+    strcpy(quiz_details[217].questions,"Atomic number of Ca is ________");
+    strcpy(quiz_details[217].correct_answer,"20");
 
-    strcpy(quiz_details[218].questions,"Atomic number of Po is ________");
-    strcpy(quiz_details[218].correct_answer,"84");
+    strcpy(quiz_details[218].questions,"Atomic number of Ca is ________");
+    strcpy(quiz_details[218].correct_answer,"20");
 
-    strcpy(quiz_details[219].questions,"Element having symbol Pb ________");
-    strcpy(quiz_details[219].correct_answer,"Lead");
+    strcpy(quiz_details[219].questions,"Atomic number of Ca is ________");
+    strcpy(quiz_details[219].correct_answer,"20");
 
-    strcpy(quiz_details[220].questions,"Atomic mass of Iodine is ________");
-    strcpy(quiz_details[220].correct_answer,"126.90");
+    strcpy(quiz_details[220].questions,"Atomic number of Ca is ________");
+    strcpy(quiz_details[220].correct_answer,"20");
 
-    strcpy(quiz_details[221].questions,"Atomic number of Osmium is ________");
-    strcpy(quiz_details[221].correct_answer,"76");
+    strcpy(quiz_details[221].questions,"Atomic number of Ca is ________");
+    strcpy(quiz_details[221].correct_answer,"20");
 
-    strcpy(quiz_details[222].questions,"Symbol of Darmstadtium is ________");
-    strcpy(quiz_details[222].correct_answer,"Ds");
+    strcpy(quiz_details[222].questions,"Atomic number of Ca is ________");
+    strcpy(quiz_details[222].correct_answer,"20");
 
-    strcpy(quiz_details[223].questions,"Atomic number of Thallium is ________");
-    strcpy(quiz_details[223].correct_answer,"81");
+    strcpy(quiz_details[223].questions,"Atomic number of Ca is ________");
+    strcpy(quiz_details[223].correct_answer,"20");
 
-    strcpy(quiz_details[224].questions,"Atomic mass of Lithium is ________");
-    strcpy(quiz_details[224].correct_answer,"6.94");
+    strcpy(quiz_details[224].questions,"Atomic number of Ca is ________");
+    strcpy(quiz_details[224].correct_answer,"20");
 
-    strcpy(quiz_details[225].questions,"Element having atomic number 9 is ________");
-    strcpy(quiz_details[225].correct_answer,"Fluorine");
+    strcpy(quiz_details[225].questions,"Atomic number of Ca is ________");
+    strcpy(quiz_details[225].correct_answer,"20");
 
-    strcpy(quiz_details[226].questions,"Atomic number of Technetium is ________");
-    strcpy(quiz_details[226].correct_answer,"43");
-
-    strcpy(quiz_details[227].questions,"Atomic mass of Xenox is ________");
-    strcpy(quiz_details[227].correct_answer,"131.29");
-
-    strcpy(quiz_details[228].questions,"Symbol of Copernicium is ________");
-    strcpy(quiz_details[228].correct_answer,"Cn");
-
-    strcpy(quiz_details[229].questions,"Element having symbol Mt is ________");
-    strcpy(quiz_details[229].correct_answer,"Meitnerium");
-
-    strcpy(quiz_details[230].questions,"Atomic mass of Bromine is ________");
-    strcpy(quiz_details[230].correct_answer,"79.90");
-
-    strcpy(quiz_details[231].questions,"Atomic number of Bi is ________");
-    strcpy(quiz_details[231].correct_answer,"83");
-
-    strcpy(quiz_details[232].questions,"Atomic number of Radium is ________");
-    strcpy(quiz_details[232].correct_answer,"88");
-
-    strcpy(quiz_details[233].questions,"Atomic mass of Selenium is ________");
-    strcpy(quiz_details[233].correct_answer,"78.97");
-
-    strcpy(quiz_details[234].questions,"Symbol of Darmstadtium is ________");
-    strcpy(quiz_details[234].correct_answer,"Ds");
-
-    strcpy(quiz_details[235].questions,"Atomic mass of Lead is ________");
-    strcpy(quiz_details[235].correct_answer,"207.2");
-
-    strcpy(quiz_details[236].questions,"Having having atomic mass 89 is ________");
-    strcpy(quiz_details[236].correct_answer,"Actinium");
-
-    strcpy(quiz_details[237].questions,"Atomic mass of Fe is ________");
-    strcpy(quiz_details[237].correct_answer,"55.845");
-
-    strcpy(quiz_details[238].questions,"Atomic number of Oganesson is ________");
-    strcpy(quiz_details[238].correct_answer,"118");
-
-    strcpy(quiz_details[239].questions,"Atomic mass of Mg is ________");
-    strcpy(quiz_details[239].correct_answer,"24.30");
-
-    strcpy(quiz_details[240].questions,"Symbol of Niobium is ________");
-    strcpy(quiz_details[240].correct_answer,"Nb");
-
-    strcpy(quiz_details[241].questions,"Atomic mass of Dysprosium is ________");
-    strcpy(quiz_details[241].correct_answer,"162.50");
-
-    strcpy(quiz_details[242].questions,"Atomic number of Vanadium is ________");
-    strcpy(quiz_details[242].correct_answer,"23");
-
-    strcpy(quiz_details[243].questions,"Symbol of Platinum is ________");
-    strcpy(quiz_details[243].correct_answer,"Pt");
-
-    strcpy(quiz_details[244].questions,"Atomic number of Krypton is ________");
-    strcpy(quiz_details[244].correct_answer,"36");
-
-    strcpy(quiz_details[245].questions,"Element having atomic mass 54.93 ________");
-    strcpy(quiz_details[245].correct_answer,"Manganese");
-
-    strcpy(quiz_details[246].questions,"Atomic number of Rhenium is ________");
-    strcpy(quiz_details[246].correct_answer,"75");
-
-    strcpy(quiz_details[247].questions,"Atomic mass of Calcium is ________");
-    strcpy(quiz_details[247].correct_answer,"40.07");
-
-    strcpy(quiz_details[248].questions,"Element having symbol Cr is ________");
-    strcpy(quiz_details[248].correct_answer,"Chromium");
-
-    strcpy(quiz_details[249].questions,"Atomic number of Ge is ________");
-    strcpy(quiz_details[249].correct_answer,"36");
-
-    strcpy(quiz_details[250].questions,"Atomic mass of Arsenic is ________");
-    strcpy(quiz_details[250].correct_answer,"74.92");
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
+    return quiz_details;
+}
 
 
 
@@ -857,59 +767,3 @@ struct quiz question_search()
 
 
 
-
-}
-    
-
-struct quiz question_search();
-bool answer_checker(char question[200],char selected_answer[100]){
-    for(int i=0;i<200;i++){
-        if(strcmp(quiz_details[i].questions,question)==0){
-            if(strcmp(quiz_details[i].correct_answer,selected_answer)==0){
-                return true;
-            }
-        }
-        else
-            return false;
-    }
-}
-
-//don't change below code
-bool Contains(char MyChar[], char Search[])
-{
-    int LoopOne;
-    int LoopTwo;
-    int LoopThree;
-    int MyCharSize = sizeof(MyChar);
-    int SearchSize = sizeof(Search);
-    int Yes = 0;
-    
-    while(LoopOne < MyCharSize)
-    {
-        if(MyChar[LoopOne] == Search[0])
-        {
-        LoopTwo = 0;
-        LoopThree = LoopOne;
-        while(LoopTwo < SearchSize)
-        {
-            if(MyChar[LoopThree] == Search[LoopTwo])
-            Yes++;
-        
-            LoopTwo++;
-            LoopThree++;
-        } 
-        if(Yes == SearchSize)
-            return true;
-        }        
-        LoopOne++;
-    }
-    return false;
-}
- 
-int integer_answers_mcq_finder(){
-    for(i=0;i<300;i++){
-        if(Contains(quiz_details[i].questions,"Atomic Number")){
-            return quiz_element[i].atomic_number;
-        }
-    }
-}

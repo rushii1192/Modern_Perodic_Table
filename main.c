@@ -10,6 +10,8 @@
 #include "header_files/elements.h"
 #include "header_files/functions.h"
 #include <string.h>
+#include <stdlib.h>
+#include "header_files/quiz.h"
 
 #define Main_Menu 1
 #define Quiz_Menu 2
@@ -17,6 +19,7 @@
 #define ElementName 4
 #define AtomicNumber 5
 #define Search 6
+#define About_Menu 7
 /*  Declare Windows procedure  */
 LRESULT CALLBACK WindowProcedure (HWND, UINT, WPARAM, LPARAM);
 
@@ -25,15 +28,22 @@ void AddMenu(HWND);
 HMENU hmenu;
 
 //Declare Add_Control Functions
-void AddControl(HWND);
+void AddMainMenuControl(HWND);
+void AddQuizMenuControl(HWND);
+void AddHelpMenuControl(HWND);
+void AddAboutMenuControl(HWND);
+void ClearWindow(HWND);
 HWND hName,hSymbol,hAtomicNumber,hAtomicWeight,hEC,hHistory,hMP,hBP,hIR,hIsotpes,hEN,hColor,hPosition,hConductivity,hLuster,hPhases,hDensity,hUses,hLogo,
-hUserInputName,hUserInputSymbol,hUserInputNumber,hUserInputWeight;
+hUserInputName,hUserInputSymbol,hUserInputNumber,hUserInputWeight,hQuiz;
 
-struct element user_atom;
+
 
 //Declare images
 HBITMAP hImage;
 void loadimages();
+
+struct element element_searcher(char element_name[20],char element_symbol[4],int atomic_number,float atomic_weight);
+struct element user_atom;
 /*  Make the class name into a global variable  */
 TCHAR szClassName[ ] = _T("CodeBlocksWindowsApp");
 
@@ -109,21 +119,24 @@ LRESULT CALLBACK WindowProcedure (HWND hwnd, UINT message, WPARAM wParam, LPARAM
         case WM_COMMAND:
             switch(wParam){
                 case Main_Menu:
-                    MessageBeep(MB_ERR_INVALID_CHARS);
+                    AddMainMenuControl(hwnd);
                     break;
 
                 case Quiz_Menu:
-                    MessageBoxEx(hwnd,"This is Quiz Menu",NULL,NULL,NULL);
+                    AddQuizMenuControl(hwnd);
                     break;
 
                 case Help_Menu:
-                    MessageBoxEx(hwnd,"This is Help Menu",NULL,NULL,NULL);
+                    AddHelpMenuControl(hwnd);
+                    break;
+
+                case About_Menu:
+                    AddAboutMenuControl(hwnd);
                     break;
 
                 case Search:;
 
                     char user_name[20],user_symbol[4],user_atomic_number[4],user_atomic_weight[10],atomic_number[4],atomic_weight[10],melting_point[10],boiling_point[10],ionic_radius[10],isotopes[4],electronegativity[10],group[3],period[2],density[10];
-
                     //Values inputed from users
                     GetWindowText(hUserInputName,user_name,20);
                     GetWindowText(hUserInputSymbol,user_symbol,4);
@@ -131,19 +144,19 @@ LRESULT CALLBACK WindowProcedure (HWND hwnd, UINT message, WPARAM wParam, LPARAM
                     GetWindowText(hUserInputWeight,user_atomic_weight,10);
 
                     //Values are fetched from element searcher function
-                    user_atom = element_searcher("","",3,0);
+                    user_atom = element_searcher(user_name,user_symbol,atoi(user_atomic_number),atof(user_atomic_weight));
 
                     //Conversion of values
                     itoa(user_atom.atomic_number,atomic_number,10);
-                    ftoa(user_atom.atomic_weight,atomic_weight,3);
-                    ftoa(user_atom.melting_point,melting_point,3);
-                    ftoa(user_atom.boiling_point,boiling_point,3);
-                    ftoa(user_atom.ionic_radius,ionic_radius,3);
+                    ftoa(user_atom.atomic_weight,atomic_weight,5);
+                    ftoa(user_atom.melting_point,melting_point,5);
+                    ftoa(user_atom.boiling_point,boiling_point,5);
+                    ftoa(user_atom.ionic_radius,ionic_radius,5);
                     itoa(user_atom.isotopes,isotopes,10);
-                    ftoa(user_atom.electronegativity,electronegativity,3);
+                    ftoa(user_atom.electronegativity,electronegativity,5);
                     itoa(user_atom.period,period,10);
                     itoa(user_atom.group,group,10);
-                    ftoa(user_atom.density,density,3);
+                    ftoa(user_atom.density,density,5);
                     char position[70];
                     strcpy(position,"The element is present in period ");
                     strcat(position,period);
@@ -177,7 +190,7 @@ LRESULT CALLBACK WindowProcedure (HWND hwnd, UINT message, WPARAM wParam, LPARAM
         case WM_CREATE:
             loadimages();
             AddMenu(hwnd);
-            AddControl(hwnd);
+            AddMainMenuControl(hwnd);
             break;
 
         case WM_DESTROY:
@@ -197,13 +210,14 @@ void AddMenu(HWND hwnd){
     AppendMenu(hmenu,MF_STRING,Main_Menu,"Main");
     AppendMenu(hmenu,MF_STRING,Quiz_Menu,"Quiz");
     AppendMenu(hmenu,MF_STRING,Help_Menu,"Help");
+    AppendMenu(hmenu,MF_STRING,About_Menu,"About Us");
 
     SetMenu(hwnd,hmenu);
 }
 
-void AddControl(HWND hwnd){
-
-    //All static elements are here
+void AddMainMenuControl(HWND hwnd){
+    HWND hManinWindow;
+    hManinWindow = CreateWindowEx(0,"Static","",WS_CHILD | WS_VISIBLE,0,0,750,500,hwnd,NULL,NULL,NULL);
     CreateWindowEx(0,"Static","Element Name:-",WS_VISIBLE | WS_CHILD,200,50,150,15,hwnd,NULL,NULL,NULL);
     CreateWindowEx(0,"Static","Element Symbol:-",WS_VISIBLE | WS_CHILD,200,75,150,15,hwnd,NULL,NULL,NULL);
     CreateWindowEx(0,"Static","Atomic Number:-",WS_VISIBLE | WS_CHILD,200,100,150,15,hwnd,NULL,NULL,NULL);
@@ -230,8 +244,8 @@ void AddControl(HWND hwnd){
     hSymbol = CreateWindowEx(0,"Edit","",WS_VISIBLE | WS_CHILD,360,75,270,15,hwnd,NULL,NULL,NULL);
     hAtomicNumber = CreateWindowEx(0,"Edit","",WS_VISIBLE | WS_CHILD,360,100,270,15,hwnd,NULL,NULL,NULL);
     hAtomicWeight = CreateWindowEx(0,"Edit","",WS_VISIBLE | WS_CHILD,360,125,270,15,hwnd,NULL,NULL,NULL);
-    hEC = CreateWindowEx(0,"Edit","",WS_VISIBLE | WS_CHILD,360,150,270,15,hwnd,NULL,NULL,NULL);
-    hHistory = CreateWindowEx(0,"Edit","",WS_VISIBLE | WS_CHILD,360,175,270,15,hwnd,NULL,NULL,NULL);
+    hEC = CreateWindowEx(0,"Edit","",WS_VISIBLE | WS_CHILD | WS_HSCROLL,360,150,270,15,hwnd,NULL,NULL,NULL);
+    hHistory = CreateWindowEx(0,"Edit","",WS_VISIBLE | WS_CHILD | WS_HSCROLL,360,175,270,15,hwnd,NULL,NULL,NULL);
     hMP = CreateWindowEx(0,"Edit","",WS_VISIBLE | WS_CHILD,360,225,270,15,hwnd,NULL,NULL,NULL);
     hBP = CreateWindowEx(0,"Edit","",WS_VISIBLE | WS_CHILD,360,250,270,15,hwnd,NULL,NULL,NULL);
     hIR = CreateWindowEx(0,"Edit","",WS_VISIBLE | WS_CHILD,360,275,270,15,hwnd,NULL,NULL,NULL);
@@ -246,14 +260,14 @@ void AddControl(HWND hwnd){
     hUses = CreateWindowEx(0,"Edit","",WS_VISIBLE | WS_CHILD,360,525,270,15,hwnd,NULL,NULL,NULL);
 
     //User inputs are defined here
-    hUserInputName = CreateWindowEx(0,"ComboBox","Element Name",WS_VISIBLE | WS_CHILD | CBS_DROPDOWN | CBS_HASSTRINGS | WS_OVERLAPPED,10,10,100,18,hwnd,(HMENU)ElementName,NULL,NULL);
-    CreateWindowEx(0,"Edit","Element Symbol",WS_VISIBLE | WS_CHILD,120,10,100,18,hwnd,NULL,NULL,NULL);
-    hUserInputNumber = CreateWindowEx(0,"ComboBox","Atomic Number",WS_VISIBLE | WS_CHILD,230,10,100,18,hwnd,(HMENU)AtomicNumber,NULL,NULL);
+    hUserInputName = CreateWindowEx(0,"ComboBox","",WS_VISIBLE | WS_CHILD | CBS_DROPDOWN | CBS_HASSTRINGS | WS_OVERLAPPED,10,10,100,18,hwnd,NULL,NULL,NULL);
+    CreateWindowEx(0,"Edit","",WS_VISIBLE | WS_CHILD,120,10,100,18,hwnd,NULL,NULL,NULL);
+    hUserInputNumber = CreateWindowEx(0,"ComboBox","",WS_VISIBLE | WS_CHILD,230,10,100,18,hwnd,NULL,NULL,NULL);
     for(int i = 0;i<118;i++){
         SendMessage(hUserInputName,(UINT) CB_ADDSTRING,(WPARAM)0,(LPARAM)user_atom.name);
     }
     SendMessage(hUserInputName, CB_SETCURSEL, (WPARAM)2, (LPARAM)0);
-    CreateWindowEx(0,"Edit","Atomic Weight",WS_VISIBLE | WS_CHILD,340,10,100,18,hwnd,NULL,NULL,NULL);
+    hUserInputSymbol = CreateWindowEx(0,"Edit","",WS_VISIBLE | WS_CHILD,340,10,100,18,hwnd,NULL,NULL,NULL);
 
     CreateWindowEx(0,"Button","Search",WS_VISIBLE | WS_CHILD,450,10,100,25,hwnd,(HMENU)Search,NULL,NULL);
 
@@ -263,4 +277,50 @@ void AddControl(HWND hwnd){
 
 void loadimages(){
     hImage = (HBITMAP)LoadImageA(NULL,"image.bmp",IMAGE_BITMAP,150,150,LR_LOADFROMFILE);
+}
+
+void AddHelpMenuControl(HWND hwnd){
+    HWND hHelpWindow;
+    hHelpWindow = CreateWindowEx(0,"Static","",WS_CHILD | WS_VISIBLE,0,0,750,500,hwnd,NULL,NULL,NULL);
+    CreateWindowEx(0,"Static","Help related to program",WS_CHILD | WS_VISIBLE,50,50,650,400,hHelpWindow,NULL,NULL,NULL);
+}
+
+void AddQuizMenuControl(HWND hwnd){
+    HWND hQuizWindow;
+    struct quiz *quiz_data = question_search();
+    struct element *all_elements = elements_data();
+    hQuizWindow = CreateWindowEx(0,"Static","",WS_CHILD | WS_VISIBLE | ES_MULTILINE | WS_VSCROLL,0,0,750,450,hwnd,NULL,NULL,NULL);
+    int k,j,temp = 50;
+    for(k=0;k<118;k++){
+        CreateWindowEx(0,"Static",quiz_data[k].questions,WS_CHILD | WS_VISIBLE,50,temp,250,20,hQuizWindow,NULL,NULL,NULL);
+        for(j=0;j<5;j++){
+            temp = temp + 30;
+            CreateWindowEx(0,"Button",all_elements[k].color,WS_VISIBLE | WS_CHILD | BS_AUTORADIOBUTTON,50,temp,56,20,hQuizWindow,(HMENU)k,NULL,NULL);
+        }
+    }
+    temp = temp + 30;
+}
+
+void AddAboutMenuControl(HWND hwnd){
+    HWND hAboutWindow;
+    hAboutWindow = CreateWindowEx(0,"Static","",WS_CHILD | WS_VISIBLE,0,0,750,500,hwnd,NULL,NULL,NULL);
+    CreateWindowEx(0,"Static","The Developers Contact",WS_CHILD | WS_VISIBLE | ES_MULTILINE | WS_VSCROLL,50,50,650,400,hAboutWindow,NULL,NULL,NULL);
+}
+
+struct element element_searcher(char element_name[20],char element_symbol[4],int atomic_number,float atomic_weight){
+    struct element *all_elements = elements_data();
+    for(int i=0;i<118;i++){
+        if(strcmp(all_elements[i].name,element_name)==0){
+            return all_elements[i];
+        }
+        if(strcmp(all_elements[i].symbol,element_symbol)==0){
+            return all_elements[i];
+        }
+        if(all_elements[i].atomic_number==atomic_number){
+            return all_elements[i];
+        }
+        if(all_elements[i].atomic_weight==atomic_weight){
+            return all_elements[i];
+        }
+    }
 }

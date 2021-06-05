@@ -34,7 +34,7 @@ void AddHelpMenuControl(HWND);
 void AddAboutMenuControl(HWND);
 void ClearWindow(HWND);
 HWND hName,hSymbol,hAtomicNumber,hAtomicWeight,hEC,hHistory,hMP,hBP,hIR,hIsotpes,hEN,hColor,hPosition,hConductivity,hLuster,hPhases,hDensity,hUses,hLogo,
-hUserInputName,hUserInputSymbol,hUserInputNumber,hUserInputWeight,hQuiz;
+hUserInputName,hUserInputSymbol,hUserInputNumber,hUserInputWeight,hQuiz,hMainWindow;;
 
 
 
@@ -124,14 +124,17 @@ LRESULT CALLBACK WindowProcedure (HWND hwnd, UINT message, WPARAM wParam, LPARAM
 
                 case Quiz_Menu:
                     AddQuizMenuControl(hwnd);
+                    DestroyWindow(hMainWindow);
                     break;
 
                 case Help_Menu:
                     AddHelpMenuControl(hwnd);
+                    DestroyWindow(hMainWindow);
                     break;
 
                 case About_Menu:
                     AddAboutMenuControl(hwnd);
+                    DestroyWindow(hMainWindow);
                     break;
 
                 case Search:;
@@ -216,67 +219,61 @@ void AddMenu(HWND hwnd){
 }
 
 void AddMainMenuControl(HWND hwnd){
-    HWND hManinWindow;
-    hManinWindow = CreateWindowEx(0,"Static","",WS_CHILD | WS_VISIBLE,0,0,750,500,hwnd,NULL,NULL,NULL);
-    CreateWindowEx(0,"Static","Element Name:-",WS_VISIBLE | WS_CHILD,200,50,150,15,hwnd,NULL,NULL,NULL);
-    CreateWindowEx(0,"Static","Element Symbol:-",WS_VISIBLE | WS_CHILD,200,75,150,15,hwnd,NULL,NULL,NULL);
-    CreateWindowEx(0,"Static","Atomic Number:-",WS_VISIBLE | WS_CHILD,200,100,150,15,hwnd,NULL,NULL,NULL);
-    CreateWindowEx(0,"Static","Atomic Weight:-",WS_VISIBLE | WS_CHILD,200,125,150,15,hwnd,NULL,NULL,NULL);
-    CreateWindowEx(0,"Static","Electronic Configuration:-",WS_VISIBLE | WS_CHILD,200,150,150,15,hwnd,NULL,NULL,NULL);
-    CreateWindowEx(0,"Static","History:-",WS_VISIBLE | WS_CHILD,200,175,150,15,hwnd,NULL,NULL,NULL);
-    CreateWindowEx(0,"Static","Physical Properties",WS_VISIBLE | WS_CHILD,200,200,350,15,hwnd,NULL,NULL,NULL);
-    CreateWindowEx(0,"Static","Melting point:-",WS_VISIBLE | WS_CHILD,200,225,150,15,hwnd,NULL,NULL,NULL);
-    CreateWindowEx(0,"Static","Boiling Point:-",WS_VISIBLE | WS_CHILD,200,250,150,15,hwnd,NULL,NULL,NULL);
-    CreateWindowEx(0,"Static","Ionic Radius:-",WS_VISIBLE | WS_CHILD,200,275,150,15,hwnd,NULL,NULL,NULL);
-    CreateWindowEx(0,"Static","Isotopes:-",WS_VISIBLE | WS_CHILD,200,300,150,15,hwnd,NULL,NULL,NULL);
-    CreateWindowEx(0,"Static","Electronegativity:-",WS_VISIBLE | WS_CHILD,200,325,150,15,hwnd,NULL,NULL,NULL);
-    CreateWindowEx(0,"Static","Chemical Properties",WS_VISIBLE | WS_CHILD,200,350,350,15,hwnd,NULL,NULL,NULL);
-    CreateWindowEx(0,"Static","Color:-",WS_VISIBLE | WS_CHILD,200,375,150,15,hwnd,NULL,NULL,NULL);
-    CreateWindowEx(0,"Static","Position:-",WS_VISIBLE | WS_CHILD,200,400,150,15,hwnd,NULL,NULL,NULL);
-    CreateWindowEx(0,"Static","Conductivity:-",WS_VISIBLE | WS_CHILD,200,425,150,15,hwnd,NULL,NULL,NULL);
-    CreateWindowEx(0,"Static","Luster:-",WS_VISIBLE | WS_CHILD,200,450,150,15,hwnd,NULL,NULL,NULL);
-    CreateWindowEx(0,"Static","State of matter:-",WS_VISIBLE | WS_CHILD,200,475,150,15,hwnd,NULL,NULL,NULL);
-    CreateWindowEx(0,"Static","Density:-",WS_VISIBLE | WS_CHILD,200,500,150,15,hwnd,NULL,NULL,NULL);
-    CreateWindowEx(0,"Static","Uses:-",WS_VISIBLE | WS_CHILD,200,525,150,15,hwnd,NULL,NULL,NULL);
+    hMainWindow = CreateWindowEx(0,"Static","",WS_CHILD | WS_VISIBLE | WS_BORDER,0,0,750,500,hwnd,NULL,NULL,NULL);
+    CreateWindowEx(0,"Static","Element Name:-",WS_VISIBLE | WS_CHILD,200,50,150,15,hMainWindow,NULL,NULL,NULL);
+    CreateWindowEx(0,"Static","Element Symbol:-",WS_VISIBLE | WS_CHILD,200,75,150,15,hMainWindow,NULL,NULL,NULL);
+    CreateWindowEx(0,"Static","Atomic Number:-",WS_VISIBLE | WS_CHILD,200,100,150,15,hMainWindow,NULL,NULL,NULL);
+    CreateWindowEx(0,"Static","Atomic Weight:-",WS_VISIBLE | WS_CHILD,200,125,150,15,hMainWindow,NULL,NULL,NULL);
+    CreateWindowEx(0,"Static","Electronic Configuration:-",WS_VISIBLE | WS_CHILD,200,150,150,15,hMainWindow,NULL,NULL,NULL);
+    CreateWindowEx(0,"Static","History:-",WS_VISIBLE | WS_CHILD,200,215,150,20,hMainWindow,NULL,NULL,NULL);
+    CreateWindowEx(0,"Static","Physical Properties",WS_VISIBLE | WS_CHILD,200,290,350,15,hMainWindow,NULL,NULL,NULL);
+    CreateWindowEx(0,"Static","Melting point:-",WS_VISIBLE | WS_CHILD,200,310,150,15,hMainWindow,NULL,NULL,NULL);
+    CreateWindowEx(0,"Static","Boiling Point:-",WS_VISIBLE | WS_CHILD,200,345,150,15,hMainWindow,NULL,NULL,NULL);
+    CreateWindowEx(0,"Static","Ionic Radius:-",WS_VISIBLE | WS_CHILD,200,380,150,15,hMainWindow,NULL,NULL,NULL);
+    CreateWindowEx(0,"Static","Isotopes:-",WS_VISIBLE | WS_CHILD,200,415,150,15,hMainWindow,NULL,NULL,NULL);
+    CreateWindowEx(0,"Static","Electronegativity:-",WS_VISIBLE | WS_CHILD,200,450,150,15,hMainWindow,NULL,NULL,NULL);
+    CreateWindowEx(0,"Static","Chemical Properties",WS_VISIBLE | WS_CHILD,200,475,350,15,hMainWindow,NULL,NULL,NULL);
+    CreateWindowEx(0,"Static","Color:-",WS_VISIBLE | WS_CHILD,200,500,150,15,hMainWindow,NULL,NULL,NULL);
+    CreateWindowEx(0,"Static","Position:-",WS_VISIBLE | WS_CHILD,200,525,150,15,hMainWindow,NULL,NULL,NULL);
+    CreateWindowEx(0,"Static","Conductivity:-",WS_VISIBLE | WS_CHILD,200,550,150,15,hMainWindow,NULL,NULL,NULL);
+    CreateWindowEx(0,"Static","Luster:-",WS_VISIBLE | WS_CHILD,200,575,150,15,hMainWindow,NULL,NULL,NULL);
+    CreateWindowEx(0,"Static","State of matter:-",WS_VISIBLE | WS_CHILD,200,600,150,15,hMainWindow,NULL,NULL,NULL);
+    CreateWindowEx(0,"Static","Density:-",WS_VISIBLE | WS_CHILD,200,625,150,15,hMainWindow,NULL,NULL,NULL);
+    CreateWindowEx(0,"Static","Uses:-",WS_VISIBLE | WS_CHILD,200,650,150,15,hMainWindow,NULL,NULL,NULL);
 
     //All edit elements are here
-    hName = CreateWindowEx(0,"Edit","",WS_VISIBLE | WS_CHILD | WS_BORDER,360,50,270,15,hwnd,NULL,NULL,NULL);
-    hSymbol = CreateWindowEx(0,"Edit","",WS_VISIBLE | WS_CHILD,360,75,270,15,hwnd,NULL,NULL,NULL);
-    hAtomicNumber = CreateWindowEx(0,"Edit","",WS_VISIBLE | WS_CHILD,360,100,270,15,hwnd,NULL,NULL,NULL);
-    hAtomicWeight = CreateWindowEx(0,"Edit","",WS_VISIBLE | WS_CHILD,360,125,270,15,hwnd,NULL,NULL,NULL);
-    hEC = CreateWindowEx(0,"Edit","",WS_VISIBLE | WS_CHILD | WS_HSCROLL,360,150,270,15,hwnd,NULL,NULL,NULL);
-    hHistory = CreateWindowEx(0,"Edit","",WS_VISIBLE | WS_CHILD | WS_HSCROLL,360,175,270,15,hwnd,NULL,NULL,NULL);
-    hMP = CreateWindowEx(0,"Edit","",WS_VISIBLE | WS_CHILD,360,225,270,15,hwnd,NULL,NULL,NULL);
-    hBP = CreateWindowEx(0,"Edit","",WS_VISIBLE | WS_CHILD,360,250,270,15,hwnd,NULL,NULL,NULL);
-    hIR = CreateWindowEx(0,"Edit","",WS_VISIBLE | WS_CHILD,360,275,270,15,hwnd,NULL,NULL,NULL);
-    hIsotpes = CreateWindowEx(0,"Edit","",WS_VISIBLE | WS_CHILD,360,300,270,15,hwnd,NULL,NULL,NULL);
-    hEN = CreateWindowEx(0,"Edit","",WS_VISIBLE | WS_CHILD,360,325,270,15,hwnd,NULL,NULL,NULL);
-    hColor = CreateWindowEx(0,"Edit","",WS_VISIBLE | WS_CHILD,360,375,270,15,hwnd,NULL,NULL,NULL);
-    hPosition = CreateWindowEx(0,"Edit","",WS_VISIBLE | WS_CHILD,360,400,270,15,hwnd,NULL,NULL,NULL);
-    hConductivity = CreateWindowEx(0,"Edit","",WS_VISIBLE | WS_CHILD,360,425,270,15,hwnd,NULL,NULL,NULL);
-    hLuster = CreateWindowEx(0,"Edit","",WS_VISIBLE | WS_CHILD,360,450,270,15,hwnd,NULL,NULL,NULL);
-    hPhases = CreateWindowEx(0,"Edit","",WS_VISIBLE | WS_CHILD,360,475,270,15,hwnd,NULL,NULL,NULL);
-    hDensity = CreateWindowEx(0,"Edit","",WS_VISIBLE | WS_CHILD,360,500,270,15,hwnd,NULL,NULL,NULL);
-    hUses = CreateWindowEx(0,"Edit","",WS_VISIBLE | WS_CHILD,360,525,270,15,hwnd,NULL,NULL,NULL);
+    hName = CreateWindowEx(0,"Edit","",WS_VISIBLE | WS_CHILD | WS_BORDER,360,50,270,15,hMainWindow,NULL,NULL,NULL);
+    hSymbol = CreateWindowEx(0,"Edit","",WS_VISIBLE | WS_CHILD,360,75,270,15,hMainWindow,NULL,NULL,NULL);
+    hAtomicNumber = CreateWindowEx(0,"Edit","",WS_VISIBLE | WS_CHILD,360,100,270,15,hMainWindow,NULL,NULL,NULL);
+    hAtomicWeight = CreateWindowEx(0,"Edit","",WS_VISIBLE | WS_CHILD,360,125,270,15,hMainWindow,NULL,NULL,NULL);
+    hEC = CreateWindowEx(0,"Edit","",WS_VISIBLE | WS_CHILD | WS_HSCROLL,360,150,270,15,hMainWindow,NULL,NULL,NULL);
+    hHistory = CreateWindowEx(0,"Edit","",WS_VISIBLE | WS_CHILD | ES_MULTILINE | WS_VSCROLL,360,175,270,100,hMainWindow,NULL,NULL,NULL);
+    hMP = CreateWindowEx(0,"Edit","",WS_VISIBLE | WS_CHILD,360,310,270,15,hMainWindow,NULL,NULL,NULL);
+    hBP = CreateWindowEx(0,"Edit","",WS_VISIBLE | WS_CHILD,360,345,270,15,hMainWindow,NULL,NULL,NULL);
+    hIR = CreateWindowEx(0,"Edit","",WS_VISIBLE | WS_CHILD,360,380,270,15,hMainWindow,NULL,NULL,NULL);
+    hIsotpes = CreateWindowEx(0,"Edit","",WS_VISIBLE | WS_CHILD,360,415,270,15,hMainWindow,NULL,NULL,NULL);
+    hEN = CreateWindowEx(0,"Edit","",WS_VISIBLE | WS_CHILD,360,450,270,15,hMainWindow,NULL,NULL,NULL);
+    hColor = CreateWindowEx(0,"Edit","",WS_VISIBLE | WS_CHILD,360,500,270,15,hMainWindow,NULL,NULL,NULL);
+    hPosition = CreateWindowEx(0,"Edit","",WS_VISIBLE | WS_CHILD,360,525,270,30,hMainWindow,NULL,NULL,NULL);
+    hConductivity = CreateWindowEx(0,"Edit","",WS_VISIBLE | WS_CHILD,360,550,270,15,hMainWindow,NULL,NULL,NULL);
+    hLuster = CreateWindowEx(0,"Edit","",WS_VISIBLE | WS_CHILD,360,575,270,15,hMainWindow,NULL,NULL,NULL);
+    hPhases = CreateWindowEx(0,"Edit","",WS_VISIBLE | WS_CHILD,360,600,270,15,hMainWindow,NULL,NULL,NULL);
+    hDensity = CreateWindowEx(0,"Edit","",WS_VISIBLE | WS_CHILD,360,625,270,15,hMainWindow,NULL,NULL,NULL);
+    hUses = CreateWindowEx(0,"Edit","",WS_VISIBLE | WS_CHILD,360,650,270,90,hMainWindow,NULL,NULL,NULL);
 
     //User inputs are defined here
-    hUserInputName = CreateWindowEx(0,"ComboBox","",WS_VISIBLE | WS_CHILD | CBS_DROPDOWN | CBS_HASSTRINGS | WS_OVERLAPPED,10,10,100,18,hwnd,NULL,NULL,NULL);
-    CreateWindowEx(0,"Edit","",WS_VISIBLE | WS_CHILD,120,10,100,18,hwnd,NULL,NULL,NULL);
-    hUserInputNumber = CreateWindowEx(0,"ComboBox","",WS_VISIBLE | WS_CHILD,230,10,100,18,hwnd,NULL,NULL,NULL);
-    for(int i = 0;i<118;i++){
-        SendMessage(hUserInputName,(UINT) CB_ADDSTRING,(WPARAM)0,(LPARAM)user_atom.name);
-    }
-    SendMessage(hUserInputName, CB_SETCURSEL, (WPARAM)2, (LPARAM)0);
-    hUserInputSymbol = CreateWindowEx(0,"Edit","",WS_VISIBLE | WS_CHILD,340,10,100,18,hwnd,NULL,NULL,NULL);
+    hUserInputName = CreateWindowEx(0,"ComboBox","",WS_VISIBLE | WS_CHILD | CBS_DROPDOWN | CBS_HASSTRINGS | WS_OVERLAPPED,10,10,100,18,hMainWindow,NULL,NULL,NULL);
+    hUserInputSymbol = CreateWindowEx(0,"ComboBox","",WS_VISIBLE | WS_CHILD | CBS_DROPDOWN | CBS_HASSTRINGS | WS_OVERLAPPED,120,10,100,18,hMainWindow,NULL,NULL,NULL);
+    hUserInputNumber = CreateWindowEx(0,"ComboBox","",WS_VISIBLE | WS_CHILD | CBS_DROPDOWN | CBS_HASSTRINGS | WS_OVERLAPPED,230,10,100,18,hMainWindow,NULL,NULL,NULL);
+    CreateWindowEx(0,"Edit","",WS_VISIBLE | WS_CHILD,340,10,100,18,hMainWindow,NULL,NULL,NULL);
+    CreateWindowEx(0,"Button","Search",WS_VISIBLE | WS_CHILD,450,10,100,25,hMainWindow,(HMENU)Search,NULL,NULL);
 
-    CreateWindowEx(0,"Button","Search",WS_VISIBLE | WS_CHILD,450,10,100,25,hwnd,(HMENU)Search,NULL,NULL);
-
-    hLogo = CreateWindowEx(0,"Static","",WS_VISIBLE | WS_CHILD | SS_BITMAP,15,60,150,15,hwnd,NULL,NULL,NULL);
+    hLogo = CreateWindowEx(0,"Static","",WS_VISIBLE | WS_CHILD | SS_BITMAP,15,60,150,15,hMainWindow,NULL,NULL,NULL);
     SendMessageA(hLogo,STM_SETIMAGE,IMAGE_BITMAP,(LPARAM)hImage);
 }
 
 void loadimages(){
-    hImage = (HBITMAP)LoadImageA(NULL,"image.bmp",IMAGE_BITMAP,150,150,LR_LOADFROMFILE);
+    hImage = LoadImageA(NULL,"image.bmp",IMAGE_BITMAP,150,150,LR_LOADFROMFILE);
 }
 
 void AddHelpMenuControl(HWND hwnd){
@@ -289,7 +286,7 @@ void AddQuizMenuControl(HWND hwnd){
     HWND hQuizWindow;
     struct quiz *quiz_data = question_search();
     struct element *all_elements = elements_data();
-    hQuizWindow = CreateWindowEx(0,"Static","",WS_CHILD | WS_VISIBLE | ES_MULTILINE | WS_VSCROLL,0,0,750,450,hwnd,NULL,NULL,NULL);
+    hQuizWindow = CreateWindowEx(0,"Static","",WS_CHILD | WS_VISIBLE | WS_VSCROLL,0,0,750,450,hwnd,NULL,NULL,NULL);
     int k,j,temp = 50;
     for(k=0;k<118;k++){
         CreateWindowEx(0,"Static",quiz_data[k].questions,WS_CHILD | WS_VISIBLE,50,temp,250,20,hQuizWindow,NULL,NULL,NULL);
@@ -303,8 +300,8 @@ void AddQuizMenuControl(HWND hwnd){
 
 void AddAboutMenuControl(HWND hwnd){
     HWND hAboutWindow;
-    hAboutWindow = CreateWindowEx(0,"Static","",WS_CHILD | WS_VISIBLE,0,0,750,500,hwnd,NULL,NULL,NULL);
-    CreateWindowEx(0,"Static","The Developers Contact",WS_CHILD | WS_VISIBLE | ES_MULTILINE | WS_VSCROLL,50,50,650,400,hAboutWindow,NULL,NULL,NULL);
+    hAboutWindow = CreateWindowEx(0,"Static","",WS_CHILD | WS_VISIBLE ,0,0,750,500,hwnd,NULL,NULL,NULL);
+    CreateWindowEx(0,"Edit","Elephants are the largest existing land animals. Three species are currently recognised: the African bush elephant, the African forest elephant, and the Asian elephant. Elephantidae is the only surviving family of the order Proboscidea; extinct members include the mastodons. The family Elephantidae also contains several extinct groups, including the mammoths and straight-tusked elephants. African elephants have larger ears and concave backs, whereas Asian elephants have smaller ears, and convex or level backs. Distinctive features of all elephants include a long proboscis called a trunk, tusks, large ear flaps, massive legs, and tough but sensitive skin. The trunk is used for breathing, bringing food and water to the mouth, and grasping objects. Tusks, which are derived from the incisor teeth, serve both as weapons and as tools for moving objects and digging. The large ear flaps assist in maintaining a constant body temperature as well as in communication. The pillar-like legs carry their great weight.Elephants are scattered throughout sub-Saharan Africa, South Asia, and Southeast Asia and are found in different habitats, including savannahs, forests, deserts, and marshes. They are herbivorous, and they stay near water when it is accessible. They are considered to be keystone species, due to their impact on their environments. Elephants have a fission–fusion society, in which multiple family groups come together to socialise. Females (cows) tend to live in family groups, which can consist of one female with her calves or several related females with offspring. The groups, which do not include bulls, are usually led by the oldest cow, known as the matriarch.Males (bulls) leave their family groups when they reach puberty and may live alone or with other males. Adult bulls mostly interact with family groups when looking for a mate. They enter a state of increased testosterone and aggression known as musth, which helps them gain dominance over other males as well as reproductive success. Calves are the centre of attention in their family groups and rely on their mothers for as long as three years. Elephants can live up to 70 years in the wild. They communicate by touch, sight, smell, and sound; elephants use infrasound, and seismic communication over long distances. Elephant intelligence has been compared with that of primates and cetaceans. They appear to have self-awareness, and appear to show empathy for dying and dead family members.African bush elephants and Asian elephants are listed as endangered and African forest elephants as critically endangered by the International Union for Conservation of Nature (IUCN). One of the biggest threats to elephant populations is the ivory trade, as the animals are poached for their ivory tusks. Other threats to wild elephants include habitat destruction and conflicts with local people. Elephants are used as working animals in Asia. In the past, they were used in war; today, they are often controversially put on display in zoos, or exploited for entertainment in circuses. Elephants are highly recognisable and have been featured in art, folklore, religion, literature, and popular culture.",WS_CHILD | WS_VISIBLE | ES_MULTILINE | WS_VSCROLL,50,50,600,400,hAboutWindow,NULL,NULL,NULL);
 }
 
 struct element element_searcher(char element_name[20],char element_symbol[4],int atomic_number,float atomic_weight){

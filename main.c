@@ -34,7 +34,7 @@ void AddHelpMenuControl(HWND);
 void AddAboutMenuControl(HWND);
 void ClearWindow(HWND);
 HWND hName,hSymbol,hAtomicNumber,hAtomicWeight,hEC,hHistory,hMP,hBP,hIR,hIsotpes,hEN,hColor,hPosition,hConductivity,hLuster,hPhases,hDensity,hUses,hLogo,
-hUserInputName,hUserInputSymbol,hUserInputNumber,hUserInputWeight,hQuiz,hMainWindow;;
+hUserInputName,hUserInputSymbol,hUserInputNumber,hUserInputWeight,hQuiz,hMainWindow,hQuizWindow,hAboutWindow,hHelpWindow;
 
 
 
@@ -114,6 +114,7 @@ int WINAPI WinMain (HINSTANCE hThisInstance,
 
 LRESULT CALLBACK WindowProcedure (HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
+    
     switch (message)                  /* handle the messages */
     {
         case WM_COMMAND:
@@ -124,17 +125,19 @@ LRESULT CALLBACK WindowProcedure (HWND hwnd, UINT message, WPARAM wParam, LPARAM
 
                 case Quiz_Menu:
                     AddQuizMenuControl(hwnd);
-                    DestroyWindow(hMainWindow);
+                    CloseWindow(hMainWindow);
                     break;
 
                 case Help_Menu:
                     AddHelpMenuControl(hwnd);
-                    DestroyWindow(hMainWindow);
+                    CloseWindow(hQuizWindow);
+                    CloseWindow(hMainWindow);
                     break;
 
                 case About_Menu:
                     AddAboutMenuControl(hwnd);
-                    DestroyWindow(hMainWindow);
+                    CloseWindow(hHelpWindow);
+                    CloseWindow(hMainWindow);
                     break;
 
                 case Search:;
@@ -195,7 +198,8 @@ LRESULT CALLBACK WindowProcedure (HWND hwnd, UINT message, WPARAM wParam, LPARAM
             AddMenu(hwnd);
             AddMainMenuControl(hwnd);
             break;
-
+    
+        
         case WM_DESTROY:
             PostQuitMessage (0);       /* send a WM_QUIT to the message queue */
             break;
@@ -220,7 +224,7 @@ void AddMenu(HWND hwnd){
 
 void AddMainMenuControl(HWND hwnd){
     hMainWindow = CreateWindowEx(0,"Static","",WS_CHILD | WS_VISIBLE | WS_BORDER,0,0,750,500,hwnd,NULL,NULL,NULL);
-    CreateWindowEx(0,"Static","Element Name:-",WS_VISIBLE | WS_CHILD,200,50,150,15,hMainWindow,NULL,NULL,NULL);
+    CreateWindowEx(0,"Static",_T("Element Name:-"),WS_VISIBLE | WS_CHILD,200,50,150,15,hMainWindow,NULL,NULL,NULL);
     CreateWindowEx(0,"Static","Element Symbol:-",WS_VISIBLE | WS_CHILD,200,75,150,15,hMainWindow,NULL,NULL,NULL);
     CreateWindowEx(0,"Static","Atomic Number:-",WS_VISIBLE | WS_CHILD,200,100,150,15,hMainWindow,NULL,NULL,NULL);
     CreateWindowEx(0,"Static","Atomic Weight:-",WS_VISIBLE | WS_CHILD,200,125,150,15,hMainWindow,NULL,NULL,NULL);
@@ -277,29 +281,28 @@ void loadimages(){
 }
 
 void AddHelpMenuControl(HWND hwnd){
-    HWND hHelpWindow;
     hHelpWindow = CreateWindowEx(0,"Static","",WS_CHILD | WS_VISIBLE,0,0,750,500,hwnd,NULL,NULL,NULL);
     CreateWindowEx(0,"Static","Help related to program",WS_CHILD | WS_VISIBLE,50,50,650,400,hHelpWindow,NULL,NULL,NULL);
 }
 
 void AddQuizMenuControl(HWND hwnd){
-    HWND hQuizWindow;
     struct quiz *quiz_data = question_search();
     struct element *all_elements = elements_data();
-    hQuizWindow = CreateWindowEx(0,"Static","",WS_CHILD | WS_VISIBLE | WS_VSCROLL,0,0,750,450,hwnd,NULL,NULL,NULL);
+    hQuizWindow = CreateWindowEx(0,"Static","",WS_CHILD | WS_VISIBLE | WS_VSCROLL | BS_GROUPBOX,0,0,750,450,hwnd,NULL,NULL,NULL);
     int k,j,temp = 50;
-    for(k=0;k<118;k++){
+    for(k=0;k<15;k++){
         CreateWindowEx(0,"Static",quiz_data[k].questions,WS_CHILD | WS_VISIBLE,50,temp,250,20,hQuizWindow,NULL,NULL,NULL);
-        for(j=0;j<5;j++){
+        for(j=0;j<4;j++){
             temp = temp + 30;
-            CreateWindowEx(0,"Button",all_elements[k].color,WS_VISIBLE | WS_CHILD | BS_AUTORADIOBUTTON,50,temp,56,20,hQuizWindow,(HMENU)k,NULL,NULL);
+            CreateWindowEx(0,"Button",all_elements[k].name,WS_VISIBLE | WS_CHILD | BS_AUTORADIOBUTTON,100,temp,56,20,hQuizWindow,(HMENU)k,NULL,NULL);
         }
+        temp = temp + 30;
+        CreateWindowEx(0,"Button",quiz_data[k].correct_answer,WS_VISIBLE | WS_CHILD | BS_AUTORADIOBUTTON,100,temp,56,20,hQuizWindow,(HMENU)k,NULL,NULL);
     }
     temp = temp + 30;
 }
 
 void AddAboutMenuControl(HWND hwnd){
-    HWND hAboutWindow;
     hAboutWindow = CreateWindowEx(0,"Static","",WS_CHILD | WS_VISIBLE ,0,0,750,500,hwnd,NULL,NULL,NULL);
     CreateWindowEx(0,"Edit","Elephants are the largest existing land animals. Three species are currently recognised: the African bush elephant, the African forest elephant, and the Asian elephant. Elephantidae is the only surviving family of the order Proboscidea; extinct members include the mastodons. The family Elephantidae also contains several extinct groups, including the mammoths and straight-tusked elephants. African elephants have larger ears and concave backs, whereas Asian elephants have smaller ears, and convex or level backs. Distinctive features of all elephants include a long proboscis called a trunk, tusks, large ear flaps, massive legs, and tough but sensitive skin. The trunk is used for breathing, bringing food and water to the mouth, and grasping objects. Tusks, which are derived from the incisor teeth, serve both as weapons and as tools for moving objects and digging. The large ear flaps assist in maintaining a constant body temperature as well as in communication. The pillar-like legs carry their great weight.Elephants are scattered throughout sub-Saharan Africa, South Asia, and Southeast Asia and are found in different habitats, including savannahs, forests, deserts, and marshes. They are herbivorous, and they stay near water when it is accessible. They are considered to be keystone species, due to their impact on their environments. Elephants have a fission–fusion society, in which multiple family groups come together to socialise. Females (cows) tend to live in family groups, which can consist of one female with her calves or several related females with offspring. The groups, which do not include bulls, are usually led by the oldest cow, known as the matriarch.Males (bulls) leave their family groups when they reach puberty and may live alone or with other males. Adult bulls mostly interact with family groups when looking for a mate. They enter a state of increased testosterone and aggression known as musth, which helps them gain dominance over other males as well as reproductive success. Calves are the centre of attention in their family groups and rely on their mothers for as long as three years. Elephants can live up to 70 years in the wild. They communicate by touch, sight, smell, and sound; elephants use infrasound, and seismic communication over long distances. Elephant intelligence has been compared with that of primates and cetaceans. They appear to have self-awareness, and appear to show empathy for dying and dead family members.African bush elephants and Asian elephants are listed as endangered and African forest elephants as critically endangered by the International Union for Conservation of Nature (IUCN). One of the biggest threats to elephant populations is the ivory trade, as the animals are poached for their ivory tusks. Other threats to wild elephants include habitat destruction and conflicts with local people. Elephants are used as working animals in Asia. In the past, they were used in war; today, they are often controversially put on display in zoos, or exploited for entertainment in circuses. Elephants are highly recognisable and have been featured in art, folklore, religion, literature, and popular culture.",WS_CHILD | WS_VISIBLE | ES_MULTILINE | WS_VSCROLL,50,50,600,400,hAboutWindow,NULL,NULL,NULL);
 }

@@ -2106,7 +2106,7 @@ struct element *elements_data()
     strcpy(atom[93].luster," silvery bright color but takes on a dull gray, yellow, or olive green tarnish when oxidized in air. ");
     strcpy(atom[93].phase,"solid at room temperature.");
     atom[93].density =19.84  ;
-    strcpy(atom[93].uses,"Plutonium has been used to make nuclear weapons (such as "atomic bombs") and in nuclear power plants to produce electricity. Plutonium has also been used as a portable energy supply in space probes and other space vehicles.");
+    strcpy(atom[93].uses,"Plutonium has been used to make nuclear weapons (such as 'atomic bombs') and in nuclear power plants to produce electricity. Plutonium has also been used as a portable energy supply in space probes and other space vehicles.");
     strcpy(atom[93].image_path,"");
 	
 	
@@ -2475,8 +2475,8 @@ struct element *elements_data()
 	atom[109].atomic_weight=281;
 	strcpy(atom[109].electronic_configuration,"[Rn] 5f146d97s1");
 	strcpy(atom[109].history," Darmstadtium was first produced by Peter Armbruster, Gottfried Münzenber and their team working at the Gesellschaft für Schwerionenforschung in Darmstadt, Germany on November 9th, 1994.");
-    atom[109].melting_point = ;
-    atom[109].boiling_point = ;
+    atom[109].melting_point = 0;
+    atom[109].boiling_point = 0;
     atom[109].ionic_radius = 128  ;
     atom[109].isotopes =9  ;
     atom[109].electronegativity =0;
@@ -2500,14 +2500,14 @@ struct element *elements_data()
     atom[110].boiling_point = -1 ;
     atom[110].ionic_radius =114   ;
     atom[110].isotopes =7 ;
-    atom[110].electronegativity = ;
+    atom[110].electronegativity = 0;
     strcpy(atom[110].color,"orange metallic or yellow ");
     atom[110].group =11;
     atom[110].period =7 ;
     strcpy(atom[110].conductivity,"good electrical and thermal");
     strcpy(atom[110].luster," metallic gold (yellow solid)");
     strcpy(atom[110].phase,"Solid");
-    atom[110].density =;22 
+    atom[110].density =22; 
     strcpy(atom[110].uses,"At present, it is only used in research. Roentgenium has no known biological role.");
     strcpy(atom[110].image_path,"");
 
@@ -2521,9 +2521,9 @@ struct element *elements_data()
     atom[111].boiling_point = 67 ;
     atom[111].ionic_radius = 110   ;
     atom[111].isotopes = 4 ;
-    atom[111].electronegativity = ;
+    atom[111].electronegativity = 0;
     strcpy(atom[111].color,"unknown, but is likely to be metallic and silvery white or grey in appearance");
-    atom[111].group =;12
+    atom[111].group =12;
     atom[111].period =7 ;
     strcpy(atom[111].conductivity,"Thermal Conductivity");
     strcpy(atom[111].luster,"metallic and silvery white or grey in appearance");
@@ -2542,7 +2542,7 @@ struct element *elements_data()
     atom[112].boiling_point =1130  ;
     atom[112].ionic_radius = 170;
     atom[112].isotopes = 6 ;
-    atom[112].electronegativity = ;
+    atom[112].electronegativity = 0;
     strcpy(atom[112].color,"silvery-gray/ unknown");
     atom[112].group =13;
     atom[112].period =7 ;
@@ -2563,7 +2563,7 @@ struct element *elements_data()
     atom[113].boiling_point = 107 ;
     atom[113].ionic_radius = 180  ;
     atom[113].isotopes = 7 ;
-    atom[113].electronegativity =  ;
+    atom[113].electronegativity =  0;
     strcpy(atom[113].color,"Unknown, but probably metallic and silvery white or grey in appearance");
     atom[113].group =14;
     atom[113].period =7;
@@ -2626,7 +2626,7 @@ struct element *elements_data()
     atom[116].boiling_point = 883 ;
     atom[116].ionic_radius = 165  ;
     atom[116].isotopes = 2;
-    atom[116].electronegativity = ;
+    atom[116].electronegativity = 0;
     strcpy(atom[116].color,"Silver");
     atom[116].group =17;
     atom[116].period =7 ;
@@ -2647,7 +2647,7 @@ struct element *elements_data()
     atom[117].boiling_point = 450 ;
     atom[117].ionic_radius = 152 ;
     atom[117].isotopes = 1 ;
-    atom[117].electronegativity = ;
+    atom[117].electronegativity = 0;
     strcpy(atom[117].color,"unknown (presumably colourless)");
     atom[117].group =18;
     atom[117].period =7 ;

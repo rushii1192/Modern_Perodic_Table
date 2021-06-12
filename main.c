@@ -15,11 +15,12 @@
 
 #define Main_Menu 1
 #define Quiz_Menu 2
-#define Help_Menu 3
-#define ElementName 4
-#define AtomicNumber 5
-#define Search 6
-#define About_Menu 7
+#define Molecule_Menu 3
+#define Help_Menu 4
+#define ElementName 5
+#define AtomicNumber 6
+#define Search 7
+#define About_Menu 8
 /*  Declare Windows procedure  */
 LRESULT CALLBACK WindowProcedure (HWND, UINT, WPARAM, LPARAM);
 
@@ -30,13 +31,15 @@ HMENU hmenu;
 //Declare Add_Control Functions
 void AddMainMenuControl(HWND);
 void AddQuizMenuControl(HWND);
-void AddHelpMenuControl(HWND);
+void AddMoleculeMenuControl(HWND);
 void AddAboutMenuControl(HWND);
 void ClearWindow(HWND);
 HWND hName,hSymbol,hAtomicNumber,hAtomicWeight,hEC,hHistory,hMP,hBP,hIR,hIsotpes,hEN,hColor,hPosition,hConductivity,hLuster,hPhases,hDensity,hUses,hLogo,
-hUserInputName,hUserInputSymbol,hUserInputNumber,hUserInputWeight,hQuiz,hMainWindow,hQuizWindow,hAboutWindow,hHelpWindow;
+hUserInputName,hUserInputSymbol,hUserInputNumber,hUserInputWeight,hQuiz,hMainWindow,hQuizWindow,hAboutWindow,hMoleculeWindow;
 
-
+HWND main_classWindow(HWND window){
+    return window;
+}
 
 //Declare images
 HBITMAP hImage;
@@ -92,7 +95,8 @@ int WINAPI WinMain (HINSTANCE hThisInstance,
            hThisInstance,       /* Program Instance handler */
            NULL                 /* No Window Creation data */
            );
-
+    hMainWindow = main_classWindow(hwnd);
+    hAboutWindow = main_classWindow(hwnd);
     /* Make the window visible on the screen */
     ShowWindow (hwnd, nCmdShow);
 
@@ -114,34 +118,51 @@ int WINAPI WinMain (HINSTANCE hThisInstance,
 
 LRESULT CALLBACK WindowProcedure (HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
+    HDC hdc;
+    TEXTMETRIC tm;
+    SCROLLINFO si;
+
+    // These variables are required to display text.
+    static int xClient;     // width of client area
+    static int yClient;     // height of client area
+    static int yChar; // vertical scrolling unit
+    static int yPos;  // current vertical scrolling position
     
     switch (message)                  /* handle the messages */
     {
+        case WM_CREATE:
+
+            loadimages();
+            AddMenu(hwnd);
+            AddMainMenuControl(hwnd);
+            // Get the handle to the client area's device context.
+            break;
+
         case WM_COMMAND:
+        {
             switch(wParam){
                 case Main_Menu:
+                    // ShowWindow(hAboutWindow,SW_MINIMIZE);
+                    // ShowWindow(hAboutWindow,SW_HIDE);
                     AddMainMenuControl(hwnd);
+                    // ShowWindow(hMainWindow,SW_SHOW);
+                    // ShowWindow(hMainWindow,SW_SHOW);
                     break;
 
                 case Quiz_Menu:
                     AddQuizMenuControl(hwnd);
-                    CloseWindow(hMainWindow);
+                    
                     break;
 
                 case Help_Menu:
-                    AddHelpMenuControl(hwnd);
-                    CloseWindow(hQuizWindow);
-                    CloseWindow(hMainWindow);
+                    MessageBoxEx(hMainWindow,"This is the Help","Help",(UINT)MB_OK,(WORD)0);
                     break;
 
                 case About_Menu:
                     AddAboutMenuControl(hwnd);
-                    CloseWindow(hHelpWindow);
-                    CloseWindow(hMainWindow);
                     break;
 
                 case Search:;
-
                     char user_name[20],user_symbol[4],user_atomic_number[4],user_atomic_weight[10],atomic_number[4],atomic_weight[10],melting_point[10],boiling_point[10],ionic_radius[10],isotopes[4],electronegativity[10],group[3],period[2],density[10];
                     //Values inputed from users
                     GetWindowText(hUserInputName,user_name,20);
@@ -151,6 +172,7 @@ LRESULT CALLBACK WindowProcedure (HWND hwnd, UINT message, WPARAM wParam, LPARAM
 
                     //Values are fetched from element searcher function
                     user_atom = element_searcher(user_name,user_symbol,atoi(user_atomic_number),atof(user_atomic_weight));
+                    // user_atom = element_searcher("HELIUM","",0,0);
 
                     //Conversion of values
                     itoa(user_atom.atomic_number,atomic_number,10);
@@ -192,13 +214,8 @@ LRESULT CALLBACK WindowProcedure (HWND hwnd, UINT message, WPARAM wParam, LPARAM
             }
 
             break;
-
-        case WM_CREATE:
-            loadimages();
-            AddMenu(hwnd);
-            AddMainMenuControl(hwnd);
-            break;
-    
+        }
+        
         
         case WM_DESTROY:
             PostQuitMessage (0);       /* send a WM_QUIT to the message queue */
@@ -216,14 +233,17 @@ void AddMenu(HWND hwnd){
 
     AppendMenu(hmenu,MF_STRING,Main_Menu,"Main");
     AppendMenu(hmenu,MF_STRING,Quiz_Menu,"Quiz");
+    AppendMenu(hmenu,MF_STRING,Molecule_Menu,"Molecule");
     AppendMenu(hmenu,MF_STRING,Help_Menu,"Help");
     AppendMenu(hmenu,MF_STRING,About_Menu,"About Us");
 
     SetMenu(hwnd,hmenu);
 }
 
+
 void AddMainMenuControl(HWND hwnd){
-    hMainWindow = CreateWindowEx(0,"Static","",WS_CHILD | WS_VISIBLE | WS_BORDER,0,0,750,500,hwnd,NULL,NULL,NULL);
+
+    // hMainWindow = CreateWindowEx(0,"","",WS_CHILD | WS_VISIBLE | WS_BORDER | WM_VSCROLL,0,0,750,500,hwnd,NULL,NULL,NULL);
     CreateWindowEx(0,"Static",_T("Element Name:-"),WS_VISIBLE | WS_CHILD,200,50,150,15,hMainWindow,NULL,NULL,NULL);
     CreateWindowEx(0,"Static","Element Symbol:-",WS_VISIBLE | WS_CHILD,200,75,150,15,hMainWindow,NULL,NULL,NULL);
     CreateWindowEx(0,"Static","Atomic Number:-",WS_VISIBLE | WS_CHILD,200,100,150,15,hMainWindow,NULL,NULL,NULL);
@@ -266,7 +286,7 @@ void AddMainMenuControl(HWND hwnd){
     hUses = CreateWindowEx(0,"Edit","",WS_VISIBLE | WS_CHILD,360,650,270,90,hMainWindow,NULL,NULL,NULL);
 
     //User inputs are defined here
-    hUserInputName = CreateWindowEx(0,"ComboBox","",WS_VISIBLE | WS_CHILD | CBS_DROPDOWN | CBS_HASSTRINGS | WS_OVERLAPPED,10,10,100,18,hMainWindow,NULL,NULL,NULL);
+    hUserInputName = CreateWindowEx(0,"Combobox","",WS_VISIBLE | WS_CHILD | CBS_DROPDOWN | CBS_HASSTRINGS | WS_OVERLAPPED,10,10,100,18,hMainWindow,NULL,NULL,NULL);
     hUserInputSymbol = CreateWindowEx(0,"ComboBox","",WS_VISIBLE | WS_CHILD | CBS_DROPDOWN | CBS_HASSTRINGS | WS_OVERLAPPED,120,10,100,18,hMainWindow,NULL,NULL,NULL);
     hUserInputNumber = CreateWindowEx(0,"ComboBox","",WS_VISIBLE | WS_CHILD | CBS_DROPDOWN | CBS_HASSTRINGS | WS_OVERLAPPED,230,10,100,18,hMainWindow,NULL,NULL,NULL);
     CreateWindowEx(0,"Edit","",WS_VISIBLE | WS_CHILD,340,10,100,18,hMainWindow,NULL,NULL,NULL);
@@ -280,31 +300,31 @@ void loadimages(){
     hImage = LoadImageA(NULL,"image.bmp",IMAGE_BITMAP,150,150,LR_LOADFROMFILE);
 }
 
-void AddHelpMenuControl(HWND hwnd){
-    hHelpWindow = CreateWindowEx(0,"Static","",WS_CHILD | WS_VISIBLE,0,0,750,500,hwnd,NULL,NULL,NULL);
-    CreateWindowEx(0,"Static","Help related to program",WS_CHILD | WS_VISIBLE,50,50,650,400,hHelpWindow,NULL,NULL,NULL);
+void AddMoleculeMenuControl(HWND hwnd){
+    hMoleculeWindow = CreateWindowEx(0,"Static","",WS_CHILD | WS_VISIBLE,0,0,750,500,hwnd,NULL,NULL,NULL);
+    CreateWindowEx(0,"Static","Help related to program",WS_CHILD | WS_VISIBLE,50,50,650,400,hMoleculeWindow,NULL,NULL,NULL);
 }
 
 void AddQuizMenuControl(HWND hwnd){
-    struct quiz *quiz_data = question_search();
-    struct element *all_elements = elements_data();
     hQuizWindow = CreateWindowEx(0,"Static","",WS_CHILD | WS_VISIBLE | WS_VSCROLL | BS_GROUPBOX,0,0,750,450,hwnd,NULL,NULL,NULL);
-    int k,j,temp = 50;
-    for(k=0;k<15;k++){
-        CreateWindowEx(0,"Static",quiz_data[k].questions,WS_CHILD | WS_VISIBLE,50,temp,250,20,hQuizWindow,NULL,NULL,NULL);
-        for(j=0;j<4;j++){
-            temp = temp + 30;
-            CreateWindowEx(0,"Button",all_elements[k].name,WS_VISIBLE | WS_CHILD | BS_AUTORADIOBUTTON,100,temp,56,20,hQuizWindow,(HMENU)k,NULL,NULL);
-        }
-        temp = temp + 30;
-        CreateWindowEx(0,"Button",quiz_data[k].correct_answer,WS_VISIBLE | WS_CHILD | BS_AUTORADIOBUTTON,100,temp,56,20,hQuizWindow,(HMENU)k,NULL,NULL);
-    }
-    temp = temp + 30;
+    // struct quiz *quiz_data = question_search();
+    // struct element *all_elements = elements_data();
+
+    // int k,j,temp = 50;
+    // for(k=0;k<15;k++){
+    //     CreateWindowEx(0,"Static",quiz_data[k].questions,WS_CHILD | WS_VISIBLE,50,temp,250,20,hQuizWindow,NULL,NULL,NULL);
+    //     for(j=0;j<4;j++){
+    //         temp = temp + 30;
+    //         CreateWindowEx(0,"Button",all_elements[k].name,WS_VISIBLE | WS_CHILD | BS_AUTORADIOBUTTON,100,temp,56,20,hQuizWindow,(HMENU)k,NULL,NULL);
+    //     }
+    //     temp = temp + 30;
+    //     CreateWindowEx(0,"Button",quiz_data[k].correct_answer,WS_VISIBLE | WS_CHILD | BS_AUTORADIOBUTTON,100,temp,56,20,hQuizWindow,(HMENU)k,NULL,NULL);
+    // }
+    // temp = temp + 30;
 }
 
 void AddAboutMenuControl(HWND hwnd){
-    hAboutWindow = CreateWindowEx(0,"Static","",WS_CHILD | WS_VISIBLE ,0,0,750,500,hwnd,NULL,NULL,NULL);
-    CreateWindowEx(0,"Edit","Elephants are the largest existing land animals. Three species are currently recognised: the African bush elephant, the African forest elephant, and the Asian elephant. Elephantidae is the only surviving family of the order Proboscidea; extinct members include the mastodons. The family Elephantidae also contains several extinct groups, including the mammoths and straight-tusked elephants. African elephants have larger ears and concave backs, whereas Asian elephants have smaller ears, and convex or level backs. Distinctive features of all elephants include a long proboscis called a trunk, tusks, large ear flaps, massive legs, and tough but sensitive skin. The trunk is used for breathing, bringing food and water to the mouth, and grasping objects. Tusks, which are derived from the incisor teeth, serve both as weapons and as tools for moving objects and digging. The large ear flaps assist in maintaining a constant body temperature as well as in communication. The pillar-like legs carry their great weight.Elephants are scattered throughout sub-Saharan Africa, South Asia, and Southeast Asia and are found in different habitats, including savannahs, forests, deserts, and marshes. They are herbivorous, and they stay near water when it is accessible. They are considered to be keystone species, due to their impact on their environments. Elephants have a fission–fusion society, in which multiple family groups come together to socialise. Females (cows) tend to live in family groups, which can consist of one female with her calves or several related females with offspring. The groups, which do not include bulls, are usually led by the oldest cow, known as the matriarch.Males (bulls) leave their family groups when they reach puberty and may live alone or with other males. Adult bulls mostly interact with family groups when looking for a mate. They enter a state of increased testosterone and aggression known as musth, which helps them gain dominance over other males as well as reproductive success. Calves are the centre of attention in their family groups and rely on their mothers for as long as three years. Elephants can live up to 70 years in the wild. They communicate by touch, sight, smell, and sound; elephants use infrasound, and seismic communication over long distances. Elephant intelligence has been compared with that of primates and cetaceans. They appear to have self-awareness, and appear to show empathy for dying and dead family members.African bush elephants and Asian elephants are listed as endangered and African forest elephants as critically endangered by the International Union for Conservation of Nature (IUCN). One of the biggest threats to elephant populations is the ivory trade, as the animals are poached for their ivory tusks. Other threats to wild elephants include habitat destruction and conflicts with local people. Elephants are used as working animals in Asia. In the past, they were used in war; today, they are often controversially put on display in zoos, or exploited for entertainment in circuses. Elephants are highly recognisable and have been featured in art, folklore, religion, literature, and popular culture.",WS_CHILD | WS_VISIBLE | ES_MULTILINE | WS_VSCROLL,50,50,600,400,hAboutWindow,NULL,NULL,NULL);
+    CreateWindowEx(0,"Edit","A very warm welcome in our app to all our user. We the students of St Francis institute of technology made this app. We five students Rushikesh Borakhede, Krutika Chaudhari, Rishma Kurumboor, Lincia D'Souza, Prathamesh Parab and our mentor, Valentina Basker. We being students always wanted to make something about students, coming to chemistry many students faced problems in memorizing periodic table and knowing the periodic table. We Students of SFIT had a Pryas compition for which we made this APP using C programming.We got the motivation for creating a APP, because in our engineering first year we have a C programming subject which deals with making the same APP. We faced many difficulties during the coding of our APP, it took us 15-20days for creating this app. We hope users find it effective for studying. Thank you",WS_CHILD | WS_VISIBLE | ES_MULTILINE | WS_VSCROLL,50,50,600,400,hAboutWindow,NULL,NULL,NULL);
 }
 
 struct element element_searcher(char element_name[20],char element_symbol[4],int atomic_number,float atomic_weight){

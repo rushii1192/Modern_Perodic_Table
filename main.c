@@ -45,7 +45,6 @@ HWND main_classWindow(HWND window){
 HBITMAP hImage;
 void loadimages();
 
-struct element element_searcher(char element_name[20],char element_symbol[4],int atomic_number,float atomic_weight);
 struct element user_atom;
 /*  Make the class name into a global variable  */
 TCHAR szClassName[ ] = _T("CodeBlocksWindowsApp");
@@ -97,6 +96,7 @@ int WINAPI WinMain (HINSTANCE hThisInstance,
            );
     hMainWindow = main_classWindow(hwnd);
     hAboutWindow = main_classWindow(hwnd);
+    hQuizWindow = main_classWindow(hwnd);
     /* Make the window visible on the screen */
     ShowWindow (hwnd, nCmdShow);
 
@@ -136,6 +136,15 @@ LRESULT CALLBACK WindowProcedure (HWND hwnd, UINT message, WPARAM wParam, LPARAM
             AddMenu(hwnd);
             AddMainMenuControl(hwnd);
             // Get the handle to the client area's device context.
+            hdc = GetDC(hQuizWindow);
+
+            // Extract font dimensions from the text metrics.
+            GetTextMetrics(hdc, &tm);
+            yChar = tm.tmHeight + tm.tmExternalLeading;
+
+            // Free the device context.
+            ReleaseDC(hwnd, hdc);
+
             break;
 
         case WM_COMMAND:
@@ -297,7 +306,7 @@ void AddMainMenuControl(HWND hwnd){
 }
 
 void loadimages(){
-    hImage = LoadImageA(NULL,"image.bmp",IMAGE_BITMAP,150,150,LR_LOADFROMFILE);
+    hImage = (HBITMAP)LoadImageA(NULL,"image.bmp",IMAGE_BITMAP,150,150,LR_LOADFROMFILE);
 }
 
 void AddMoleculeMenuControl(HWND hwnd){
@@ -306,20 +315,21 @@ void AddMoleculeMenuControl(HWND hwnd){
 }
 
 void AddQuizMenuControl(HWND hwnd){
-    hQuizWindow = CreateWindowEx(0,"Static","",WS_CHILD | WS_VISIBLE | WS_VSCROLL | BS_GROUPBOX,0,0,750,450,hwnd,NULL,NULL,NULL);
     // struct quiz *quiz_data = question_search();
     // struct element *all_elements = elements_data();
 
-    // int k,j,temp = 50;
-    // for(k=0;k<15;k++){
-    //     CreateWindowEx(0,"Static",quiz_data[k].questions,WS_CHILD | WS_VISIBLE,50,temp,250,20,hQuizWindow,NULL,NULL,NULL);
-    //     for(j=0;j<4;j++){
-    //         temp = temp + 30;
-    //         CreateWindowEx(0,"Button",all_elements[k].name,WS_VISIBLE | WS_CHILD | BS_AUTORADIOBUTTON,100,temp,56,20,hQuizWindow,(HMENU)k,NULL,NULL);
-    //     }
-    //     temp = temp + 30;
-    //     CreateWindowEx(0,"Button",quiz_data[k].correct_answer,WS_VISIBLE | WS_CHILD | BS_AUTORADIOBUTTON,100,temp,56,20,hQuizWindow,(HMENU)k,NULL,NULL);
-    // }
+    int k,j,temp = 50;
+    for(k=0;k<15;k++){
+        struct quiz quiz_data = question_search(k);
+        CreateWindowEx(0,"Static",quiz_data.questions,WS_CHILD | WS_VISIBLE,50,temp,250,20,hQuizWindow,NULL,NULL,NULL);
+        for(j=0;j<4;j++){
+            struct quiz mcq_data = question_search(j+k);
+            temp = temp + 30;
+            CreateWindowEx(0,"Button",mcq_data.correct_answer,WS_VISIBLE | WS_CHILD | BS_AUTORADIOBUTTON,100,temp,56,20,hQuizWindow,(HMENU)k,NULL,NULL);
+        }
+        temp = temp + 30;
+        CreateWindowEx(0,"Button",quiz_data.correct_answer,WS_VISIBLE | WS_CHILD | BS_AUTORADIOBUTTON,100,temp,56,20,hQuizWindow,(HMENU)k,NULL,NULL);
+    }
     // temp = temp + 30;
 }
 
@@ -327,20 +337,3 @@ void AddAboutMenuControl(HWND hwnd){
     CreateWindowEx(0,"Edit","A very warm welcome in our app to all our user. We the students of St Francis institute of technology made this app. We five students Rushikesh Borakhede, Krutika Chaudhari, Rishma Kurumboor, Lincia D'Souza, Prathamesh Parab and our mentor, Valentina Basker. We being students always wanted to make something about students, coming to chemistry many students faced problems in memorizing periodic table and knowing the periodic table. We Students of SFIT had a Pryas compition for which we made this APP using C programming.We got the motivation for creating a APP, because in our engineering first year we have a C programming subject which deals with making the same APP. We faced many difficulties during the coding of our APP, it took us 15-20days for creating this app. We hope users find it effective for studying. Thank you",WS_CHILD | WS_VISIBLE | ES_MULTILINE | WS_VSCROLL,50,50,600,400,hAboutWindow,NULL,NULL,NULL);
 }
 
-struct element element_searcher(char element_name[20],char element_symbol[4],int atomic_number,float atomic_weight){
-    struct element *all_elements = elements_data();
-    for(int i=0;i<118;i++){
-        if(strcmp(all_elements[i].name,element_name)==0){
-            return all_elements[i];
-        }
-        if(strcmp(all_elements[i].symbol,element_symbol)==0){
-            return all_elements[i];
-        }
-        if(all_elements[i].atomic_number==atomic_number){
-            return all_elements[i];
-        }
-        if(all_elements[i].atomic_weight==atomic_weight){
-            return all_elements[i];
-        }
-    }
-}

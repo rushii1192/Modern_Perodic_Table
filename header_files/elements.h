@@ -29,9 +29,9 @@ struct element
 
 };
 
-struct element *elements_data()
+struct element element_searcher(char element_name[20],char element_symbol[4],int atomic_number,float atomic_weight)
 {
-	struct element *atom = malloc(sizeof(struct element) * 118);
+	struct element atom[118];
 
     //for data department you can start from here don,t change above code
 
@@ -2658,30 +2658,22 @@ struct element *elements_data()
     strcpy(atom[117].uses," At present, it is only used in research. It has no known biological role.");
     strcpy(atom[117].image_path,"");
 
-    strcpy(atom[118].name,"");
-	strcpy(atom[118].symbol,"");
-	atom[118].atomic_number=0;
-	atom[118].atomic_weight=00;
-	strcpy(atom[118].electronic_configuration,"");
-	strcpy(atom[118].history,"");
-    atom[118].melting_point = 0 ;
-    atom[118].boiling_point = 0 ;
-    atom[118].ionic_radius = 0  ;
-    atom[118].isotopes = 0 ;
-    atom[118].electronegativity =  0;
-    strcpy(atom[118].color,"");
-    atom[118].group =0;
-    atom[118].period =0 ;
-    strcpy(atom[118].conductivity,"");
-    strcpy(atom[118].luster,"");
-    strcpy(atom[118].phase,"");
-    atom[118].density =0;
-    strcpy(atom[118].uses,"");
-    strcpy(atom[118].image_path,"");
-
-	    
+        
     //for data department please don't change below code
     
-    return atom;
+    for(int i=0;i<118;i++){
+        if(strcmp(atom[i].name,element_name)==0){
+            return atom[i];
+        }
+        if(strcmp(atom[i].symbol,element_symbol)==0){
+            return atom[i];
+        }
+        if(atom[i].atomic_number==atomic_number){
+            return atom[i];
+        }
+        if(atom[i].atomic_weight==atomic_weight){
+            return atom[i];
+        }
+    }
 }
 

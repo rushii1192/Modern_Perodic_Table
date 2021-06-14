@@ -6,6 +6,7 @@
 
 #include <tchar.h>
 #include <windows.h>
+#include <wingdi.h>
 #include <gdiplus.h>
 #include "header_files/elements.h"
 #include "header_files/functions.h"
@@ -19,8 +20,9 @@
 #define Help_Menu 4
 #define ElementName 5
 #define AtomicNumber 6
-#define Search 7
+#define ElementSearch 7
 #define About_Menu 8
+#define MoleculeSearch 9
 /*  Declare Windows procedure  */
 LRESULT CALLBACK WindowProcedure (HWND, UINT, WPARAM, LPARAM);
 
@@ -35,7 +37,7 @@ void AddMoleculeMenuControl(HWND);
 void AddAboutMenuControl(HWND);
 void ClearWindow(HWND);
 HWND hName,hSymbol,hAtomicNumber,hAtomicWeight,hEC,hHistory,hMP,hBP,hIR,hIsotpes,hEN,hColor,hPosition,hConductivity,hLuster,hPhases,hDensity,hUses,hLogo,
-hUserInputName,hUserInputSymbol,hUserInputNumber,hUserInputWeight,hQuiz,hMainWindow,hQuizWindow,hAboutWindow,hMoleculeWindow;
+hUserInputName,hUserInputSymbol,hUserInputNumber,hUserInputWeight,hQuiz,hMainWindow,hQuizWindow,hAboutWindow,hMoleculeWindow,hMoleculeName;
 
 HWND main_classWindow(HWND window){
     return window;
@@ -97,6 +99,7 @@ int WINAPI WinMain (HINSTANCE hThisInstance,
     hMainWindow = main_classWindow(hwnd);
     hAboutWindow = main_classWindow(hwnd);
     hQuizWindow = main_classWindow(hwnd);
+    hMoleculeWindow = main_classWindow(hwnd);
     /* Make the window visible on the screen */
     ShowWindow (hwnd, nCmdShow);
 
@@ -135,15 +138,15 @@ LRESULT CALLBACK WindowProcedure (HWND hwnd, UINT message, WPARAM wParam, LPARAM
             loadimages();
             AddMenu(hwnd);
             AddMainMenuControl(hwnd);
-            // Get the handle to the client area's device context.
-            hdc = GetDC(hQuizWindow);
+            // // Get the handle to the client area's device context.
+            // hdc = GetDC(hQuizWindow);
 
-            // Extract font dimensions from the text metrics.
-            GetTextMetrics(hdc, &tm);
-            yChar = tm.tmHeight + tm.tmExternalLeading;
+            // // Extract font dimensions from the text metrics.
+            // GetTextMetrics(hdc, &tm);
+            // yChar = tm.tmHeight + tm.tmExternalLeading;
 
-            // Free the device context.
-            ReleaseDC(hwnd, hdc);
+            // // Free the device context.
+            // ReleaseDC(hQuizWindow, hdc);
 
             break;
 
@@ -167,11 +170,15 @@ LRESULT CALLBACK WindowProcedure (HWND hwnd, UINT message, WPARAM wParam, LPARAM
                     MessageBoxEx(hMainWindow,"This is the Help","Help",(UINT)MB_OK,(WORD)0);
                     break;
 
+                case Molecule_Menu:
+                    AddMoleculeMenuControl(hwnd);
+                    break;
+
                 case About_Menu:
                     AddAboutMenuControl(hwnd);
                     break;
 
-                case Search:;
+                case ElementSearch:;
                     char user_name[20],user_symbol[4],user_atomic_number[4],user_atomic_weight[10],atomic_number[4],atomic_weight[10],melting_point[10],boiling_point[10],ionic_radius[10],isotopes[4],electronegativity[10],group[3],period[2],density[10];
                     //Values inputed from users
                     GetWindowText(hUserInputName,user_name,20);
@@ -251,9 +258,9 @@ void AddMenu(HWND hwnd){
 
 
 void AddMainMenuControl(HWND hwnd){
-
+    HWND hSName;
     // hMainWindow = CreateWindowEx(0,"","",WS_CHILD | WS_VISIBLE | WS_BORDER | WM_VSCROLL,0,0,750,500,hwnd,NULL,NULL,NULL);
-    CreateWindowEx(0,"Static",_T("Element Name:-"),WS_VISIBLE | WS_CHILD,200,50,150,15,hMainWindow,NULL,NULL,NULL);
+    hSName = CreateWindowEx(0,"Static",_T("Element Name:-"),WS_VISIBLE | WS_CHILD,200,50,150,15,hMainWindow,NULL,NULL,NULL);
     CreateWindowEx(0,"Static","Element Symbol:-",WS_VISIBLE | WS_CHILD,200,75,150,15,hMainWindow,NULL,NULL,NULL);
     CreateWindowEx(0,"Static","Atomic Number:-",WS_VISIBLE | WS_CHILD,200,100,150,15,hMainWindow,NULL,NULL,NULL);
     CreateWindowEx(0,"Static","Atomic Weight:-",WS_VISIBLE | WS_CHILD,200,125,150,15,hMainWindow,NULL,NULL,NULL);
@@ -299,7 +306,7 @@ void AddMainMenuControl(HWND hwnd){
     hUserInputSymbol = CreateWindowEx(0,"ComboBox","",WS_VISIBLE | WS_CHILD | CBS_DROPDOWN | CBS_HASSTRINGS | WS_OVERLAPPED,120,10,100,18,hMainWindow,NULL,NULL,NULL);
     hUserInputNumber = CreateWindowEx(0,"ComboBox","",WS_VISIBLE | WS_CHILD | CBS_DROPDOWN | CBS_HASSTRINGS | WS_OVERLAPPED,230,10,100,18,hMainWindow,NULL,NULL,NULL);
     CreateWindowEx(0,"Edit","",WS_VISIBLE | WS_CHILD,340,10,100,18,hMainWindow,NULL,NULL,NULL);
-    CreateWindowEx(0,"Button","Search",WS_VISIBLE | WS_CHILD,450,10,100,25,hMainWindow,(HMENU)Search,NULL,NULL);
+    CreateWindowEx(0,"Button","Search",WS_VISIBLE | WS_CHILD,450,10,100,25,hMainWindow,(HMENU)ElementSearch,NULL,NULL);
 
     hLogo = CreateWindowEx(0,"Static","",WS_VISIBLE | WS_CHILD | SS_BITMAP,15,60,150,15,hMainWindow,NULL,NULL,NULL);
     SendMessageA(hLogo,STM_SETIMAGE,IMAGE_BITMAP,(LPARAM)hImage);
@@ -310,8 +317,11 @@ void loadimages(){
 }
 
 void AddMoleculeMenuControl(HWND hwnd){
-    hMoleculeWindow = CreateWindowEx(0,"Static","",WS_CHILD | WS_VISIBLE,0,0,750,500,hwnd,NULL,NULL,NULL);
-    CreateWindowEx(0,"Static","Help related to program",WS_CHILD | WS_VISIBLE,50,50,650,400,hMoleculeWindow,NULL,NULL,NULL);
+    ShowWindow(hMoleculeWindow,SW_SHOW);
+    ShowWindow(hMoleculeWindow,SW_SHOW);
+    hMoleculeName = CreateWindowEx(0,"ComboBox","",WS_VISIBLE | WS_CHILD | CBS_DROPDOWN | CBS_HASSTRINGS | WS_OVERLAPPED,120,10,100,18,hMoleculeWindow,NULL,NULL,NULL);
+    CreateWindowEx(0,"Button","Search",WS_VISIBLE | WS_CHILD,450,10,100,25,hMainWindow,(HMENU)MoleculeSearch,NULL,NULL);
+    
 }
 
 void AddQuizMenuControl(HWND hwnd){

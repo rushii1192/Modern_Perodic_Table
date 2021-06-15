@@ -14,9 +14,9 @@ struct quiz
 
 //you can start from here
 
-struct quiz *question_search()
+struct quiz question_search(int i)
 {
-    struct quiz *quiz_details = malloc(sizeof(struct quiz) * 250);
+    struct quiz quiz_details[226];
 
     strcpy(quiz_details[0].questions,"Atomic number of Helium is________");
     strcpy(quiz_details[0].correct_answer,"2");
@@ -694,7 +694,7 @@ struct quiz *question_search()
     strcpy(quiz_details[225].questions,"Atomic number of Ca is ________");
     strcpy(quiz_details[225].correct_answer,"20");
 
-    return quiz_details;
+    return quiz_details[i];
 }
 
 

@@ -7,22 +7,26 @@
 #include <tchar.h>
 #include <windows.h>
 #include <wingdi.h>
+#include <windowsx.h>
 #include <gdiplus.h>
 #include "header_files/elements.h"
 #include "header_files/functions.h"
 #include <string.h>
 #include <stdlib.h>
 #include "header_files/quiz.h"
+#include "header_files/molecules.h"
+#include <CommCtrl.h>
 
-#define Main_Menu 101
-#define Quiz_Menu 102
-#define Molecule_Menu 103
-#define Help_Menu 104
-#define ElementName 105
-#define AtomicNumber 106
-#define ElementSearch 107
-#define About_Menu 108
-#define MoleculeSearch 109
+#define Main_Menu 301
+#define Quiz_Menu 302
+#define Molecule_Menu 303
+#define Help_Menu 304
+#define ElementName 305
+#define AtomicNumber 306
+#define ElementSearch 307
+#define About_Menu 308
+#define MoleculeSearch 309
+#define QuizSubmit 310
 /*  Declare Windows procedure  */
 LRESULT CALLBACK WindowProcedure (HWND, UINT, WPARAM, LPARAM);
 
@@ -42,15 +46,27 @@ hUserInputName,hUserInputSymbol,hUserInputNumber,hUserInputWeight,hQuiz,hMainWin
 HWND main_classWindow(HWND window){
     return window;
 }
-
+HWND hanswer[5],hquestion[5];
 //Declare images
 HBITMAP hImage;
 void loadimages();
-
+int answer_checker(char question[100],char answer[50]);
 struct element user_atom;
 /*  Make the class name into a global variable  */
 TCHAR szClassName[ ] = _T("CodeBlocksWindowsApp");
+// void MakeAutocompleteCombo(HWND hComboBox)
+// {
+//     // SubClass the combo's Edit control
+//     HWND hEdit = IsExtended(hComboBox) ?
+//         ComboBoxEx_GetEditControl(hComboBox) :
+//             FindWindowEx(hComboBox, NULL, WC_EDIT, NULL);
 
+//     SetProp(hEdit, TEXT("Wprc"), (HANDLE)GetWindowLongPtr(hEdit, GWLP_WNDPROC));
+//     SubclassWindow(hEdit, ComboBox_Proc);
+
+//     // Set the text limit to standard size
+//     ComboBox_LimitText(hComboBox, DEFAULT_TXT_LIM);
+// } 
 int WINAPI WinMain (HINSTANCE hThisInstance,
                      HINSTANCE hPrevInstance,
                      LPSTR lpszArgument,
@@ -97,10 +113,8 @@ int WINAPI WinMain (HINSTANCE hThisInstance,
            NULL                 /* No Window Creation data */
            );
 
-    hMainWindow = main_classWindow(hwnd);
-    hQuizWindow = main_classWindow(hwnd);
-    hMoleculeWindow = main_classWindow(hwnd);
-    hAboutWindow = main_classWindow(hwnd);
+    
+    
 
     // hMainWindow = CreateWindowEx(0,szClassName,"",WS_CHILD | WS_VISIBLE,0,0,750,500,hwnd,NULL,NULL,NULL);
     // hAboutWindow = CreateWindowEx(0,szClassName,"",WS_CHILD | WS_VISIBLE,0,0,750,500,hwnd,NULL,NULL,NULL);
@@ -131,6 +145,7 @@ LRESULT CALLBACK WindowProcedure (HWND hwnd, UINT message, WPARAM wParam, LPARAM
     TEXTMETRIC tm;
     SCROLLINFO si;
     RECT rect;
+    // static HBRUSH hBrush = CreateSolidBrush(RGB(230,230,230));
     // These variables are required to display text.
     static int xClient;     // width of client area
     static int yClient;     // height of client area
@@ -143,7 +158,7 @@ LRESULT CALLBACK WindowProcedure (HWND hwnd, UINT message, WPARAM wParam, LPARAM
 
             loadimages();
             AddMenu(hwnd);
-            AddMainMenuControl(hwnd);
+
             // // Get the handle to the client area's device context.
             // hdc = GetDC(hQuizWindow);
 
@@ -153,14 +168,15 @@ LRESULT CALLBACK WindowProcedure (HWND hwnd, UINT message, WPARAM wParam, LPARAM
 
             // // Free the device context.
             // ReleaseDC(hQuizWindow, hdc);
-
+            
             break;
-
         case WM_COMMAND:
         {
             switch(wParam){
+                
                 case Main_Menu:
-                    CreateWindowEx(0,"Static","",WS_CHILD | WS_VISIBLE,0,0,950,900,hwnd,NULL,NULL,NULL);
+                    InvalidateRect(hMoleculeWindow,NULL,1);
+                    hMoleculeWindow = CreateWindowEx(0,"Static","",WS_CHILD | WS_VISIBLE,0,0,950,900,hwnd,NULL,NULL,NULL);
                     AddMainMenuControl(hwnd);
                     
                     break;
@@ -172,11 +188,12 @@ LRESULT CALLBACK WindowProcedure (HWND hwnd, UINT message, WPARAM wParam, LPARAM
                     break;
 
                 case Help_Menu:
-                    MessageBoxEx(hMainWindow,"This is the Help","Help",(UINT)MB_OK,(WORD)0);
+                    MessageBoxEx(hMainWindow,"Help","Help",(UINT)MB_OK,(WORD)0);
                     break;
 
                 case Molecule_Menu:
-                    CreateWindowEx(0,"Static","",WS_CHILD | WS_VISIBLE,0,0,950,900,hwnd,NULL,NULL,NULL);
+                    InvalidateRect(hMainWindow,NULL,1);
+                    hMainWindow = CreateWindowEx(0,"Static","",WS_CHILD | WS_VISIBLE,0,0,950,900,hwnd,NULL,NULL,NULL);
                     AddMoleculeMenuControl(hwnd);
                     break;
 
@@ -185,10 +202,30 @@ LRESULT CALLBACK WindowProcedure (HWND hwnd, UINT message, WPARAM wParam, LPARAM
                     AddAboutMenuControl(hwnd);
                     
                     break;
+                case MoleculeSearch:;
+                    char user_input_name[50];
+                    GetWindowText(hUserMoleculeName,user_input_name,50);
+                    struct compound molecule_output = molecules_data(user_input_name);
+                    SetWindowText(hMoleculeName,molecule_output.name);
+                    SetWindowText(hMoleculePrep,molecule_output.preparation);
+                    SetWindowText(hMoleculeReprsentation,molecule_output.representation);
+                    SetWindowText(hMoleculeUses,molecule_output.uses);
+                    break;
 
+                case QuizSubmit:;
+                    char question[100],answer[50];
+                    for(int i=0;i<=5;i++){
+                        GetWindowText(hquestion[i],question,100);
+                        // GetWindowText(hquestion[i],answer,50);
+                        GetDlgItemText(hanswer[i],i,answer,50);
+                        // if(Button_GetState(hanswer[i])==BST_CHECKED)
+                        MessageBoxExA(hQuizWindow,answer,"Data",(UINT)MB_OK,(WORD)0);
+                    }
+                    break;
                 case ElementSearch:;
                     char user_name[20],user_symbol[4],user_atomic_number[4],user_atomic_weight[10],atomic_number[4],atomic_weight[10],melting_point[10],boiling_point[10],ionic_radius[10],isotopes[4],electronegativity[10],group[3],period[2],density[10];
                     //Values inputed from users
+                    // GetDlgItem(hUserInputName,0);
                     GetWindowText(hUserInputName,user_name,20);
                     GetWindowText(hUserInputSymbol,user_symbol,4);
                     GetWindowText(hUserInputNumber,user_atomic_number,4);
@@ -235,6 +272,7 @@ LRESULT CALLBACK WindowProcedure (HWND hwnd, UINT message, WPARAM wParam, LPARAM
                     SetWindowText(hDensity,density);
                     SetWindowText(hUses,user_atom.uses);
                     break;
+
             }
 
             break;
@@ -252,7 +290,14 @@ LRESULT CALLBACK WindowProcedure (HWND hwnd, UINT message, WPARAM wParam, LPARAM
         //     EndPaint(hwnd, &ps);
         // }
         //     break;
-
+        case WM_CTLCOLORSTATIC:
+        {
+            HDC hdcStatic = (HDC) wParam;
+            SetTextColor(hdcStatic, RGB(0,0,0));
+            SetBkColor(hdcStatic, RGB(135,205,235));
+            return (INT_PTR)CreateSolidBrush(RGB(135,205,235));
+                // color_changer(hMainWindow,0,0,0);
+        }
         case WM_DESTROY:
             PostQuitMessage (0);       /* send a WM_QUIT to the message queue */
             break;
@@ -279,8 +324,14 @@ void AddMenu(HWND hwnd){
 
 void AddMainMenuControl(HWND hwnd){
     HWND hSName;
+    hMainWindow = main_classWindow(hwnd);
+    // SetBkColor(GetDC(hMainWindow),RGB(255,0,0));
+    // SetWindowSubclass(hMainWindow,(SUBCLASSPROC)&WindowProcedure,1,0);
     // hMainWindow = CreateWindowEx(0,"","",WS_CHILD | WS_VISIBLE | WS_BORDER | WM_VSCROLL,0,0,750,500,hwnd,NULL,NULL,NULL);
     hSName = CreateWindowEx(0,"Static",_T("Element Name:-"),WS_VISIBLE | WS_CHILD,200,50,150,15,hMainWindow,NULL,NULL,NULL);
+    
+    // HBRUSH brush = CreateSolidBrush(RGB(0, 0, 255));
+    // SetClassLongPtr(hMainWindow, GCLP_HBRBACKGROUND, (LONG_PTR)brush);
     CreateWindowEx(0,"Static","Element Symbol:-",WS_VISIBLE | WS_CHILD,200,75,150,15,hMainWindow,NULL,NULL,NULL);
     CreateWindowEx(0,"Static","Atomic Number:-",WS_VISIBLE | WS_CHILD,200,100,150,15,hMainWindow,NULL,NULL,NULL);
     CreateWindowEx(0,"Static","Atomic Weight:-",WS_VISIBLE | WS_CHILD,200,125,150,15,hMainWindow,NULL,NULL,NULL);
@@ -322,29 +373,33 @@ void AddMainMenuControl(HWND hwnd){
     hUses = CreateWindowEx(0,"Edit","",WS_VISIBLE | WS_CHILD | ES_MULTILINE | WS_VSCROLL,360,650,270,90,hMainWindow,NULL,NULL,NULL);
 
     //User inputs are defined here
-    hUserInputName = CreateWindowEx(0,"Combobox","",WS_VISIBLE | WS_CHILD | CBS_DROPDOWN | CBS_HASSTRINGS | WS_OVERLAPPED,10,10,100,18,hMainWindow,NULL,NULL,NULL);
-    for(int i=1;i<119;i++){
-        struct element user_input_name = element_searcher("","",i,0);
-        SendMessage(hUserInputName,(UINT)CB_ADDSTRING,(WPARAM)0,(LPARAM)user_input_name.name);
-        if(i==118)
-            SendMessage(hUserInputName, CB_SETCURSEL, (WPARAM)2, (LPARAM)0);
-    }
-    hUserInputSymbol = CreateWindowEx(0,"ComboBox","",WS_VISIBLE | WS_CHILD | CBS_DROPDOWN | CBS_HASSTRINGS | WS_OVERLAPPED,120,10,100,18,hMainWindow,NULL,NULL,NULL);
-    hUserInputNumber = CreateWindowEx(0,"ComboBox","",WS_VISIBLE | WS_CHILD | CBS_DROPDOWN | CBS_HASSTRINGS | WS_OVERLAPPED,230,10,100,18,hMainWindow,NULL,NULL,NULL);
-    CreateWindowEx(0,"Edit","",WS_VISIBLE | WS_CHILD,340,10,100,18,hMainWindow,NULL,NULL,NULL);
+    hUserInputName = CreateWindowEx(0,"Edit","",WS_VISIBLE | WS_CHILD  | WS_OVERLAPPED,10,10,100,18,hMainWindow,NULL,NULL,NULL);
+    CreateWindowEx(0,"Static","Name",WS_VISIBLE|WS_CHILD,10,25,100,15,hMainWindow,NULL,NULL,NULL);
+    hUserInputSymbol = CreateWindowEx(0,"Edit","",WS_VISIBLE | WS_CHILD | WS_OVERLAPPED,120,10,100,18,hMainWindow,NULL,NULL,NULL);
+    CreateWindowEx(0,"Static","Symbol",WS_VISIBLE|WS_CHILD,120,25,100,15,hMainWindow,NULL,NULL,NULL);
+    hUserInputNumber = CreateWindowEx(0,"Edit","",WS_VISIBLE | WS_CHILD | WS_OVERLAPPED,230,10,100,18,hMainWindow,NULL,NULL,NULL);
+    CreateWindowEx(0,"Static","Atomic Number",WS_VISIBLE|WS_CHILD,230,25,100,15,hMainWindow,NULL,NULL,NULL);
+    // CreateWindowEx(0,"Edit","",WS_VISIBLE | WS_CHILD,340,10,100,18,hMainWindow,NULL,NULL,NULL);
     CreateWindowEx(0,"Button","Search",WS_VISIBLE | WS_CHILD,450,10,100,25,hMainWindow,(HMENU)ElementSearch,NULL,NULL);
-
-    hLogo = CreateWindowEx(0,"Static","",WS_VISIBLE | WS_CHILD | SS_BITMAP,15,60,150,15,hMainWindow,NULL,NULL,NULL);
-    SendMessageA(hLogo,STM_SETIMAGE,IMAGE_BITMAP,(LPARAM)hImage);
+    // System.Drawing.Image image(L"Grapes.jpg");
+    // graphics.DrawImage(&image, 60, 10);
+    // HBITMAP hImage = (HBITMAP)LoadImage(NULL, (LPCWSTR)"E:\\Projects\\Modern_Perdoic_Table\\download.bmp", IMAGE_BITMAP, 0, 0, LR_LOADFROMFILE | LR_DEFAULTSIZE);
+    // if(hImage==NULL)
+    //     MessageBoxEx(hMainWindow,"image is null","Image",(UINT)MB_OK,(WORD)0);
+    // hLogo = CreateWindowEx(0,"Static","",WS_VISIBLE | WS_CHILD | SS_BITMAP,15,60,150,15,hMainWindow,(HMENU)100000,NULL,NULL);
+    // SendMessageA(hLogo,STM_SETIMAGE,(WPARAM)IMAGE_BITMAP,(LPARAM)hImage);
+    
 }
 
 void loadimages(){
-    hImage = (HBITMAP)LoadImageA(NULL,"image.bmp",IMAGE_BITMAP,150,150,LR_LOADFROMFILE);
+    
 }
 
 void AddMoleculeMenuControl(HWND hwnd){
-    hUserMoleculeName = CreateWindowEx(0,"ComboBox","",WS_VISIBLE | WS_CHILD | CBS_DROPDOWN | CBS_HASSTRINGS | WS_OVERLAPPED,120,10,100,18,hMoleculeWindow,NULL,NULL,NULL);
-    CreateWindowEx(0,"Button","Search",WS_VISIBLE | WS_CHILD,450,10,100,25,hMainWindow,(HMENU)MoleculeSearch,NULL,NULL);
+    hMoleculeWindow = main_classWindow(hwnd);
+    
+    hUserMoleculeName = CreateWindowEx(0,"ComboBox","",WS_VISIBLE | WS_CHILD | WS_OVERLAPPED,115,10,200,18,hMoleculeWindow,NULL,NULL,NULL);
+    CreateWindowEx(0,"Button","Search",WS_VISIBLE | WS_CHILD,425,10,100,25,hMoleculeWindow,(HMENU)MoleculeSearch,NULL,NULL);
 
     CreateWindowEx(0,"Static","Name",WS_CHILD | WS_VISIBLE,200,50,150,15,hMoleculeWindow,NULL,NULL,NULL);
     CreateWindowEx(0,"Static","Representation",WS_CHILD | WS_VISIBLE,200,75,150,15,hMoleculeWindow,NULL,NULL,NULL);
@@ -355,28 +410,63 @@ void AddMoleculeMenuControl(HWND hwnd){
     hMoleculeReprsentation = CreateWindowEx(0,"Edit","",WS_VISIBLE | WS_CHILD,360,75,270,15,hMoleculeWindow,NULL,NULL,NULL);
     hMoleculePrep = CreateWindowEx(0,"Edit","",WS_VISIBLE | WS_CHILD | ES_MULTILINE | WS_VSCROLL,360,100,270,100,hMoleculeWindow,NULL,NULL,NULL);
     hMoleculeUses = CreateWindowEx(0,"Edit","",WS_VISIBLE | WS_CHILD | ES_MULTILINE | WS_VSCROLL,360,210,270,100,hMoleculeWindow,NULL,NULL,NULL);
+
+
 }
 
 void AddQuizMenuControl(HWND hwnd){
+    hQuizWindow = main_classWindow(hwnd);
     // struct quiz *quiz_data = question_search();
     // struct element *all_elements = elements_data();
 
     int k,j,temp = 30;
+    char McqAtomicWeight[5],McqAtomicNumber[5];
+    
     for(k=0;k<5;k++){
         struct quiz quiz_data = question_search(k);
-        CreateWindowEx(0,"Static",quiz_data.questions,WS_CHILD | WS_VISIBLE,50,temp,250,20,hQuizWindow,NULL,NULL,NULL);
-        for(j=0;j<4;j++){
-            struct quiz mcq_data = question_search(j+k);
+        
+        hquestion[k] = CreateWindowEx(0,"Static",quiz_data.questions,WS_CHILD | WS_VISIBLE,50,temp,250,20,hQuizWindow,NULL,NULL,NULL);
+        
+        for(j=0;j<3;j++){
+            struct quiz quiz_data1 = question_search(k+j);
+            struct element mcq = element_searcher("","",j+k,0);
             temp = temp + 30;
-            CreateWindowEx(0,"Button",mcq_data.correct_answer,WS_VISIBLE | WS_CHILD | BS_AUTORADIOBUTTON,100,temp,56,20,hQuizWindow,(HMENU)k,NULL,NULL);
+            if(strstr(quiz_data.questions,"Symbol")!=NULL)
+                hanswer[k] = CreateWindowEx(0,"Button",mcq.symbol,WS_VISIBLE | WS_CHILD | BS_AUTORADIOBUTTON,100,temp,56,20,hQuizWindow,NULL,NULL,NULL);
+            if(strstr(quiz_data.questions,"number")!=NULL){
+                // ftoa(mcq.atomic_number,McqAtomicNumber,5);
+                hanswer[k] = CreateWindowEx(0,"Button",quiz_data1.correct_answer,WS_VISIBLE | WS_CHILD | BS_AUTORADIOBUTTON,100,temp,56,20,hQuizWindow,NULL,NULL,NULL);
+            }
+            if(strstr(quiz_data.questions,"mass")!=NULL){
+                ftoa(mcq.atomic_weight,McqAtomicWeight,5);
+                hanswer[k] = CreateWindowEx(0,"Button",quiz_data1.correct_answer,WS_VISIBLE | WS_CHILD | BS_AUTORADIOBUTTON,100,temp,56,20,hQuizWindow,NULL,NULL,NULL);
+            }
+            if(strstr(quiz_data.questions,"Element")!=NULL)
+                hanswer[k] = CreateWindowEx(0,"Button",mcq.name,WS_VISIBLE | WS_CHILD | BS_AUTORADIOBUTTON,100,temp,56,20,hQuizWindow,NULL,NULL,NULL);
+
         }
         temp = temp + 30;
-        CreateWindowEx(0,"Button",quiz_data.correct_answer,WS_VISIBLE | WS_CHILD | BS_AUTORADIOBUTTON,100,temp,56,20,hQuizWindow,(HMENU)k,NULL,NULL);
+        hanswer[k] = CreateWindowEx(0,"Button",quiz_data.correct_answer,WS_VISIBLE | WS_CHILD | BS_AUTORADIOBUTTON,100,temp,56,20,hQuizWindow,NULL,NULL,NULL);
+        temp = temp + 30;
     }
     temp = temp + 30;
-    CreateWindowEx(0,"Button","Submit",WS_VISIBLE | WS_CHILD,150,temp,50,30,hQuizWindow,NULL,NULL,NULL);
+    CreateWindowEx(0,"Button","Submit",WS_VISIBLE | WS_CHILD,450,700,50,30,hQuizWindow,(HMENU)QuizSubmit,NULL,NULL);
 }
+int answer_checker(char question[100],char answer[50]){
+    int value=0;
+    for(int k =0;k<225;k++){
+        struct quiz quiz_data = question_search(k);
+        if(strcmp(question,quiz_data.questions)==0 && strcmp(answer,quiz_data.correct_answer)==0)
+            value = 1;
+    }
+    if(value==1)
+        return 1;
+    else
+        return 0;
+}
+
 void AddAboutMenuControl(HWND hwnd){
+    hAboutWindow = main_classWindow(hwnd);
     CreateWindowEx(0,"Edit","A very warm welcome in our app to all our user. We the students of St Francis institute of technology made this app. We five students Rushikesh Borakhede, Krutika Chaudhari, Rishma Kurumboor, Lincia D'Souza, Prathamesh Parab and our mentor, Valentina Basker. We being students always wanted to make something about students, coming to chemistry many students faced problems in memorizing periodic table and knowing the periodic table. We Students of SFIT had a Pryas compition for which we made this APP using C programming.We got the motivation for creating a APP, because in our engineering first year we have a C programming subject which deals with making the same APP. We faced many difficulties during the coding of our APP, it took us 15-20days for creating this app. We hope users find it effective for studying. Thank you",WS_CHILD | WS_VISIBLE | ES_MULTILINE | WS_VSCROLL,50,50,600,400,hAboutWindow,NULL,NULL,NULL);
 }
 

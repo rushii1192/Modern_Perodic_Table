@@ -7,8 +7,8 @@ struct compound
     char name[50],representation[30],preparation[200],uses[2700],constituent_elements[60];
 };
 
-struct compound *molecules_data(){
-    struct compound *molecule = malloc(sizeof(struct compound) * 50);
+struct compound molecules_data(char name[50]){
+    struct compound molecule[26];
 
     strcpy(molecule[0].name,"Water");
     strcpy(molecule[0].representation,"H2O");
@@ -127,8 +127,7 @@ struct compound *molecules_data(){
     
     strcpy(molecule[17].name,"Salt");
     strcpy(molecule[17].representation,"NaCl");
-    strcpy(molecule[17].preparation,"Sodium and chlorine respond together to generate a substance that is familiar to nearly everybody in the globe that is sodium chloride, or table salt, or common salt
-                                    \n   2Na(s) + Cl2(g) --→  2NaCl(s)       \n ");
+    strcpy(molecule[17].preparation,"Sodium and chlorine respond together to generate a substance that is familiar to nearly everybody in the globe that is sodium chloride, or table salt, or common salt\n   2Na(s) + Cl2(g) --→  2NaCl(s)       \n ");
     strcpy(molecule[17].constituent_elements,"Na,Cl");
     strcpy(molecule[17].uses,"It is widely used in food industries as a food preservative and as a flavour enhancer. \n  It is a major raw material in the industrial manufacturing of various chemicals such as sodium carbonate, sodium hydrogen carbonate etc.  \n \n  This salt is used in glass production.  \n  \n In cold countries, it is used to prevent the build-up of ice on roads, bridges etc which is important for safe driving conditions. \n ");
 
@@ -186,11 +185,14 @@ struct compound *molecules_data(){
     strcpy(molecule[25].uses,"In its molten state, this compound acts as a catalyst for some aromatization reactions. For example, hexamethyl benzene can be obtained from methanol with the help of a molten ZnCl2  \nSince it acts as a moderately strong Lewis acid, this compound can also serve as a catalyst for the Fischer indole synthesis reaction and some Friedel-Crafts acylation reactions.\n  \nThe Lucas reagent is a solution of anhydrous zinc chloride and concentrated hydrochloric acid. This reagent is very useful in the preparation of alkyl chlorides.\n  \nA mixture of zinc oxide and hexachloroethane is used in some smoke grenades. Upon ignition, these compounds react to form a smoke of zinc chloride, which serves as a smokescreen.\n  \nZnCl2 is also useful in fingerprint detection since it forms an easily detectable complex with Ruhemann’s purple.\n \nThe aqueous solutions of this compound, when diluted, can be used for disinfecting purposes. It is a constituent of several antiseptic mouthwash products.\n ");                       
 
 
+    for(int i=0;i<26;i++){
+        if(strcmp(name,molecule[i].name)==0)
+            return molecule[i];
+    }
 
 
 
 
 
-
-    return molecule;
+    
 }
